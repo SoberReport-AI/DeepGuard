@@ -1,0 +1,39 @@
+{
+  "id": "dsh-tui",
+  "name": "dsh-TUI",
+  "repo": "ccch1mneyyy/dsh-tui",
+  "url": "https://github.com/ccch1mneyyy/dsh-tui",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 4,
+  "status": "pending",
+  "submitted_at": "2026-08-22T09:10:31.216Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "f4e302b764afa71596025713b859cbbffcd52a9f",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T09:00:29Z",
+    "stars": 2286,
+    "version": "0.8.8",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-tui"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T09:10:31.216Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
