@@ -1,0 +1,38 @@
+{
+  "id": "dsh-plugins-marketplace",
+  "name": "DSH-Plugins-Marketplace",
+  "repo": "bradegithub/dsh-plugins-marketplace",
+  "url": "https://github.com/bradegithub/dsh-plugins-marketplace",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 19,
+  "status": "pending",
+  "submitted_at": "2026-08-22T09:17:24.304Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "a7c4e403152a803f57a09bab2c58a885171d7c9d",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T09:00:49Z",
+    "stars": 135,
+    "version": "1.5.5",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plugins-marketplace"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T09:17:24.304Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
