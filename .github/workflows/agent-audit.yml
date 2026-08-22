@@ -371,6 +371,15 @@ jobs:
         if: always()
         run: node agent/scripts/normalize-evidence.mjs --task "$WORK_DIR/task.json" || echo "::warning::evidence normalization failed; postcheck evidence-crosscheck remains the hard gate"
 
+      # The raw trace.jsonl (prompts/responses/tool calls) never leaves the job: public-repo
+      # artifacts are downloadable by anyone, and the trace is an auditor-probing surface. Pack the
+      # two facts downstream consumers actually need — trace-summary.md (review/dispute cards) and
+      # run-result.json (ledger run metadata) — then strip the raw file. Pack is fail-closed yet
+      # leak-free: even on a pack error the raw trace is deleted before the step reports failure.
+      - name: Pack trace for handoff, strip raw trace.jsonl
+        if: always()
+        run: ./agent/node_modules/.bin/tsx agent/src/trace-pack.ts "$WORK_DIR/outbox"
+
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
         with:
@@ -378,7 +387,7 @@ jobs:
           path: agent/work/outbox/
           retention-days: 7
 
-      # The agent step has continue-on-error (to guarantee trace upload), so the output must be
+      # The agent step has continue-on-error (to guarantee the outbox upload), so the output must be
       # verified explicitly or failures go silent.
       # Two legal end states: report.json (applicable, audited) / inapplicable.json (Sonar determined
       # it is not a dsh plugin; review and report stages are skipped)
@@ -456,6 +465,11 @@ jobs:
           # in agents.config.json requires updating this line too — a missing var fails fast by name.
           BAI_LLM_KEY: ${{ secrets.BAI_LLM_KEY }}
         run: ./agent/node_modules/.bin/tsx agent/src/cli.ts review --task "$WORK_DIR/task.json" --config agent/agents.config.json --a-outbox agent/work/outbox-sonar
+
+      # Raw trace.jsonl never leaves the job (see the sonar job for the rationale).
+      - name: Pack trace for handoff, strip raw trace.jsonl
+        if: always()
+        run: ./agent/node_modules/.bin/tsx agent/src/trace-pack.ts "$WORK_DIR/outbox"
 
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
@@ -539,6 +553,11 @@ jobs:
           BAI_LLM_KEY: ${{ secrets.BAI_LLM_KEY }}
         run: ./agent/node_modules/.bin/tsx agent/src/cli.ts judge --task "$WORK_DIR/task.json" --config agent/agents.config.json --a-outbox agent/work/outbox-sonar --b-outbox agent/work/outbox-aegis
 
+      # Raw trace.jsonl never leaves the job (see the sonar job for the rationale).
+      - name: Pack trace for handoff, strip raw trace.jsonl
+        if: always()
+        run: ./agent/node_modules/.bin/tsx agent/src/trace-pack.ts "$WORK_DIR/outbox"
+
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
         with:
@@ -612,6 +631,12 @@ jobs:
           # in agents.config.json requires updating this line too — a missing var fails fast by name.
           BAI_LLM_KEY: ${{ secrets.BAI_LLM_KEY }}
         run: ./agent/node_modules/.bin/tsx agent/src/cli.ts translate --report "$WORK_DIR/outbox/report.json" --out "$WORK_DIR/outbox/report-bilingual.json" --config agent/agents.config.json
+
+      # Raw trace.jsonl never leaves the job (see the sonar job for the rationale). Translate is not
+      # an agent loop and normally has no trace — the pack step is then a graceful no-op safeguard.
+      - name: Pack trace for handoff, strip raw trace.jsonl
+        if: always()
+        run: ./agent/node_modules/.bin/tsx agent/src/trace-pack.ts "$WORK_DIR/outbox"
 
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
