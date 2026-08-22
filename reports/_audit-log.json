@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T10:56:35.311Z",
+      "plugin_id": "dsh-vision-toolkit",
+      "name": "dsh-vision-toolkit",
+      "version": "0.1.38",
+      "commit": "5a33bf6e9ff38f2d05d32fd6ee41479b8340ac5c",
+      "repo": "anionex/dsh-vision-toolkit",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": null,
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/27",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32568388975",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit 逐字一致）。FND-001 全部证据路径实际打开核实存在且内容支撑描述。维度一致性：DG-D4 risk 挂 FND-001，其余 clean 维度 findings=0，overall_result=risk 与 market.verdict=risk 推导合规。机械命中 50 条全部落在 DSH-X07/C05/X08/X05/X03 五个规则族（1+2+29+4+14），L1 层对每族引用映射规则 ID（DG-R3-59/59/60/57/55）给出明确排除理由，无覆盖缺口。独立快扫：src 无 eval/new Function；fet",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T10:36:33.758Z",
       "plugin_id": "dsh-market",
       "name": "dsh-market",
