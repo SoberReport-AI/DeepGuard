@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T15:35:07.762Z",
+      "plugin_id": "misakanet",
+      "name": "misakanet",
+      "version": null,
+      "commit": "a656edb8e9427942147d4b8ff3af5d11fb5b1e9c",
+      "repo": "ikalus1988/misakanet",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "gate",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/58",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32582110296",
+      "extended_review": true,
+      "reason": "intake gate script error (see run logs)",
+      "compactions": null,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T15:19:57.787Z",
       "plugin_id": "treg",
       "name": "treg",
