@@ -1,0 +1,38 @@
+{
+  "id": "dsh-webui-market-plugin",
+  "name": "dsh-webui-market-plugin",
+  "repo": "sanqi-normal/dsh-webui-market-plugin",
+  "url": "https://github.com/sanqi-normal/dsh-webui-market-plugin",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake (catalog star ranking, 70 stars).",
+  "source": "issue",
+  "issue": 65,
+  "status": "pending",
+  "submitted_at": "2026-08-22T16:16:28.089Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "f0cfc501a9e66b3c77da37e346d311d092cb1e41",
+    "default_branch": "master",
+    "pushed_at": "2026-08-22T05:36:20Z",
+    "stars": 100,
+    "version": "0.5.5",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-webui-market-plugin"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T16:16:28.089Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
