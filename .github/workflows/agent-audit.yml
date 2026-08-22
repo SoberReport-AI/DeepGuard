@@ -742,8 +742,9 @@ jobs:
           VER=$(node -p "JSON.parse(require('fs').readFileSync('$WORK_DIR/outbox/report.json')).plugin.version")
           COMMIT=$(node -p "JSON.parse(require('fs').readFileSync('$WORK_DIR/outbox/report.json')).plugin.commit")
           # Defense in depth: prepare/postcheck already guarantee the format; re-validate the
-          # character set as a backstop before on-disk path concatenation
-          case "$VER" in *[!a-zA-Z0-9.-]*|"") echo "invalid version: [$VER]" >&2; exit 1;; esac
+          # character set as a backstop before on-disk path concatenation. Alphabet = full semver
+          # ([0-9A-Za-z.+-]): never stricter than the schema, still blocks / and whitespace traversal
+          case "$VER" in *[!a-zA-Z0-9.+-]*|"") echo "invalid version: [$VER]" >&2; exit 1;; esac
           case "$COMMIT" in *[!a-f0-9]*|"") echo "invalid commit: [$COMMIT]" >&2; exit 1;; esac
           mkdir -p "reports/$ID/$VER"
           cp "$WORK_DIR/outbox/report.json" "reports/$ID/$VER/$COMMIT.json"
