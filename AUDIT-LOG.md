@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-23 00:25 | misakanet | — | [a656edb](https://github.com/ikalus1988/misakanet/commit/a656edb8e9427942147d4b8ff3af5d11fb5b1e9c) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#58](https://github.com/SoberReport-AI/DeepGuard/issues/58) |
 | 2026-08-23 00:19 | whale-girl | 0.1.0 | [e22e1fd](https://github.com/vlln/whale-girl/commit/e22e1fd918746e610f7bfb1713cef1e57a56f37c) | SoberReport-AI | clean | 0 | extended review | uphold Aegis | — | failed, flagged for extended review | [#60](https://github.com/SoberReport-AI/DeepGuard/issues/60) |
 | 2026-08-23 00:05 | harmony-next-skills | 1.3.35 | [880420c](https://github.com/linhay/harmony-next.skills/commit/880420ccaede758845daa3e86154c4e02e6f2249) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#59](https://github.com/SoberReport-AI/DeepGuard/issues/59) |
 | 2026-08-22 23:35 | misakanet | — | [a656edb](https://github.com/ikalus1988/misakanet/commit/a656edb8e9427942147d4b8ff3af5d11fb5b1e9c) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#58](https://github.com/SoberReport-AI/DeepGuard/issues/58) |
