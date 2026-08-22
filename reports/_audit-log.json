@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T11:14:02.193Z",
+      "plugin_id": "dsh-vision-router",
+      "name": "dsh-vision-router",
+      "version": "1.7.6",
+      "commit": "9e9a938e53a70715a23c7b9650b652506e537419",
+      "repo": "ysr666/dsh-vision-router",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": null,
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/28",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32569214004",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过：plugin.id/version/commit 与任务卡逐字一致。报告无 findings[]，维度一致性核验：D1-D6 全部 clean 且 checked 计数与 checked_items 条数逐一对齐（2/2/4/2/3/2），key_findings 空与 overall_result=clean 自洽。机械预扫 37 条命中独立复核：全部树内命中路径均实际打开验证存在且行号精确（index.js:28、lib/doctor-runtime.js:1、lib/file-logger.js:4/334、lib/local-vision-stabilizer.js:1、",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T10:56:35.311Z",
       "plugin_id": "dsh-vision-toolkit",
       "name": "dsh-vision-toolkit",
