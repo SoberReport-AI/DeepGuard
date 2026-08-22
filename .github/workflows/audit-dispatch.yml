@@ -64,9 +64,12 @@ jobs:
           git config user.name "SoberReport-AI"
           git config user.email "59252154+SoberReport-AI@users.noreply.github.com"
 
+          # stdout hygiene: this function's stdout is captured into RESULT — `git reset --hard`
+          # prints "HEAD is now at ..." to stdout, which once polluted RESULT, broke MODE parsing
+          # and aborted the commit with an empty message (2026-08-22). All git plumbing → stderr.
           evaluate() {
-            git fetch origin
-            git reset --hard origin/main
+            git fetch origin >&2
+            git reset --hard -q origin/main >&2
             node -e "
               const fs = require('fs');
               const now = new Date();
@@ -153,6 +156,8 @@ jobs:
                 MSG="chore(dispatch): requeue orphaned entries ($NEXT) [skip ci]"
                 ;;
               DISPATCH) MSG="chore(dispatch): dispatch $NEXT [skip ci]" ;;
+              # fail loud on any stdout pollution instead of committing with an empty MSG
+              *) echo "::error::unparseable evaluate output — expected MODE|payload, got:"; echo "$RESULT"; exit 1 ;;
             esac
             git add _import/audit-queue
             if git diff --cached --quiet; then echo "state already persisted concurrently"; PUSHED=1; break; fi
