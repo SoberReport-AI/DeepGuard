@@ -1,0 +1,37 @@
+{
+  "id": "dsh-tianshu-tui",
+  "name": "dsh-tianshu-tui",
+  "repo": "huiliyi37/dsh-tianshu-tui",
+  "url": "https://github.com/huiliyi37/dsh-tianshu-tui",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 14,
+  "status": "pending",
+  "submitted_at": "2026-08-22T09:15:27.472Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "1ff44e3dea8c677f48022c79887849df0248bccc",
+    "default_branch": "main",
+    "pushed_at": "2026-08-20T10:49:27Z",
+    "stars": 229,
+    "version": "0.1.2-rc.12",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-tianshu-tui"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T09:15:27.472Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
