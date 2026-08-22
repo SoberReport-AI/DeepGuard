@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake (catalog star ranking, 70 stars).",
   "source": "issue",
   "issue": 64,
-  "status": "auditing",
+  "status": "audited",
   "submitted_at": "2026-08-22T16:16:28.484Z",
   "prescreen": {
     "ok": true,
@@ -38,6 +38,11 @@
       "at": "2026-08-22T17:20:59.489Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-22T17:28:46.213Z",
+      "action": "audited",
+      "reason": null
     }
   ],
   "attempts": 1
