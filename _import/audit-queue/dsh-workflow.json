@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake (catalog star ranking, 68 stars).",
   "source": "issue",
   "issue": 66,
-  "status": "auditing",
+  "status": "pending",
   "submitted_at": "2026-08-22T16:16:29.364Z",
   "prescreen": {
     "ok": true,
@@ -44,7 +44,12 @@
       "at": "2026-08-22T21:50:23.516Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-22T22:03:58.000Z",
+      "action": "reset-to-pending",
+      "reason": "both prior attempts died on provider quota (HTTP 402 payment-required), never reaching analysis — balance topped up; attempts rolled back to 1 so the entry gets one real audit before extended-review flagging"
     }
   ],
-  "attempts": 2
+  "attempts": 1
 }
