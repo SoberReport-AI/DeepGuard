@@ -15,6 +15,24 @@
   },
   "rules": [
     {
+      "id": "invalid-submission",
+      "match": {
+        "status": 400,
+        "message_regex": "submission prerequisite not met"
+      },
+      "category": "invalid_submission",
+      "retry": {
+        "max_attempts": 0
+      },
+      "note": "Prepare-stage prerequisite failure (no resolvable/valid semver version): a deterministic property of the submitted snapshot — retrying it is pointless. Synthetic sentinels from the gate job name this rule directly; the match clause is deliberately narrow so runtime LLM errors never classify here.",
+      "issue": {
+        "template": "issue-templates/invalid-submission.md",
+        "close": true,
+        "queue_status": "rejected",
+        "reason_code": "invalid-submission"
+      }
+    },
+    {
       "id": "context-overflow",
       "match": {
         "status": 400,

@@ -184,15 +184,25 @@ jobs:
           } >> "$GITHUB_OUTPUT"
           [ $code -eq 0 ] || [ $code -eq 2 ] || exit $code
 
+      # prepare exit codes: 0 = ready; 2 = submission-prerequisite reject (it wrote
+      # preflight-result.json — the shared gate reject slot — and the run walks the preflight-reject
+      # path: queue → rejected + issue feedback, no orphan requeue); anything else = real failure
       - name: prepare (pin commit + tarball + manifest + task.json)
         if: steps.gate.outputs.decision == 'pass'
-        run: node agent/scripts/prepare.mjs --queue-file "_import/audit-queue/${{ inputs.queue_id }}.json" --work-root "$WORK_DIR" --reports-dir reports
+        id: prepare
+        run: |
+          set +e
+          node agent/scripts/prepare.mjs --queue-file "_import/audit-queue/${{ inputs.queue_id }}.json" --work-root "$WORK_DIR" --reports-dir reports
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          [ $code -eq 0 ] || [ $code -eq 2 ] || exit $code
 
       # Static scope check after prepare (trimmed tree exists), before any LLM role: the scope-total
       # gate is the only failure runtime cannot recover from at ~10 req/min; oversized files ride
       # along as notices (copied into the read-only context dir → inlined into the audit task card).
+      # Skipped when prepare already rejected (code 2) — the reject slot is already populated.
       - name: preflight-context (static scope gate, zero LLM)
-        if: steps.gate.outputs.decision == 'pass'
+        if: steps.gate.outputs.decision == 'pass' && steps.prepare.outputs.code == '0'
         id: preflight
         run: |
           set +e
@@ -204,15 +214,19 @@ jobs:
           cp "$WORK_DIR/preflight-result.json" "$WORK_DIR/context/preflight.json"
           [ $code -eq 0 ] || [ $code -eq 2 ] || exit $code
 
-      # On preflight reject: persist the rejection into the queue file (mirrors intake-gate's reject
-      # write), synthesize an llm-error.json sentinel (rule context-overflow) so issue-feedback and
-      # the ledger walk the exact same template/close/queue-status path as a runtime 400 — then ship
-      # both as an artifact (this job is contents:read and cannot push; the ledger commits for it).
+      # On preflight/prepare reject: persist the rejection into the queue file (mirrors intake-gate's
+      # reject write), synthesize an llm-error.json sentinel so issue-feedback and the ledger walk
+      # the exact same template/close/queue-status path as a runtime 400 — then ship both as an
+      # artifact (this job is contents:read and cannot push; the ledger commits for it). The rule is
+      # source-dependent: preflight scope overflow → context-overflow; prepare prerequisite →
+      # invalid-submission (prepare wrote preflight-result.json itself before exiting 2).
       - name: Handle preflight reject
-        if: steps.gate.outputs.decision == 'pass' && steps.preflight.outputs.code == '2'
+        if: steps.gate.outputs.decision == 'pass' && (steps.preflight.outputs.code == '2' || steps.prepare.outputs.code == '2')
         env:
           QUEUE_ID: ${{ inputs.queue_id }}
+          PREPARE_CODE: ${{ steps.prepare.outputs.code }}
         run: |
+          if [ "$PREPARE_CODE" = "2" ]; then RULE=invalid-submission; CAT=invalid_submission; MODE=prepare; else RULE=context-overflow; CAT=context_overflow; MODE=preflight; fi
           node -e "
             const fs = require('fs');
             const q = JSON.parse(fs.readFileSync('_import/audit-queue/$QUEUE_ID.json', 'utf8'));
@@ -225,13 +239,13 @@ jobs:
             fs.copyFileSync('_import/audit-queue/$QUEUE_ID.json', 'gate-reject/queue.json');
             fs.copyFileSync('$WORK_DIR/preflight-result.json', 'gate-reject/preflight-result.json');
             fs.writeFileSync('gate-reject/llm-error.json', JSON.stringify({
-              rule_id: 'context-overflow', category: 'context_overflow', status: 400,
-              mode: 'preflight', error: r.reasons.join('; '), at: new Date().toISOString(),
+              rule_id: '$RULE', category: '$CAT', status: 400,
+              mode: '$MODE', error: r.reasons.join('; '), at: new Date().toISOString(),
             }, null, 2) + '\n');
           "
 
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        if: steps.gate.outputs.decision == 'pass' && steps.preflight.outputs.code == '2'
+        if: steps.gate.outputs.decision == 'pass' && (steps.preflight.outputs.code == '2' || steps.prepare.outputs.code == '2')
         with:
           name: gate-reject-${{ inputs.queue_id }}
           path: gate-reject/
@@ -257,7 +271,7 @@ jobs:
           path: gate-reject/
           retention-days: 7
 
-      - name: Final gate decision (intake gate + preflight scope gate)
+      - name: Final gate decision (intake gate + prepare prerequisite + preflight scope gate)
         id: decision
         env:
           # FINAL-V003: step outputs are LLM-influenceable (blacklist reason flows into gate reasons);
@@ -267,10 +281,11 @@ jobs:
           GATE_DECISION: ${{ steps.gate.outputs.decision }}
           GATE_REASONS: ${{ steps.gate.outputs.reasons }}
           PREFLIGHT_CODE: ${{ steps.preflight.outputs.code }}
+          PREPARE_CODE: ${{ steps.prepare.outputs.code }}
         run: |
           DECISION="$GATE_DECISION"
           REASONS="$GATE_REASONS"
-          if [ "$DECISION" = "pass" ] && [ "$PREFLIGHT_CODE" = "2" ]; then
+          if [ "$DECISION" = "pass" ] && { [ "$PREFLIGHT_CODE" = "2" ] || [ "$PREPARE_CODE" = "2" ]; }; then
             DECISION="reject"
             REASONS=$(node -p "(JSON.parse(require('fs').readFileSync('$WORK_DIR/preflight-result.json','utf8')).reasons||[]).join('；')" | tr -d '\r\n')
           fi

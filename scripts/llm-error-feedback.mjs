@@ -51,7 +51,7 @@ if (!templateRel) {
 const templatePath = join(policy.templates_dir ?? dirname(args.policy), templateRel);
 const template = readFileSync(templatePath, "utf8");
 
-const ROLE_BY_MODE = { audit: "sonar", review: "aegis", judge: "beacon", translate: "translate", harbor: "harbor", preflight: "preflight" };
+const ROLE_BY_MODE = { audit: "sonar", review: "aegis", judge: "beacon", translate: "translate", harbor: "harbor", preflight: "preflight", prepare: "prepare" };
 const retry = rule.retry ?? {};
 const retryInfo =
   (retry.max_attempts ?? 0) > 0

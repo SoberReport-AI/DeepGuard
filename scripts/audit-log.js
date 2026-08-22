@@ -161,9 +161,13 @@ function readJsonSafe(p) {
   }
 }
 
-/** Last run_result record of an outbox trace (run metadata: turns/usage/compactions), null when absent. */
+/** Run metadata of an outbox (turns/usage/compactions), null when absent. Pipeline artifacts carry
+ *  the packed form (run-result.json — trace-pack.ts strips the raw trace.jsonl before upload);
+ *  the raw-trace scan remains as the legacy/local fallback. */
 function readRunResult(dir) {
   if (!dir) return null;
+  const packed = readJsonSafe(path.resolve(ROOT, dir, "run-result.json"));
+  if (packed) return packed;
   try {
     const lines = fs.readFileSync(path.resolve(ROOT, dir, "trace.jsonl"), "utf-8").trim().split("\n");
     for (let i = lines.length - 1; i >= 0; i--) {
