@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "issue",
   "issue": 42,
-  "status": "auditing",
+  "status": "cancelled",
   "submitted_at": "2026-08-22T12:27:56.077Z",
   "prescreen": {
     "ok": true,
@@ -37,6 +37,11 @@
       "at": "2026-08-22T12:41:15.346Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-22T12:45:31.977Z",
+      "action": "cancelled",
+      "reason": "batch submission withdrawn (owner request) — superseded by fresh 5-issue E2E round"
     }
   ],
   "attempts": 1
