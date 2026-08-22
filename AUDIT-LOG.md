@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-23 00:05 | harmony-next-skills | 1.3.35 | [880420c](https://github.com/linhay/harmony-next.skills/commit/880420ccaede758845daa3e86154c4e02e6f2249) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#59](https://github.com/SoberReport-AI/DeepGuard/issues/59) |
 | 2026-08-22 23:35 | misakanet | — | [a656edb](https://github.com/ikalus1988/misakanet/commit/a656edb8e9427942147d4b8ff3af5d11fb5b1e9c) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#58](https://github.com/SoberReport-AI/DeepGuard/issues/58) |
 | 2026-08-22 23:19 | treg | 0.12.0 | [603540f](https://github.com/superdesigndev/treg/commit/603540f653994080d4f507a9a3564e1017c28eef) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#57](https://github.com/SoberReport-AI/DeepGuard/issues/57) |
 | 2026-08-22 22:59 | aegis | 2.8.5 | [fea84dd](https://github.com/ganyuanran/aegis/commit/fea84dd545385ebdbe1c7ceab0d2afb8fe9d4600) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
