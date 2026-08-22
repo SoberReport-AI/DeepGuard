@@ -1,0 +1,38 @@
+{
+  "id": "whale-girl",
+  "name": "whale-girl",
+  "repo": "vlln/whale-girl",
+  "url": "https://github.com/vlln/whale-girl",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 60,
+  "status": "pending",
+  "submitted_at": "2026-08-22T14:21:42.918Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "e22e1fd918746e610f7bfb1713cef1e57a56f37c",
+    "default_branch": "main",
+    "pushed_at": "2026-08-19T21:18:20Z",
+    "stars": 265,
+    "version": "0.1.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "whale-girl"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T14:21:42.918Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
