@@ -1,0 +1,40 @@
+{
+  "id": "dsh-better-sidebar",
+  "name": "dsh-better-sidebar",
+  "repo": "omdsh-dev/dsh-better-sidebar",
+  "url": "https://github.com/omdsh-dev/dsh-better-sidebar",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 3,
+  "status": "pending",
+  "submitted_at": "2026-08-22T09:09:59.786Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "b7aab48deb17b7dd92094c84441783fccaf51561",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T07:41:39Z",
+    "stars": 2614,
+    "version": "0.15.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-better-sidebar"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T09:09:59.786Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
