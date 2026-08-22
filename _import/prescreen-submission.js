@@ -288,7 +288,7 @@ async function checkSubmitterEligibility(submitter, owner, repoFull) {
 }
 
 /* ---------- shallow clone + manifest ---------- */
-function cloneAndInspect(url) {
+function cloneAndInspect(url, subpath) {
   fs.mkdirSync(CLONE_BASE, { recursive: true });
   const dest = path.join(CLONE_BASE, url.replace(/^https:\/\/github\.com\//, '').replace('/', '__'));
   fs.rmSync(dest, { recursive: true, force: true });
@@ -297,9 +297,18 @@ function cloneAndInspect(url) {
   } catch (e) {
     return { ok: false, reason: `clone failed: ${String(e.stderr || e.message).split('\n')[0]}` };
   }
-  const commit = execFileSync('git', ['-C', dest, 'rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
-  const pkgPath = path.join(dest, 'package.json');
-  if (!fs.existsSync(pkgPath)) return { ok: true, commit, manifest: null, warning: 'no package.json at the repo root (non-standard npm package layout; audit scope needs human confirmation)' };
+  const commit = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8', cwd: dest }).trim();
+  /* Monorepo fix (Harbor triplet-mismatch veto on dsh-web-ui): the queue-locked version/name/hooks
+   * must come from the SAME manifest the audit reads — prepare.mjs trims the audit root to
+   * queue.subpath and reads <subpath>/package.json (declared e.g. 0.2.8), while prescreen used to
+   * read the monorepo ROOT package.json (workspace version 0.1.1) → queue/report triplet mismatch
+   * → Harbor fail-closed veto. Read the subpath manifest first; fall back to root with a warning. */
+  const subPkgPath = subpath ? path.join(dest, subpath, 'package.json') : null;
+  const rootPkgPath = path.join(dest, 'package.json');
+  let pkgPath = null; let fellBack = false;
+  if (subPkgPath && fs.existsSync(subPkgPath)) pkgPath = subPkgPath;
+  else if (fs.existsSync(rootPkgPath)) { pkgPath = rootPkgPath; fellBack = !!subpath; }
+  if (!pkgPath) return { ok: true, commit, manifest: null, warning: `no package.json at ${subpath ? `subpath ${subpath} or the repo root` : 'the repo root'} (non-standard npm package layout; audit scope needs human confirmation)` };
   const pkg = readJSON(pkgPath);
   const dsh = pkg.dsh || {};
   const kinds = ['bundle', 'client', 'service'].filter(k => dsh[k]);
@@ -312,7 +321,8 @@ function cloneAndInspect(url) {
       engines: (pkg.engines && pkg.engines.dsh) || null,
       install_hooks: ['preinstall', 'install', 'postinstall', 'prepare'].filter(h => pkg.scripts && pkg.scripts[h])
     },
-    warning: kinds.length ? null : 'package.json has no dsh.bundle/client/service declaration (will be audited as a plain package by actual code behavior)'
+    warning: (fellBack ? `subpath ${subpath} has no package.json; fell back to the repo-root manifest (version/name may describe the workspace, not the plugin — triplet mismatch risk at the mirror gate). ` : '')
+      + (kinds.length ? '' : 'package.json has no dsh.bundle/client/service declaration (will be audited as a plain package by actual code behavior)') || null
   };
 }
 
@@ -383,7 +393,7 @@ async function cmdSubmit(input) {
   if (!gh.ok) { console.error(`✗ ${gh.reason}`); process.exit(1); }
   if (gh.archived) warnings.push('repository is archived');
 
-  const insp = cloneAndInspect(norm.url);
+  const insp = cloneAndInspect(norm.url, subpath);
   if (!insp.ok) { console.error(`✗ ${insp.reason}`); process.exit(1); }
   if (insp.warning) warnings.push(insp.warning);
 
