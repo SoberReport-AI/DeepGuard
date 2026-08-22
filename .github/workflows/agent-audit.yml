@@ -635,6 +635,19 @@ jobs:
       commit: ${{ steps.place.outputs.commit }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      # The checkout defaults to the dispatch-time SHA, which is hours-stale by publish time. If main
+      # gained a .github/workflows/* change while the audit ran, an audit branch cut from that stale
+      # base carries the old workflow state and the GITHUB_TOKEN branch push is rejected ("refusing to
+      # allow a GitHub App to create or update workflow ... without workflows permission") — observed
+      # on the dsh-tianshu-tui publish (2026-08-22). Rebase the checkout onto the latest main so the
+      # audit branch diff stays limited to report/queue files. Report data comes from artifacts, so
+      # resetting the checkout is safe; the queue file read by postcheck also gets fresher.
+      - name: Fetch latest main (stale-base audit branches cannot be pushed)
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           name: audit-work-${{ needs.gate.outputs.plugin_id }}
