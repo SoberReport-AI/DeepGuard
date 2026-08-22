@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Environment variables and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Logs and temporary files
+*.log
+tmp/
+.cache/
+
+# Commit-verification evidence (regenerated on each run, contains timestamps, not committed)
+reports/_commit-verify.json

@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "sentinel_name": "llm-error.json",
+  "_templates_note": "template paths below resolve relative to this policy file's directory (llm-error-feedback.mjs falls back to dirname(--policy)) — keeps the same file usable from both repo layouts (agent/config/ in the core, scripts/ in the public repo)",
+  "catalog": {
+    "200": "Success - returns the model list / normal response",
+    "400": "Bad request - invalid parameters or malformed request body",
+    "401": "Unauthorized - invalid or missing authentication",
+    "402": "Payment required - provider balance exhausted",
+    "403": "Forbidden - no permission, insufficient quota, or account banned",
+    "429": "Too many requests - rate limit exceeded",
+    "500": "Internal server error",
+    "520/522/524": "Cloudflare gateway errors (measured on b.ai free tier: ~100s kill switch on slow prefill, origin timeouts)",
+    "connection": "Remote end closed / connection reset without an HTTP status"
+  },
+  "rules": [
+    {
+      "id": "context-overflow",
+      "match": {
+        "status": 400,
+        "message_regex": "Input token exceed|context_length|maximum context|too long"
+      },
+      "category": "context_overflow",
+      "retry": {
+        "max_attempts": 0
+      },
+      "note": "Deterministic pre-dispatch rejection (measured ~0.5s); retrying is pointless. Submission-side problem.",
+      "issue": {
+        "template": "issue-templates/context-overflow.md",
+        "close": true,
+        "queue_status": "rejected",
+        "reason_code": "context-overflow"
+      }
+    },
+    {
+      "id": "invalid-max-tokens",
+      "match": {
+        "status": 400,
+        "message_regex": "Invalid max_tokens|max_tokens"
+      },
+      "category": "client_bug",
+      "retry": {
+        "max_attempts": 0
+      },
+      "note": "Harness failed to clamp max_tokens to the endpoint's max_output_tokens. Operations-side bug, alert a human.",
+      "issue": {
+        "template": "issue-templates/ops-outage.md",
+        "close": false,
+        "queue_status": "needs-human"
+      }
+    },
+    {
+      "id": "unauthorized",
+      "match": {
+        "status": 401
+      },
+      "category": "auth",
+      "retry": {
+        "max_attempts": 0
+      },
+      "issue": {
+        "template": "issue-templates/ops-outage.md",
+        "close": false,
+        "queue_status": "needs-human"
+      }
+    },
+    {
+      "id": "payment-required",
+      "match": {
+        "status": 402
+      },
+      "category": "quota",
+      "retry": {
+        "max_attempts": 0
+      },
+      "note": "Provider balance exhausted; issue stays open so the audit can be re-run after top-up. Keeps the Ko-fi message.",
+      "issue": {
+        "template": "token-exhausted.md",
+        "close": false,
+        "queue_status": "open"
+      }
+    },
+    {
+      "id": "forbidden",
+      "match": {
+        "status": 403
+      },
+      "category": "quota",
+      "retry": {
+        "max_attempts": 0
+      },
+      "issue": {
+        "template": "issue-templates/ops-outage.md",
+        "close": false,
+        "queue_status": "needs-human"
+      }
+    },
+    {
+      "id": "rate-limited",
+      "match": {
+        "status": 429
+      },
+      "category": "rate_limit",
+      "retry": {
+        "max_attempts": 8,
+        "backoff": "exponential",
+        "base_seconds": 20,
+        "cap_seconds": 60
+      },
+      "note": "b.ai free tier measured ~10 req/min per account/IP, empty body, no Retry-After header.",
+      "issue": {
+        "template": "issue-templates/ops-outage.md",
+        "close": false,
+        "queue_status": "needs-human"
+      }
+    },
+    {
+      "id": "gateway-timeout",
+      "match": {
+        "status": [
+          520,
+          522,
+          524
+        ]
+      },
+      "category": "gateway_timeout",
+      "retry": {
+        "max_attempts": 3,
+        "backoff": "exponential",
+        "base_seconds": 30
+      },
+      "note": "The dominant real failure on the free tier: Cloudflare kills slow prefill at ~100s and origins time out. compaction.trigger_tokens keeps single requests away from the kill line.",
+      "issue": {
+        "template": "issue-templates/ops-outage.md",
+        "close": false,
+        "queue_status": "needs-human"
+      }
+    },
+    {
+      "id": "connection-reset",
+      "match": {
+        "message_regex": "Remote end closed|connection reset|ECONNRESET|socket hang up"
+      },
+      "category": "gateway_timeout",
+      "retry": {
+        "max_attempts": 3,
+        "backoff": "exponential",
+        "base_seconds": 30
+      },
+      "note": "Status-less kill: the gateway closes the connection mid-prefill (measured on the free tier at 96K tokens / 76s). No HTTP status to match on.",
+      "issue": {
+        "template": "issue-templates/ops-outage.md",
+        "close": false,
+        "queue_status": "needs-human"
+      }
+    },
+    {
+      "id": "server-error",
+      "match": {
+        "status": [
+          500,
+          502,
+          503,
+          504
+        ]
+      },
+      "category": "server",
+      "retry": {
+        "max_attempts": 3,
+        "backoff": "exponential",
+        "base_seconds": 10
+      },
+      "issue": {
+        "template": "issue-templates/ops-outage.md",
+        "close": false,
+        "queue_status": "needs-human"
+      }
+    }
+  ]
+}

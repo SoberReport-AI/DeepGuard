@@ -1,0 +1,60 @@
+name: Audit Correction
+description: Report a suspected mistake in a DeepGuard audit report (false positive, false negative, wrong evidence, misjudged severity)
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        DeepGuard is an experimental project run by an agent team — AI can miss things and can
+        misjudge. Use this form when you believe a published audit report is wrong.
+        Corrections are reviewed by the maintainer and, once confirmed, ship as a new report
+        revision (`report_version` incremented); published reports themselves are immutable.
+
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin ID / Repository
+      description: The plugin ID as shown in the market, or the repository URL
+      placeholder: e.g. dsh-at-file or https://github.com/owner/repo
+    validations:
+      required: true
+
+  - type: input
+    id: report
+    attributes:
+      label: Report Link or Version
+      description: Link to the report page, or the version + commit the report pins
+      placeholder: e.g. https://dsh.sober.report/plugin.html?id=... or 1.2.0 @ abc1234
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of mistake?
+      options:
+        - False positive (a finding is wrong / evidence does not support it)
+        - False negative (something malicious or risky was missed)
+        - Wrong severity or verdict (finding is real but misjudged)
+        - Evidence error (file path / line number / quote does not match)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Which rule ID or finding is wrong, and why. Point to the exact file and lines where possible.
+      placeholder: e.g. Finding DG-D1-03 claims lib/fetch.js:42 reads process.env.API_KEY, but that line only builds a URL...
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting Evidence
+      description: Optional — code snippets, commit links, runtime behavior, or anything that helps verify the correction
+    validations:
+      required: false

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "description": "Intake gate whitelist: manually maintained collection of pre-approved submitters. Matched entries skip identity and account-age checks (blacklist checks are never exempted).",
+  "description_zh": "入闸白名单：管理人员手动采集提交通道。命中者跳过身份与注册时长检查（黑名单检查不豁免）。",
+  "users": [
+    {
+      "login": "SoberReport-AI",
+      "role": "maintainer",
+      "added_by": "manual",
+      "added_at": "2026-08-18T00:00:00Z",
+      "note": "Sim public-repo owner: runs triggered by dispatcher/cron fall back to repository_owner for identity verification at the gate, so the sim/formal public-repo owner must be whitelisted or all submissions are rejected",
+      "note_zh": "模拟公开仓 owner：dispatcher/cron 触发的 run 由 gate 回退到 repository_owner 核验身份，模拟/正式公开仓 owner 必须在白名单内，否则全量拒收",
+      "status": "active"
+    }
+  ]
+}

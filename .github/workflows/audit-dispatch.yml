@@ -1,0 +1,104 @@
+# Chained backfill dispatcher for the audit queue (part of the fully automated observation experiment)
+# Background: GitHub concurrency groups replace an old pending run with a new one, so they cannot
+# serve as a queue — of 20 batch-triggered runs only 2 survived.
+# Hence chaining: each time an agent-audit run completes (success/failure), this dispatcher backfills the next pending item.
+# Dispatch order: ① the batch-top20.json manifest order ② remaining pending items (enqueued by watch-updates version tracking) in ascending enqueue time.
+# attempts are recorded in the queue file (legacy fallback: manifest.attempts); still pending after ≥2 attempts → flagged for extended review; watch re-enqueue resets the counter.
+# To stop a batch: cancel the running agent-audit run (conclusion=cancelled does not trigger backfill), or empty the ids in batch-top20.json.
+name: audit-dispatch
+
+# Trigger paths:
+#  - workflow_run: backfill immediately after a manually triggered (user token) agent-audit run completes (fast path)
+#  - schedule: fallback self-heal every 10 min (required! completion events of runs dispatched with GITHUB_TOKEN are suppressed by GitHub, breaking the chain)
+#  - workflow_dispatch: manual backfill / chain restart
+on:
+  workflow_run:
+    workflows: ["agent-audit"]
+    types: [completed]
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write # write back the attempts counter
+  actions: write # dispatch the next agent-audit
+
+concurrency:
+  group: audit-dispatch
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    # For workflow_run events, backfill only on success/failure (cancelled = the way a human stops a batch); cron/manual triggers always check
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Backfill next pending item and dispatch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          # Re-entry guard: exit if any agent-audit run is still running/queued (this dispatcher triggers again when it completes)
+          ACTIVE=$(gh run list --workflow=agent-audit.yml --status in_progress --json databaseId --jq length)
+          QUEUED=$(gh run list --workflow=agent-audit.yml --status queued --json databaseId --jq length)
+          if [ "$ACTIVE" != "0" ] || [ "$QUEUED" != "0" ]; then
+            echo "agent-audit still has active runs ($ACTIVE running / $QUEUED queued); not dispatching"
+            exit 0
+          fi
+
+          git config user.name "SoberReport-AI"
+          git config user.email "59252154+SoberReport-AI@users.noreply.github.com"
+          NEXT=""
+          # SEC-003: the attempts increment MUST land on main before dispatching — otherwise a
+          # persistently failing push still dispatches and the "≥2 attempts → extended review"
+          # escalation is silently diluted (NEXT is assigned before the loop).
+          PUSHED=0
+          for i in 1 2 3; do
+            git fetch origin
+            git reset --hard origin/main
+            if NEXT=$(node -e "
+              const fs = require('fs');
+              // Treat a missing/corrupt manifest as an empty list — batch-top20.json may be removed after the batch experiment ends, and the watch flow must keep going
+              let m = { ids: [], attempts: {} };
+              try { m = JSON.parse(fs.readFileSync('_import/batch-top20.json', 'utf8')); } catch { /* empty-manifest fallback */ }
+              m.ids = Array.isArray(m.ids) ? m.ids : [];
+              m.attempts = m.attempts || {};
+              const readQ = (id) => { try { return JSON.parse(fs.readFileSync('_import/audit-queue/' + id + '.json', 'utf8')); } catch { return null; } };
+              const pick = (id, q) => {
+                const n = q.attempts ?? m.attempts[id] ?? 0; // fall back to the manifest count when an old queue file has no attempts field
+                if (n >= 2) { console.error('skipping ' + id + ': still pending after 2 attempts, flagged for extended review'); return false; }
+                q.attempts = n + 1;
+                fs.writeFileSync('_import/audit-queue/' + id + '.json', JSON.stringify(q, null, 2) + '\n');
+                console.log(id);
+                return true;
+              };
+              // ① manifest order first (preserves batch-experiment semantics)
+              for (const id of m.ids) {
+                const q = readQ(id);
+                if (q && q.status === 'pending' && pick(id, q)) process.exit(0);
+              }
+              // ② remaining pending items (enqueued by watch-updates version tracking, etc.) in ascending last-enqueued time
+              const extra = [];
+              for (const f of fs.readdirSync('_import/audit-queue')) {
+                if (!f.endsWith('.json')) continue;
+                const id = f.slice(0, -5);
+                if (m.ids.includes(id)) continue;
+                const q = readQ(id);
+                if (q && q.status === 'pending') extra.push({ id, q, at: (q.history || []).map((h) => h.at).sort().pop() || '' });
+              }
+              extra.sort((a, b) => a.at.localeCompare(b.at));
+              for (const { id, q } of extra) if (pick(id, q)) process.exit(0);
+              process.exit(1);
+            "); then :; else echo "no dispatchable items left in queue (all completed or flagged for extended review)"; exit 0; fi
+            git add _import/audit-queue
+            git add _import/batch-top20.json 2>/dev/null || true # manifest may have been removed
+            if git diff --cached --quiet; then echo "attempts unchanged (already persisted concurrently)"; PUSHED=1; break; fi
+            git commit -m "chore(dispatch): dispatch $NEXT [skip ci]" && git push && { PUSHED=1; break; }
+            sleep 5
+          done
+          [ -n "$NEXT" ] || { echo "::error::failed to determine the next dispatch item"; exit 1; }
+          [ "$PUSHED" = "1" ] || { echo "::error::attempts increment for $NEXT was NOT persisted to main after 3 attempts; refusing to dispatch (would dilute attempts-based escalation)"; exit 1; }
+          echo "backfill dispatch: $NEXT (trigger=${{ github.event_name }})"
+          gh workflow run agent-audit.yml -f queue_id="$NEXT"

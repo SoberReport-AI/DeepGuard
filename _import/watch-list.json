@@ -1,0 +1,8 @@
+{
+  "description": "Version tracking list and audit policy config. agent/scripts/watch-updates.mjs polls periodically: projects with releases are audited by release_mode (all=audit every historical and new release individually; new=only new releases from the current latest onward, do not backfill history, default; periodic=best-effort, audit only the latest release at detection time, skip intermediates). Projects without releases → diff audit on HEAD commit change (24h cooldown). Metadata is read from _import/audit-queue/<id>.json; only id and policy are listed here. Initially seeded with star top20.",
+  "description_zh": "版本追踪清单与审计策略配置。agent/scripts/watch-updates.mjs 定时检测：有 release 的项目按 release_mode 策略审计（all=全部历史+新增 release 逐个全量审计；new=仅当前最新起的新增 release 全量审计，历史不补，默认；periodic=尽力而为，只审检测时刻最新 release，中间跳过不补）；无 release 的项目 → HEAD commit 变化（24h 冷却）→ diff 审计。元数据从 _import/audit-queue/<id>.json 读取，此处只列 id 与策略。初始为 star top20。",
+  "created_at": "2026-08-16T00:00:00Z",
+  "default_release_mode": "new",
+  "release_mode": {},
+  "ids": []
+}

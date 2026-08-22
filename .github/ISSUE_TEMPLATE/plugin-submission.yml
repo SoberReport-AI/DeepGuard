@@ -1,0 +1,85 @@
+name: Plugin Audit Submission
+description: Submit a dsh plugin for DeepGuard security audit and market listing
+title: "[Audit] "
+labels: ["audit-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your submission! The plugin will go through the DeepGuard audit pipeline
+        (L0 metadata → L1 static scan → L2 behavioral analysis → L3 semantic review).
+        The audit verdict (including "no issues found") will be **publicly** disclosed in the
+        market listing and audit reports. Before submitting, please confirm:
+        - The repository is public, and you are the plugin author (repository owner)
+        - The plugin is installable through a standard package manager or the dsh plugin registry
+
+        **Who can submit** — only the plugin author. The intake gate verifies that the
+        submitter owns the plugin repository (a GitHub server-side fact; self-declaration
+        does not count), and your GitHub account must be registered for at least 10 days.
+        Submissions on behalf of others are not accepted — please ask the author to submit.
+
+  - type: input
+    id: name
+    attributes:
+      label: Plugin Name
+      description: Display name consistent with the repository README
+      placeholder: e.g. UI Status Label
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: Repository URL
+      description: GitHub repository root URL (no subpath; for monorepo sub-packages, note the subpath in "Additional Notes")
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Plugin Category
+      description: Choose "Uncertain" if unsure; the audit will determine the actual category from the code
+      options:
+        - UI Extension (ui)
+        - Tools (tools)
+        - Sandbox / Execution (sandbox)
+        - Bridge (bridge)
+        - Model Adapter (model)
+        - Workflow / Memory (memory)
+        - Uncertain
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: capabilities
+    attributes:
+      label: Declared Capabilities
+      description: Check the capabilities the plugin requires at runtime (the audit will verify consistency between declarations and actual behavior)
+      options:
+        - label: Network access (network)
+        - label: Command execution (shell)
+        - label: File system read/write (fs)
+        - label: Model interaction (register tools / system prompts)
+        - label: None of the above
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Optional — monorepo subpath, installation prerequisites, specific areas you want the audit to focus on, etc.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Submission Confirmations
+      options:
+        - label: I am the plugin author (I own the plugin repository)
+          required: true
+        - label: The repository is currently publicly accessible, and I understand the audit will lock a specific commit snapshot
+          required: true
+        - label: I agree that the audit report (regardless of verdict) will be publicly disclosed in the DeepGuard market
+          required: true

@@ -1,0 +1,88 @@
+# Version watch detection — public-repo deployment form (export template, scripts/export-public/templates/workflows/)
+# The only difference from the main-repo form: watch-updates.mjs is closed-source core, delivered
+# via a CORE_PAT sparse clone (pinned to CORE_REF), and .core is physically deleted after use.
+# Requires: secrets.CORE_PAT + vars.CORE_REPO + vars.CORE_REF (same as agent-audit.yml).
+#
+# When a watch-list project has updates, a corresponding audit-queue pending entry is created/refreshed.
+# Dual track: with releases → audit every formal release (newest unaudited first, historical backlog
+#   caught up round by round); without releases → HEAD change (24h cooldown) → diff audit.
+# Once enqueued, entries are picked up naturally by the audit-dispatch cron backstop (chained
+#   scheduling, no direct dispatch needed here).
+name: watch-updates
+
+on:
+  schedule:
+    - cron: "23 */3 * * *" # every 3h (sped up during catch-up: backlog enqueues 1 per plugin per round; steady-state idle cost is negligible), off-peak non-round minute
+  workflow_dispatch: {}
+
+permissions:
+  contents: write # write back queue files and push to main
+
+concurrency:
+  group: watch-updates
+  cancel-in-progress: false
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      # Config self-check: fail-fast on missing values, avoiding auth errors halfway through the run
+      - name: Config self-check (vars + CORE_PAT)
+        env:
+          CORE_REPO: ${{ vars.CORE_REPO }}
+          CORE_REF: ${{ vars.CORE_REF }}
+          CORE_PAT: ${{ secrets.CORE_PAT }}
+        run: |
+          MISSING=0
+          for v in CORE_REPO CORE_REF CORE_PAT; do
+            eval "val=\$$v"
+            if [ -z "$val" ]; then
+              echo "::error::missing config: $v (Settings → Secrets and variables → Actions)"
+              MISSING=1
+            fi
+          done
+          [ "$MISSING" = "0" ] || exit 1
+
+      # Closed-core delivery: only agent/scripts/watch-updates.mjs is needed (zero-dependency pure
+      # script), so sparse-checkout of agent/ suffices
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          repository: ${{ vars.CORE_REPO }}
+          token: ${{ secrets.CORE_PAT }}
+          ref: ${{ vars.CORE_REF }}
+          path: .core
+          sparse-checkout: |
+            agent/scripts/
+          persist-credentials: false
+
+      - name: Stage core (copy then delete the source directory, zero token residue)
+        run: |
+          mkdir -p agent
+          cp -a .core/agent/scripts agent/scripts
+          rm -rf .core
+
+      - name: Detect updates and write back the queue (race self-healing re-push)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git config user.name "deepguard-bot"
+          git config user.email "bot@deepguard.local"
+          DONE=0
+          for i in 1 2 3; do
+            git fetch origin
+            git reset --hard origin/main
+            node agent/scripts/watch-updates.mjs \
+              --watch-list _import/watch-list.json \
+              --queue-dir _import/audit-queue \
+              --reports-dir reports
+            git add _import/audit-queue
+            if git diff --cached --quiet; then echo "no updates"; DONE=1; break; fi
+            if git commit -m "chore(watch): version-watch enqueue [skip ci]" && git push; then DONE=1; break; fi
+            sleep 5
+          done
+          # Enqueue changes exist only locally on the runner; if all pushes fail the round was wasted —
+          # must fail explicitly rather than show a silent green check
+          [ "$DONE" = "1" ] || { echo "::error::all three re-push attempts failed; enqueue changes not persisted (next cron round will re-detect)"; exit 1; }

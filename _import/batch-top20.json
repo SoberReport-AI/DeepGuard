@@ -1,0 +1,6 @@
+{
+  "description": "dsh-* top5 batch audit manifest (star-descending, rebuilt from the latest catalog on 2026-08-17). audit-dispatch backfills the next pending item in this order after each agent-audit run; items still pending after >=2 attempts are flagged for extended review. Empty the ids list or cancel the running run to stop the batch.",
+  "created_at": "2026-08-17T09:10:09.944Z",
+  "ids": [],
+  "attempts": {}
+}

@@ -1,0 +1,170 @@
+# Automatic pre-screening + enqueue + audit trigger for plugin submission issues (public repo)
+#
+# Triggers: runs when an issue is opened, edited, or labeled with audit-submission.
+# Only issues carrying the audit-submission label are processed (the issue template applies it by
+# default) — all other issues are ignored, so non-audit issues never trigger the pipeline.
+#
+# Flow: write issue body → prescreen deterministic pre-screening (dedup/reachability/pin commit) →
+#   enqueue if qualified → push straight to main (queue file) → dispatch agent-audit (with
+#   issue_number; issue-feedback comments back when the audit completes).
+# Failed pre-screening → comment the reason in English; not enqueued.
+name: issue-intake
+
+on:
+  issues:
+    # labeled 必须保留：label-triggered run 的 issues 上下文才携带最新标签，
+    # github.event.label.name 读取与并发去重（同 issue 双事件）都依赖它。
+    # opened 已移除：Issue Form 创建即自动打 audit-submission 标签，
+    # opened 与 labeled 必然成对触发，去掉 opened 消除双跑，语义收拢为「带标签才入闸」。
+    types: [labeled, edited]
+
+permissions:
+  contents: write   # push the queue file straight to main
+  issues: write     # comment pre-screening results
+  actions: write    # dispatch agent-audit
+
+concurrency:
+  group: issue-intake-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  intake:
+    # Label gate: audit-submission is required; on labeled events it is the label just applied.
+    # Closed issues are never re-processed — editing a closed (settled) issue must not re-enter the pipeline.
+    if: contains(github.event.issue.labels.*.name, 'audit-submission') && github.event.issue.state == 'open'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '20'
+
+      - name: Write issue body to disk (FND-001 — body is untrusted free text; pass via file only, never interpolate into scripts)
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          printf '%s' "$ISSUE_BODY" > /tmp/issue-body.md
+          echo "issue #${ISSUE_NUMBER} body written to disk ($(wc -c < /tmp/issue-body.md) bytes)"
+
+      - name: Fetch latest main (avoid races with parallel intake/ledger)
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Pre-screen + enqueue
+        id: prescreen
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SUBMITTER: ${{ github.event.issue.user.login }}
+        run: |
+          set +e
+          # --submitter enables the submission-time eligibility gate (whitelist/identity/account-age/
+          # blacklist, same rules as intake-gate.mjs) so ineligible submitters are rejected here —
+          # before enqueue and dispatch — instead of after an "Accepted" comment.
+          node _import/prescreen-submission.js --issue-file /tmp/issue-body.md --submitter "$SUBMITTER" > /tmp/prescreen.log 2>&1
+          code=$?
+          cat /tmp/prescreen.log
+          # on success, the last line of the prescreen log contains the queue file path _import/audit-queue/<id>.json
+          QID=$(sed -n 's/.*audit-queue\/\([a-z0-9-]*\)\.json.*/\1/p' /tmp/prescreen.log | tail -1)
+          {
+            echo "code=$code"
+            echo "queue_id=$QID"
+          } >> "$GITHUB_OUTPUT"
+          # 0=passed and enqueued; non-zero=pre-screening rejected (error details in the log; next step comments them)
+          exit 0
+
+      - name: Pre-screen passed — push queue file to main + dispatch audit
+        if: steps.prescreen.outputs.code == '0' && steps.prescreen.outputs.queue_id != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          QUEUE_ID: ${{ steps.prescreen.outputs.queue_id }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "SoberReport-AI"
+          git config user.email "59252154+SoberReport-AI@users.noreply.github.com"
+          # Record the source issue number so agent-audit's issue-feedback and the final gate's issue-close can locate it for commenting
+          node -e "
+            const fs = require('fs');
+            const p = '_import/audit-queue/${QUEUE_ID}.json';
+            const q = JSON.parse(fs.readFileSync(p, 'utf8'));
+            q.issue = Number('${ISSUE_NUMBER}');
+            q.source = 'issue';
+            fs.writeFileSync(p, JSON.stringify(q, null, 2) + '\n');
+          "
+          # Critical: back up outside the worktree first — the reset --hard in the loop restores tracked
+          # files; for plugins already in the queue (resubmission/re-dispatch) it would silently wipe the
+          # new prescreen entry (this once caused lost issue fields + stale needs-human history)
+          cp "_import/audit-queue/${QUEUE_ID}.json" "$RUNNER_TEMP/queue-entry.json"
+          # SEC-003: the queue file MUST land on main before dispatching — otherwise the gate reads a
+          # missing (new plugin) or stale (resubmission, e.g. lost issue field) entry. Fail loudly.
+          PUSHED=0
+          for i in 1 2 3; do
+            git fetch origin
+            git reset --hard origin/main
+            cp "$RUNNER_TEMP/queue-entry.json" "_import/audit-queue/${QUEUE_ID}.json"
+            git add "_import/audit-queue/${QUEUE_ID}.json"
+            if git diff --cached --quiet; then echo "queue file unchanged (already committed concurrently)"; PUSHED=1; break; fi
+            git commit -m "chore(queue): enqueue ${QUEUE_ID} from issue #${ISSUE_NUMBER} [skip ci]" && git push && { PUSHED=1; break; }
+            sleep 5
+          done
+          [ "$PUSHED" = "1" ] || { echo "::error::queue file for ${QUEUE_ID} was NOT persisted to main after 3 attempts; refusing to dispatch (gate would read a missing/stale queue entry)"; exit 1; }
+          gh workflow run agent-audit.yml -f queue_id="$QUEUE_ID" -f issue_number="$ISSUE_NUMBER"
+          echo "dispatched agent-audit: queue_id=$QUEUE_ID, issue=#$ISSUE_NUMBER"
+
+      - name: Pre-screen passed — comment confirmation
+        if: steps.prescreen.outputs.code == '0' && steps.prescreen.outputs.queue_id != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+          QUEUE_ID: ${{ steps.prescreen.outputs.queue_id }}
+        run: |
+          {
+            echo "## ✅ DeepGuard Submission Accepted"
+            echo ""
+            echo "Your plugin submission has passed the deterministic pre-screening and has been enqueued for audit."
+            echo ""
+            echo "- **Queue ID**: \`${QUEUE_ID}\`"
+            echo "- **Next step**: the automated audit pipeline (Sonar static audit → Aegis review → Beacon arbitration on dispute) will start shortly."
+            echo ""
+            echo "The audit verdict will be posted back to this issue once the pipeline completes."
+            echo ""
+            echo "---"
+            echo "_This is an automated message from the DeepGuard intake pipeline._"
+          } > /tmp/accept.md
+          gh issue comment "$ISSUE_NUMBER" --repo "$REPO" --body-file /tmp/accept.md
+
+      - name: Pre-screen rejected — comment explanation
+        if: steps.prescreen.outputs.code != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          # Extract the prescreen failure line (prefixed with ✗) as the reason
+          REASON=$(grep -m1 '^✗' /tmp/prescreen.log | sed 's/^✗[[:space:]]*//' || true)
+          [ -n "$REASON" ] || REASON="Pre-screening failed. Please check the submission format and repository accessibility."
+          # T-11: the reason echoes submitter-influenced text (e.g. an invalid monorepo subpath) —
+          # break the markdown link syntax `](` so the bot comment never renders a clickable link
+          REASON=$(printf '%s' "$REASON" | sed 's/](/]\\(/g')
+          {
+            echo "## ❌ DeepGuard Submission Not Accepted"
+            echo ""
+            echo "Your submission did not pass the deterministic pre-screening:"
+            echo ""
+            echo "> ${REASON}"
+            echo ""
+            echo "Common causes:"
+            echo "- You are not the plugin author — only the repository owner may submit their own plugin (staff whitelist excepted)."
+            echo "- The repository is not publicly accessible, or the URL is not a valid GitHub repository root."
+            echo "- The same repository is already in the audit queue or has been audited."
+            echo "- Required fields in the submission form are missing."
+            echo ""
+            echo "Please fix the issue and re-submit (edit this issue body or open a new one with the \`audit-submission\` label)."
+            echo ""
+            echo "---"
+            echo "_This is an automated message from the DeepGuard intake pipeline._"
+          } > /tmp/reject.md
+          gh issue comment "$ISSUE_NUMBER" --repo "$REPO" --body-file /tmp/reject.md

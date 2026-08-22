@@ -1,0 +1,41 @@
+{
+  "_readme": "DeepGuard audit pipeline LLM configuration — the exact configuration every public audit run uses: the agent-audit workflow copies this file over the cloned core's agent/agents.config.json in every job, so the configuration the community sees here is the configuration that actually runs. Only the b.ai endpoint is declared: all audit roles (sonar / aegis / beacon / harbor / translate) run on b.ai's deepseek-v4-flash. The API key itself lives in GitHub Secrets (BAI_LLM_KEY) and is never part of this file.",
+  "default_endpoint": "bai",
+  "endpoints": {
+    "bai": { "provider": "deepseek", "base_url": "https://api.b.ai/v1", "api_key_env": "BAI_LLM_KEY", "context_window": 900000, "hard_window": true, "max_output_tokens": 393216,
+             "notes": "Input limit measured 943K-971K tokens (2026-08-21 probe); 900K is the conservative working window. 400 'Input token exceed the limit' is a deterministic pre-dispatch rejection (fail-fast, no retry)." }
+  },
+  "roles": {
+    "sonar":     { "endpoint": "bai", "model": "deepseek-v4-flash", "effort": "high", "prompt_file": "agent/prompts/sonar.md" },
+    "aegis":     { "endpoint": "bai", "model": "deepseek-v4-flash", "effort": "high", "prompt_file": "agent/prompts/aegis.md" },
+    "beacon":    { "endpoint": "bai", "model": "deepseek-v4-flash", "effort": "high", "prompt_file": "agent/prompts/beacon.md" },
+    "harbor":    { "endpoint": "bai", "model": "deepseek-v4-flash", "effort": "high", "prompt_file": "agent/prompts/harbor.md" },
+    "translate": { "endpoint": "bai", "model": "deepseek-v4-flash", "effort": "low",  "prompt_file": "agent/prompts/translate.md" }
+  },
+  "paths": {
+    "schema_file": "reports/_schema/deepguard-report.schema.json",
+    "skill_dir": "skills/deepguard-audit"
+  },
+  "budgets": {
+    "max_turns": 80,
+    "max_tool_calls": 200,
+    "max_file_bytes": 262144,
+    "max_total_read_bytes": 16777216,
+    "max_minutes": 25,
+    "max_submit_attempts": 3
+  },
+  "compaction": {
+    "enabled": true,
+    "reserve_tokens": 16384,
+    "keep_recent_tokens": 20000,
+    "trigger_tokens": 450000
+  },
+  "preflight": {
+    "enabled": true,
+    "max_scope_weighted_tokens": 8000000,
+    "max_file_weighted_tokens": 100000,
+    "action": "reject",
+    "exclude_patterns": ["*.lock", "package-lock.json", "dist/**", "*.min.js", "*.map"]
+  },
+  "error_policy_file": "agent/config/llm-error-policy.json"
+}

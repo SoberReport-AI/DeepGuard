@@ -1,0 +1,1154 @@
+# DeepGuard audit pipeline — public-repo deployment form (export template, scripts/export-public/templates/workflows/)
+# The same-named file in the main repo is the current artifact form (main-repo batch audits still
+# run on it); after the P3 cutover this form becomes the only form.
+#
+# Differences from the main-repo form:
+#   1. Closed-core delivery: the agent-code / audit-context artifacts are abolished (public-repo
+#      artifacts are downloadable by anyone = the largest leak surface). Every job that needs core
+#      uses CORE_PAT (fine-grained, Contents:Read only) to sparse-clone the main repo (CORE_REPO),
+#      fetching only agent/ + skills/ + reports/_schema/, pinned to vars.CORE_REF; after staging,
+#      .core is physically deleted with zero token residue.
+#   2. The L4 dynamic sandbox is not delivered with the public-repo form (sandbox code is
+#      closed-source, conflicting with the l4 job zero-credential principle — see transition-plan §6
+#      open items); this form removes the l4-sandbox job and all l4 artifact injection steps. When
+#      re-enabling, restore from the main-repo form and solve the delivery channel first.
+#   3. publish does not run build-index (the public repo has no web/); the index is rebuilt in the
+#      private repo after the gatekeeper merge.
+#   4. New sync job: after publish lands on main, uses SYNC_PAT to open a report-sync PR against
+#      the private repo (one-way mirror, no cycle).
+#
+# Role naming: Sonar (static audit) → Aegis (independent review) → Beacon (dual-review dispute
+# arbiter, starts only when Aegis does not approve). Translate (report zh→en field fill, v3 bilingual
+# contract) runs AFTER the review chain settles (Aegis approve, or Beacon uphold_sonar on dispute):
+# disputed/overturned reports are never translated.
+# Seven jobs with physically isolated credentials: gate (read-only + CORE_PAT) → sonar (CORE_PAT +
+# LLM key, injected in separate steps, never coexisting) → aegis (same) → beacon (same, separate
+# LLM key) → translate (same, separate LLM key) → publish (write access, opens PR) → sync (SYNC_PAT only) → ledger (write access,
+# records the ledger).
+#
+# Required configuration (gate config self-check fail-fasts if missing):
+#   secrets: CORE_PAT / SYNC_PAT / BAI_LLM_KEY (only the active endpoint's key is injected — least exposure)
+#   vars:    CORE_REPO (closed-source main repo, e.g. SoberReport-AI/DeepGuardWeb),
+#            CORE_REF (pinned ref; use a commit SHA in production),
+#            SYNC_TARGET_REPO (report-mirror target private repo, usually same as CORE_REPO)
+name: agent-audit
+
+# 运行名直接关联被审插件（全部触发路径均为 workflow_dispatch，queue_id 必有值）：
+#   issue 触发 → "[Audit] dsh-xxx · issue #34"；批量/手动 → "[Audit] dsh-xxx"
+run-name: "[Audit] ${{ inputs.queue_id }}${{ inputs.issue_number != '' && format(' · issue #{0}', inputs.issue_number) || '' }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      queue_id:
+        description: "plugin id in audit-queue (e.g. dsh-composer-expand)"
+        required: true
+      issue_number:
+        description: "source issue number (optional; empty = maintainer manual trigger, submitter = triggering actor)"
+        required: false
+
+env:
+  WORK_DIR: agent/work
+
+# Batch triggers run serially (publish/ledger write main directly; avoids concurrent collision amplification)
+concurrency:
+  group: agent-audit
+  cancel-in-progress: false
+
+jobs:
+  # ---------- Intake gate + snapshot preparation (pure scripts; checkout public repo + clone core) ----------
+  gate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: read
+    outputs:
+      # decision/reasons come from the `decision` step: intake-gate result, overridden by the
+      # preflight scope gate when it trips (preflight reject = final reject, zero LLM consumed)
+      decision: ${{ steps.decision.outputs.value }}
+      reasons: ${{ steps.decision.outputs.reasons }}
+      submitter: ${{ steps.gate.outputs.submitter }}
+      plugin_id: ${{ steps.meta.outputs.plugin_id }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+
+      # Config self-check: missing vars/secrets fail-fast here, avoiding auth errors halfway through the run
+      - name: Config self-check (vars + CORE_PAT)
+        env:
+          CORE_REPO: ${{ vars.CORE_REPO }}
+          CORE_REF: ${{ vars.CORE_REF }}
+          SYNC_TARGET_REPO: ${{ vars.SYNC_TARGET_REPO }}
+          CORE_PAT: ${{ secrets.CORE_PAT }}
+        run: |
+          MISSING=0
+          for v in CORE_REPO CORE_REF SYNC_TARGET_REPO CORE_PAT; do
+            eval "val=\$$v"
+            if [ -z "$val" ]; then
+              echo "::error::missing config: $v (Settings → Secrets and variables → Actions; see workflow header comments)"
+              MISSING=1
+            fi
+          done
+          [ "$MISSING" = "0" ] || exit 1
+
+      # Closed-core delivery: sparse-fetch only agent/ + skills/ + reports/_schema/, pinned to
+      # CORE_REF; persist-credentials:false + physical deletion of .core after use leaves no token
+      # trace. Core content must never be echo'd/cat'd into logs.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          repository: ${{ vars.CORE_REPO }}
+          token: ${{ secrets.CORE_PAT }}
+          ref: ${{ vars.CORE_REF }}
+          path: .core
+          sparse-checkout: |
+            agent/
+            skills/
+            reports/_schema/
+          persist-credentials: false
+
+      - name: Stage core (copy then delete the source directory, zero token/metadata residue)
+        run: |
+          # Note: an artifact may have already created agent/ (the work directory); copying the
+          # directory directly would nest into agent/agent — use /. content-level copy
+          mkdir -p agent
+          cp -a .core/agent/. agent/
+          mkdir -p skills
+          cp -a .core/skills/. skills/
+          mkdir -p reports
+          cp -a .core/reports/_schema reports/_schema
+          # Transparency override: the public repo's own agents.config.json (b.ai only, repo root)
+          # replaces the cloned core copy — the configuration the community sees is what runs.
+          cp agents.config.json agent/agents.config.json
+          rm -rf .core
+
+      # Input format validation (FND-003): queue_id is interpolated into shell/GITHUB_OUTPUT in many
+      # places downstream; whitelist-constrain it at the entry point. Once validated, every
+      # ${{ inputs.queue_id }} interpolation in this workflow is a safe character set
+      - name: Validate input format
+        env:
+          QUEUE_ID: ${{ inputs.queue_id }}
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
+        run: |
+          case "$QUEUE_ID" in
+            ""|*[!a-z0-9-]*|-*) echo "invalid queue_id: [$QUEUE_ID] (lowercase letters/digits/hyphens only, must not start with a hyphen)" >&2; exit 1;;
+          esac
+          # issue_number is interpolated into the gate step's run block below; empty (dispatcher
+          # channel) or digits only — anything else is rejected here before it reaches a shell
+          case "$ISSUE_NUMBER" in
+            "") ;;
+            *[!0-9]*) echo "invalid issue_number: [$ISSUE_NUMBER] (digits only, or empty)" >&2; exit 1;;
+          esac
+
+      - name: intake-gate
+        id: gate
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          if [ -n "${{ inputs.issue_number }}" ]; then
+            node agent/scripts/intake-gate.mjs \
+              --queue-file "_import/audit-queue/${{ inputs.queue_id }}.json" \
+              --whitelist _import/whitelist.json \
+              --blacklist reports/_blacklist.json \
+              --reports-dir reports \
+              --issue "${{ inputs.issue_number }}" --issue-repo "${{ github.repository }}" > /tmp/gate.json
+          else
+            # When the dispatcher/cron dispatches as github-actions[bot], the bot carries no
+            # submitter identity — fall back to the repo owner (automation in this repo = maintainer
+            # intent; the issue channel is unaffected and is still verified against the issue author)
+            SUBMITTER="${{ github.actor }}"
+            case "$SUBMITTER" in *"[bot]") SUBMITTER="${{ github.repository_owner }}";; esac
+            node agent/scripts/intake-gate.mjs \
+              --queue-file "_import/audit-queue/${{ inputs.queue_id }}.json" \
+              --whitelist _import/whitelist.json \
+              --blacklist reports/_blacklist.json \
+              --reports-dir reports \
+              --submitter "$SUBMITTER" > /tmp/gate.json
+          fi
+          code=$?
+          cat /tmp/gate.json
+          # FND-001 chain A: reasons contains free text the LLM can influence (blacklist reason) —
+          # always write outputs with a heredoc delimiter + strip newlines, and write decision last
+          # (for duplicate keys the later one wins; prevents override flips)
+          REASONS=$(node -p "((JSON.parse(require('fs').readFileSync('/tmp/gate.json','utf8')).reasons)||[]).join('；')" 2>/dev/null | tr -d '\r\n')
+          SUBMITTER=$(node -p "JSON.parse(require('fs').readFileSync('/tmp/gate.json','utf8')).submitter||''" 2>/dev/null | tr -d '\r\n')
+          {
+            echo "reasons<<DG_OUTPUT_EOF"
+            echo "$REASONS"
+            echo "DG_OUTPUT_EOF"
+            echo "submitter<<DG_OUTPUT_EOF"
+            echo "$SUBMITTER"
+            echo "DG_OUTPUT_EOF"
+            echo "decision=$([ $code -eq 0 ] && echo pass || echo reject)"
+          } >> "$GITHUB_OUTPUT"
+          [ $code -eq 0 ] || [ $code -eq 2 ] || exit $code
+
+      - name: prepare (pin commit + tarball + manifest + task.json)
+        if: steps.gate.outputs.decision == 'pass'
+        run: node agent/scripts/prepare.mjs --queue-file "_import/audit-queue/${{ inputs.queue_id }}.json" --work-root "$WORK_DIR" --reports-dir reports
+
+      # Static scope check after prepare (trimmed tree exists), before any LLM role: the scope-total
+      # gate is the only failure runtime cannot recover from at ~10 req/min; oversized files ride
+      # along as notices (copied into the read-only context dir → inlined into the audit task card).
+      - name: preflight-context (static scope gate, zero LLM)
+        if: steps.gate.outputs.decision == 'pass'
+        id: preflight
+        run: |
+          set +e
+          node agent/scripts/preflight-context.mjs --tree "$WORK_DIR/tree" --config agent/agents.config.json --out "$WORK_DIR/preflight-result.json"
+          code=$?
+          cat "$WORK_DIR/preflight-result.json"
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          mkdir -p "$WORK_DIR/context"
+          cp "$WORK_DIR/preflight-result.json" "$WORK_DIR/context/preflight.json"
+          [ $code -eq 0 ] || [ $code -eq 2 ] || exit $code
+
+      # On preflight reject: persist the rejection into the queue file (mirrors intake-gate's reject
+      # write), synthesize an llm-error.json sentinel (rule context-overflow) so issue-feedback and
+      # the ledger walk the exact same template/close/queue-status path as a runtime 400 — then ship
+      # both as an artifact (this job is contents:read and cannot push; the ledger commits for it).
+      - name: Handle preflight reject
+        if: steps.gate.outputs.decision == 'pass' && steps.preflight.outputs.code == '2'
+        env:
+          QUEUE_ID: ${{ inputs.queue_id }}
+        run: |
+          node -e "
+            const fs = require('fs');
+            const q = JSON.parse(fs.readFileSync('_import/audit-queue/$QUEUE_ID.json', 'utf8'));
+            const r = JSON.parse(fs.readFileSync('$WORK_DIR/preflight-result.json', 'utf8'));
+            q.status = 'rejected';
+            q.gate = { ...(q.gate || {}), decision: 'reject', reasons: r.reasons };
+            (q.history = q.history || []).push({ at: new Date().toISOString(), action: 'gate-reject', reason: r.reasons.join('; ') });
+            fs.writeFileSync('_import/audit-queue/$QUEUE_ID.json', JSON.stringify(q, null, 2) + '\n');
+            fs.mkdirSync('gate-reject', { recursive: true });
+            fs.copyFileSync('_import/audit-queue/$QUEUE_ID.json', 'gate-reject/queue.json');
+            fs.copyFileSync('$WORK_DIR/preflight-result.json', 'gate-reject/preflight-result.json');
+            fs.writeFileSync('gate-reject/llm-error.json', JSON.stringify({
+              rule_id: 'context-overflow', category: 'context_overflow', status: 400,
+              mode: 'preflight', error: r.reasons.join('; '), at: new Date().toISOString(),
+            }, null, 2) + '\n');
+          "
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: steps.gate.outputs.decision == 'pass' && steps.preflight.outputs.code == '2'
+        with:
+          name: gate-reject-${{ inputs.queue_id }}
+          path: gate-reject/
+          retention-days: 7
+
+      # On intake-gate reject: intake-gate.mjs already rewrote the queue file locally
+      # (status: rejected + gate block) but this job is contents:read and cannot push —
+      # ship it as the same gate-reject bundle the ledger reconciles from (mirrors the
+      # preflight-reject path; no synthetic llm-error sentinel — issue-feedback renders
+      # the intake rejection from queue.status + gate.reasons).
+      - name: Handle intake-gate reject
+        if: steps.gate.outputs.decision == 'reject'
+        env:
+          QUEUE_ID: ${{ inputs.queue_id }}
+        run: |
+          mkdir -p gate-reject
+          cp "_import/audit-queue/$QUEUE_ID.json" gate-reject/queue.json
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: steps.gate.outputs.decision == 'reject'
+        with:
+          name: gate-reject-${{ inputs.queue_id }}
+          path: gate-reject/
+          retention-days: 7
+
+      - name: Final gate decision (intake gate + preflight scope gate)
+        id: decision
+        env:
+          # FINAL-V003: step outputs are LLM-influenceable (blacklist reason flows into gate reasons);
+          # they must reach the shell via env only — never ${{ }} string interpolation into run blocks.
+          # (An injected command here once ran BEFORE the transparency config was published into the
+          # audit-work artifact, which would have let it rewrite agents.config.json for the LLM jobs.)
+          GATE_DECISION: ${{ steps.gate.outputs.decision }}
+          GATE_REASONS: ${{ steps.gate.outputs.reasons }}
+          PREFLIGHT_CODE: ${{ steps.preflight.outputs.code }}
+        run: |
+          DECISION="$GATE_DECISION"
+          REASONS="$GATE_REASONS"
+          if [ "$DECISION" = "pass" ] && [ "$PREFLIGHT_CODE" = "2" ]; then
+            DECISION="reject"
+            REASONS=$(node -p "(JSON.parse(require('fs').readFileSync('$WORK_DIR/preflight-result.json','utf8')).reasons||[]).join('；')" | tr -d '\r\n')
+          fi
+          {
+            echo "reasons<<DG_OUTPUT_EOF"
+            echo "$REASONS"
+            echo "DG_OUTPUT_EOF"
+            echo "value=$DECISION"
+          } >> "$GITHUB_OUTPUT"
+
+      # plugin_id feeds downstream artifact names and queue paths — needed even on reject, so this
+      # step runs unconditionally
+      - name: Record metadata
+        id: meta
+        run: echo "plugin_id=${{ inputs.queue_id }}" >> "$GITHUB_OUTPUT"
+
+      # Transparency config rides the work artifact: downstream LLM jobs run with contents:none
+      # (no repo read permission), so the public repo-root agents.config.json is delivered to
+      # them through the artifact they already download
+      - name: Publish transparency config into work artifact
+        if: steps.decision.outputs.value == 'pass'
+        run: cp agents.config.json "$WORK_DIR/agents.config.json"
+
+      # Work snapshot artifact: plugin code (public content) + task.json + context; not core, kept
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: steps.decision.outputs.value == 'pass'
+        with:
+          name: audit-work-${{ inputs.queue_id }}
+          path: agent/work/
+          retention-days: 7
+
+  # ---------- Sonar: static security audit (untrusted zone; core injected via CORE_PAT in separate steps, agent runtime has only the LLM key) ----------
+  sonar:
+    needs: gate
+    # A gate failure (e.g. prepare rejecting a symlink entry) must never pass — outputs.decision may
+    # have been written before the failure, so result must be checked separately.
+    if: always() && needs.gate.result == 'success' && needs.gate.outputs.decision == 'pass'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: none
+    outputs:
+      applicable: ${{ steps.produce.outputs.applicable }}
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: audit-work-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work
+
+      # core delivery: CORE_PAT appears only in this step chain; the agent run step's env has only
+      # the LLM key — the two never coexist
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          repository: ${{ vars.CORE_REPO }}
+          token: ${{ secrets.CORE_PAT }}
+          ref: ${{ vars.CORE_REF }}
+          path: .core
+          sparse-checkout: |
+            agent/
+            skills/
+            reports/_schema/
+          persist-credentials: false
+
+      - name: Stage core and install dependencies
+        run: |
+          # Note: an artifact may have already created agent/ (the work directory); copying the
+          # directory directly would nest into agent/agent — use /. content-level copy
+          mkdir -p agent
+          cp -a .core/agent/. agent/
+          mkdir -p skills
+          cp -a .core/skills/. skills/
+          mkdir -p reports
+          cp -a .core/reports/_schema reports/_schema
+          # Transparency override: the public repo's own agents.config.json (b.ai only, delivered
+          # via the gate's audit-work artifact — these jobs run with contents:none and cannot
+          # fetch the repo) replaces the cloned core copy — the config the community sees runs.
+          cp "$WORK_DIR/agents.config.json" agent/agents.config.json
+          rm -rf .core
+          cd agent && npm ci --no-audit --no-fund
+
+      - name: Fix task.json paths
+        run: |
+          node -e "const fs=require('fs'),path=require('path');const p='$WORK_DIR/task.json';const t=JSON.parse(fs.readFileSync(p));const base=path.resolve('$WORK_DIR');for(const k of ['workdir','context_dir','outbox'])t[k]=path.join(base,path.basename(t[k]));fs.writeFileSync(p,JSON.stringify(t,null,2));"
+
+      - name: Run Sonar (static audit)
+        id: audit
+        continue-on-error: true
+        env:
+          # least-exposure: inject only the key of the active endpoint (b.ai). Switching endpoints
+          # in agents.config.json requires updating this line too — a missing var fails fast by name.
+          BAI_LLM_KEY: ${{ secrets.BAI_LLM_KEY }}
+        run: ./agent/node_modules/.bin/tsx agent/src/cli.ts audit --task "$WORK_DIR/task.json" --config agent/agents.config.json
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: outbox-sonar-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox/
+          retention-days: 7
+
+      # The agent step has continue-on-error (to guarantee trace upload), so the output must be
+      # verified explicitly or failures go silent.
+      # Two legal end states: report.json (applicable, audited) / inapplicable.json (Sonar determined
+      # it is not a dsh plugin; review and report stages are skipped)
+      - name: Verify Sonar output
+        id: produce
+        run: |
+          if [ -f "$WORK_DIR/outbox/inapplicable.json" ]; then
+            echo "Sonar determined this is not a dsh plugin (inapplicable.json produced)"
+            echo "applicable=false" >> "$GITHUB_OUTPUT"
+          else
+            test -f "$WORK_DIR/outbox/report.json"
+            echo "applicable=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  # ---------- Aegis: independent review (untrusted zone; core delivery same as Sonar, LLM key only) ----------
+  aegis:
+    needs: [gate, sonar]
+    # The explicit always()+result check is mandatory: when if contains no status-check function,
+    # success() is implicitly ANDed, and success() propagates along the needs chain — a skipped
+    # upstream would silently poison the entire downstream chain (hit in E2E testing).
+    if: always() && needs.gate.result == 'success' && needs.sonar.result == 'success' && needs.sonar.outputs.applicable == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: none
+    outputs:
+      dispute: ${{ steps.dispute.outputs.dispute }}
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: audit-work-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: outbox-sonar-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox-sonar
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          repository: ${{ vars.CORE_REPO }}
+          token: ${{ secrets.CORE_PAT }}
+          ref: ${{ vars.CORE_REF }}
+          path: .core
+          sparse-checkout: |
+            agent/
+            skills/
+            reports/_schema/
+          persist-credentials: false
+
+      - name: Stage core and install dependencies
+        run: |
+          # Note: an artifact may have already created agent/ (the work directory); copying the
+          # directory directly would nest into agent/agent — use /. content-level copy
+          mkdir -p agent
+          cp -a .core/agent/. agent/
+          mkdir -p skills
+          cp -a .core/skills/. skills/
+          mkdir -p reports
+          cp -a .core/reports/_schema reports/_schema
+          # Transparency override: the public repo's own agents.config.json (b.ai only, delivered
+          # via the gate's audit-work artifact — these jobs run with contents:none and cannot
+          # fetch the repo) replaces the cloned core copy — the config the community sees runs.
+          cp "$WORK_DIR/agents.config.json" agent/agents.config.json
+          rm -rf .core
+          cd agent && npm ci --no-audit --no-fund
+
+      - name: Fix task.json paths
+        run: |
+          node -e "const fs=require('fs'),path=require('path');const p='$WORK_DIR/task.json';const t=JSON.parse(fs.readFileSync(p));const base=path.resolve('$WORK_DIR');for(const k of ['workdir','context_dir','outbox'])t[k]=path.join(base,path.basename(t[k]));fs.writeFileSync(p,JSON.stringify(t,null,2));"
+
+      - name: Run Aegis (review)
+        id: review
+        continue-on-error: true
+        env:
+          # least-exposure: inject only the key of the active endpoint (b.ai). Switching endpoints
+          # in agents.config.json requires updating this line too — a missing var fails fast by name.
+          BAI_LLM_KEY: ${{ secrets.BAI_LLM_KEY }}
+        run: ./agent/node_modules/.bin/tsx agent/src/cli.ts review --task "$WORK_DIR/task.json" --config agent/agents.config.json --a-outbox agent/work/outbox-sonar
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: outbox-aegis-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox/
+          retention-days: 7
+
+      - name: Verify Aegis output
+        run: test -f "$WORK_DIR/outbox/review.json"
+
+      # Dual-review dispute determination: Aegis not approving (reject/needs_human) = dispute, triggering Beacon arbitration
+      - name: Determine dual-review dispute
+        id: dispute
+        run: |
+          V=$(node -p "JSON.parse(require('fs').readFileSync('$WORK_DIR/outbox/review.json')).verdict")
+          echo "aegis verdict=$V"
+          echo "dispute=$([ "$V" = "approve" ] && echo false || echo true)" >> "$GITHUB_OUTPUT"
+
+  # ---------- Beacon: dual-review dispute arbiter (starts only when Aegis does not approve; untrusted zone, separate LLM key) ----------
+  # Anti-injection design: Beacon has no file tools; its input is a dispute package mechanically
+  # assembled by the harness (report + review + verbatim evidence line ranges) — the full plugin
+  # source physically cannot enter its context. Verdict is one of: uphold_sonar / uphold_aegis /
+  # escalate; it has no power to modify the report.
+  # Beacon key (endpoint-selected) unconfigured or Beacon crash → output verification fails → postcheck reconciliation fail-closed to human.
+  beacon:
+    needs: [gate, sonar, aegis]
+    if: always() && needs.sonar.outputs.applicable == 'true' && needs.aegis.result == 'success' && needs.aegis.outputs.dispute == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: none
+    outputs:
+      ruling: ${{ steps.ruling.outputs.ruling }}
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: audit-work-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: outbox-sonar-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox-sonar
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: outbox-aegis-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox-aegis
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          repository: ${{ vars.CORE_REPO }}
+          token: ${{ secrets.CORE_PAT }}
+          ref: ${{ vars.CORE_REF }}
+          path: .core
+          sparse-checkout: |
+            agent/
+          persist-credentials: false
+
+      - name: Stage core and install dependencies
+        run: |
+          # Note: an artifact may have already created agent/ (the work directory); copying the
+          # directory directly would nest into agent/agent — use /. content-level copy
+          mkdir -p agent
+          cp -a .core/agent/. agent/
+          # Transparency override: the public repo's own agents.config.json (b.ai only, delivered
+          # via the gate's audit-work artifact — these jobs run with contents:none and cannot
+          # fetch the repo) replaces the cloned core copy — the config the community sees runs.
+          cp "$WORK_DIR/agents.config.json" agent/agents.config.json
+          rm -rf .core
+          cd agent && npm ci --no-audit --no-fund
+
+      - name: Fix task.json paths
+        run: |
+          node -e "const fs=require('fs'),path=require('path');const p='$WORK_DIR/task.json';const t=JSON.parse(fs.readFileSync(p));const base=path.resolve('$WORK_DIR');for(const k of ['workdir','context_dir','outbox'])t[k]=path.join(base,path.basename(t[k]));fs.writeFileSync(p,JSON.stringify(t,null,2));"
+
+      - name: Run Beacon (dispute arbitration)
+        id: judge
+        continue-on-error: true
+        env:
+          # least-exposure: inject only the key of the active endpoint (b.ai). Switching endpoints
+          # in agents.config.json requires updating this line too — a missing var fails fast by name.
+          BAI_LLM_KEY: ${{ secrets.BAI_LLM_KEY }}
+        run: ./agent/node_modules/.bin/tsx agent/src/cli.ts judge --task "$WORK_DIR/task.json" --config agent/agents.config.json --a-outbox agent/work/outbox-sonar --b-outbox agent/work/outbox-aegis
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: outbox-beacon-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox/
+          retention-days: 7
+
+      - name: Verify Beacon output
+        run: test -f "$WORK_DIR/outbox/verdict.json"
+
+      # Expose the ruling as a job output — translate is gated on it (runs only for publishable
+      # outcomes: Aegis approve with no dispute, or Beacon uphold_sonar)
+      - name: Expose ruling
+        id: ruling
+        run: echo "ruling=$(node -p "JSON.parse(require('fs').readFileSync('$WORK_DIR/outbox/verdict.json')).ruling")" >> "$GITHUB_OUTPUT"
+
+  # ---------- Translate: report zh→en field fill (v3 bilingual contract; CORE_PAT + separate LLM key, injected in separate steps, never coexisting) ----------
+  # Runs AFTER the review chain settles, only for publishable outcomes: Aegis approve (no dispute) or
+  # Beacon uphold_sonar. A disputed report that Beacon overturns (uphold_aegis), escalates, or fails to
+  # rule on is never translated — no wasted work on an outcome that would invalidate the translation anyway.
+  # Output is never trusted: translate.ts self-verifies (only added en fields), postcheck gate 8 re-verifies
+  # deterministically against report-zh.json, and validate-report enforces bilingual completeness.
+  # A missing/failed translation does not block publish — postcheck fails closed to extended review.
+  translate:
+    needs: [gate, sonar, aegis, beacon]
+    if: always() && needs.gate.result == 'success' && needs.sonar.result == 'success' && needs.sonar.outputs.applicable == 'true' && needs.aegis.result == 'success' && (needs.aegis.outputs.dispute == 'false' || (needs.beacon.result == 'success' && needs.beacon.outputs.ruling == 'uphold_sonar'))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: none
+    steps:
+      # audit-work carries the transparency agents.config.json at its root (gate publishes it);
+      # downloaded before outbox-sonar so the sonar outbox lands on top of gate's empty one
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: audit-work-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work
+
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: outbox-sonar-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          repository: ${{ vars.CORE_REPO }}
+          token: ${{ secrets.CORE_PAT }}
+          ref: ${{ vars.CORE_REF }}
+          path: .core
+          sparse-checkout: |
+            agent/
+          persist-credentials: false
+
+      - name: Stage core and install dependencies
+        run: |
+          # Note: an artifact may have already created agent/ (the work directory); copying the
+          # directory directly would nest into agent/agent — use /. content-level copy
+          mkdir -p agent
+          cp -a .core/agent/. agent/
+          # Transparency override: the public repo's own agents.config.json (b.ai only, delivered
+          # via the gate's audit-work artifact — these jobs run with contents:none and cannot
+          # fetch the repo) replaces the cloned core copy — the config the community sees runs.
+          cp "$WORK_DIR/agents.config.json" agent/agents.config.json
+          rm -rf .core
+          cd agent && npm ci --no-audit --no-fund
+
+      - name: Run Translate (zh draft → bilingual)
+        id: translate
+        continue-on-error: true
+        env:
+          # least-exposure: inject only the key of the active endpoint (b.ai). Switching endpoints
+          # in agents.config.json requires updating this line too — a missing var fails fast by name.
+          BAI_LLM_KEY: ${{ secrets.BAI_LLM_KEY }}
+        run: ./agent/node_modules/.bin/tsx agent/src/cli.ts translate --report "$WORK_DIR/outbox/report.json" --out "$WORK_DIR/outbox/report-bilingual.json" --config agent/agents.config.json
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: outbox-translate-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox/
+          retention-days: 7
+
+      - name: Verify Translate output
+        run: test -f "$WORK_DIR/outbox/report-bilingual.json"
+
+  # ---------- Deterministic verification + hard gates + open PR (write access only in this job; public repo has no web/, build-index not run) ----------
+  publish:
+    needs: [gate, sonar, aegis, beacon, translate]
+    # The not-dsh-plugin path (applicable=false, aegis/beacon/translate skipped) must also enter publish: postcheck ⓪
+    # records the _not-dsh.json ledger.
+    # Beacon failure/absence does not block publish — postcheck verdict reconciliation is
+    # fail-closed: dispute without a verdict document = needs-human.
+    # Translate failure/absence does not block publish either — postcheck gate 8 fails closed on the missing zh draft.
+    # A gate failure does not enter publish (same as sonar: the decision output is untrustworthy, check result).
+    if: always() && needs.gate.result == 'success' && needs.gate.outputs.decision == 'pass' && (needs.aegis.result == 'success' || needs.sonar.outputs.applicable == 'false')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    outputs:
+      pr: ${{ steps.pr.outputs.pr }}
+      ver: ${{ steps.place.outputs.ver }}
+      commit: ${{ steps.place.outputs.commit }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: audit-work-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: outbox-sonar-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox
+      # On the not-dsh-plugin path aegis is skipped and there is no outbox-aegis artifact: a download
+      # failure does not block (the later cp is fault-tolerant)
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: outbox-aegis-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox-aegis
+      # With no dispute beacon is skipped: a download failure does not block (postcheck
+      # reconciliation: a verdict document existing without a dispute is the anomaly)
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: outbox-beacon-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox-beacon
+      # Translate is skipped on the not-dsh-plugin path and on non-publishable review outcomes: a download failure does not block (postcheck gate 8:
+      # a missing bilingual artifact fails closed to extended review)
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: outbox-translate-${{ needs.gate.outputs.plugin_id }}
+          path: agent/work/outbox-translate
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          repository: ${{ vars.CORE_REPO }}
+          token: ${{ secrets.CORE_PAT }}
+          ref: ${{ vars.CORE_REF }}
+          path: .core
+          sparse-checkout: |
+            agent/
+          persist-credentials: false
+
+      - name: Stage core (postcheck has zero dependencies; no npm ci needed)
+        run: |
+          # Note: an artifact may have already created agent/ (the work directory); copying the
+          # directory directly would nest into agent/agent — use /. content-level copy
+          mkdir -p agent
+          cp -a .core/agent/. agent/
+          # Transparency override: the public repo's own agents.config.json (b.ai only, repo root)
+          # replaces the cloned core copy — the configuration the community sees is what runs.
+          cp agents.config.json agent/agents.config.json
+          rm -rf .core
+
+      - name: Merge artifacts from all agents and fix task.json paths
+        run: |
+          cp agent/work/outbox-aegis/review.json agent/work/outbox/ 2>/dev/null || true
+          cp agent/work/outbox-beacon/verdict.json agent/work/outbox/ 2>/dev/null || true
+          # v3 bilingual merge: keep Sonar's zh draft as report-zh.json (postcheck gate 8 reference), overlay the translated bilingual report as report.json
+          if [ -f agent/work/outbox-translate/report-bilingual.json ] && [ -f agent/work/outbox/report.json ]; then
+            cp agent/work/outbox/report.json agent/work/outbox/report-zh.json
+            cp agent/work/outbox-translate/report-bilingual.json agent/work/outbox/report.json
+            echo "bilingual report merged (zh draft preserved as report-zh.json)"
+          else
+            echo "no bilingual artifact; postcheck gate 8 will fail closed to extended review"
+          fi
+          node -e "const fs=require('fs'),path=require('path');const p='$WORK_DIR/task.json';const t=JSON.parse(fs.readFileSync(p));const base=path.resolve('$WORK_DIR');for(const k of ['workdir','context_dir','outbox'])t[k]=path.join(base,path.basename(t[k]));fs.writeFileSync(p,JSON.stringify(t,null,2));"
+
+      - name: postcheck (deterministic verification + blacklist cascading)
+        id: post
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          node agent/scripts/postcheck.mjs --task "$WORK_DIR/task.json" \
+            --queue-file "_import/audit-queue/${{ needs.gate.outputs.plugin_id }}.json" \
+            --blacklist reports/_blacklist.json \
+            --not-dsh reports/_not-dsh.json
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Place report and pass hard gates
+        id: place
+        if: steps.post.outputs.code == '0'
+        run: |
+          ID="${{ needs.gate.outputs.plugin_id }}"
+          VER=$(node -p "JSON.parse(require('fs').readFileSync('$WORK_DIR/outbox/report.json')).plugin.version")
+          COMMIT=$(node -p "JSON.parse(require('fs').readFileSync('$WORK_DIR/outbox/report.json')).plugin.commit")
+          # Defense in depth: prepare/postcheck already guarantee the format; re-validate the
+          # character set as a backstop before on-disk path concatenation
+          case "$VER" in *[!a-zA-Z0-9.-]*|"") echo "invalid version: [$VER]" >&2; exit 1;; esac
+          case "$COMMIT" in *[!a-f0-9]*|"") echo "invalid commit: [$COMMIT]" >&2; exit 1;; esac
+          mkdir -p "reports/$ID/$VER"
+          cp "$WORK_DIR/outbox/report.json" "reports/$ID/$VER/$COMMIT.json"
+          # Platform-side fact injection: audit_mode/release_tag come from task.json (generated by
+          # prepare); the agent is never allowed to self-declare them — the audit mode is a
+          # scheduling-layer fact, and the agent has no right to claim its own audit caliber
+          node -e "
+            const fs = require('fs');
+            const t = JSON.parse(fs.readFileSync('$WORK_DIR/task.json', 'utf8'));
+            const p = 'reports/$ID/$VER/$COMMIT.json';
+            const r = JSON.parse(fs.readFileSync(p, 'utf8'));
+            delete r.metadata.audit_mode;
+            delete r.metadata.release_tag;
+            r.metadata.audit_mode = t.mode || 'full';
+            if (t.release_tag) r.metadata.release_tag = t.release_tag;
+            fs.writeFileSync(p, JSON.stringify(r, null, 2) + '\n');
+          "
+          node scripts/validate-report.js "reports/$ID/$VER/$COMMIT.json"
+          # ver/commit have passed the whitelist validation above (safe character set); consumed by the sync job
+          echo "ver=$VER" >> "$GITHUB_OUTPUT"
+          echo "commit=$COMMIT" >> "$GITHUB_OUTPUT"
+          echo "VER=$VER" >> "$GITHUB_ENV"
+          echo "COMMIT=$COMMIT" >> "$GITHUB_ENV"
+
+      - name: Open PR and auto-merge (audit trail)
+        if: steps.post.outputs.code == '0'
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ID="${{ needs.gate.outputs.plugin_id }}"
+          VERDICT=$(node -p "JSON.parse(require('fs').readFileSync('$WORK_DIR/outbox/report.json')).summary.overall_result")
+          COMMIT_SHORT=$(echo "$COMMIT" | cut -c1-8)
+          BRANCH="audit/$ID-$VER-$COMMIT_SHORT"
+          git config user.name "deepguard-audit-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          # Only plugin-private files come along; aggregate artifacts never enter the PR — the public
+          # repo has no aggregate artifacts; the private repo rebuilds the index after merging the mirror
+          git add "reports/$ID" "reports/_blacklist.json" "_import/audit-queue/$ID.json"
+          git commit -m "[audit] $ID@$VER#$COMMIT_SHORT $VERDICT (Sonar/Aegis dual review, postcheck passed)"
+          git push origin "$BRANCH"
+          PR_URL=$(gh pr create --title "[audit] $ID@$VER#$COMMIT_SHORT $VERDICT" \
+            --body "DeepGuard automated audit pipeline artifact (Sonar static audit + Aegis independent review; Beacon arbitration on dispute). postcheck and validate-report hard gates have passed. Blacklist cascading (if any) is recorded in \`reports/_blacklist.json\`.\n\nThis PR is auto-squashed by the pipeline for audit traceability only." \
+            --base main)
+          echo "pr=$PR_URL" >> "$GITHUB_OUTPUT"
+          # Fully automatic mode: dual review passed (or Beacon upheld Sonar) + postcheck passed →
+          # squash-merge immediately.
+          # GitHub computes mergeable asynchronously; retry with waits; final failure is backstopped by the ledger needs-human path
+          MERGED=0
+          for i in 1 2 3 4 5 6; do
+            gh pr merge "$PR_URL" --squash --delete-branch && { MERGED=1; break; }
+            echo "merge attempt $i not ready, retrying in 10s"; sleep 10
+          done
+          [ "$MERGED" = "1" ] || { echo "::error::auto-merge failed, escalating to human"; exit 1; }
+
+      - name: Not passed — commit queue status to main (needs-human / not-dsh-plugin, no PR)
+        if: steps.post.outputs.code != '0' && steps.post.outputs.code != ''
+        run: |
+          ID="${{ needs.gate.outputs.plugin_id }}"
+          git config user.name "deepguard-audit-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "_import/audit-queue/$ID.json" "reports/_blacklist.json"
+          if [ "${{ steps.post.outputs.code }}" = "3" ]; then
+            git add reports/_not-dsh.json
+            MSG="chore(queue): $ID is not a dsh plugin, recorded in _not-dsh.json (no longer scheduled)"
+          else
+            MSG="chore(queue): $ID marked needs-human (postcheck failed, flagged for extended review)"
+          fi
+          git commit -m "$MSG" || echo "no changes to commit"
+          # SEC-002: a loop ending in `|| sleep 5` exits 0 even when all pushes fail — the queue entry
+          # would stay pending locally only and the plugin would vanish from scheduling. Fail loudly.
+          PUSHED=0
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && { PUSHED=1; break; } || sleep 5
+          done
+          [ "$PUSHED" = "1" ] || { echo "::error::failed to push queue status for $ID to main after 3 attempts ($MSG); the queue entry must be recovered manually"; exit 1; }
+
+  # ---------- Report mirror sync: open a report-sync PR against the private repo (SYNC_PAT appears only in this job; one-way flow, no cycle) ----------
+  sync:
+    needs: [gate, publish]
+    # Sync only when publish opened and merged an audit PR (the code==0 path); needs-human / not-dsh-plugin have no PR and are not synced
+    if: always() && needs.publish.result == 'success' && needs.publish.outputs.pr != '' && needs.publish.outputs.ver != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      # publish already squash-merged; explicitly fetch the latest main (the default ref is the stale sha from dispatch time)
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          ref: main
+
+      - name: Mirror the report to the private repo and open a PR
+        env:
+          GH_TOKEN: ${{ secrets.SYNC_PAT }}
+          SYNC_PAT: ${{ secrets.SYNC_PAT }}
+          TARGET: ${{ vars.SYNC_TARGET_REPO }}
+          ID: ${{ needs.gate.outputs.plugin_id }}
+          VER: ${{ needs.publish.outputs.ver }}
+          COMMIT: ${{ needs.publish.outputs.commit }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          SOURCE_REPO: ${{ github.repository }}
+        run: |
+          set -e
+          # Token hygiene: wipe the token embedded in the remote url immediately after clone; trap
+          # backstops physical deletion.
+          # Note: push cannot use a Bearer header — GitHub's git HTTP endpoint only accepts Basic
+          # (x-access-token); Bearer applies only to REST/GraphQL, and pushing git with Bearer gets a
+          # 401 (verified in E2E).
+          SYNC_ROOT="$(pwd)"
+          cleanup() { cd "$SYNC_ROOT" && rm -rf private; }
+          trap cleanup EXIT
+          SHA8=$(echo "$COMMIT" | cut -c1-8)
+          BRANCH="report-sync/$ID-$VER-$SHA8"
+          git clone --depth 1 "https://x-access-token:${SYNC_PAT}@github.com/${TARGET}.git" private
+          git -C private remote set-url origin "https://github.com/${TARGET}.git"
+          cd private
+          git config user.name "deepguard-sync-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          # Precise copy: only this run's artifacts (report file + _blacklist + queue file),
+          # one-to-one with the gatekeeper path whitelist — never mirror whole directories (any
+          # unplanned file under reports/$ID must not enter the private repo; better missing than extra)
+          mkdir -p "reports/$ID/$VER" "_import/audit-queue"
+          cp "../reports/$ID/$VER/$COMMIT.json" "reports/$ID/$VER/$COMMIT.json"
+          cp "../reports/_blacklist.json" reports/_blacklist.json
+          cp "../_import/audit-queue/$ID.json" "_import/audit-queue/$ID.json"
+          git add "reports/$ID" reports/_blacklist.json "_import/audit-queue/$ID.json"
+          if git diff --cached --quiet; then echo "mirror has no diff (already synced), skipping PR"; exit 0; fi
+          git commit -m "[sync] $ID@$VER#$SHA8 report mirror (synced from public repo $SOURCE_REPO)"
+          # push uses one-off URL-embedded auth (same as clone; the secret is auto-masked in Actions logs; the origin url stays clean)
+          git push "https://x-access-token:${SYNC_PAT}@github.com/${TARGET}.git" "$BRANCH"
+          gh pr create --repo "$TARGET" --title "[sync] $ID@$VER#$SHA8 report mirror" \
+            --body "One-way mirror sync of audit artifacts from public repo $SOURCE_REPO. Source run: $RUN_URL . Auto squash-merged once the six deterministic gate checks + Harbor inspection both pass; any failure is flagged for extended review." \
+            --base main --head "$BRANCH"
+
+  # ---------- Ledger (always runs: pass/reject/failure all recorded, committed straight to main) ----------
+  # sync runs in-job right after collect: publish's auto-merge is already on main by then, so pr-open
+  # flips to merged immediately. The public repo has NO build-index workflow — this in-job sync is the
+  # ONLY status-flip path; without it entries stay stuck at "auto-merge pending" forever.
+  ledger:
+    needs: [gate, sonar, aegis, beacon, publish]
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: outbox-sonar-${{ inputs.queue_id }}
+          path: agent/work/outbox-sonar
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: outbox-aegis-${{ inputs.queue_id }}
+          path: agent/work/outbox-aegis
+      # With no dispute beacon is skipped and has no artifact: a download failure does not block
+      # (collect records beacon=null when there is no verdict document)
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: outbox-beacon-${{ inputs.queue_id }}
+          path: agent/work/outbox-beacon
+      # preflight-reject bundle (updated queue file + synthetic llm-error.json); absent on any other path.
+      # The gate job is contents:read — the terminal queue state rides this artifact and is committed below.
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: gate-reject-${{ inputs.queue_id }}
+          path: agent/work/gate-reject
+
+      # collect is idempotent (upsert by id@version#commit); on races, reset then regenerate and
+      # re-push — safe.
+      # FND-001 chain B: free text (gate reasons contain the LLM-influenceable blacklist reason) is
+      # always passed via env; ${{ }} compile-time interpolation into run scripts is forbidden
+      # (guards against quote escape / command substitution)
+      - name: Record ledger and commit to main (race-safe retry)
+        env:
+          QUEUE_ID: ${{ inputs.queue_id }}
+          GATE_DECISION: ${{ needs.gate.outputs.decision }}
+          GATE_REASONS: ${{ needs.gate.outputs.reasons }}
+          GATE_SUBMITTER: ${{ needs.gate.outputs.submitter }}
+          PUBLISH_RESULT: ${{ needs.publish.result }}
+          PUBLISH_PR: ${{ needs.publish.outputs.pr }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
+        run: |
+          git config user.name "deepguard-bot"
+          git config user.email "bot@deepguard.local"
+          # Details column → the source issue (permanent record of intake → stage conclusions → final
+          # receipt). Empty on dispatcher submissions (no issue); audit-log.js regex-validates the URL.
+          ISSUE_URL=""
+          if [ -n "$ISSUE_NUMBER" ]; then ISSUE_URL="https://github.com/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}"; fi
+          for i in 1 2 3; do
+            git fetch origin
+            git reset --hard origin/main
+            node scripts/audit-log.js collect \
+              --id "$QUEUE_ID" \
+              --queue-file "_import/audit-queue/$QUEUE_ID.json" \
+              --gate-decision "$GATE_DECISION" \
+              --gate-reasons "$GATE_REASONS" \
+              --submitter "$GATE_SUBMITTER" \
+              --outbox-sonar agent/work/outbox-sonar \
+              --outbox-aegis agent/work/outbox-aegis \
+              --outbox-beacon agent/work/outbox-beacon \
+              --result-publish "$PUBLISH_RESULT" \
+              --pr "$PUBLISH_PR" \
+              --run-url "$RUN_URL" \
+              --issue-url "$ISSUE_URL"
+            # pr-open → merged flip: publish's auto-merge already landed on main (this job needs
+            # publish), so after reset --hard origin/main the report file is on disk — run sync
+            # in-job instead of leaving entries stuck at "auto-merge pending"
+            node scripts/audit-log.js sync
+            # Queue terminal-state reconciliation (llm-error policy): a preflight reject ships its
+            # updated queue file as an artifact (the gate job cannot push); a runtime llm-error
+            # sentinel maps via the policy to queue_status (rejected/needs-human) — recording it
+            # here keeps the dispatcher from re-picking a terminal entry.
+            if [ -f agent/work/gate-reject/queue.json ]; then
+              cp agent/work/gate-reject/queue.json "_import/audit-queue/$QUEUE_ID.json"
+              git add "_import/audit-queue/$QUEUE_ID.json"
+            else
+              SENT=$(find agent/work -name llm-error.json 2>/dev/null | head -1)
+              if [ -n "$SENT" ] && [ -f "_import/audit-queue/$QUEUE_ID.json" ]; then
+                node -e "
+                  const fs = require('fs');
+                  const policy = JSON.parse(fs.readFileSync('scripts/llm-error-policy.json', 'utf8'));
+                  const s = JSON.parse(fs.readFileSync('$SENT', 'utf8'));
+                  const rule = (policy.rules || []).find((r) => r.id === s.rule_id);
+                  const qs = rule && rule.issue && rule.issue.queue_status;
+                  if (!qs || qs === 'open') process.exit(0);
+                  const p = '_import/audit-queue/$QUEUE_ID.json';
+                  const q = JSON.parse(fs.readFileSync(p, 'utf8'));
+                  if (q.status === qs) process.exit(0);
+                  q.status = qs;
+                  (q.history = q.history || []).push({ at: new Date().toISOString(), action: qs, reason: 'llm-error:' + s.rule_id + ' (' + String(s.error || '').slice(0, 200) + ')' });
+                  fs.writeFileSync(p, JSON.stringify(q, null, 2) + '\n');
+                " && git add "_import/audit-queue/$QUEUE_ID.json"
+              fi
+            fi
+            git add reports/_audit-log.json AUDIT-LOG.md
+            if git diff --cached --quiet; then echo "ledger unchanged"; break; fi
+            git commit -m "chore(audit-log): $QUEUE_ID ledger update [skip ci]"
+            git push && break
+          done
+
+  # ---------- Post the audit verdict back to the source issue in the public repo (in English) ----------
+  issue-feedback:
+    needs: [gate, ledger]
+    if: always() && inputs.issue_number != '' && needs.gate.result == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read   # checkout to read the queue/reports
+      issues: write    # comment back
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      # ledger/publish push straight to main, so the checkout snapshot may lag — explicitly align to the latest main before reading the queue/reports
+      - name: Sync to latest main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      # Token-exhaustion probe: an LLM 402 (insufficient balance) in any agent role drops a
+      # token-exhausted.json sentinel into that role's outbox artifact. If found, the comment must
+      # say "out of tokens" instead of the generic status-based message below.
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: outbox-sonar-${{ needs.gate.outputs.plugin_id }}
+          path: probe/sonar
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: outbox-aegis-${{ needs.gate.outputs.plugin_id }}
+          path: probe/aegis
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: outbox-beacon-${{ needs.gate.outputs.plugin_id }}
+          path: probe/beacon
+      # preflight-reject bundle (queue.json + synthetic llm-error.json); absent on any other path
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: gate-reject-${{ needs.gate.outputs.plugin_id }}
+          path: probe/gate-reject
+
+      - name: Determine verdict and comment on issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ inputs.issue_number }}
+          REPO: ${{ github.repository }}
+          PLUGIN_ID: ${{ needs.gate.outputs.plugin_id }}
+        run: |
+          Q="_import/audit-queue/${PLUGIN_ID}.json"
+          STATUS=$(node -p "try{JSON.parse(require('fs').readFileSync('$Q','utf8')).status}catch(e){'unknown'}")
+
+          # Stage conclusions (Gate/Sonar/Aegis/Beacon/Postcheck/Harbor): rendered from the outbox
+          # artifacts by the committed pure script; degrades per-row, never blocks the comment.
+          # The same facts land in reports/_audit-log.json (entry.stages) via audit-log.js collect.
+          node scripts/issue-stages.js \
+            --queue-file "$Q" \
+            --sonar-dir probe/sonar \
+            --aegis-dir probe/aegis \
+            --beacon-dir probe/beacon \
+            --out /tmp/stages.md
+
+          # Try to locate the latest report file (reports/<id>/<ver>/<commit>.json)
+          REPORT_DIR="reports/${PLUGIN_ID}"
+          REPORT=""
+          if [ -d "$REPORT_DIR" ]; then
+            REPORT=$(find "$REPORT_DIR" -maxdepth 2 -name '*.json' -not -name '_*' | sort | tail -1)
+          fi
+          OVERALL="unknown"
+          if [ -n "$REPORT" ] && [ -f "$REPORT" ]; then
+            OVERALL=$(node -p "try{JSON.parse(require('fs').readFileSync('$REPORT','utf8')).summary.overall_result}catch(e){'unknown'}")
+          fi
+
+          # LLM error sentinel (harness-classified via scripts/llm-error-policy.json, or the
+          # synthetic one from a preflight reject): the comment comes from the rule's template and
+          # the close decision from the policy — this branch supersedes the status-based messages.
+          LLM_SENTINEL=$(find probe -name llm-error.json 2>/dev/null | head -1)
+          LLM_CLOSE=false
+          if [ -n "$LLM_SENTINEL" ]; then
+            VER_Q=$(node -p "try{const q=JSON.parse(require('fs').readFileSync('$Q','utf8'));q.version||q.prescreen?.version||'n/a'}catch(e){'n/a'}")
+            CMT_Q=$(node -p "try{const q=JSON.parse(require('fs').readFileSync('$Q','utf8'));String(q.watch?.commit||q.prescreen?.commit||'n/a').slice(0,8)}catch(e){'n/a'}")
+            REPO_URL_Q=$(node -p "try{const q=JSON.parse(require('fs').readFileSync('$Q','utf8'));q.url||q.repo||'n/a'}catch(e){'n/a'}")
+            # Read the model from the repo-root agents.config.json (the same file the audit ran on —
+            # single source of truth, no hardcoded drift)
+            SONAR_MODEL=$(node -p "JSON.parse(require('fs').readFileSync('agents.config.json','utf8')).roles.sonar.model")
+            if node scripts/llm-error-feedback.mjs \
+                 --policy scripts/llm-error-policy.json \
+                 --sentinel "$LLM_SENTINEL" \
+                 --plugin-id "$PLUGIN_ID" --repo-url "$REPO_URL_Q" \
+                 --version "$VER_Q" --commit "$CMT_Q" \
+                 --endpoint "b.ai (free tier)" --model "$SONAR_MODEL" \
+                 --out /tmp/llm-error-comment.md --meta-out /tmp/llm-error-meta.json; then
+              LLM_CLOSE=$(node -p "JSON.parse(require('fs').readFileSync('/tmp/llm-error-meta.json','utf8')).close===true?'true':'false'")
+            else
+              echo "llm-error render failed; falling back to the generic status comment"
+              LLM_SENTINEL=""
+            fi
+          fi
+
+          TOKEN_SENTINEL=$(find probe -name token-exhausted.json 2>/dev/null | head -1)
+          if [ -z "$LLM_SENTINEL" ] && [ -n "$TOKEN_SENTINEL" ]; then
+            # LLM provider HTTP 402 (insufficient balance): operational outage, not a verdict.
+            # The issue stays open; the submission can be re-queued once the balance is restored.
+            TITLE="🪫 DeepGuard Audit Status: Token Balance Exhausted"
+            BODY="The audit for \`${PLUGIN_ID}\` could not be completed: the LLM token balance that powers the DeepGuard agent team is exhausted (the model provider returned HTTP 402 — insufficient balance).\n\nNo verdict was produced. **This is an operational outage, not a rejection of your plugin.**\n\nThe agent team runs on donated tokens. If you would like to bring it back to work, you can buy the team more tokens via Ko-fi: <https://ko-fi.com/G2S825CBZS> — donations go directly to audit compute.\n\nThis issue remains open; the submission can be re-queued once the balance is restored."
+          else
+          case "$STATUS" in
+            audited)
+              if [ "$OVERALL" = "blocked" ]; then
+                TITLE="🛑 DeepGuard Audit Result: Malicious Detected"
+                BODY="This plugin has been audited by DeepGuard and **security issues were detected** (verdict: \`blocked\`).\n\n- Plugin ID: \`${PLUGIN_ID}\`\n- Report: ${REPO}/tree/main/reports/${PLUGIN_ID}\n\nThe plugin is listed on the market with a security advisory. Please review the findings and submit a fixed version for re-audit.\n\nThis issue will be closed automatically once the final mirror gate completes."
+              elif [ "$OVERALL" = "risk" ]; then
+                TITLE="⚠️ DeepGuard Audit Result: Risk Detected"
+                BODY="This plugin has been audited by DeepGuard and **potential risks were detected** (verdict: \`risk\`).\n\n- Plugin ID: \`${PLUGIN_ID}\`\n- Report: ${REPO}/tree/main/reports/${PLUGIN_ID}\n\nReview the report findings. If you have questions about the risk level, open a new issue referencing this one.\n\nThis issue will be closed automatically once the final mirror gate completes."
+              else
+                TITLE="✅ DeepGuard Audit Result: Passed"
+                BODY="This plugin has passed the DeepGuard security audit (verdict: \`clean\`).\n\n- Plugin ID: \`${PLUGIN_ID}\`\n- Report: ${REPO}/tree/main/reports/${PLUGIN_ID}\n\nNo security issues were detected at the audited commit.\n\nThis issue will be closed automatically once the final mirror gate completes."
+              fi
+              ;;
+            rejected)
+              # "rejected" has two sources with different reason locations: the intake gate
+              # (structured gate.reasons array) and postcheck deterministic verification
+              # (reason string on the latest history entry; gate.reasons is absent there)
+              GATE_REASONS=$(node -p "try{(JSON.parse(require('fs').readFileSync('$Q','utf8')).gate.reasons||[]).join('; ')}catch(e){''}")
+              if [ -n "$GATE_REASONS" ]; then
+                TITLE="⛔ DeepGuard Audit Result: Rejected at Intake Gate"
+                BODY="The submission did not pass the intake gate and has been rejected.\n\n- Plugin ID: \`${PLUGIN_ID}\`\n- Reasons: ${GATE_REASONS}\n\nPlease ensure you are the plugin author or an authorized maintainer, and that the repository is publicly accessible. You may re-submit once the issues are resolved.\n\nThis issue is now closed."
+              else
+                POST_REASONS=$(node -p "try{const h=JSON.parse(require('fs').readFileSync('$Q','utf8')).history||[];const r=[...h].reverse().find(e=>e.action==='rejected'&&e.reason);r?String(r.reason):''}catch(e){''}")
+                REASONS_MD=$(printf '%s\n' "${POST_REASONS:-unspecified}" | sed 's/; */\n/g' | sed 's/^/- /')
+                TITLE="⛔ DeepGuard Audit Result: Rejected by Deterministic Verification"
+                BODY="The audit report failed DeepGuard's deterministic post-audit verification (postcheck) and has been rejected. No report was published.\n\n- Plugin ID: \`${PLUGIN_ID}\`\n\nVerification reasons:\n${REASONS_MD}\n\nVerification failures indicate report integrity problems (e.g. evidence paths missing from the audited snapshot, inconsistent metadata), not a plugin verdict. You may re-submit; if the failure persists, open a new issue referencing this one.\n\nThis issue is now closed."
+              fi
+              ;;
+            needs-human)
+              TITLE="🔍 DeepGuard Audit Result: Under Extended Review"
+              BODY="The automated audit pipeline flagged this submission for extended review due to an anomaly or ambiguity that could not be resolved automatically.\n\n- Plugin ID: \`${PLUGIN_ID}\`\n\nThis issue remains open while the flag is being resolved."
+              ;;
+            not-dsh-plugin)
+              TITLE="⛔ DeepGuard Audit Result: Not a DSH Plugin"
+              BODY="The submitted repository does not appear to be a valid dsh plugin (missing dsh manifest or incompatible structure).\n\n- Plugin ID: \`${PLUGIN_ID}\`\n\nPlease verify the plugin follows the dsh plugin specification and re-submit.\n\nThis issue is now closed."
+              ;;
+            *)
+              TITLE="⏳ DeepGuard Audit Status: In Progress"
+              BODY="The audit for \`${PLUGIN_ID}\` is still in progress or the final status is not yet available.\n\nThis issue will be updated once the audit completes."
+              ;;
+          esac
+          fi
+
+          # The \n in BODY is a literal escape (JSON/node style); decode it into real newlines with printf %b
+          if [ -n "$LLM_SENTINEL" ]; then
+            # Policy-rendered template is a complete document; stages + footer ride along as usual
+            {
+              cat /tmp/llm-error-comment.md
+              echo ""
+              cat /tmp/stages.md
+              echo ""
+              echo "---"
+              echo "_This is an automated message from the DeepGuard audit pipeline. Do not reply directly to this comment for support; open a new issue if needed._"
+            } > /tmp/comment.md
+          else
+          {
+            echo "## ${TITLE}"
+            echo ""
+            printf '%b\n' "$BODY"
+            echo ""
+            cat /tmp/stages.md
+            echo ""
+            echo "---"
+            echo "_This is an automated message from the DeepGuard audit pipeline. Do not reply directly to this comment for support; open a new issue if needed._"
+          } > /tmp/comment.md
+          fi
+
+          gh issue comment "$ISSUE" --repo "$REPO" --body-file /tmp/comment.md
+
+          # gate-rejected / not-dsh-plugin: the flow ends here (no sync/Harbor), close the issue on the spot;
+          # audited (clean/blocked) is left for the final gate (report-sync-guard's issue-close job) to close;
+          # llm-error close comes from the policy rule (context-overflow closes; ops outages stay open)
+          case "$STATUS" in
+            rejected|not-dsh-plugin) gh issue close "$ISSUE" --repo "$REPO";;
+          esac
+          [ "$LLM_CLOSE" = "true" ] && gh issue close "$ISSUE" --repo "$REPO" || true

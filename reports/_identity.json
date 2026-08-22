@@ -1,0 +1,16 @@
+{
+  "_readme": "Verified authors and official plugins are configured in this file, maintained by the DeepGuard pipeline (no human review step exists anywhere in the project). Effective priority: plugins > authors > orgs/auto (automated verification) > report fields. orgs lists trusted GitHub organizations: when an author login is the organization account itself, the author is automatically verified and its plugins become official (when the org has official:true). scripts/verify-identities.js periodically checks whether the remaining authors are public members of orgs and writes results into the auto section (do not edit auto by hand). After any change run node scripts/build-index.js to take effect; pushing to main triggers the build-index workflow to rebuild automatically.",
+  "_criteria": [
+    "Verified author inclusion policy (community authors; all conditions must hold; when in doubt, do not include):",
+    "1. GitHub account registered >= 180 days with normal historical activity (not a shell or farmed account)",
+    "2. No confirmed malicious record among listed plugins; author and repositories absent from active entries in reports/_blacklist.json",
+    "3. Author has actual control over the plugin repository (OWNER or write-level COLLABORATOR, same standard as the intake gate)",
+    "4. Inclusion must fill in note recording the verification basis; revocation: explicitly set verified:false to remove the badge"
+  ],
+  "orgs": {
+    "deepseek-ai": { "official": true, "note": "DeepSeek Harness official organization" }
+  },
+  "authors": {},
+  "plugins": {},
+  "auto": {}
+}
