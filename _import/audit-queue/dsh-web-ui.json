@@ -17,7 +17,7 @@
     "default_branch": "dev",
     "pushed_at": "2026-08-22T09:00:59Z",
     "stars": 5497,
-    "version": "0.1.1",
+    "version": "0.2.8",
     "dsh_kind": [],
     "install_hooks": [],
     "dup": {
@@ -37,6 +37,10 @@
       "at": "2026-08-22T09:15:12.241Z",
       "action": "audited",
       "reason": null
+    },
+    {
+      "at": "2026-08-22T10:18:45.054Z",
+      "action": "version-repair: prescreen read the monorepo root manifest at intake (0.1.1); corrected to the subpath manifest value 0.2.8 (the commit lock is unchanged)"
     }
   ]
 }
