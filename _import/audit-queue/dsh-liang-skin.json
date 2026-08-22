@@ -1,0 +1,38 @@
+{
+  "id": "dsh-liang-skin",
+  "name": "dsh-liang-skin",
+  "repo": "kingofsoysauce/dsh-liang-skin",
+  "url": "https://github.com/kingofsoysauce/dsh-liang-skin",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 22,
+  "status": "pending",
+  "submitted_at": "2026-08-22T09:18:51.493Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "976fcbf9b4a91b79f14b90c16cbe0d3f553c2bd3",
+    "default_branch": "main",
+    "pushed_at": "2026-08-21T03:23:04Z",
+    "stars": 126,
+    "version": "0.1.7",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-liang-skin"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T09:18:51.493Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
