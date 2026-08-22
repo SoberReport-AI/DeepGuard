@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T14:31:15.236Z",
+      "plugin_id": "dsh-browser",
+      "name": "dsh-browser",
+      "version": "0.1.2",
+      "commit": "eefd503da96097b41826943f49231f761e448e70",
+      "repo": "lum1104/dsh-browser",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 2,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/47",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/61",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32578470584",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 2
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：身份逐字一致；两条 finding 的全部证据路径均实际打开验证、行号精确、内容支撑描述与定级（MEDIUM/high），未见幻觉路径、形态违规或定级浮夸；31 条机械命中全部在报告中有 DSH- 规则 ID + 明确排除理由（或转化为 finding），无覆盖缺口；维度一致性良好（clean 维度无 findings，risk 维度 findings 挂接正确，checked_items 非空头对勾且经抽样核验属实）；独立漏检快扫（install 钩子/child_process/eval/外联域名/凭据读取/注入模式/审计员定向文本）未发现 Sonar 遗漏的高危点；安装命令",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T14:03:44.549Z",
       "plugin_id": "dsh-visualize",
       "name": "dsh-visualize",
