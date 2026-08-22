@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T14:03:44.549Z",
+      "plugin_id": "dsh-visualize",
+      "name": "dsh-visualize",
+      "version": "0.1.2",
+      "commit": "e86f68fe66b980a0ebeed8ef7409522b0b720bed",
+      "repo": "nagi-ovo/dsh-visualize",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": null,
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/55",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32577227984",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 与任务卡逐字一致）。报告 findings 为空，无逐条证据可核验；我独立打开并验证了全部维度 clean 声称：node 侧（src/index.ts、src/tool.ts、src/skill.ts）仅注册工具/技能并经由 ctx.fs 写入会话工作区 viz/，无 eval/child_process/凭据读取/外联/本地服务；lib/index.js 与 lib/client.js 构建产物与 src 逐行一致，未发现注入或篡改；iframe 采用 sandbox=allow-scripts（无 allow-same-o",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T13:43:49.207Z",
       "plugin_id": "dsh-plugins-marketplace",
       "name": "dsh-plugins-marketplace",
