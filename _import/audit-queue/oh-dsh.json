@@ -1,0 +1,38 @@
+{
+  "id": "oh-dsh",
+  "name": "oh-dsh",
+  "repo": "hust-open-atom-club/oh-dsh",
+  "url": "https://github.com/hust-open-atom-club/oh-dsh",
+  "subpath": null,
+  "category_hint": "sandbox",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 12,
+  "status": "pending",
+  "submitted_at": "2026-08-22T09:14:30.142Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "49a1bd0aa4f98487d8120de590864414b9cbdee1",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T03:32:43Z",
+    "stars": 256,
+    "version": "0.1.7",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "oh-dsh"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T09:14:30.143Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
