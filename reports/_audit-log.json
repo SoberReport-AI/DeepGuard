@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T09:31:38.104Z",
+      "plugin_id": "dsh-liang-skin",
+      "name": "dsh-liang-skin",
+      "version": "0.1.7",
+      "commit": "976fcbf9b4a91b79f14b90c16cbe0d3f553c2bd3",
+      "repo": "kingofsoysauce/dsh-liang-skin",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/22",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/23",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32564609392",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份逐字一致；报告零 findings，六维 clean 与 checked_items 实质内容自洽；机械命中 3 条（DSH-X08→DG-R3-60 @ lib/client.js:282 与 lib/client.js.map:4）均已在 DG-D3 checked item 3 及 L1 引用规则 ID 明确排除，且我亲自打开验证：lib/client.js:282 为皮肤 CSS 对『发送消息』按钮的 aria-label 转义选择器（对应 src/client/skin.css:253 正常主题化），lib/client.js.map:4 为 esbuild sou",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T09:25:01.595Z",
       "plugin_id": "dsh-tianshu-tui",
       "name": "dsh-tianshu-tui",
