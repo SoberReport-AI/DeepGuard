@@ -14,6 +14,14 @@ permissions:
 
 jobs:
   validate:
+    # Exempt the automated audit/* branches (opened and squash-merged by agent-audit's publish job,
+    # already gated by postcheck's own validate-report run): github-actions[bot] is not a repo
+    # collaborator, so its pull_request runs sit at action_required forever awaiting approval —
+    # every audit PR carried a permanently stuck red check (all 8 historical runs, 2026-08-22).
+    # A human fork PR naming its head branch audit/* could skip this check, but merge remains
+    # maintainer-gated, so the hard gate's protective value for human contributions is unchanged.
+    # (push events have no head_ref → startsWith('') is false → push validation still runs.)
+    if: ${{ !startsWith(github.head_ref, 'audit/') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0

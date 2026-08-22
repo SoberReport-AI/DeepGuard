@@ -8,6 +8,11 @@
 # running agent-audit run no longer drops its entry — orphan recovery requeues it after ~30 min.
 name: audit-dispatch
 
+# Title shown in the Actions list (agent-audit already carries "[Audit] <plugin> · issue #N").
+# The dispatcher picks its queue entry only inside the run, so the title carries the trigger
+# context instead: fast path shows the completed audit run that woke it; cron/manual are labeled.
+run-name: "[Dispatch] ${{ github.event_name == 'workflow_run' && format('after {0}', github.event.workflow_run.name) || (github.event_name == 'schedule' && 'cron backstop' || 'manual backfill') }}"
+
 # Trigger paths:
 #  - workflow_run: backfill immediately after a manually triggered (user token) agent-audit run completes (fast path)
 #  - schedule: fallback self-heal every 10 min (required! completion events of runs dispatched with GITHUB_TOKEN are suppressed by GitHub, breaking the chain)
