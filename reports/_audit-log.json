@@ -2,6 +2,38 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T17:52:52.618Z",
+      "plugin_id": "dsh-workflow",
+      "name": "dsh-workflow",
+      "version": "0.1.2",
+      "commit": "44b83c182aa02d1be8a0803e8446cb495f93cd8f",
+      "repo": "omdsh-dev/dsh_workflow",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "aegis",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/66",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32588768783",
+      "extended_review": true,
+      "reason": "Aegis produced no review verdict (see run logs)",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T17:29:01.578Z",
       "plugin_id": "dsh-turn-rewind",
       "name": "dsh-turn-rewind",

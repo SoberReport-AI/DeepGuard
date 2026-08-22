@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-23 01:52 | dsh-workflow | 0.1.2 | [44b83c1](https://github.com/omdsh-dev/dsh_workflow/commit/44b83c182aa02d1be8a0803e8446cb495f93cd8f) | SoberReport-AI | clean | 0 | — | — | — | failed, flagged for extended review | [#66](https://github.com/SoberReport-AI/DeepGuard/issues/66) |
 | 2026-08-23 01:29 | dsh-turn-rewind | 0.1.1 | [b1b85f1](https://github.com/anionex/dsh-turn-rewind/commit/b1b85f18aaaaf71d76c84613429ce04d71f69620) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#64](https://github.com/SoberReport-AI/DeepGuard/issues/64) |
 | 2026-08-23 01:00 | dsh-webui-market-plugin | 0.5.5 | [f0cfc50](https://github.com/sanqi-normal/dsh-webui-market-plugin/commit/f0cfc501a9e66b3c77da37e346d311d092cb1e41) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#65](https://github.com/SoberReport-AI/DeepGuard/issues/65) |
 | 2026-08-23 00:25 | misakanet | — | [a656edb](https://github.com/ikalus1988/misakanet/commit/a656edb8e9427942147d4b8ff3af5d11fb5b1e9c) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#58](https://github.com/SoberReport-AI/DeepGuard/issues/58) |
