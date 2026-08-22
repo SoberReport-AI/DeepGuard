@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T17:00:04.289Z",
+      "plugin_id": "dsh-webui-market-plugin",
+      "name": "dsh-webui-market-plugin",
+      "version": "0.5.5",
+      "commit": "f0cfc501a9e66b3c77da37e346d311d092cb1e41",
+      "repo": "sanqi-normal/dsh-webui-market-plugin",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/65",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/69",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32585923585",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：身份逐字一致；报告零 findings、全维度 clean，无逐条证据需核验；9 条机械命中（DSH-X03×8 + DSH-C05×1）逐条在报告中裁决（DG-R3-55/DG-R4-53 引用明确），无覆盖缺口；checked_items 均有实义（spawn 数组传参+shell 白名单、snapshot 注释、6 处测试 new Function、cordis.patch.yml 无 !!js、无安装钩子、同源校验、白名单+试装、README 明示 allowBuilds/最小发布年龄自动放行——均经本人亲自开文件核实）；漏检快扫未发现恶意行为，仅 3 条文档化设计取舍（见 ",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T16:25:11.602Z",
       "plugin_id": "misakanet",
       "name": "misakanet",
