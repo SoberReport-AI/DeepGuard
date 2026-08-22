@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T21:54:14.496Z",
+      "plugin_id": "dsh-workflow",
+      "name": "dsh-workflow",
+      "version": "0.1.2",
+      "commit": "44b83c182aa02d1be8a0803e8446cb495f93cd8f",
+      "repo": "omdsh-dev/dsh_workflow",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "sonar",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/66",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32600743104",
+      "extended_review": true,
+      "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
+      "compactions": 0,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T20:38:52.180Z",
       "plugin_id": "dsh-cost-meter",
       "name": "dsh-cost-meter",
