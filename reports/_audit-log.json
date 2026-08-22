@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T11:48:44.146Z",
+      "plugin_id": "dsh-context",
+      "name": "dsh-context",
+      "version": "0.24.1",
+      "commit": "c40a919e60d86514a18f41e68d2ad3f0c3b13db4",
+      "repo": "bowenliang123/dsh-context",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": null,
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/35",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32570888378",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份/哈希/子路径/安装命令四元组全部核对一致；11 条机械命中（DSH-X07、DSH-C05、DSH-P01×3、DSH-X03×5、DSH-X05）Sonar 在 audit_scope.limits 中均以规则 ID 逐条裁决，我逐一打开证据路径核实：.github/workflows/release.yml 与 .oxlintrc.json 为点前缀文件无法直接读取（与 Sonar limits 注一致），其裁决依据 static-scan-hits.json 摘录，摘录内容支持排除结论（CI 发布工作流在 GitHub 基础设施运行、'curl' 命中 object-",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T11:35:18.090Z",
       "plugin_id": "dsh-at-file",
       "name": "dsh-at-file",
