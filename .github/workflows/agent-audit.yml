@@ -637,6 +637,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      actions: read # list run artifacts to gate optional downloads
     outputs:
       pr: ${{ steps.pr.outputs.pr }}
       ver: ${{ steps.place.outputs.ver }}
@@ -656,6 +657,16 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
 
+      # Optional artifacts (beacon only on dispute, aegis/translate skipped on the not-dsh path):
+      # existence-gate the downloads — an unconditional download of an absent artifact logs a red
+      # ##[error] annotation even under continue-on-error (noise on every green run, 2026-08-22).
+      # The name list is space-padded so contains() matches whole names only.
+      - name: List run artifacts (gate optional downloads)
+        id: arts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "names= $(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" --paginate --jq '.artifacts[].name' | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           name: audit-work-${{ needs.gate.outputs.plugin_id }}
@@ -667,6 +678,7 @@ jobs:
       # On the not-dsh-plugin path aegis is skipped and there is no outbox-aegis artifact: a download
       # failure does not block (the later cp is fault-tolerant)
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: contains(steps.arts.outputs.names, format(' outbox-aegis-{0} ', needs.gate.outputs.plugin_id))
         continue-on-error: true
         with:
           name: outbox-aegis-${{ needs.gate.outputs.plugin_id }}
@@ -674,6 +686,7 @@ jobs:
       # With no dispute beacon is skipped: a download failure does not block (postcheck
       # reconciliation: a verdict document existing without a dispute is the anomaly)
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: contains(steps.arts.outputs.names, format(' outbox-beacon-{0} ', needs.gate.outputs.plugin_id))
         continue-on-error: true
         with:
           name: outbox-beacon-${{ needs.gate.outputs.plugin_id }}
@@ -681,6 +694,7 @@ jobs:
       # Translate is skipped on the not-dsh-plugin path and on non-publishable review outcomes: a download failure does not block (postcheck gate 8:
       # a missing bilingual artifact fails closed to extended review)
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: contains(steps.arts.outputs.names, format(' outbox-translate-{0} ', needs.gate.outputs.plugin_id))
         continue-on-error: true
         with:
           name: outbox-translate-${{ needs.gate.outputs.plugin_id }}
@@ -891,14 +905,29 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: read # list run artifacts to gate optional downloads
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      # Path-dependent artifacts (gate-reject only on reject, sonar/aegis absent on preflight reject,
+      # beacon absent without dispute): existence-gate the downloads — an unconditional download of
+      # an absent artifact logs a red ##[error] annotation even under continue-on-error (noise on
+      # every green run, 2026-08-22). The name list is space-padded so contains() matches whole
+      # names only.
+      - name: List run artifacts (gate optional downloads)
+        id: arts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "names= $(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" --paginate --jq '.artifacts[].name' | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: contains(steps.arts.outputs.names, format(' outbox-sonar-{0} ', inputs.queue_id))
         continue-on-error: true
         with:
           name: outbox-sonar-${{ inputs.queue_id }}
           path: agent/work/outbox-sonar
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: contains(steps.arts.outputs.names, format(' outbox-aegis-{0} ', inputs.queue_id))
         continue-on-error: true
         with:
           name: outbox-aegis-${{ inputs.queue_id }}
@@ -906,6 +935,7 @@ jobs:
       # With no dispute beacon is skipped and has no artifact: a download failure does not block
       # (collect records beacon=null when there is no verdict document)
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: contains(steps.arts.outputs.names, format(' outbox-beacon-{0} ', inputs.queue_id))
         continue-on-error: true
         with:
           name: outbox-beacon-${{ inputs.queue_id }}
@@ -913,6 +943,7 @@ jobs:
       # preflight-reject bundle (updated queue file + synthetic llm-error.json); absent on any other path.
       # The gate job is contents:read — the terminal queue state rides this artifact and is committed below.
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: contains(steps.arts.outputs.names, format(' gate-reject-{0} ', inputs.queue_id))
         continue-on-error: true
         with:
           name: gate-reject-${{ inputs.queue_id }}
@@ -1000,6 +1031,7 @@ jobs:
     permissions:
       contents: read   # checkout to read the queue/reports
       issues: write    # comment back
+      actions: read    # list run artifacts to gate optional downloads
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
@@ -1009,26 +1041,41 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
 
+      # Token-exhaustion probe artifacts are path-dependent (sonar/aegis absent on preflight reject,
+      # beacon absent without dispute, gate-reject only on reject): existence-gate the downloads —
+      # an unconditional download of an absent artifact logs a red ##[error] annotation even under
+      # continue-on-error (noise on every green run, 2026-08-22). The name list is space-padded so
+      # contains() matches whole names only.
+      - name: List run artifacts (gate optional downloads)
+        id: arts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "names= $(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" --paginate --jq '.artifacts[].name' | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+
       # Token-exhaustion probe: an LLM 402 (insufficient balance) in any agent role drops a
       # token-exhausted.json sentinel into that role's outbox artifact. If found, the comment must
       # say "out of tokens" instead of the generic status-based message below.
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: contains(steps.arts.outputs.names, format(' outbox-sonar-{0} ', needs.gate.outputs.plugin_id))
         continue-on-error: true
         with:
           name: outbox-sonar-${{ needs.gate.outputs.plugin_id }}
           path: probe/sonar
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: contains(steps.arts.outputs.names, format(' outbox-aegis-{0} ', needs.gate.outputs.plugin_id))
         continue-on-error: true
         with:
           name: outbox-aegis-${{ needs.gate.outputs.plugin_id }}
           path: probe/aegis
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: contains(steps.arts.outputs.names, format(' outbox-beacon-{0} ', needs.gate.outputs.plugin_id))
         continue-on-error: true
         with:
           name: outbox-beacon-${{ needs.gate.outputs.plugin_id }}
           path: probe/beacon
       # preflight-reject bundle (queue.json + synthetic llm-error.json); absent on any other path
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: contains(steps.arts.outputs.names, format(' gate-reject-{0} ', needs.gate.outputs.plugin_id))
         continue-on-error: true
         with:
           name: gate-reject-${{ needs.gate.outputs.plugin_id }}
