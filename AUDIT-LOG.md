@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-22 19:35 | dsh-at-file | 0.6.7 | [c57849b](https://github.com/omdsh-dev/dsh-at-file/commit/c57849b27e378cf6b41d082b17c8a8750cee370f) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#31](https://github.com/SoberReport-AI/DeepGuard/issues/31) |
 | 2026-08-22 19:25 | dsh-browser | 0.1.2 | [eefd503](https://github.com/lum1104/dsh-browser/commit/eefd503da96097b41826943f49231f761e448e70) | SoberReport-AI | risk | 1 | approve | — | — | rejected (postcheck) | [#32](https://github.com/SoberReport-AI/DeepGuard/issues/32) |
 | 2026-08-22 19:14 | dsh-vision-router | 1.7.6 | [9e9a938](https://github.com/ysr666/dsh-vision-router/commit/9e9a938e53a70715a23c7b9650b652506e537419) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#28](https://github.com/SoberReport-AI/DeepGuard/pull/28) |
 | 2026-08-22 18:56 | dsh-vision-toolkit | 0.1.38 | [5a33bf6](https://github.com/anionex/dsh-vision-toolkit/commit/5a33bf6e9ff38f2d05d32fd6ee41479b8340ac5c) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#27](https://github.com/SoberReport-AI/DeepGuard/pull/27) |
