@@ -1,0 +1,38 @@
+{
+  "id": "dsh-agent-teams",
+  "name": "dsh-agent-teams",
+  "repo": "nanmicoder/dsh-agent-teams",
+  "url": "https://github.com/nanmicoder/dsh-agent-teams",
+  "subpath": null,
+  "category_hint": "memory",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 10,
+  "status": "pending",
+  "submitted_at": "2026-08-22T09:13:30.383Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "6e7e5eeef3aa39b2aa1dae7aa30ea4d70b44f639",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T09:08:52Z",
+    "stars": 781,
+    "version": "0.1.12",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-agent-teams"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T09:13:30.383Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
