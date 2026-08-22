@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "issue",
   "issue": 47,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-22T12:46:47.324Z",
   "prescreen": {
     "ok": true,
@@ -42,6 +42,12 @@
       "at": "2026-08-22T12:56:51.371Z",
       "action": "requeued",
       "reason": "stale postcheck from cancelled run 32573663152 (issue #42) clobbered the fresh #47 entry; resetting for the new E2E round"
+    },
+    {
+      "at": "2026-08-22T14:21:37.795Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
-  ]
+  ],
+  "attempts": 1
 }
