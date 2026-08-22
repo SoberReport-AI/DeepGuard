@@ -13,10 +13,11 @@ body:
         - The repository is public, and you are the plugin author (repository owner)
         - The plugin is installable through a standard package manager or the dsh plugin registry
 
-        **Who can submit** — only the plugin author. The intake gate verifies that the
-        submitter owns the plugin repository (a GitHub server-side fact; self-declaration
-        does not count), and your GitHub account must be registered for at least 10 days.
-        Submissions on behalf of others are not accepted — please ask the author to submit.
+        **Who can submit** — the plugin author (repository owner), or a DeepGuard whitelist
+        member submitting on the project's behalf. The intake gate verifies server-side that the
+        submitter owns the plugin repository OR is on the whitelist (self-declaration does not
+        count), and non-whitelisted submitter accounts must be registered for at least 10 days.
+        Other third-party submissions are not accepted — please ask the author to submit.
 
   - type: input
     id: name
@@ -78,7 +79,9 @@ body:
       label: Submission Confirmations
       options:
         - label: I am the plugin author (I own the plugin repository)
-          required: true
+          required: false
+        - label: I am a DeepGuard whitelist member submitting on the project's behalf (the submitter may differ from the repository owner)
+          required: false
         - label: The repository is currently publicly accessible, and I understand the audit will lock a specific commit snapshot
           required: true
         - label: I agree that the audit report (regardless of verdict) will be publicly disclosed in the DeepGuard market

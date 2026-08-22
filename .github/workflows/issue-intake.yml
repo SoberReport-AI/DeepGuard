@@ -110,8 +110,20 @@ jobs:
             sleep 5
           done
           [ "$PUSHED" = "1" ] || { echo "::error::queue file for ${QUEUE_ID} was NOT persisted to main after 3 attempts; refusing to dispatch (gate would read a missing/stale queue entry)"; exit 1; }
-          gh workflow run agent-audit.yml -f queue_id="$QUEUE_ID" -f issue_number="$ISSUE_NUMBER"
-          echo "dispatched agent-audit: queue_id=$QUEUE_ID, issue=#$ISSUE_NUMBER"
+          # Batch-safe dispatch: the agent-audit concurrency group (cancel-in-progress: false) keeps
+          # only ONE waiting run — a direct dispatch while another audit is active/queued replaces the
+          # older waiting run ("Canceling since a higher priority waiting request exists", first seen
+          # in the dsh-top20 issue batch). When the pipeline is busy, leave the entry pending:
+          # audit-dispatch (workflow_run completion + 10-min cron) backfills pending items in
+          # ascending enqueue time, so the batch drains serially instead of colliding here.
+          ACTIVE=$(gh run list --workflow=agent-audit.yml --status in_progress --json databaseId --jq length)
+          WAITING=$(gh run list --workflow=agent-audit.yml --status queued --json databaseId --jq length)
+          if [ "$ACTIVE" != "0" ] || [ "$WAITING" != "0" ]; then
+            echo "agent-audit busy ($ACTIVE running / $WAITING queued) — $QUEUE_ID stays pending; the audit-dispatch chain will backfill it"
+          else
+            gh workflow run agent-audit.yml -f queue_id="$QUEUE_ID" -f issue_number="$ISSUE_NUMBER"
+            echo "dispatched agent-audit: queue_id=$QUEUE_ID, issue=#$ISSUE_NUMBER"
+          fi
 
       - name: Pre-screen passed — comment confirmation
         if: steps.prescreen.outputs.code == '0' && steps.prescreen.outputs.queue_id != ''
