@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T10:36:33.758Z",
+      "plugin_id": "dsh-market",
+      "name": "dsh-market",
+      "version": "1.18.0",
+      "commit": "b9323cc85d0148013384a5aca5215be1922eea36",
+      "repo": "dsh-market/dsh-market",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": null,
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/26",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32567600538",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核（Aegis）结论：身份核验逐字一致；报告 findings 为空，逐项验证各维度 checked_items/ds_scenarios 主张均与源码相符（安装目标 TARGET_RE 白名单、变更路由 sameOrigin、进程控制 trustedRestartRequest 回环+拒转发头、备份恢复防穿越、patch 层保护宿主模块、出站端点固定合法、客户端 bundle 关键命中行与源码语义一致且为 UI 用途）；机械预扫 93 条命中全部落入 Sonar 已引用规则 ID（DG-R3-51/54/55/57/59/60、DG-R4-53）明确排除的 7 个类别，逐类抽样验证成立",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T10:23:00.196Z",
       "plugin_id": "dsh-tui",
       "name": "dsh-TUI",
