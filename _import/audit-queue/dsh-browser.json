@@ -1,0 +1,37 @@
+{
+  "id": "dsh-browser",
+  "name": "dsh-browser",
+  "repo": "lum1104/dsh-browser",
+  "url": "https://github.com/lum1104/dsh-browser",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "cli",
+  "issue": null,
+  "status": "pending",
+  "submitted_at": "2026-08-22T08:53:43.451Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "eefd503da96097b41826943f49231f761e448e70",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T04:17:32Z",
+    "stars": 381,
+    "version": "0.1.2",
+    "dsh_kind": [],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-browser-lum1104"
+    },
+    "warnings": [
+      "package.json has no dsh.bundle/client/service declaration (will be audited as a plain package by actual code behavior)"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-08-22T08:53:43.451Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "dsh-context",
+  "name": "dsh-context",
+  "repo": "bowenliang123/dsh-context",
+  "url": "https://github.com/bowenliang123/dsh-context",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "cli",
+  "issue": null,
+  "status": "pending",
+  "submitted_at": "2026-08-22T08:53:50.441Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "9859f4702af9d937d53f8d7431dde88cbe8df86c",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T08:32:24Z",
+    "stars": 774,
+    "version": "0.24.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-context"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T08:53:50.442Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "dsh-web-ui",
+  "name": "dsh-web-ui",
+  "repo": "zhu1090093659/dsh-web-ui",
+  "url": "https://github.com/zhu1090093659/dsh-web-ui",
+  "subpath": "packages/dsh-web-ui-all",
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).\n- Monorepo subpath: `packages/dsh-web-ui-all`",
+  "source": "cli",
+  "issue": null,
+  "status": "pending",
+  "submitted_at": "2026-08-22T08:52:59.515Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "b4837f4c176587666f4d1ebe0fa7831a4395ec14",
+    "default_branch": "dev",
+    "pushed_at": "2026-08-22T08:51:54Z",
+    "stars": 5496,
+    "version": "0.1.1",
+    "dsh_kind": [],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-web-ui-all-zhu1090093659"
+    },
+    "warnings": [
+      "package.json has no dsh.bundle/client/service declaration (will be audited as a plain package by actual code behavior)"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-08-22T08:52:59.515Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}

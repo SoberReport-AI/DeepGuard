@@ -1,0 +1,38 @@
+{
+  "id": "dsh-vision-toolkit",
+  "name": "@anionex/dsh-vision-toolkit",
+  "repo": "anionex/dsh-vision-toolkit",
+  "url": "https://github.com/anionex/dsh-vision-toolkit",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "cli",
+  "issue": null,
+  "status": "pending",
+  "submitted_at": "2026-08-22T08:53:14.626Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "5a33bf6e9ff38f2d05d32fd6ee41479b8340ac5c",
+    "default_branch": "main",
+    "pushed_at": "2026-08-21T16:32:09Z",
+    "stars": 806,
+    "version": "0.1.38",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-vision-toolkit"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T08:53:14.626Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
