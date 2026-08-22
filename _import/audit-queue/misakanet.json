@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "issue",
   "issue": 58,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-22T14:21:32.466Z",
   "prescreen": {
     "ok": true,
@@ -42,7 +42,12 @@
       "at": "2026-08-22T16:03:36.000Z",
       "action": "reset-to-pending",
       "reason": "gate failed on pre-fix core (fatal version exit 1); core a64fbe7 + public 5b7247a now reject gracefully — requeue for the invalid-submission flow"
+    },
+    {
+      "at": "2026-08-22T16:24:46.527Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 1
+  "attempts": 2
 }
