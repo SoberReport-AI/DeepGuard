@@ -167,4 +167,8 @@ jobs:
           [ "$PUSHED" = "1" ] || { echo "::error::queue state was NOT persisted to main after 3 attempts; refusing to dispatch (SEC-003)"; exit 1; }
           [ "$MODE" = "DISPATCH" ] || { echo "orphan recovery persisted ($NEXT); dispatch happens next round"; exit 0; }
           echo "backfill dispatch: $NEXT (trigger=${{ github.event_name }})"
-          gh workflow run agent-audit.yml -f queue_id="$NEXT"
+          # Carry the issue linkage into the audit run: issue-sourced queue entries have an `issue`
+          # field; without it agent-audit's issue-feedback job is skipped (inputs.issue_number == '')
+          # and the stage-conclusions comment never lands on the submission issue.
+          ISSUE=$(node -p "try{const q=JSON.parse(require('fs').readFileSync('_import/audit-queue/$NEXT.json','utf8'));q.issue?String(q.issue):''}catch(e){''}")
+          gh workflow run agent-audit.yml -f queue_id="$NEXT" -f issue_number="$ISSUE"
