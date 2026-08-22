@@ -1,1 +1,41 @@
-{"version":1,"entries":[]}
+{
+  "version": 1,
+  "entries": [
+    {
+      "ts": "2026-08-22T09:15:31.650Z",
+      "plugin_id": "dsh-web-ui",
+      "name": "dsh-web-ui",
+      "version": "0.2.8",
+      "commit": "f91a2641cee74f97457741c06a12a2c91c97fef5",
+      "repo": "zhu1090093659/dsh-web-ui",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/2",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/15",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32564189089",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 逐字一致）。报告 findings 为空，全部 clean 声明经我独立核验成立：宿主侧 apply 为空操作（src/index.ts）、浏览器侧仅 DOM 属性补齐（src/client/index.ts：setAttribute/querySelector/MutationObserver，无键盘/剪贴板/凭据接口）、cordis.patch.yml 全部为插件 insert 行、lib 构建产物与源码逐字一致、无 eval/child_process/网络/环境变量/凭据读取/base64 等危险模式（独立 grep 全",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    }
+  ]
+}
