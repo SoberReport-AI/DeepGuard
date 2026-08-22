@@ -1,0 +1,37 @@
+{
+  "id": "harmony-next-skills",
+  "name": "harmony-next-skills",
+  "repo": "linhay/harmony-next.skills",
+  "url": "https://github.com/linhay/harmony-next.skills",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 59,
+  "status": "pending",
+  "submitted_at": "2026-08-22T14:21:39.077Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "880420ccaede758845daa3e86154c4e02e6f2249",
+    "default_branch": "master",
+    "pushed_at": "2026-08-18T08:05:29Z",
+    "stars": 335,
+    "version": "1.3.35",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "harmony-next-skills"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T14:21:39.078Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
