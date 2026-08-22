@@ -1,6 +1,6 @@
 {
   "id": "dsh-plugins-marketplace",
-  "name": "DSH-Plugins-Marketplace",
+  "name": "dsh-plugins-marketplace",
   "repo": "bradegithub/dsh-plugins-marketplace",
   "url": "https://github.com/bradegithub/dsh-plugins-marketplace",
   "subpath": null,
@@ -8,14 +8,14 @@
   "capabilities_hint": [],
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "issue",
-  "issue": 19,
-  "status": "cancelled",
-  "submitted_at": "2026-08-22T09:17:24.304Z",
+  "issue": 39,
+  "status": "pending",
+  "submitted_at": "2026-08-22T11:58:15.303Z",
   "prescreen": {
     "ok": true,
-    "commit": "a7c4e403152a803f57a09bab2c58a885171d7c9d",
+    "commit": "42431aa5f29d5d4421c2e2c6bcbb4bf25d282893",
     "default_branch": "main",
-    "pushed_at": "2026-08-22T09:00:49Z",
+    "pushed_at": "2026-08-22T10:58:20Z",
     "stars": 135,
     "version": "1.5.5",
     "dsh_kind": [
@@ -31,13 +31,8 @@
   },
   "history": [
     {
-      "at": "2026-08-22T09:17:24.304Z",
+      "at": "2026-08-22T11:58:15.304Z",
       "action": "prescreen-pass"
-    },
-    {
-      "at": "2026-08-22T11:05:53.010Z",
-      "action": "cancelled",
-      "reason": "batch submission withdrawn (owner request)"
     }
   ]
 }
