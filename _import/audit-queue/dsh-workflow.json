@@ -1,0 +1,34 @@
+{
+  "id": "dsh-workflow",
+  "name": "dsh-workflow",
+  "repo": "omdsh-dev/dsh_workflow",
+  "url": "https://github.com/omdsh-dev/dsh_workflow",
+  "subpath": null,
+  "category_hint": "memory",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake (catalog star ranking, 68 stars).",
+  "source": "issue",
+  "issue": 66,
+  "status": "pending",
+  "submitted_at": "2026-08-22T16:16:29.364Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "44b83c182aa02d1be8a0803e8446cb495f93cd8f",
+    "default_branch": "main",
+    "pushed_at": "2026-08-13T23:53:40Z",
+    "stars": 95,
+    "version": "0.1.2",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": null,
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T16:16:29.364Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
