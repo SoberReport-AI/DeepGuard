@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).\n- Monorepo subpath: `packages/dsh-web-ui-all`",
   "source": "cli",
   "issue": null,
-  "status": "pending",
+  "status": "audited",
   "submitted_at": "2026-08-22T08:52:59.515Z",
   "prescreen": {
     "ok": true,
@@ -32,6 +32,11 @@
     {
       "at": "2026-08-22T08:52:59.515Z",
       "action": "prescreen-pass"
+    },
+    {
+      "at": "2026-08-22T09:02:01.436Z",
+      "action": "audited",
+      "reason": null
     }
   ],
   "attempts": 1
