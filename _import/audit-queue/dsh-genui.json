@@ -1,0 +1,38 @@
+{
+  "id": "dsh-genui",
+  "name": "dsh-genui",
+  "repo": "omdsh-dev/dsh-genui",
+  "url": "https://github.com/omdsh-dev/dsh-genui",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 18,
+  "status": "pending",
+  "submitted_at": "2026-08-22T09:16:59.028Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "1ca5da4eb9394972cce2c1ccacfedc22eec3166b",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T04:51:37Z",
+    "stars": 291,
+    "version": "0.9.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-genui"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T09:16:59.028Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
