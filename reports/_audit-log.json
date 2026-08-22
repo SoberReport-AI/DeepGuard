@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T13:02:41.595Z",
+      "plugin_id": "dsh-openpencil",
+      "name": "dsh-openpencil",
+      "version": "0.1.0-rc.2",
+      "commit": "e3eb3bfdb5262db0659c3c6e567fe209199c3eb2",
+      "repo": "zseven-w/dsh-openpencil",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": null,
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/52",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32574159577",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 与任务卡逐字一致）。报告为全 clean、无 findings，关键核验点为 11 条机械命中裁决：DG-D3 checked_items[0] 以规则 ID（DSH-X03/DG-R3-55、DSH-X05/DG-R3-57、DSH-X07/DG-R3-59）逐条引用并给出文件位置，覆盖无缺口；我逐一打开源码验证：spawn 均为固定参数数组、无 shell:true、仅启动本机 OpenPencil/Jian 渲染器与编辑器守护进程（声明核心功能）；键盘/剪贴板命中均为 Esc 关闭、Tab 焦点圈定、clipboard.w",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T12:51:04.079Z",
       "plugin_id": "dsh-browser",
       "name": "dsh-browser",
