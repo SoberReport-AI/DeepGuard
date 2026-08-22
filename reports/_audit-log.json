@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T09:44:14.041Z",
+      "plugin_id": "dsh-better-sidebar",
+      "name": "dsh-better-sidebar",
+      "version": "0.15.0",
+      "commit": "9a40164d1a69dbc960585d8789ee0d849231979b",
+      "repo": "omdsh-dev/dsh-better-sidebar",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": null,
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/24",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32565344850",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验逐字一致。报告为 clean、无 findings，复核重点是 checked_items 叙述与机械命中覆盖：独立打开验证了 cordis.patch.yml 的 !!js 只读守卫（行 36/49）、package.json prepare=tsdown（行 80）、git.ts 数组式 spawn（行 12/97）、browser.probe 非回环+8s+仅回显头（index.ts 439-481）、e2e curl 指向 127.0.0.1（URL 从 dsh web 日志 127.0.0.1 绑定提取）、client 同源 fetch、fs.read/fs.write 任意",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T09:31:38.104Z",
       "plugin_id": "dsh-liang-skin",
       "name": "dsh-liang-skin",
