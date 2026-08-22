@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-23 03:12 | dsh-annotation | 1.4.1 | [599cd1e](https://github.com/omdsh-dev/dsh-annotation/commit/599cd1e68c320da2def27574a57a4e5e786d757b) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#67](https://github.com/SoberReport-AI/DeepGuard/issues/67) |
 | 2026-08-23 01:52 | dsh-workflow | 0.1.2 | [44b83c1](https://github.com/omdsh-dev/dsh_workflow/commit/44b83c182aa02d1be8a0803e8446cb495f93cd8f) | SoberReport-AI | clean | 0 | — | — | — | failed, flagged for extended review | [#66](https://github.com/SoberReport-AI/DeepGuard/issues/66) |
 | 2026-08-23 01:29 | dsh-turn-rewind | 0.1.1 | [b1b85f1](https://github.com/anionex/dsh-turn-rewind/commit/b1b85f18aaaaf71d76c84613429ce04d71f69620) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#64](https://github.com/SoberReport-AI/DeepGuard/issues/64) |
 | 2026-08-23 01:00 | dsh-webui-market-plugin | 0.5.5 | [f0cfc50](https://github.com/sanqi-normal/dsh-webui-market-plugin/commit/f0cfc501a9e66b3c77da37e346d311d092cb1e41) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#65](https://github.com/SoberReport-AI/DeepGuard/issues/65) |
