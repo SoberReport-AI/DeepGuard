@@ -1,0 +1,38 @@
+{
+  "id": "dsh-cost-meter",
+  "name": "dsh-cost-meter",
+  "repo": "han-1413141/dsh-cost-meter",
+  "url": "https://github.com/han-1413141/dsh-cost-meter",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake (catalog star ranking, 66 stars).",
+  "source": "issue",
+  "issue": 68,
+  "status": "pending",
+  "submitted_at": "2026-08-22T16:16:40.480Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "a6ab9d61936e89521e800d16ce9b4dc6723972f9",
+    "default_branch": "master",
+    "pushed_at": "2026-08-22T14:41:07Z",
+    "stars": 155,
+    "version": "1.5.40",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-cost-meter"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T16:16:40.480Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
