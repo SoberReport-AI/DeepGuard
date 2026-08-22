@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake (catalog star ranking, 69 stars).",
   "source": "issue",
   "issue": 67,
-  "status": "auditing",
+  "status": "pending",
   "submitted_at": "2026-08-22T16:16:37.952Z",
   "prescreen": {
     "ok": true,
@@ -48,7 +48,12 @@
       "at": "2026-08-22T22:04:58.621Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-22T22:20:08.000Z",
+      "action": "reset-to-pending",
+      "reason": "run 32601438357 died on provider quota (HTTP 402, top-up still propagating) — terminal failure with no active run, so the orphan window would only stall the queue lock; attempts rolled back to 1 (quota outage, same policy as dsh-workflow)"
     }
   ],
-  "attempts": 2
+  "attempts": 1
 }
