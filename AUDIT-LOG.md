@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-22 21:28 | dsh-genui | 0.9.1 | [1ca5da4](https://github.com/omdsh-dev/dsh-genui/commit/1ca5da4eb9394972cce2c1ccacfedc22eec3166b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#53](https://github.com/SoberReport-AI/DeepGuard/pull/53) |
 | 2026-08-22 21:02 | dsh-openpencil | 0.1.0-rc.2 | [e3eb3bf](https://github.com/zseven-w/dsh-openpencil/commit/e3eb3bfdb5262db0659c3c6e567fe209199c3eb2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#52](https://github.com/SoberReport-AI/DeepGuard/pull/52) |
 | 2026-08-22 20:51 | dsh-browser | 0.1.2 | [eefd503](https://github.com/lum1104/dsh-browser/commit/eefd503da96097b41826943f49231f761e448e70) | SoberReport-AI | risk | 1 | approve | — | — | rejected (postcheck) | [run](https://github.com/SoberReport-AI/DeepGuard/actions/runs/32573663152) |
 | 2026-08-22 20:06 | dsh-agent-teams | 0.1.12 | [6e7e5ee](https://github.com/nanmicoder/dsh-agent-teams/commit/6e7e5eeef3aa39b2aa1dae7aa30ea4d70b44f639) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#41](https://github.com/SoberReport-AI/DeepGuard/pull/41) |

@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T13:28:35.162Z",
+      "plugin_id": "dsh-genui",
+      "name": "dsh-genui",
+      "version": "0.9.1",
+      "commit": "1ca5da4eb9394972cce2c1ccacfedc22eec3166b",
+      "repo": "omdsh-dev/dsh-genui",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": null,
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/53",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32575425159",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（plugin.id/version/commit 逐字一致，subpath=null 对应仓库根）。无任何 findings，26 条机械命中全部在 Sonar 报告 audit_scope.limits 中逐规则裁决（DG-R3-59/60/57/R2-52/R3-55/R4-53）。独立漏检快扫：未发现安装钩子、child_process 仅限脚本/测试、无 eval/new Function 运行时调用、无出站网络（fetch/XHR/WebSocket）、无凭据读取、无注入措辞、无隐蔽外联。浏览器端键盘监听为 UI 交互功能（标签页导航、复制按钮、Enter 提交），剪贴",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T13:02:41.595Z",
       "plugin_id": "dsh-openpencil",
       "name": "dsh-openpencil",
