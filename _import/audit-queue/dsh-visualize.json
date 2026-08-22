@@ -1,0 +1,38 @@
+{
+  "id": "dsh-visualize",
+  "name": "dsh-visualize",
+  "repo": "nagi-ovo/dsh-visualize",
+  "url": "https://github.com/nagi-ovo/dsh-visualize",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 17,
+  "status": "pending",
+  "submitted_at": "2026-08-22T09:16:28.619Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "e86f68fe66b980a0ebeed8ef7409522b0b720bed",
+    "default_branch": "main",
+    "pushed_at": "2026-08-17T16:27:54Z",
+    "stars": 201,
+    "version": "0.1.2",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-visualize"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T09:16:28.619Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
