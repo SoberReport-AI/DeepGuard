@@ -1,0 +1,38 @@
+{
+  "id": "dsh-turn-rewind",
+  "name": "dsh-turn-rewind",
+  "repo": "anionex/dsh-turn-rewind",
+  "url": "https://github.com/anionex/dsh-turn-rewind",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake (catalog star ranking, 70 stars).",
+  "source": "issue",
+  "issue": 64,
+  "status": "pending",
+  "submitted_at": "2026-08-22T16:16:28.484Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "b1b85f18aaaaf71d76c84613429ce04d71f69620",
+    "default_branch": "main",
+    "pushed_at": "2026-08-21T17:31:57Z",
+    "stars": 95,
+    "version": "0.1.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-turn-rewind"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T16:16:28.484Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
