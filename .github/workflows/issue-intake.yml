@@ -5,8 +5,8 @@
 # default) — all other issues are ignored, so non-audit issues never trigger the pipeline.
 #
 # Flow: write issue body → prescreen deterministic pre-screening (dedup/reachability/pin commit) →
-#   enqueue if qualified → push straight to main (queue file) → dispatch agent-audit (with
-#   issue_number; issue-feedback comments back when the audit completes).
+#   enqueue if qualified → push straight to main (queue file) → trigger audit-dispatch (the single
+#   dispatcher; issue-feedback comments back when the audit completes).
 # Failed pre-screening → comment the reason in English; not enqueued.
 name: issue-intake
 
@@ -21,7 +21,7 @@ on:
 permissions:
   contents: write   # push the queue file straight to main
   issues: write     # comment pre-screening results
-  actions: write    # dispatch agent-audit
+  actions: write    # trigger audit-dispatch
 
 concurrency:
   group: issue-intake-${{ github.event.issue.number }}
@@ -75,7 +75,7 @@ jobs:
           # 0=passed and enqueued; non-zero=pre-screening rejected (error details in the log; next step comments them)
           exit 0
 
-      - name: Pre-screen passed — push queue file to main + dispatch audit
+      - name: Pre-screen passed — push queue file to main + trigger the dispatcher
         if: steps.prescreen.outputs.code == '0' && steps.prescreen.outputs.queue_id != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -110,20 +110,19 @@ jobs:
             sleep 5
           done
           [ "$PUSHED" = "1" ] || { echo "::error::queue file for ${QUEUE_ID} was NOT persisted to main after 3 attempts; refusing to dispatch (gate would read a missing/stale queue entry)"; exit 1; }
-          # Batch-safe dispatch: the agent-audit concurrency group (cancel-in-progress: false) keeps
-          # only ONE waiting run — a direct dispatch while another audit is active/queued replaces the
-          # older waiting run ("Canceling since a higher priority waiting request exists", first seen
-          # in the dsh-top20 issue batch). When the pipeline is busy, leave the entry pending:
-          # audit-dispatch (workflow_run completion + 10-min cron) backfills pending items in
-          # ascending enqueue time, so the batch drains serially instead of colliding here.
-          ACTIVE=$(gh run list --workflow=agent-audit.yml --status in_progress --json databaseId --jq length)
-          WAITING=$(gh run list --workflow=agent-audit.yml --status queued --json databaseId --jq length)
-          if [ "$ACTIVE" != "0" ] || [ "$WAITING" != "0" ]; then
-            echo "agent-audit busy ($ACTIVE running / $WAITING queued) — $QUEUE_ID stays pending; the audit-dispatch chain will backfill it"
-          else
-            gh workflow run agent-audit.yml -f queue_id="$QUEUE_ID" -f issue_number="$ISSUE_NUMBER"
-            echo "dispatched agent-audit: queue_id=$QUEUE_ID, issue=#$ISSUE_NUMBER"
-          fi
+          # Single-dispatcher discipline: NEVER dispatch agent-audit from here. Check-then-dispatch
+          # is racy under concurrent issues — a freshly dispatched run takes seconds to become
+          # visible to `gh run list`, so N simultaneous intakes can all read "idle" and dispatch;
+          # the agent-audit concurrency group (cancel-in-progress: false, 1 running + 1 waiting)
+          # then REPLACES the waiting run ("Canceling since a higher priority waiting request
+          # exists" — first seen in the dsh-top20 batch, reproduced in the 5-issue E2E 2026-08-22).
+          # audit-dispatch is the ONLY dispatcher: globally serialized + busy-guarded, it picks the
+          # next pending entry in enqueue order (the issue number travels inside the queue file and
+          # issue-feedback reads it from there). Surplus audit-dispatch triggers collapse harmlessly
+          # (its own concurrency group keeps 1 running + 1 waiting; the busy guard turns survivors
+          # into no-ops), and the 10-min cron backstops the chain.
+          gh workflow run audit-dispatch.yml
+          echo "triggered audit-dispatch: $QUEUE_ID enqueued; picked up in ascending enqueue time"
 
       - name: Pre-screen passed — comment confirmation
         if: steps.prescreen.outputs.code == '0' && steps.prescreen.outputs.queue_id != ''
