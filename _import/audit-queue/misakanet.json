@@ -1,0 +1,37 @@
+{
+  "id": "misakanet",
+  "name": "misakanet",
+  "repo": "ikalus1988/misakanet",
+  "url": "https://github.com/ikalus1988/misakanet",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "source": "issue",
+  "issue": 58,
+  "status": "pending",
+  "submitted_at": "2026-08-22T14:21:32.466Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "a656edb8e9427942147d4b8ff3af5d11fb5b1e9c",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T13:05:11Z",
+    "stars": 423,
+    "version": null,
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "misakanet"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-22T14:21:32.466Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
