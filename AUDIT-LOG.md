@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-22 23:19 | treg | 0.12.0 | [603540f](https://github.com/superdesigndev/treg/commit/603540f653994080d4f507a9a3564e1017c28eef) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#57](https://github.com/SoberReport-AI/DeepGuard/issues/57) |
 | 2026-08-22 22:59 | aegis | 2.8.5 | [fea84dd](https://github.com/ganyuanran/aegis/commit/fea84dd545385ebdbe1c7ceab0d2afb8fe9d4600) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
 | 2026-08-22 22:31 | dsh-browser | 0.1.2 | [eefd503](https://github.com/lum1104/dsh-browser/commit/eefd503da96097b41826943f49231f761e448e70) | SoberReport-AI | risk | 2 | approve | — | pass | merged | [#47](https://github.com/SoberReport-AI/DeepGuard/issues/47) |
 | 2026-08-22 22:03 | dsh-visualize | 0.1.2 | [e86f68f](https://github.com/nagi-ovo/dsh-visualize/commit/e86f68fe66b980a0ebeed8ef7409522b0b720bed) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#55](https://github.com/SoberReport-AI/DeepGuard/pull/55) |

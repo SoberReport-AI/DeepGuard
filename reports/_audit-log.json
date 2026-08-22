@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T15:19:57.787Z",
+      "plugin_id": "treg",
+      "name": "treg",
+      "version": "0.12.0",
+      "commit": "603540f653994080d4f507a9a3564e1017c28eef",
+      "repo": "superdesigndev/treg",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/57",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/63",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32580760435",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核（Aegis）结论：approve。①身份/哈希/命令/维度汇总全部一致；②findings[] 为空，无 finding 证据路径需逐条核验；③checked_items 关键证据我亲自打开复核：dsh/index.js（纯 ESM 技能注册，无子进程/网络）、dsh/cordis.patch.yml（两处 !!js 仅读 TREG_TOKEN，唯一外联 treg.to/mcp/，未触碰沙箱/审批/权限行）、package.json（无安装钩子，dsh.bundle 指向存在的 ./dsh/cordis.patch.yml）、dsh/skills/treg/SKILL.md 及多份同",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T14:59:31.225Z",
       "plugin_id": "aegis",
       "name": "aegis",
