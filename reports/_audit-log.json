@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T10:23:00.196Z",
+      "plugin_id": "dsh-tui",
+      "name": "dsh-TUI",
+      "version": "0.8.8",
+      "commit": "f4e302b764afa71596025713b859cbbffcd52a9f",
+      "repo": "ccch1mneyyy/dsh-tui",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": null,
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/25",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32566995497",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论 approve。身份核验通过（plugin.id/version/commit/subpath 与任务卡及 package.json 实测一致，审计根为插件包根）。findings 为空，无证据可伪造；维度结构自洽（clean/na 维度无 findings，checked_items 均有实质内容，无空头对勾）。机械命中 146 条全量（static-scan-hits.json 亲自通读）均被 Sonar 以规则 ID 明确裁决，抽查 cordis.patch.yml/cordis.yml 的 !!js 表达式、prepare 钩子、bin 启动器、'curly' 样式名、src",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T09:44:14.041Z",
       "plugin_id": "dsh-better-sidebar",
       "name": "dsh-better-sidebar",
