@@ -1,0 +1,37 @@
+{
+  "id": "dsh-deep-whale",
+  "name": "dsh-deep-whale",
+  "repo": "small-tailqwq/dsh-deep-whale",
+  "url": "https://github.com/small-tailqwq/dsh-deep-whale",
+  "subpath": "maid-atelier",
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "Top-starred dsh plugin batch intake (catalog star ranking).\n- Monorepo subpath: `maid-atelier`",
+  "source": "issue",
+  "issue": 5,
+  "status": "pending",
+  "submitted_at": "2026-08-22T09:11:01.865Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "4a8e227209dce10f36892244b82646a5316afd93",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T09:10:58Z",
+    "stars": 1577,
+    "version": null,
+    "dsh_kind": [],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "maid-atelier"
+    },
+    "warnings": [
+      "no package.json at the repo root (non-standard npm package layout; audit scope needs human confirmation)"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-08-22T09:11:01.865Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
