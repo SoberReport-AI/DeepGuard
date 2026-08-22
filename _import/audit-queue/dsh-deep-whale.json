@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).\n- Monorepo subpath: `maid-atelier`",
   "source": "issue",
   "issue": 5,
-  "status": "pending",
+  "status": "cancelled",
   "submitted_at": "2026-08-22T09:11:01.865Z",
   "prescreen": {
     "ok": true,
@@ -36,6 +36,11 @@
     {
       "at": "2026-08-22T10:18:45.054Z",
       "action": "version-repair: prescreen read the monorepo root manifest at intake (None); corrected to the subpath manifest value 0.0.1 (the commit lock is unchanged)"
+    },
+    {
+      "at": "2026-08-22T11:05:53.010Z",
+      "action": "cancelled",
+      "reason": "batch submission withdrawn (owner request)"
     }
   ]
 }
