@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-22T14:59:31.225Z",
+      "plugin_id": "aegis",
+      "name": "aegis",
+      "version": "2.8.5",
+      "commit": "fea84dd545385ebdbe1c7ceab0d2afb8fe9d4600",
+      "repo": "ganyuanran/aegis",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/56",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/62",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32579862724",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：1) 身份/版本/commit 与任务卡逐字一致；2) 报告无 findings，6 个维度 checked_items 叙事均经我逐文件核实（extensions/dsh/bootstrap.js、index.js、cordis.patch.yml、extensions/shared/aegis-bootstrap.ts、hooks/*、skills/using-aegis、scripts/aegis-update.py 等），无空头对勾；3) 9 条机械预扫命中全部被裁决且引用规则 ID，我逐一打开可见证据复核均成立；.github/.opencode 等隐藏目录本环境同样不",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T14:31:15.236Z",
       "plugin_id": "dsh-browser",
       "name": "dsh-browser",
