@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-23 06:22 | dsh-cost-meter | 1.5.40 | [a6ab9d6](https://github.com/han-1413141/dsh-cost-meter/commit/a6ab9d61936e89521e800d16ce9b4dc6723972f9) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
 | 2026-08-23 06:06 | dsh-annotation | 1.4.1 | [599cd1e](https://github.com/omdsh-dev/dsh-annotation/commit/599cd1e68c320da2def27574a57a4e5e786d757b) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#67](https://github.com/SoberReport-AI/DeepGuard/issues/67) |
 | 2026-08-23 05:54 | dsh-workflow | 0.1.2 | [44b83c1](https://github.com/omdsh-dev/dsh_workflow/commit/44b83c182aa02d1be8a0803e8446cb495f93cd8f) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#66](https://github.com/SoberReport-AI/DeepGuard/issues/66) |
 | 2026-08-23 04:38 | dsh-cost-meter | 1.5.40 | [a6ab9d6](https://github.com/han-1413141/dsh-cost-meter/commit/a6ab9d61936e89521e800d16ce9b4dc6723972f9) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
