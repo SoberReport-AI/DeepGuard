@@ -1,1 +1,41 @@
-{"version":1,"entries":[]}
+{
+  "version": 1,
+  "entries": [
+    {
+      "ts": "2026-08-22T09:03:22.465Z",
+      "plugin_id": "dsh-web-ui",
+      "name": null,
+      "version": "0.2.8",
+      "commit": "b4837f4c176587666f4d1ebe0fa7831a4395ec14",
+      "repo": null,
+      "source": null,
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "publish",
+      "status": "failed",
+      "issue": null,
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/1",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32563608150",
+      "extended_review": true,
+      "reason": "publish did not pass (postcheck FAIL, or push/PR creation failed; see run logs)",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：1) 身份四要素（id/version/commit/subpath）逐字一致；2) 报告无 findings，各维度 clean 声明经我亲自打开 package.json、src/index.ts、src/client/index.ts、lib/*.js、lib/client.js.map、cordis.patch.yml、aggregate.yml、README/AGENTS.md 逐一验证属实——host 半区空实现，client 半区仅 DOM 属性打标（无键盘/剪贴板/网络/特权接口），patch 仅插件行插入，prepare=tsdown 为常规构建脚本，外部依赖精",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    }
+  ]
+}
