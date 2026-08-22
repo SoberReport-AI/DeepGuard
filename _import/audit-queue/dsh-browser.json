@@ -8,15 +8,15 @@
   "capabilities_hint": [],
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "issue",
-  "issue": 32,
-  "status": "rejected",
-  "submitted_at": "2026-08-22T11:14:26.463Z",
+  "issue": 36,
+  "status": "pending",
+  "submitted_at": "2026-08-22T11:58:13.986Z",
   "prescreen": {
     "ok": true,
     "commit": "eefd503da96097b41826943f49231f761e448e70",
     "default_branch": "main",
     "pushed_at": "2026-08-22T04:17:32Z",
-    "stars": 383,
+    "stars": 386,
     "version": "0.1.2",
     "dsh_kind": [],
     "install_hooks": [],
@@ -30,13 +30,8 @@
   },
   "history": [
     {
-      "at": "2026-08-22T11:14:26.463Z",
+      "at": "2026-08-22T11:58:13.986Z",
       "action": "prescreen-pass"
-    },
-    {
-      "at": "2026-08-22T11:24:59.728Z",
-      "action": "rejected",
-      "reason": "evidence-crosscheck: FND-001: evidence path does not exist MANAGED_ROOT/scripts/install.sh；FND-001: evidence path does not exist //raw.githubusercontent.com/Lum1104/dsh-browser/refs/heads/main/scripts/install.sh"
     }
   ]
 }
