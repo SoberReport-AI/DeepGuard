@@ -363,6 +363,14 @@ jobs:
           BAI_LLM_KEY: ${{ secrets.BAI_LLM_KEY }}
         run: ./agent/node_modules/.bin/tsx agent/src/cli.ts audit --task "$WORK_DIR/task.json" --config agent/agents.config.json
 
+      # Deterministic evidence repair (prompt hardening alone did not stop Sonar from citing remote
+      # URLs in the path position — dsh-browser rejected twice on 2026-08-22): snapshot-verifiable
+      # URL citations are rewired to file:line here, before translate/publish consume the draft.
+      # Non-blocking by design: whatever slips through meets postcheck's evidence-crosscheck gate.
+      - name: Normalize evidence URLs to snapshot file:line
+        if: always()
+        run: node agent/scripts/normalize-evidence.mjs --task "$WORK_DIR/task.json" || echo "::warning::evidence normalization failed; postcheck evidence-crosscheck remains the hard gate"
+
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
         with:
