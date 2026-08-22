@@ -8,15 +8,15 @@
   "capabilities_hint": [],
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "issue",
-  "issue": 20,
-  "status": "cancelled",
-  "submitted_at": "2026-08-22T09:17:52.481Z",
+  "issue": 38,
+  "status": "pending",
+  "submitted_at": "2026-08-22T11:58:20.300Z",
   "prescreen": {
     "ok": true,
     "commit": "e3eb3bfdb5262db0659c3c6e567fe209199c3eb2",
     "default_branch": "main",
     "pushed_at": "2026-08-21T14:32:24Z",
-    "stars": 139,
+    "stars": 140,
     "version": "0.1.0-rc.2",
     "dsh_kind": [
       "bundle",
@@ -31,13 +31,8 @@
   },
   "history": [
     {
-      "at": "2026-08-22T09:17:52.482Z",
+      "at": "2026-08-22T11:58:20.300Z",
       "action": "prescreen-pass"
-    },
-    {
-      "at": "2026-08-22T11:05:53.010Z",
-      "action": "cancelled",
-      "reason": "batch submission withdrawn (owner request)"
     }
   ]
 }
