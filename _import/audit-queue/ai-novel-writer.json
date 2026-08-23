@@ -1,0 +1,37 @@
+{
+  "id": "ai-novel-writer",
+  "name": "dsh-ai-novel-writer",
+  "repo": "ethanyoq/ai-novel-writer",
+  "url": "https://github.com/ethanyoq/ai-novel-writer",
+  "subpath": null,
+  "category_hint": "memory",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #2 (catalog star ranking, 372 stars).",
+  "source": "issue",
+  "issue": 77,
+  "status": "pending",
+  "submitted_at": "2026-08-23T09:54:21.002Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "cb767d89277927ecd2986e70b9f0a9f57c72c9f8",
+    "default_branch": "master",
+    "pushed_at": "2026-08-23T04:16:59Z",
+    "stars": 435,
+    "version": "0.8.5",
+    "dsh_kind": [],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-ai-novel-writer"
+    },
+    "warnings": [
+      "package.json has no dsh.bundle/client/service declaration (will be audited as a plain package by actual code behavior)"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-08-23T09:54:21.002Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
