@@ -9,7 +9,7 @@
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #14). Top-starred dsh plugin (catalog star ranking).",
   "source": "issue",
   "issue": 93,
-  "status": "pending",
+  "status": "audited",
   "submitted_at": "2026-08-23T16:08:32.847Z",
   "prescreen": {
     "ok": true,
@@ -42,6 +42,11 @@
       "at": "2026-08-23T16:27:08.859Z",
       "action": "requeued",
       "reason": "orphaned dispatch: no terminal write within 30 min of dispatch (run died or was cancelled)"
+    },
+    {
+      "at": "2026-08-23T16:39:47.944Z",
+      "action": "audited",
+      "reason": null
     }
   ],
   "attempts": 1
