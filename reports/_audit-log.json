@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T18:43:24.434Z",
+      "plugin_id": "deepseek-harness-desktop",
+      "name": "dsh-desktop-base",
+      "version": "3.0.1",
+      "commit": "f718ac012e80fccd0b3b123e58d780f0f8ed7abc",
+      "repo": "ningbainb/deepseek-harness-desktop",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/80",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/98",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32658413445",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份四元组逐字一致；findings 为空（clean 报告），无逐条证据需核验。机械规则面 51 条预扫命中全部落在 Sonar 已按规则 ID 明确裁决的规则族内（DSH-X10/X07/X03/X05/X08/C01/C05/T02/P01/X02），无两头皆空的覆盖缺口；关键良性裁决经独立抽查成立（SKILL.md/AGENTS.md 为仓库开发与发版指令、systemPrompt.section 为插件能力声明、prepare 全为构建工具、describe-image 实际 patch 无 !!js 标量、profile 克隆含撤销同意后不再复制凭据的测试）。定级校准：无 find",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T16:41:41.360Z",
       "plugin_id": "oh-dsh",
       "name": "oh-dsh",
