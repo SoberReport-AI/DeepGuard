@@ -315,6 +315,11 @@ jobs:
         with:
           name: audit-work-${{ inputs.queue_id }}
           path: agent/work/
+          # upload-artifact v4 excludes hidden files by default — without this flag every dot-path
+          # in the plugin tree (.dsh/, .github/workflows/, …) silently vanishes from the artifact,
+          # leaving all downstream LLM roles unable to open files the manifest still lists
+          # (issue #80, run 32640813276: Aegis escalated needs_human on exactly this gap).
+          include-hidden-files: true
           retention-days: 7
 
   # ---------- Sonar: static security audit (untrusted zone; core injected via CORE_PAT in separate steps, agent runtime has only the LLM key) ----------
