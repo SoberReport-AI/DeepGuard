@@ -53,7 +53,12 @@
       "at": "2026-08-23T16:41:57.212Z",
       "action": "requeued",
       "reason": "orphaned dispatch: no terminal write within 30 min of dispatch (run died or was cancelled)"
+    },
+    {
+      "at": "2026-08-23T18:11:37Z",
+      "action": "manual-reenqueue",
+      "reason": "prior attempts burned by a deterministic prepare failure (tarball link entry .agents/notes/implemented/CLAUDE.md) with no graceful channel; link entries now route to the invalid-submission reject path (DeepGuardWeb@c18e3ad) — this run lands the terminal rejected state + issue feedback instead of looping; attempts reset"
     }
   ],
-  "attempts": 2
+  "attempts": 0
 }
