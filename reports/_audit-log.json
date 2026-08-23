@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T23:20:54.604Z",
+      "plugin_id": "dsh-automation",
+      "name": "dsh-automation",
+      "version": "0.1.7",
+      "commit": "5ae28f209c0253461131613fc1b2ea27920bec67",
+      "repo": "titanwings/dsh-automation",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/100",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/109",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32673025044",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过：plugin.id/version/commit/subpath 均与任务卡逐字一致。\nSonar 报告无 findings，所有维度 clean。逐条证据核验：零条 finding 无需逐条核查；机械命中 6 条 DSH-X08 均已在线下逐行确认位置与内容（CSS 样式、Unicode 本地化字符串、sourcemap），均为良性，Sonar 已在 DG-D3 第 8 项中明确裁决排除。\n危险模式快扫：child_process/eval/Function/网络调用/凭据读取/base64 解码执行/install 钩子/隐藏指令文件均未发现。\n覆盖面对账：manifest ",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T18:45:25.514Z",
       "plugin_id": "openviking",
       "name": "dsh-memory-plugin",
