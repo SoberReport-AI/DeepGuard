@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "issue",
   "issue": 60,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-22T14:21:42.918Z",
   "prescreen": {
     "ok": true,
@@ -48,7 +48,12 @@
       "at": "2026-08-23T09:12:02.000Z",
       "action": "reset-to-pending",
       "reason": "re-run approved by maintainer: the 16:18 attempt ran pre-fix pipeline code (dispatched 16:08, before the trace-pack/artifact-gating export landed) and its translate stage never delivered; fresh run on current code to get a clean verdict"
+    },
+    {
+      "at": "2026-08-23T09:14:57.306Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 1
+  "attempts": 2
 }
