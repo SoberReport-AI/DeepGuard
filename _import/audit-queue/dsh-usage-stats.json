@@ -1,0 +1,38 @@
+{
+  "id": "dsh-usage-stats",
+  "name": "dsh-usage-stats-ychris12138",
+  "repo": "ychris12138/dsh-usage-stats",
+  "url": "https://github.com/ychris12138/dsh-usage-stats",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #2 (catalog star ranking, 59 stars).",
+  "source": "issue",
+  "issue": 83,
+  "status": "pending",
+  "submitted_at": "2026-08-23T09:54:29.171Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "7c88a445b73f78af7df6082fd671d22a293acb6d",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T07:07:49Z",
+    "stars": 109,
+    "version": "0.2.10",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-usage-stats-ychris12138"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T09:54:29.172Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
