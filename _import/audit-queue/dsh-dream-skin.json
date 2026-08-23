@@ -1,0 +1,38 @@
+{
+  "id": "dsh-dream-skin",
+  "name": "dsh-dream-skin",
+  "repo": "revolutionla/dsh-dream-skin",
+  "url": "https://github.com/revolutionla/dsh-dream-skin",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #3 (catalog star ranking, 44 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 104,
+  "status": "pending",
+  "submitted_at": "2026-08-23T23:14:07.538Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "68c554c2fd4701b560315a7513b0ee73b668874f",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T18:45:45Z",
+    "stars": 91,
+    "version": "0.4.10",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-dream-skin"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T23:14:07.538Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
