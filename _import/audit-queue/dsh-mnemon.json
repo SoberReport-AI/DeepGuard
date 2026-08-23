@@ -1,0 +1,38 @@
+{
+  "id": "dsh-mnemon",
+  "name": "dsh-mnemon",
+  "repo": "omdsh-dev/dsh-mnemon",
+  "url": "https://github.com/omdsh-dev/dsh-mnemon",
+  "subpath": null,
+  "category_hint": "memory",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #2 (catalog star ranking, 66 stars).",
+  "source": "issue",
+  "issue": 81,
+  "status": "pending",
+  "submitted_at": "2026-08-23T09:54:24.556Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "e5aae00797772bee34f414820b545d21391b84c7",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T08:12:49Z",
+    "stars": 182,
+    "version": "0.2.16",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-mnemon"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T09:54:24.556Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
