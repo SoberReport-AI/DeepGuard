@@ -1,0 +1,38 @@
+{
+  "id": "dsh-notification",
+  "name": "dsh-notification",
+  "repo": "omdsh-dev/dsh-notification",
+  "url": "https://github.com/omdsh-dev/dsh-notification",
+  "subpath": null,
+  "category_hint": "bridge",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #2 (catalog star ranking, 57 stars).",
+  "source": "issue",
+  "issue": 84,
+  "status": "pending",
+  "submitted_at": "2026-08-23T09:54:29.542Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "ddec603395a223deb46c75b74274c41849c6a131",
+    "default_branch": "main",
+    "pushed_at": "2026-08-19T07:12:27Z",
+    "stars": 71,
+    "version": "0.1.3",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-notification"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T09:54:29.542Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
