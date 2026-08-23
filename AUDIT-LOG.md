@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-23 22:15 | dsh-usage-stats | 0.2.10 | [7c88a44](https://github.com/ychris12138/dsh-usage-stats/commit/7c88a445b73f78af7df6082fd671d22a293acb6d) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#83](https://github.com/SoberReport-AI/DeepGuard/issues/83) |
 | 2026-08-23 22:11 | dsh-pet | — | [82ba588](https://github.com/pc2005-cloud/dsh-pet/commit/82ba588c7f849a62f1af5df81250e2ca8154c3a3) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#79](https://github.com/SoberReport-AI/DeepGuard/issues/79) |
 | 2026-08-23 22:10 | dsh-undo-plugin | 0.4.1 | [7d21c94](https://github.com/lire1131/dsh-undo-plugin/commit/7d21c941a06ef46508e96aa0bd33e5af65488d8b) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#82](https://github.com/SoberReport-AI/DeepGuard/issues/82) |
 | 2026-08-23 21:06 | deepseek-harness-desktop | 3.0.1 | [f718ac0](https://github.com/ningbainb/deepseek-harness-desktop/commit/f718ac012e80fccd0b3b123e58d780f0f8ed7abc) | SoberReport-AI | clean | 0 | extended review | escalated | — | failed, flagged for extended review | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
