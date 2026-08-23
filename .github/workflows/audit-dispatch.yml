@@ -66,11 +66,15 @@ jobs:
           # dispatched before this protocol existed, whose queue status is still pending).
           #
           # exclude_run_id (chain mode): agent-audit's chain-next job fires this dispatcher while its
-          # own run is still in_progress, so the caller id is subtracted from every visibility check
-          # (string comparison — an empty input excludes nothing; see audit-chain-dispatch.md §F3).
+          # own run is still in_progress, so the caller id is subtracted from every visibility check.
+          # gh's --jq is embedded gojq and takes NO --arg/--argjson (F8: `--jq --arg ex ...` made gh
+          # swallow "--arg" as the expression and error `unknown command "ex"`, killing every
+          # dispatcher run on first contact, 2026-08-23) — the id is shell-embedded after a strict
+          # numeric check; an empty string excludes nothing.
+          case "$EXCLUDE_RUN_ID" in *[!0-9]*) echo "::error::exclude_run_id must be a numeric run id, got: $EXCLUDE_RUN_ID"; exit 1;; esac
           visible_runs() {
             gh run list --workflow=agent-audit.yml --status "$1" --json databaseId \
-              --jq --arg ex "$EXCLUDE_RUN_ID" '[.[] | select(.databaseId | tostring != $ex)] | length'
+              --jq "[.[] | select(.databaseId | tostring != \"$EXCLUDE_RUN_ID\")] | length"
           }
           ACTIVE=$(visible_runs in_progress)
           QUEUED=$(visible_runs queued)
