@@ -1,0 +1,38 @@
+{
+  "id": "dsh-openbiliclaw",
+  "name": "dsh-openbiliclaw",
+  "repo": "whiteguo233/dsh-openbiliclaw",
+  "url": "https://github.com/whiteguo233/dsh-openbiliclaw",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #3 (catalog star ranking, 39 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 106,
+  "status": "pending",
+  "submitted_at": "2026-08-23T23:14:13.834Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "b91ff7850df0722bc6133a6a312fa7b8984196c0",
+    "default_branch": "main",
+    "pushed_at": "2026-08-21T19:26:27Z",
+    "stars": 52,
+    "version": "0.3.206",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-openbiliclaw"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T23:14:13.834Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
