@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 07:38 | dsh-commandcode-provider | 0.8.0 | [7eac763](https://github.com/mars-sea/dsh-commandcode-provider/commit/7eac763be33ddb5266b0966975916a11ae471664) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#102](https://github.com/SoberReport-AI/DeepGuard/issues/102) |
 | 2026-08-24 07:30 | dsh-chat-import | 0.7.0 | [a6c5410](https://github.com/nwflower/dsh-chat-import/commit/a6c5410e45beb055e232edcf25db29f2721035c6) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#99](https://github.com/SoberReport-AI/DeepGuard/issues/99) |
 | 2026-08-24 07:20 | dsh-automation | 0.1.7 | [5ae28f2](https://github.com/titanwings/dsh-automation/commit/5ae28f209c0253461131613fc1b2ea27920bec67) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#100](https://github.com/SoberReport-AI/DeepGuard/issues/100) |
 | 2026-08-24 02:45 | openviking | — | [6e944cc](https://github.com/volcengine/openviking/commit/6e944cc3e14872ec7e7a80edec9265397f367894) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#75](https://github.com/SoberReport-AI/DeepGuard/issues/75) |
