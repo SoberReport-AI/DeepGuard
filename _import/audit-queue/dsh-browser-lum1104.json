@@ -1,0 +1,38 @@
+{
+  "id": "dsh-browser-lum1104",
+  "name": "dsh-browser-lum1104",
+  "repo": "lum1104/dsh-browser",
+  "url": "https://github.com/lum1104/dsh-browser",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #2 (catalog star ranking, 230 stars).",
+  "source": "issue",
+  "issue": 78,
+  "status": "pending",
+  "submitted_at": "2026-08-23T09:54:18.955Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "ef8b551666d6e725e69934e71c3cc0f63c3e51b0",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T09:44:05Z",
+    "stars": 399,
+    "version": "0.1.2",
+    "dsh_kind": [],
+    "install_hooks": [],
+    "dup": {
+      "in": "reports",
+      "id": "dsh-browser"
+    },
+    "warnings": [
+      "package.json has no dsh.bundle/client/service declaration (will be audited as a plain package by actual code behavior)",
+      "id collides with an admitted plugin; using dsh-browser-lum1104 instead"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-08-23T09:54:18.955Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
