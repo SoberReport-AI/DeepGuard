@@ -1,0 +1,37 @@
+{
+  "id": "openviking",
+  "name": "dsh-memory-plugin",
+  "repo": "volcengine/openviking",
+  "url": "https://github.com/volcengine/openviking",
+  "subpath": null,
+  "category_hint": "memory",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #2 (catalog star ranking, 28787 stars).",
+  "source": "issue",
+  "issue": 75,
+  "status": "pending",
+  "submitted_at": "2026-08-23T09:54:11.896Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "6e944cc3e14872ec7e7a80edec9265397f367894",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T09:44:23Z",
+    "stars": 32243,
+    "version": null,
+    "dsh_kind": [],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-memory-plugin"
+    },
+    "warnings": [
+      "no package.json at the repo root (non-standard npm package layout; audit scope needs human confirmation)"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-08-23T09:54:11.896Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
