@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T02:53:41.638Z",
+      "plugin_id": "dsh-annotation",
+      "name": "dsh-annotation",
+      "version": "1.4.1",
+      "commit": "599cd1e68c320da2def27574a57a4e5e786d757b",
+      "repo": "omdsh-dev/dsh-annotation",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/67",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/71",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32613640036",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份四元组与任务卡逐字一致；报告 findings 为空（clean），全部 clean 主张经亲自打开文件验证成立——client.js 仅 DOM 批注功能（Enter 拼稿/Esc 关闭，无键盘记录/剪贴板窃取/网络外联/凭据读取/eval），cordis.patch.yml 仅插入自身 id，package.json 无安装钩子、无运行时第三方依赖，README 74 行 curl 为 127.0.0.1 自检；14 条机械命中逐条裁决无覆盖缺口（DSH-X07 经预扫摘录判良性，DSH-X08 零宽正则与压缩产物、DSH-C05「curly」子串误报均亲自核实）；sit",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-22T23:34:22.719Z",
       "plugin_id": "dsh-workflow",
       "name": "dsh-workflow",
