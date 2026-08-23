@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 00:26 | dsh-ads | 0.1.0 | [aa752ed](https://github.com/nagi-ovo/dsh-ads/commit/aa752ed8d24d0a4b5ce1fde4b99b0d9d7f5a1e22) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#91](https://github.com/SoberReport-AI/DeepGuard/issues/91) |
 | 2026-08-24 00:17 | dsh-deep-whale | 0.0.1 | [d3d7ff2](https://github.com/small-tailqwq/dsh-deep-whale/commit/d3d7ff2b7d97260e940306b3e462870b6e033c96) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#92](https://github.com/SoberReport-AI/DeepGuard/issues/92) |
 | 2026-08-23 23:30 | dsh-usage-stats | 0.2.10 | [7c88a44](https://github.com/ychris12138/dsh-usage-stats/commit/7c88a445b73f78af7df6082fd671d22a293acb6d) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#83](https://github.com/SoberReport-AI/DeepGuard/issues/83) |
 | 2026-08-23 23:21 | dsh-undo-plugin | 0.4.1 | [7d21c94](https://github.com/lire1131/dsh-undo-plugin/commit/7d21c941a06ef46508e96aa0bd33e5af65488d8b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#82](https://github.com/SoberReport-AI/DeepGuard/issues/82) |

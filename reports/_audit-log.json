@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T16:26:35.997Z",
+      "plugin_id": "dsh-ads",
+      "name": "dsh-ads",
+      "version": "0.1.0",
+      "commit": "aa752ed8d24d0a4b5ce1fde4b99b0d9d7f5a1e22",
+      "repo": "nagi-ovo/dsh-ads",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/91",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/96",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32651247790",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 逐字一致）。findings[] 为空，无逐条证据可核；对全部 6 个维度的 checked_items 与 ds_scenarios 声明逐一做了独立源码验证：DG-D1 无凭据读取（process.env 仅 GITHUB_TOKEN/GH_TOKEN 用于 GitHub API Bearer，localStorage 仅曝光记录/偏好）；DG-D2 无工具注册、无系统提示注入（grep 证实仅 slots 与 webServer 路由）；DG-D3 全部 13 条机械命中（DSH-X03×9/DSH-X05×3/DSH-X",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T16:17:41.271Z",
       "plugin_id": "dsh-deep-whale",
       "name": "dsh-deep-whale",
