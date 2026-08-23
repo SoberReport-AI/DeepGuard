@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T14:25:00.877Z",
+      "plugin_id": "openviking",
+      "name": "dsh-memory-plugin",
+      "version": null,
+      "commit": "6e944cc3e14872ec7e7a80edec9265397f367894",
+      "repo": "volcengine/openviking",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "gate",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/75",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32645339515",
+      "extended_review": true,
+      "reason": "intake gate script error (see run logs)",
+      "compactions": null,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T14:24:01.973Z",
       "plugin_id": "dsh-notification",
       "name": "dsh-notification",

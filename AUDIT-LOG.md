@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-23 22:25 | openviking | — | [6e944cc](https://github.com/volcengine/openviking/commit/6e944cc3e14872ec7e7a80edec9265397f367894) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#75](https://github.com/SoberReport-AI/DeepGuard/issues/75) |
 | 2026-08-23 22:24 | dsh-notification | 0.1.3 | [ddec603](https://github.com/omdsh-dev/dsh-notification/commit/ddec603395a223deb46c75b74274c41849c6a131) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#84](https://github.com/SoberReport-AI/DeepGuard/issues/84) |
 | 2026-08-23 22:15 | dsh-usage-stats | 0.2.10 | [7c88a44](https://github.com/ychris12138/dsh-usage-stats/commit/7c88a445b73f78af7df6082fd671d22a293acb6d) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#83](https://github.com/SoberReport-AI/DeepGuard/issues/83) |
 | 2026-08-23 22:11 | dsh-pet | — | [82ba588](https://github.com/pc2005-cloud/dsh-pet/commit/82ba588c7f849a62f1af5df81250e2ca8154c3a3) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#79](https://github.com/SoberReport-AI/DeepGuard/issues/79) |
