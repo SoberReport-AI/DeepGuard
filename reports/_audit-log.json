@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T09:24:24.845Z",
+      "plugin_id": "whale-girl",
+      "name": "whale-girl",
+      "version": "0.1.0",
+      "commit": "e22e1fd918746e610f7bfb1713cef1e57a56f37c",
+      "repo": "vlln/whale-girl",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/60",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/73",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32630481366",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit 逐字一致，commit 完整 40 位 hex，subpath=null 对应仓库根）。报告无 findings，故无逐条证据核验负担；报告在 checked_items/limits 中引用的关键证据均亲自打开验证属实：lib/index.mjs:42 状态文件仅 <dshHome>/data/whale-girl/state.json；全部网络请求指向 /whale-girl/* 相对路由（lib/src/routes.mjs 单一前缀）；桌面伴侣默认 127.0.0.1:3080（desktop/lib/src/config.mjs:12",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T08:51:38.207Z",
       "plugin_id": "dsh-workflow",
       "name": "dsh-workflow",
