@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 69 stars).",
   "source": "issue",
   "issue": 80,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-23T09:54:25.680Z",
   "prescreen": {
     "ok": true,
@@ -47,7 +47,12 @@
       "at": "2026-08-23T15:40:00.000Z",
       "action": "manual-reenqueue",
       "reason": "human review resolved Aegis's 2 concerns: both .dsh/skills SKILL.md fetched at pinned commit f718ac01 (sha256 == manifest), content verified benign maintainer docs — no injection wording, DG-D2 clean stands. Root cause was a pipeline bug (upload-artifact v4 strips hidden files; fixed in DeepGuardWeb #74 + DSH-X10 mechanical rule). Re-running with the fixed pipeline also regenerates the missing bilingual pair."
+    },
+    {
+      "at": "2026-08-23T14:53:28.231Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 1
+  "attempts": 2
 }
