@@ -9,7 +9,7 @@
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #12). Top-starred dsh plugin (catalog star ranking).",
   "source": "issue",
   "issue": 94,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-23T16:08:34.639Z",
   "prescreen": {
     "ok": true,
@@ -33,6 +33,12 @@
     {
       "at": "2026-08-23T16:08:34.639Z",
       "action": "prescreen-pass"
+    },
+    {
+      "at": "2026-08-23T16:27:10.819Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
-  ]
+  ],
+  "attempts": 1
 }
