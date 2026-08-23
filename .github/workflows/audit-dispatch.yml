@@ -10,20 +10,29 @@ name: audit-dispatch
 
 # Title shown in the Actions list (agent-audit already carries "[Audit] <plugin> · issue #N").
 # The dispatcher picks its queue entry only inside the run, so the title carries the trigger
-# context instead: fast path shows the completed audit run that woke it; cron/manual are labeled.
-run-name: "[Dispatch] ${{ github.event_name == 'workflow_run' && format('after {0}', github.event.workflow_run.name) || (github.event_name == 'schedule' && 'cron backstop' || 'manual backfill') }}"
+# context instead: fast path shows the completed audit run that woke it; a chain-next wake-up from
+# agent-audit's tail job is labeled "chained"; cron/manual are labeled.
+run-name: "[Dispatch] ${{ github.event_name == 'workflow_run' && format('after {0}', github.event.workflow_run.name) || (github.event_name == 'schedule' && 'cron backstop' || (inputs.exclude_run_id != '' && 'chained' || 'manual backfill')) }}"
 
 # Trigger paths:
 #  - workflow_run: backfill immediately after a manually triggered (user token) agent-audit run completes (fast path)
 #  - schedule: fallback self-heal every 10 min (required! completion events of runs dispatched with GITHUB_TOKEN are suppressed by GitHub, breaking the chain)
-#  - workflow_dispatch: manual backfill / chain restart
+#  - workflow_dispatch: manual backfill / chain restart / agent-audit's chain-next job (explicit REST
+#    dispatch is NOT subject to the event-cascade suppression; exclude_run_id lets us subtract the
+#    still-in_progress caller run from the busy pre-filter — design: docs/design/audit-chain-dispatch.md)
 on:
   workflow_run:
     workflows: ["agent-audit"]
     types: [completed]
   schedule:
     - cron: "*/10 * * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      exclude_run_id:
+        description: "run id to ignore in the active-run pre-filter (agent-audit's chain job calls while its own run is still in_progress)"
+        required: false
+        default: ""
+        type: string
 
 permissions:
   contents: write # write back the attempts counter
@@ -44,6 +53,7 @@ jobs:
       - name: Backfill next pending item and dispatch
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXCLUDE_RUN_ID: ${{ inputs.exclude_run_id }}
         run: |
           set -e
           # Queue-file lock protocol — the runs API is NOT a dispatch lock: a freshly dispatched run
@@ -54,8 +64,16 @@ jobs:
           # and pushes BEFORE `gh workflow run`; any entry already auditing = an audit in flight →
           # stand down. The API busy-check below stays as a cheap pre-filter (covers entries
           # dispatched before this protocol existed, whose queue status is still pending).
-          ACTIVE=$(gh run list --workflow=agent-audit.yml --status in_progress --json databaseId --jq length)
-          QUEUED=$(gh run list --workflow=agent-audit.yml --status queued --json databaseId --jq length)
+          #
+          # exclude_run_id (chain mode): agent-audit's chain-next job fires this dispatcher while its
+          # own run is still in_progress, so the caller id is subtracted from every visibility check
+          # (string comparison — an empty input excludes nothing; see audit-chain-dispatch.md §F3).
+          visible_runs() {
+            gh run list --workflow=agent-audit.yml --status "$1" --json databaseId \
+              --jq --arg ex "$EXCLUDE_RUN_ID" '[.[] | select(.databaseId | tostring != $ex)] | length'
+          }
+          ACTIVE=$(visible_runs in_progress)
+          QUEUED=$(visible_runs queued)
           if [ "$ACTIVE" != "0" ] || [ "$QUEUED" != "0" ]; then
             echo "agent-audit still has active runs ($ACTIVE running / $QUEUED queued); not dispatching"
             exit 0
@@ -66,6 +84,11 @@ jobs:
           # any runs-API staleness, so a live run cannot be misjudged as orphaned. To halt a batch
           # durably, disable this workflow (or empty batch-top20.json ids) — cancelling a run only
           # pauses its entry until orphan recovery requeues it (~30 min).
+          # Chain mode (exclude_run_id set): crash paths (gate fatal, unclassified hard failure) never
+          # write a terminal queue state, so the entry is still `auditing` when the caller's chain job
+          # fires. Single-flight invariant (agent-audit concurrency group, cancel-in-progress:false):
+          # the only in-progress run is the caller's, so any `auditing` entry can only be its own —
+          # the 30-min staleness window does not apply and the entry is requeued immediately (§F2).
           git config user.name "SoberReport-AI"
           git config user.email "59252154+SoberReport-AI@users.noreply.github.com"
 
@@ -78,7 +101,8 @@ jobs:
             node -e "
               const fs = require('fs');
               const now = new Date();
-              const cut = now.getTime() - 30 * 60 * 1000;
+              const chain = process.env.EXCLUDE_RUN_ID !== '';
+              const cut = chain ? now.getTime() + 1 : now.getTime() - 30 * 60 * 1000;
               const dir = '_import/audit-queue';
               const readQ = (id) => { try { return JSON.parse(fs.readFileSync(dir + '/' + id + '.json', 'utf8')); } catch { return null; } };
               const lastAt = (q) => (q.history || []).map((h) => h.at).sort().pop() || '';
@@ -143,34 +167,47 @@ jobs:
           # main before dispatching — otherwise a persistently failing push still dispatches and the
           # "≥2 attempts → extended review" escalation is silently diluted. Each retry re-fetches and
           # re-evaluates from the fresh base, so a concurrently moved queue is never overwritten.
-          RESULT=""
-          PUSHED=0
-          for i in 1 2 3; do
-            RESULT=$(evaluate)
-            MODE=${RESULT%%|*}; NEXT=${RESULT#*|}
-            case "$MODE" in
-              NONE)  echo "no dispatchable items left in queue (all completed or flagged for extended review)"; exit 0 ;;
-              BUSY)  echo "audit in flight (queue lock: $NEXT); not dispatching"; exit 0 ;;
-              ORPHAN)
-                ACTIVE=$(gh run list --workflow=agent-audit.yml --status in_progress --json databaseId --jq length)
-                QUEUED=$(gh run list --workflow=agent-audit.yml --status queued --json databaseId --jq length)
-                if [ "$ACTIVE" != "0" ] || [ "$QUEUED" != "0" ]; then
-                  echo "orphan candidates ($NEXT) but a run is visible ($ACTIVE running / $QUEUED queued); leaving them for the next round"
-                  exit 0
-                fi
-                MSG="chore(dispatch): requeue orphaned entries ($NEXT) [skip ci]"
-                ;;
-              DISPATCH) MSG="chore(dispatch): dispatch $NEXT [skip ci]" ;;
-              # fail loud on any stdout pollution instead of committing with an empty MSG
-              *) echo "::error::unparseable evaluate output — expected MODE|payload, got:"; echo "$RESULT"; exit 1 ;;
-            esac
-            git add _import/audit-queue
-            if git diff --cached --quiet; then echo "state already persisted concurrently"; PUSHED=1; break; fi
-            git commit -m "$MSG" && git push && { PUSHED=1; break; }
-            sleep 5
+          ROUND=0
+          while :; do
+            ROUND=$((ROUND+1))
+            RESULT=""
+            PUSHED=0
+            for i in 1 2 3; do
+              RESULT=$(evaluate)
+              MODE=${RESULT%%|*}; NEXT=${RESULT#*|}
+              case "$MODE" in
+                NONE)  echo "no dispatchable items left in queue (all completed or flagged for extended review)"; exit 0 ;;
+                BUSY)  echo "audit in flight (queue lock: $NEXT); not dispatching"; exit 0 ;;
+                ORPHAN)
+                  ACTIVE=$(visible_runs in_progress)
+                  QUEUED=$(visible_runs queued)
+                  if [ "$ACTIVE" != "0" ] || [ "$QUEUED" != "0" ]; then
+                    echo "orphan candidates ($NEXT) but a run is visible ($ACTIVE running / $QUEUED queued); leaving them for the next round"
+                    exit 0
+                  fi
+                  MSG="chore(dispatch): requeue orphaned entries ($NEXT) [skip ci]"
+                  ;;
+                DISPATCH) MSG="chore(dispatch): dispatch $NEXT [skip ci]" ;;
+                # fail loud on any stdout pollution instead of committing with an empty MSG
+                *) echo "::error::unparseable evaluate output — expected MODE|payload, got:"; echo "$RESULT"; exit 1 ;;
+              esac
+              git add _import/audit-queue
+              if git diff --cached --quiet; then echo "state already persisted concurrently"; PUSHED=1; break; fi
+              git commit -m "$MSG" && git push && { PUSHED=1; break; }
+              sleep 5
+            done
+            [ "$PUSHED" = "1" ] || { echo "::error::queue state was NOT persisted to main after 3 attempts; refusing to dispatch (SEC-003)"; exit 1; }
+            if [ "$MODE" = "DISPATCH" ]; then break; fi
+            # ORPHAN persisted. Chain mode: the only guaranteed "next round" is the jittery cron, and
+            # the single-flight invariant makes the requeued entry immediately dispatchable — loop
+            # once to pick it in this same run (§F2). Non-chain triggers keep the historic
+            # requeue-now-dispatch-next-round behavior; the ROUND cap bounds the loop either way.
+            if [ -n "$EXCLUDE_RUN_ID" ] && [ "$ROUND" -lt 2 ]; then
+              echo "orphan recovery persisted ($NEXT); chain mode — continuing to pick in this run"
+              continue
+            fi
+            echo "orphan recovery persisted ($NEXT); dispatch happens next round"; exit 0
           done
-          [ "$PUSHED" = "1" ] || { echo "::error::queue state was NOT persisted to main after 3 attempts; refusing to dispatch (SEC-003)"; exit 1; }
-          [ "$MODE" = "DISPATCH" ] || { echo "orphan recovery persisted ($NEXT); dispatch happens next round"; exit 0; }
           echo "backfill dispatch: $NEXT (trigger=${{ github.event_name }})"
           # Carry the issue linkage into the audit run: issue-sourced queue entries have an `issue`
           # field; without it agent-audit's issue-feedback job is skipped (inputs.issue_number == '')

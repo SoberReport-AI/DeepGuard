@@ -1261,3 +1261,25 @@ jobs:
             rejected|not-dsh-plugin) gh issue close "$ISSUE" --repo "$REPO";;
           esac
           [ "$LLM_CLOSE" = "true" ] && gh issue close "$ISSUE" --repo "$REPO" || true
+
+  # Chain-dispatch: wake the dispatcher the moment this run ends (success or failure) instead of
+  # waiting for the cron backstop (observed 26+ min jitter, 2026-08-23). An explicit REST dispatch
+  # with GITHUB_TOKEN is NOT subject to the event-cascade suppression that neuters the workflow_run
+  # fast path (same pattern as issue-intake's enqueue trigger). exclude_run_id lets the dispatcher
+  # subtract this still-in_progress run from its busy pre-filter; the queue-file lock remains the
+  # serialization authority. continue-on-error: a failed wake-up call must never flip this run's
+  # conclusion — the cron backstop heals a missed chain. !cancelled(): cancelling = the human stop
+  # signal (mirrors the dispatcher's workflow_run branch). Design: docs/design/audit-chain-dispatch.md
+  chain-next:
+    needs: [gate, sonar, aegis, beacon, translate, publish, sync, ledger, issue-feedback]
+    if: always() && !cancelled()
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write # dispatch audit-dispatch
+    steps:
+      # -R: this job has no checkout — gh resolves the repo from git remotes by default and fails
+      # with "not a git repository" otherwise (probe-verified pre-deploy, 2026-08-23).
+      - run: gh workflow run audit-dispatch.yml -R "$GITHUB_REPOSITORY" -f exclude_run_id="$GITHUB_RUN_ID"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
