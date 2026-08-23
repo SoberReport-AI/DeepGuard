@@ -9,7 +9,7 @@
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #12). Top-starred dsh plugin (catalog star ranking).",
   "source": "issue",
   "issue": 94,
-  "status": "auditing",
+  "status": "rejected",
   "submitted_at": "2026-08-23T16:08:34.639Z",
   "prescreen": {
     "ok": true,
@@ -63,7 +63,54 @@
       "at": "2026-08-23T18:43:51.305Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-23T18:44:04.463Z",
+      "action": "gate-pass",
+      "reason": null
+    },
+    {
+      "at": "2026-08-23T18:44:06.323Z",
+      "action": "gate-reject",
+      "reason": "repository contains a link entry (symlink/hardlink): \".agents/notes/implemented/CLAUDE.md\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit"
     }
   ],
-  "attempts": 1
+  "attempts": 1,
+  "gate": {
+    "at": "2026-08-23T18:44:04.463Z",
+    "submitter": "SoberReport-AI",
+    "whitelisted": true,
+    "association": null,
+    "checks": [
+      {
+        "check": "whitelist",
+        "ok": true,
+        "note": "whitelisted (Sim public-repo owner: runs triggered by dispatcher/cron fall back to repository_owner for identity verification at the gate, so the sim/formal public-repo owner must be whitelisted or all submissions are rejected), skipping identity and account-age checks"
+      },
+      {
+        "check": "identity",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "account-age",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "blacklist",
+        "ok": true,
+        "note": "no hit"
+      },
+      {
+        "check": "duplicate",
+        "ok": true,
+        "note": "no existing report for oh-dsh@0.1.8#64182e9a"
+      }
+    ],
+    "decision": "reject",
+    "reasons": [
+      "repository contains a link entry (symlink/hardlink): \".agents/notes/implemented/CLAUDE.md\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit"
+    ]
+  }
 }

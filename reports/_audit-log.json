@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T18:44:18.713Z",
+      "plugin_id": "oh-dsh",
+      "name": "oh-dsh",
+      "version": "0.1.8",
+      "commit": "64182e9acb81cc173a6c19136716d51a7d1b679d",
+      "repo": "hust-open-atom-club/oh-dsh",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "gate",
+      "status": "rejected-gate",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/94",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32658962560",
+      "extended_review": false,
+      "reason": "repository contains a link entry (symlink/hardlink): \".agents/notes/implemented/CLAUDE.md\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit",
+      "compactions": null,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T18:43:24.434Z",
       "plugin_id": "deepseek-harness-desktop",
       "name": "dsh-desktop-base",
