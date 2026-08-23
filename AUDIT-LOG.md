@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-23 22:11 | dsh-pet | — | [82ba588](https://github.com/pc2005-cloud/dsh-pet/commit/82ba588c7f849a62f1af5df81250e2ca8154c3a3) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#79](https://github.com/SoberReport-AI/DeepGuard/issues/79) |
 | 2026-08-23 22:10 | dsh-undo-plugin | 0.4.1 | [7d21c94](https://github.com/lire1131/dsh-undo-plugin/commit/7d21c941a06ef46508e96aa0bd33e5af65488d8b) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#82](https://github.com/SoberReport-AI/DeepGuard/issues/82) |
 | 2026-08-23 21:06 | deepseek-harness-desktop | 3.0.1 | [f718ac0](https://github.com/ningbainb/deepseek-harness-desktop/commit/f718ac012e80fccd0b3b123e58d780f0f8ed7abc) | SoberReport-AI | clean | 0 | extended review | escalated | — | failed, flagged for extended review | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
 | 2026-08-23 20:13 | dsh-mnemon | 0.2.16 | [e5aae00](https://github.com/omdsh-dev/dsh-mnemon/commit/e5aae00797772bee34f414820b545d21391b84c7) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |

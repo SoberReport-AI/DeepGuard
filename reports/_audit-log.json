@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T14:11:39.245Z",
+      "plugin_id": "dsh-pet",
+      "name": "dsh-pet-pc2005-cloud",
+      "version": null,
+      "commit": "82ba588c7f849a62f1af5df81250e2ca8154c3a3",
+      "repo": "pc2005-cloud/dsh-pet",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "gate",
+      "status": "rejected-gate",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/79",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32644648391",
+      "extended_review": false,
+      "reason": "cannot determine plugin version: no version field in the repository's package.json and none pinned by prescreen — add a semver version to package.json and re-submit",
+      "compactions": null,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T14:10:42.047Z",
       "plugin_id": "dsh-undo-plugin",
       "name": "dsh-undo-plugin",
