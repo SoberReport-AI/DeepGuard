@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T12:13:26.455Z",
+      "plugin_id": "dsh-mnemon",
+      "name": "dsh-mnemon",
+      "version": "0.2.16",
+      "commit": "e5aae00797772bee34f414820b545d21391b84c7",
+      "repo": "omdsh-dev/dsh-mnemon",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/81",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/87",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32638243423",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过：package.json name=dsh-mnemon、version=0.2.16，commit/subpath 与任务卡逐字一致。独立复核（不依赖 Sonar 转述）：1) src/tools.ts 实际注册 13 个工具（memory_bodies/recall/related/status/document_search/document_manage/runtime_memory/remember/link/forget/memory_body_create/memory_body_update/memory_body_merge），报告两处称'12 个注册工具'属事",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T11:58:18.208Z",
       "plugin_id": "ai-novel-writer",
       "name": "dsh-ai-novel-writer",

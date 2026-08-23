@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-23 20:13 | dsh-mnemon | 0.2.16 | [e5aae00](https://github.com/omdsh-dev/dsh-mnemon/commit/e5aae00797772bee34f414820b545d21391b84c7) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
 | 2026-08-23 19:58 | ai-novel-writer | 0.8.5 | [cb767d8](https://github.com/ethanyoq/ai-novel-writer/commit/cb767d89277927ecd2986e70b9f0a9f57c72c9f8) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-08-23 19:32 | dsh-browser-lum1104 | 0.1.2 | [ef8b551](https://github.com/lum1104/dsh-browser/commit/ef8b551666d6e725e69934e71c3cc0f63c3e51b0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#78](https://github.com/SoberReport-AI/DeepGuard/issues/78) |
 | 2026-08-23 18:51 | dsh-web-ui-zhu1090093659 | 0.1.1 | [08629b9](https://github.com/zhu1090093659/dsh-web-ui/commit/08629b999735016a172f465cf90975289a498eb1) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#76](https://github.com/SoberReport-AI/DeepGuard/issues/76) |
