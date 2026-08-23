@@ -11,6 +11,6 @@ The LLM provider balance behind the DeepGuard audit pipeline is exhausted (HTTP 
 ### What happens next
 
 - The audit resumes automatically once the balance is topped up.
-- If you would like to help keep this free audit service running, you can support us here: **https://ko-fi.com/soberreport**
+- If you would like to help keep this free audit service running, you can support us here: **https://ko-fi.com/G2S825CBZS**
 
 Thank you for your patience.
