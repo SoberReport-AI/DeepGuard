@@ -6,41 +6,33 @@
   "subpath": "maid-atelier",
   "category_hint": "ui",
   "capabilities_hint": [],
-  "note": "Top-starred dsh plugin batch intake (catalog star ranking).\n- Monorepo subpath: `maid-atelier`",
+  "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #5). Monorepo subpath: `maid-atelier`.",
   "source": "issue",
-  "issue": 5,
-  "status": "cancelled",
-  "submitted_at": "2026-08-22T09:11:01.865Z",
+  "issue": 92,
+  "status": "pending",
+  "submitted_at": "2026-08-23T16:08:31.357Z",
   "prescreen": {
     "ok": true,
-    "commit": "4a8e227209dce10f36892244b82646a5316afd93",
+    "commit": "d3d7ff2b7d97260e940306b3e462870b6e033c96",
     "default_branch": "main",
-    "pushed_at": "2026-08-22T09:10:58Z",
-    "stars": 1577,
+    "pushed_at": "2026-08-23T06:40:00Z",
+    "stars": 1627,
     "version": "0.0.1",
-    "dsh_kind": [],
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
     "install_hooks": [],
     "dup": {
       "in": "catalog",
       "id": "maid-atelier"
     },
-    "warnings": [
-      "no package.json at the repo root (non-standard npm package layout; audit scope needs human confirmation)"
-    ]
+    "warnings": []
   },
   "history": [
     {
-      "at": "2026-08-22T09:11:01.865Z",
+      "at": "2026-08-23T16:08:31.357Z",
       "action": "prescreen-pass"
-    },
-    {
-      "at": "2026-08-22T10:18:45.054Z",
-      "action": "version-repair: prescreen read the monorepo root manifest at intake (None); corrected to the subpath manifest value 0.0.1 (the commit lock is unchanged)"
-    },
-    {
-      "at": "2026-08-22T11:05:53.010Z",
-      "action": "cancelled",
-      "reason": "batch submission withdrawn (owner request)"
     }
   ]
 }
