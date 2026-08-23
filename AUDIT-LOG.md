@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 07:49 | dsh-open-in-vscode | 0.1.6 | [8aed144](https://github.com/omdsh-dev/dsh-open-in-vscode/commit/8aed144abdc158a332aa73bce42fc217d962f751) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#101](https://github.com/SoberReport-AI/DeepGuard/issues/101) |
 | 2026-08-24 07:38 | dsh-commandcode-provider | 0.8.0 | [7eac763](https://github.com/mars-sea/dsh-commandcode-provider/commit/7eac763be33ddb5266b0966975916a11ae471664) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#102](https://github.com/SoberReport-AI/DeepGuard/issues/102) |
 | 2026-08-24 07:30 | dsh-chat-import | 0.7.0 | [a6c5410](https://github.com/nwflower/dsh-chat-import/commit/a6c5410e45beb055e232edcf25db29f2721035c6) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#99](https://github.com/SoberReport-AI/DeepGuard/issues/99) |
 | 2026-08-24 07:20 | dsh-automation | 0.1.7 | [5ae28f2](https://github.com/titanwings/dsh-automation/commit/5ae28f209c0253461131613fc1b2ea27920bec67) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#100](https://github.com/SoberReport-AI/DeepGuard/issues/100) |
