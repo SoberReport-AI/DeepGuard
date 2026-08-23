@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T15:30:20.288Z",
+      "plugin_id": "dsh-usage-stats",
+      "name": "dsh-usage-stats-ychris12138",
+      "version": "0.2.10",
+      "commit": "7c88a445b73f78af7df6082fd671d22a293acb6d",
+      "repo": "ychris12138/dsh-usage-stats",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/83",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/90",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32648329500",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：approve。身份核验通过（id/version/commit/subpath 与任务卡逐字一致）。报告无 findings，全部 clean 断言均经我亲自开文件验证：(1) package.json 无 preinstall/install/postinstall/prepare 钩子（仅 dev 期 prepublishOnly），files 清单确认 scripts/check-balance.mjs、smoke-client.mjs、test-*.mjs、validate-fold.mjs、verify-raw.mjs 不随包发布；(2) lib 无 eval/new",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T15:21:34.314Z",
       "plugin_id": "dsh-undo-plugin",
       "name": "dsh-undo-plugin",
