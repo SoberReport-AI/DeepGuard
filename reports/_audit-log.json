@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T18:45:25.514Z",
+      "plugin_id": "openviking",
+      "name": "dsh-memory-plugin",
+      "version": null,
+      "commit": "6e944cc3e14872ec7e7a80edec9265397f367894",
+      "repo": "volcengine/openviking",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "gate",
+      "status": "rejected-gate",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/75",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32659020301",
+      "extended_review": false,
+      "reason": "repository contains a link entry (symlink/hardlink): \"benchmark/locomo/claudecode/import_to_ov.py\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit",
+      "compactions": null,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T18:44:18.713Z",
       "plugin_id": "oh-dsh",
       "name": "oh-dsh",

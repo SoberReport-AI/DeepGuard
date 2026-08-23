@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 02:45 | openviking | — | [6e944cc](https://github.com/volcengine/openviking/commit/6e944cc3e14872ec7e7a80edec9265397f367894) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#75](https://github.com/SoberReport-AI/DeepGuard/issues/75) |
 | 2026-08-24 02:44 | oh-dsh | 0.1.8 | [64182e9](https://github.com/hust-open-atom-club/oh-dsh/commit/64182e9acb81cc173a6c19136716d51a7d1b679d) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#94](https://github.com/SoberReport-AI/DeepGuard/issues/94) |
 | 2026-08-24 02:43 | deepseek-harness-desktop | 3.0.1 | [f718ac0](https://github.com/ningbainb/deepseek-harness-desktop/commit/f718ac012e80fccd0b3b123e58d780f0f8ed7abc) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
 | 2026-08-24 00:41 | oh-dsh | 0.1.8 | [64182e9](https://github.com/hust-open-atom-club/oh-dsh/commit/64182e9acb81cc173a6c19136716d51a7d1b679d) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#94](https://github.com/SoberReport-AI/DeepGuard/issues/94) |

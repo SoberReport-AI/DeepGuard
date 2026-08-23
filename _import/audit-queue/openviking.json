@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 28787 stars).",
   "source": "issue",
   "issue": 75,
-  "status": "auditing",
+  "status": "rejected",
   "submitted_at": "2026-08-23T09:54:11.896Z",
   "prescreen": {
     "ok": true,
@@ -62,7 +62,54 @@
       "at": "2026-08-23T18:44:54.825Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-23T18:45:08.318Z",
+      "action": "gate-pass",
+      "reason": null
+    },
+    {
+      "at": "2026-08-23T18:45:13.096Z",
+      "action": "gate-reject",
+      "reason": "repository contains a link entry (symlink/hardlink): \"benchmark/locomo/claudecode/import_to_ov.py\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit"
     }
   ],
-  "attempts": 1
+  "attempts": 1,
+  "gate": {
+    "at": "2026-08-23T18:45:08.318Z",
+    "submitter": "SoberReport-AI",
+    "whitelisted": true,
+    "association": null,
+    "checks": [
+      {
+        "check": "whitelist",
+        "ok": true,
+        "note": "whitelisted (Sim public-repo owner: runs triggered by dispatcher/cron fall back to repository_owner for identity verification at the gate, so the sim/formal public-repo owner must be whitelisted or all submissions are rejected), skipping identity and account-age checks"
+      },
+      {
+        "check": "identity",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "account-age",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "blacklist",
+        "ok": true,
+        "note": "no hit"
+      },
+      {
+        "check": "duplicate",
+        "ok": true,
+        "note": "no locked version in queue entry — commit-locked, version-dimension dedup skipped (resolved later at prepare)"
+      }
+    ],
+    "decision": "reject",
+    "reasons": [
+      "repository contains a link entry (symlink/hardlink): \"benchmark/locomo/claudecode/import_to_ov.py\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit"
+    ]
+  }
 }
