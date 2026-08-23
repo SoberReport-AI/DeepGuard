@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T10:51:46.081Z",
+      "plugin_id": "dsh-web-ui-zhu1090093659",
+      "name": "dsh-web-ui-all-zhu1090093659",
+      "version": "0.1.1",
+      "commit": "08629b999735016a172f465cf90975289a498eb1",
+      "repo": "zhu1090093659/dsh-web-ui",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "gate",
+      "status": "rejected-gate",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/76",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32634890064",
+      "extended_review": false,
+      "reason": "context-preflight: audit scope totals ~8820217 weighted tokens (limit 8000000); an audit at this scale cannot complete within the free-tier rate budget — shrink the plugin directory and resubmit",
+      "compactions": null,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T09:54:52.498Z",
       "plugin_id": "openviking",
       "name": "dsh-memory-plugin",
