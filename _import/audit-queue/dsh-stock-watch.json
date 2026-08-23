@@ -1,0 +1,38 @@
+{
+  "id": "dsh-stock-watch",
+  "name": "dsh-stock-watch",
+  "repo": "awu12277/dsh-stock-watch",
+  "url": "https://github.com/awu12277/dsh-stock-watch",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #3 (catalog star ranking, 38 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 107,
+  "status": "pending",
+  "submitted_at": "2026-08-23T23:14:16.516Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "0bd76f3f72b647249b2168fc50ae4955c6c86575",
+    "default_branch": "main",
+    "pushed_at": "2026-08-17T08:22:52Z",
+    "stars": 61,
+    "version": "1.0.8",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-stock-watch"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T23:14:16.516Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
