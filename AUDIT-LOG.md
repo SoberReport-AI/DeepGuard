@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 00:41 | oh-dsh | 0.1.8 | [64182e9](https://github.com/hust-open-atom-club/oh-dsh/commit/64182e9acb81cc173a6c19136716d51a7d1b679d) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#94](https://github.com/SoberReport-AI/DeepGuard/issues/94) |
 | 2026-08-24 00:40 | oh-dsh | 0.1.8 | [64182e9](https://github.com/hust-open-atom-club/oh-dsh/commit/64182e9acb81cc173a6c19136716d51a7d1b679d) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#94](https://github.com/SoberReport-AI/DeepGuard/issues/94) |
 | 2026-08-24 00:40 | dsh-tianshu-tui | 0.1.2-rc.13 | [2adee43](https://github.com/huiliyi37/dsh-tianshu-tui/commit/2adee4387850e23099a617cddf8f85300c404988) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#93](https://github.com/SoberReport-AI/DeepGuard/issues/93) |
 | 2026-08-24 00:26 | dsh-ads | 0.1.0 | [aa752ed](https://github.com/nagi-ovo/dsh-ads/commit/aa752ed8d24d0a4b5ce1fde4b99b0d9d7f5a1e22) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#91](https://github.com/SoberReport-AI/DeepGuard/issues/91) |

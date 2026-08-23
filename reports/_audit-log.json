@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T16:41:41.360Z",
+      "plugin_id": "oh-dsh",
+      "name": "oh-dsh",
+      "version": "0.1.8",
+      "commit": "64182e9acb81cc173a6c19136716d51a7d1b679d",
+      "repo": "hust-open-atom-club/oh-dsh",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "gate",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/94",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32652444871",
+      "extended_review": true,
+      "reason": "intake gate script error (see run logs)",
+      "compactions": null,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T16:40:53.924Z",
       "plugin_id": "oh-dsh",
       "name": "oh-dsh",
