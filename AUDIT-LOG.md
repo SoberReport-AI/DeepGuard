@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-23 23:21 | dsh-undo-plugin | 0.4.1 | [7d21c94](https://github.com/lire1131/dsh-undo-plugin/commit/7d21c941a06ef46508e96aa0bd33e5af65488d8b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#82](https://github.com/SoberReport-AI/DeepGuard/issues/82) |
 | 2026-08-23 23:02 | deepseek-harness-desktop | 3.0.1 | [f718ac0](https://github.com/ningbainb/deepseek-harness-desktop/commit/f718ac012e80fccd0b3b123e58d780f0f8ed7abc) | SoberReport-AI | risk | 1 | approve | — | — | rejected (postcheck) | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
 | 2026-08-23 22:25 | openviking | — | [6e944cc](https://github.com/volcengine/openviking/commit/6e944cc3e14872ec7e7a80edec9265397f367894) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#75](https://github.com/SoberReport-AI/DeepGuard/issues/75) |
 | 2026-08-23 22:24 | dsh-notification | 0.1.3 | [ddec603](https://github.com/omdsh-dev/dsh-notification/commit/ddec603395a223deb46c75b74274c41849c6a131) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#84](https://github.com/SoberReport-AI/DeepGuard/issues/84) |

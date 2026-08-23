@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T15:21:34.314Z",
+      "plugin_id": "dsh-undo-plugin",
+      "name": "dsh-undo-plugin",
+      "version": "0.4.1",
+      "commit": "7d21c941a06ef46508e96aa0bd33e5af65488d8b",
+      "repo": "lire1131/dsh-undo-plugin",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/82",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/89",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32647864456",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：approve。（1）身份/版本/commit/subpath 与任务卡逐字一致。（2）报告无 findings，但其各维度 checked_items 引用的关键证据（PROMPT_TEXT、工具描述、脱敏+vault、execFile 用途、桌面快捷方式、safe mode、pre-execute 监听器、undo-server 127.0.0.1 绑定、client fetch 相对路径、AES-256-GCM 导出、无 install 钩子、cordis.patch.yml 仅 insert）均经实际打开文件验证成立，非注入文本被当作功能。（3）39 条机械预扫命中全部有",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T15:02:06.596Z",
       "plugin_id": "deepseek-harness-desktop",
       "name": "dsh-desktop-base",
