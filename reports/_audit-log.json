@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T23:58:06.539Z",
+      "plugin_id": "dsh-multica-runtime",
+      "name": "dsh-multica-runtime",
+      "version": "0.1.0-private.1",
+      "commit": "e29aae228449dfe50e88af60ef4281e38ca44e2a",
+      "repo": "forrestchang/dsh-multica-runtime",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/103",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/113",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32674764266",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：身份一致、无 findings 需逐条取证、机械命中 DSH-P01→DG-R3-51 已在 DG-D3/DG-S01 以规则 ID 显式裁决、全树源码/配置/测试/锁文件均亲自打开核对、漏检快扫未发现明显高危点、安装命令与哈希形态成立。审批自动放行（index.ts:317-320）与凭据清洗豁免（environment.ts:42-52）属文档声明的无头运行核心功能，报告已如实记录并论证非隐蔽行为，不构成恶意。唯一的低危观察项（package.json repository 元数据指向不同 org）已在 missed_concerns 记录，不影响 approve。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T23:49:11.286Z",
       "plugin_id": "dsh-open-in-vscode",
       "name": "dsh-open-in-vscode",
