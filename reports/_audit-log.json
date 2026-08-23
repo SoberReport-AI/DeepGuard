@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T11:32:48.664Z",
+      "plugin_id": "dsh-browser-lum1104",
+      "name": "dsh-browser-lum1104",
+      "version": "0.1.2",
+      "commit": "ef8b551666d6e725e69934e71c3cc0f63c3e51b0",
+      "repo": "lum1104/dsh-browser",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/78",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/85",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32636311749",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。身份核验通过：plugin.id/version/commit 与任务卡逐字一致，subpath null(仓库根)。报告 findings=[]，无证据路径需验证。维度一致性：clean/na 维度均无 finding。动态证据：无产物，na。机械命中裁决覆盖：31条机械命中全部在报告的 DG-D3/DG-D4 维度被覆盖说明，每类命中按规则ID引用并给出排除理由；已逐条核验路径真实存在且内容匹配描述。定级校准：finding为空无需校准。增量审计：不适用(full mode)。漏检快扫：对安装钩子、child_process/eval、外联域名、凭据读取、注入模式",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T10:51:46.081Z",
       "plugin_id": "dsh-web-ui-zhu1090093659",
       "name": "dsh-web-ui-all-zhu1090093659",

@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-23 19:32 | dsh-browser-lum1104 | 0.1.2 | [ef8b551](https://github.com/lum1104/dsh-browser/commit/ef8b551666d6e725e69934e71c3cc0f63c3e51b0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#78](https://github.com/SoberReport-AI/DeepGuard/issues/78) |
 | 2026-08-23 18:51 | dsh-web-ui-zhu1090093659 | 0.1.1 | [08629b9](https://github.com/zhu1090093659/dsh-web-ui/commit/08629b999735016a172f465cf90975289a498eb1) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#76](https://github.com/SoberReport-AI/DeepGuard/issues/76) |
 | 2026-08-23 17:54 | openviking | — | [6e944cc](https://github.com/volcengine/openviking/commit/6e944cc3e14872ec7e7a80edec9265397f367894) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#75](https://github.com/SoberReport-AI/DeepGuard/issues/75) |
 | 2026-08-23 17:36 | dsh-cost-meter | 1.5.40 | [a6ab9d6](https://github.com/han-1413141/dsh-cost-meter/commit/a6ab9d61936e89521e800d16ce9b4dc6723972f9) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
