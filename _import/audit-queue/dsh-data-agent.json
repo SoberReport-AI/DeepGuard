@@ -1,0 +1,38 @@
+{
+  "id": "dsh-data-agent",
+  "name": "dsh-data-agent",
+  "repo": "omdsh-dev/dsh-data-agent",
+  "url": "https://github.com/omdsh-dev/dsh-data-agent",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #3 (catalog star ranking, 35 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 108,
+  "status": "pending",
+  "submitted_at": "2026-08-23T23:14:15.242Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "b34f01f6ccaa1d3b8eb7aab403a833a45065ddb4",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T16:59:06Z",
+    "stars": 159,
+    "version": "0.1.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-data-agent"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T23:14:15.242Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
