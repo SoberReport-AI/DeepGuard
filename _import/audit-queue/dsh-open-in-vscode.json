@@ -1,0 +1,38 @@
+{
+  "id": "dsh-open-in-vscode",
+  "name": "dsh-open-in-vscode",
+  "repo": "omdsh-dev/dsh-open-in-vscode",
+  "url": "https://github.com/omdsh-dev/dsh-open-in-vscode",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #3 (catalog star ranking, 48 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 101,
+  "status": "pending",
+  "submitted_at": "2026-08-23T23:14:03.423Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "8aed144abdc158a332aa73bce42fc217d962f751",
+    "default_branch": "main",
+    "pushed_at": "2026-08-16T05:24:58Z",
+    "stars": 54,
+    "version": "0.1.6",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-open-in-vscode"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T23:14:03.423Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
