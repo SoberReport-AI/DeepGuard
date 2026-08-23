@@ -1,0 +1,38 @@
+{
+  "id": "dsh-web-ui-zhu1090093659",
+  "name": "dsh-web-ui-all-zhu1090093659",
+  "repo": "zhu1090093659/dsh-web-ui",
+  "url": "https://github.com/zhu1090093659/dsh-web-ui",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #2 (catalog star ranking, 3869 stars).",
+  "source": "issue",
+  "issue": 76,
+  "status": "pending",
+  "submitted_at": "2026-08-23T09:54:16.691Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "08629b999735016a172f465cf90975289a498eb1",
+    "default_branch": "dev",
+    "pushed_at": "2026-08-23T09:36:19Z",
+    "stars": 5667,
+    "version": "0.1.1",
+    "dsh_kind": [],
+    "install_hooks": [],
+    "dup": {
+      "in": "reports",
+      "id": "dsh-web-ui"
+    },
+    "warnings": [
+      "package.json has no dsh.bundle/client/service declaration (will be audited as a plain package by actual code behavior)",
+      "id collides with an admitted plugin; using dsh-web-ui-zhu1090093659 instead"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-08-23T09:54:16.691Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
