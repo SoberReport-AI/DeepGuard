@@ -1,0 +1,38 @@
+{
+  "id": "dsh-undo-plugin",
+  "name": "dsh-undo-plugin",
+  "repo": "lire1131/dsh-undo-plugin",
+  "url": "https://github.com/lire1131/dsh-undo-plugin",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #2 (catalog star ranking, 61 stars).",
+  "source": "issue",
+  "issue": 82,
+  "status": "pending",
+  "submitted_at": "2026-08-23T09:54:27.530Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "7d21c941a06ef46508e96aa0bd33e5af65488d8b",
+    "default_branch": "master",
+    "pushed_at": "2026-08-22T19:58:07Z",
+    "stars": 116,
+    "version": "0.4.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-undo-plugin"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T09:54:27.530Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
