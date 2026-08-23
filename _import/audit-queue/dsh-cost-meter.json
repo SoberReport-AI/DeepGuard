@@ -53,7 +53,12 @@
       "at": "2026-08-22T23:07:30.493Z",
       "action": "requeued",
       "reason": "orphaned dispatch: no terminal write within 30 min of dispatch (run died or was cancelled)"
+    },
+    {
+      "at": "2026-08-23T08:11:43.000Z",
+      "action": "attempts-rollback",
+      "reason": "both attempts died on provider quota (HTTP 402) before balance took effect (~02:45, proven by dsh-annotation success); rolled back to 1 so the entry gets one real audit before extended-review flagging"
     }
   ],
-  "attempts": 2
+  "attempts": 1
 }
