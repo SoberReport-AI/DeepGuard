@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 61 stars).",
   "source": "issue",
   "issue": 82,
-  "status": "needs-human",
+  "status": "pending",
   "submitted_at": "2026-08-23T09:54:27.530Z",
   "prescreen": {
     "ok": true,
@@ -43,6 +43,11 @@
       "at": "2026-08-23T14:10:42.123Z",
       "action": "needs-human",
       "reason": "llm-error:gateway-timeout (Server requested 120s retry delay (max: 60s). 524 status code (no body))"
+    },
+    {
+      "at": "2026-08-23T15:11:32.000Z",
+      "action": "manual-reenqueue",
+      "reason": "human review: failure was a transient provider-side gateway timeout (524) during the token-exhaustion window, not a submission defect — environment restored (quota recharged, dispatcher hotfixed), safe to re-audit"
     }
   ],
   "attempts": 1
