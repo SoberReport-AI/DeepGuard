@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "issue",
   "issue": 60,
-  "status": "needs-human",
+  "status": "pending",
   "submitted_at": "2026-08-22T14:21:42.918Z",
   "prescreen": {
     "ok": true,
@@ -43,6 +43,11 @@
       "at": "2026-08-22T16:18:51.671Z",
       "action": "needs-human",
       "reason": "review-verdict: review.verdict=needs_human, Beacon ruling=uphold_aegis (not approved, not admitted); translation-integrity: report-zh.json (Sonar zh draft) missing — translate stage did not deliver; cannot admit a monolingual report under the v3 contract"
+    },
+    {
+      "at": "2026-08-23T09:12:02.000Z",
+      "action": "reset-to-pending",
+      "reason": "re-run approved by maintainer: the 16:18 attempt ran pre-fix pipeline code (dispatched 16:08, before the trace-pack/artifact-gating export landed) and its translate stage never delivered; fresh run on current code to get a clean verdict"
     }
   ],
   "attempts": 1

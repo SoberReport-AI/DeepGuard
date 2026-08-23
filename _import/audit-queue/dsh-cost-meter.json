@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake (catalog star ranking, 66 stars).",
   "source": "issue",
   "issue": 68,
-  "status": "needs-human",
+  "status": "pending",
   "submitted_at": "2026-08-22T16:16:40.480Z",
   "prescreen": {
     "ok": true,
@@ -68,7 +68,12 @@
       "at": "2026-08-23T08:16:57.108Z",
       "action": "needs-human",
       "reason": "llm-error:gateway-timeout (Server requested 120s retry delay (max: 60s). 524 status code (no body))"
+    },
+    {
+      "at": "2026-08-23T09:12:03.000Z",
+      "action": "reset-to-pending",
+      "reason": "re-run approved by maintainer: every prior failure was infra-side (402 quota, then a 524 gateway timeout where the server asked for 120s backoff — time-of-day congestion, not a deterministic over-limit context); retrying in a quieter window"
     }
   ],
-  "attempts": 2
+  "attempts": 1
 }
