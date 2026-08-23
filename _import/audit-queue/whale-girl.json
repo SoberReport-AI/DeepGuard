@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "issue",
   "issue": 60,
-  "status": "auditing",
+  "status": "audited",
   "submitted_at": "2026-08-22T14:21:42.918Z",
   "prescreen": {
     "ok": true,
@@ -53,6 +53,11 @@
       "at": "2026-08-23T09:14:57.306Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-23T09:24:01.182Z",
+      "action": "audited",
+      "reason": null
     }
   ],
   "attempts": 2
