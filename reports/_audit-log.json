@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T23:30:27.726Z",
+      "plugin_id": "dsh-chat-import",
+      "name": "dsh-chat-import",
+      "version": "0.7.0",
+      "commit": "a6c5410e45beb055e232edcf25db29f2721035c6",
+      "repo": "nwflower/dsh-chat-import",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/99",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/110",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32673366214",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份四项逐字一致；报告 findings 为空，各维度 clean 声称的关键支撑点（secrets 保护性检测、discovery 声明业务读取、工具 description 功能性、AGENTS.md 开发指南、context-bridge 默认关、cordis.patch.yml 仅 insert、无安装钩子/无运行时子进程/无外部外联、CI 本地 mock、fzstd 唯一依赖、webServer 注入路由、sync-loop 默认关）均经实际打开文件逐行核实成立。12 条机械规则命中全部被 Sonar 逐条裁决且排除理由与行内容相符，无覆盖缺口。漏检快扫独立执行（ins",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T23:20:54.604Z",
       "plugin_id": "dsh-automation",
       "name": "dsh-automation",
