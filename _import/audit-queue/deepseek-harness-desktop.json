@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 69 stars).",
   "source": "issue",
   "issue": 80,
-  "status": "auditing",
+  "status": "rejected",
   "submitted_at": "2026-08-23T09:54:25.680Z",
   "prescreen": {
     "ok": true,
@@ -52,6 +52,11 @@
       "at": "2026-08-23T14:53:28.231Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-23T15:01:56.483Z",
+      "action": "rejected",
+      "reason": "evidence-crosscheck: FND-001: evidence path does not exist /.dsh/dsh-ssh.json"
     }
   ],
   "attempts": 2
