@@ -1,0 +1,38 @@
+{
+  "id": "dsh-automation",
+  "name": "dsh-automation",
+  "repo": "titanwings/dsh-automation",
+  "url": "https://github.com/titanwings/dsh-automation",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #3 (catalog star ranking, 49 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 100,
+  "status": "pending",
+  "submitted_at": "2026-08-23T23:13:59.417Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "5ae28f209c0253461131613fc1b2ea27920bec67",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T19:19:30Z",
+    "stars": 73,
+    "version": "0.1.7",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-automation"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T23:13:59.418Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
