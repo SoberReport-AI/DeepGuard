@@ -1,0 +1,40 @@
+{
+  "id": "dsh-commandcode-provider",
+  "name": "dsh-commandcode-provider",
+  "repo": "mars-sea/dsh-commandcode-provider",
+  "url": "https://github.com/mars-sea/dsh-commandcode-provider",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #3 (catalog star ranking, 48 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 102,
+  "status": "pending",
+  "submitted_at": "2026-08-23T23:14:03.147Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "7eac763be33ddb5266b0966975916a11ae471664",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T14:56:46Z",
+    "stars": 87,
+    "version": "0.8.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-commandcode-provider"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T23:14:03.147Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
