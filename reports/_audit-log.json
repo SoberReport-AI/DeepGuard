@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T14:10:42.047Z",
+      "plugin_id": "dsh-undo-plugin",
+      "name": "dsh-undo-plugin",
+      "version": "0.4.1",
+      "commit": "7d21c941a06ef46508e96aa0bd33e5af65488d8b",
+      "repo": "lire1131/dsh-undo-plugin",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "sonar",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/82",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32644445551",
+      "extended_review": true,
+      "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
+      "compactions": 0,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T13:06:55.947Z",
       "plugin_id": "deepseek-harness-desktop",
       "name": "dsh-desktop-base",
