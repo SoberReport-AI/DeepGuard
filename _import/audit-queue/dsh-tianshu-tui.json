@@ -6,18 +6,18 @@
   "subpath": null,
   "category_hint": "ui",
   "capabilities_hint": [],
-  "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
+  "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #14). Top-starred dsh plugin (catalog star ranking).",
   "source": "issue",
-  "issue": 14,
-  "status": "cancelled",
-  "submitted_at": "2026-08-22T09:15:27.472Z",
+  "issue": 93,
+  "status": "pending",
+  "submitted_at": "2026-08-23T16:08:32.847Z",
   "prescreen": {
     "ok": true,
-    "commit": "1ff44e3dea8c677f48022c79887849df0248bccc",
+    "commit": "2adee4387850e23099a617cddf8f85300c404988",
     "default_branch": "main",
-    "pushed_at": "2026-08-20T10:49:27Z",
-    "stars": 229,
-    "version": "0.1.2-rc.12",
+    "pushed_at": "2026-08-22T10:35:10Z",
+    "stars": 231,
+    "version": "0.1.2-rc.13",
     "dsh_kind": [
       "bundle"
     ],
@@ -30,13 +30,8 @@
   },
   "history": [
     {
-      "at": "2026-08-22T09:15:27.472Z",
+      "at": "2026-08-23T16:08:32.847Z",
       "action": "prescreen-pass"
-    },
-    {
-      "at": "2026-08-22T11:05:53.010Z",
-      "action": "cancelled",
-      "reason": "batch submission withdrawn (owner request)"
     }
   ]
 }
