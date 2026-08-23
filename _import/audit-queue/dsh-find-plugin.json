@@ -1,0 +1,37 @@
+{
+  "id": "dsh-find-plugin",
+  "name": "dsh-find-plugin",
+  "repo": "awesome-dsh-plugin/dsh-find-plugin",
+  "url": "https://github.com/awesome-dsh-plugin/dsh-find-plugin",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #3 (catalog star ranking, 43 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 105,
+  "status": "pending",
+  "submitted_at": "2026-08-23T23:14:12.865Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "e7a27eb01606e6deccdaacccb8e0cfd992c0bcdc",
+    "default_branch": "main",
+    "pushed_at": "2026-08-19T05:24:43Z",
+    "stars": 82,
+    "version": "0.3.7",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-find-plugin"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T23:14:12.865Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
