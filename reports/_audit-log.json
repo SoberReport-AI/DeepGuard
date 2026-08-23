@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T16:17:41.271Z",
+      "plugin_id": "dsh-deep-whale",
+      "name": "dsh-deep-whale",
+      "version": "0.0.1",
+      "commit": "d3d7ff2b7d97260e940306b3e462870b6e033c96",
+      "repo": "small-tailqwq/dsh-deep-whale",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/92",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/95",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32650762656",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "Identity verified: plugin.id dsh-deep-whale, version 0.0.1, commit d3d7ff2b7d97260e940306b3e462870b6e033c96, subpath maid-atelier — all match task card. 0 findings (clean verdict). All 14 mechanical hits (DSH-X08→DG-R3-60×12, DSH-X05→DG-R3-57×2, DSH-C05→DG-R4-53×1) verified by actual file reads: bas",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T15:30:20.288Z",
       "plugin_id": "dsh-usage-stats",
       "name": "dsh-usage-stats-ychris12138",
