@@ -1,0 +1,38 @@
+{
+  "id": "dsh-chat-import",
+  "name": "dsh-chat-import",
+  "repo": "nwflower/dsh-chat-import",
+  "url": "https://github.com/nwflower/dsh-chat-import",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #3 (catalog star ranking, 54 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 99,
+  "status": "pending",
+  "submitted_at": "2026-08-23T23:14:00.093Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "a6c5410e45beb055e232edcf25db29f2721035c6",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T14:36:15Z",
+    "stars": 94,
+    "version": "0.7.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-chat-import"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-23T23:14:00.093Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
