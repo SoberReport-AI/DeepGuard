@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T11:58:18.208Z",
+      "plugin_id": "ai-novel-writer",
+      "name": "dsh-ai-novel-writer",
+      "version": "0.8.5",
+      "commit": "cb767d89277927ecd2986e70b9f0a9f57c72c9f8",
+      "repo": "ethanyoq/ai-novel-writer",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/77",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/86",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32637507111",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（plugin.id/version/commit均与任务卡一致）。Sonar报告无findings（全部维度clean），经逐项复核：①DG-D1（凭据）：src/无任何凭据文件读取，仅访问工作区.ai-novel目录；②DG-D2（提示词注入）：工具描述、系统提示、客户端提示词均为功能性写作指令，要求原生审批，无注入或绕过措辞；③DG-D3（代码执行）：src/无eval/child_process/动态函数，所有DG-R3-51/55/57/59/60命中均位于测试/发布/CI脚本（不随npm分发），shipped插件无危险执行模式，无安装钩子；④DG-D4（数据外泄）：sh",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T11:32:48.664Z",
       "plugin_id": "dsh-browser-lum1104",
       "name": "dsh-browser-lum1104",
