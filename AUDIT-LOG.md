@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 00:40 | dsh-tianshu-tui | 0.1.2-rc.13 | [2adee43](https://github.com/huiliyi37/dsh-tianshu-tui/commit/2adee4387850e23099a617cddf8f85300c404988) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#93](https://github.com/SoberReport-AI/DeepGuard/issues/93) |
 | 2026-08-24 00:26 | dsh-ads | 0.1.0 | [aa752ed](https://github.com/nagi-ovo/dsh-ads/commit/aa752ed8d24d0a4b5ce1fde4b99b0d9d7f5a1e22) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#91](https://github.com/SoberReport-AI/DeepGuard/issues/91) |
 | 2026-08-24 00:17 | dsh-deep-whale | 0.0.1 | [d3d7ff2](https://github.com/small-tailqwq/dsh-deep-whale/commit/d3d7ff2b7d97260e940306b3e462870b6e033c96) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#92](https://github.com/SoberReport-AI/DeepGuard/issues/92) |
 | 2026-08-23 23:30 | dsh-usage-stats | 0.2.10 | [7c88a44](https://github.com/ychris12138/dsh-usage-stats/commit/7c88a445b73f78af7df6082fd671d22a293acb6d) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#83](https://github.com/SoberReport-AI/DeepGuard/issues/83) |

@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T16:40:04.342Z",
+      "plugin_id": "dsh-tianshu-tui",
+      "name": "dsh-tianshu-tui",
+      "version": "0.1.2-rc.13",
+      "commit": "2adee4387850e23099a617cddf8f85300c404988",
+      "repo": "huiliyi37/dsh-tianshu-tui",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/93",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/97",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32651685571",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份逐字一致（id/version/commit/根包）。报告无 findings，唯一引用证据路径 vision-ask/src/ask-tool.ts 实存且内容支撑描述（ask_image 描述为纯功能说明，无注入）。机械命中 63 条全部归入 6 个规则族并在 limits/checked_items 中逐族排除，我抽查 ci.yml（四门禁+bundle 新鲜度门禁）、AGENTS.md（开发纪律文档，含防御性『系统消息信任边界』而非注入）、lib/index.js:205（自更新包管理器字符串非安装钩子）、curly* LaTeX 误匹配均属实。独立快扫：全树无 eval/new ",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T16:26:35.997Z",
       "plugin_id": "dsh-ads",
       "name": "dsh-ads",
