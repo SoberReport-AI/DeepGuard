@@ -1,23 +1,23 @@
 {
   "id": "dsh-pet",
-  "name": "dsh-pet",
+  "name": "dsh-pet-pc2005-cloud",
   "repo": "pc2005-cloud/dsh-pet",
   "url": "https://github.com/pc2005-cloud/dsh-pet",
-  "subpath": "dsh-pet",
+  "subpath": null,
   "category_hint": "ui",
   "capabilities_hint": [],
-  "note": "Top-starred dsh plugin batch intake (catalog star ranking).\n- Monorepo subpath: `dsh-pet`",
+  "note": "dsh-* E2E batch intake #2 (catalog star ranking, 78 stars).",
   "source": "issue",
-  "issue": 21,
-  "status": "cancelled",
-  "submitted_at": "2026-08-22T09:18:25.483Z",
+  "issue": 79,
+  "status": "pending",
+  "submitted_at": "2026-08-23T09:54:28.565Z",
   "prescreen": {
     "ok": true,
     "commit": "82ba588c7f849a62f1af5df81250e2ca8154c3a3",
     "default_branch": "main",
     "pushed_at": "2026-08-22T05:11:04Z",
-    "stars": 308,
-    "version": "0.1.7",
+    "stars": 345,
+    "version": null,
     "dsh_kind": [],
     "install_hooks": [],
     "dup": {
@@ -30,17 +30,8 @@
   },
   "history": [
     {
-      "at": "2026-08-22T09:18:25.483Z",
+      "at": "2026-08-23T09:54:28.565Z",
       "action": "prescreen-pass"
-    },
-    {
-      "at": "2026-08-22T10:18:45.054Z",
-      "action": "version-repair: prescreen read the monorepo root manifest at intake (None); corrected to the subpath manifest value 0.1.7 (the commit lock is unchanged)"
-    },
-    {
-      "at": "2026-08-22T11:05:53.010Z",
-      "action": "cancelled",
-      "reason": "batch submission withdrawn (owner request)"
     }
   ]
 }
