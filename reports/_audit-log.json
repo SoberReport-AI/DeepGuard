@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-23T08:51:38.207Z",
+      "plugin_id": "dsh-workflow",
+      "name": "dsh-workflow",
+      "version": "0.1.2",
+      "commit": "44b83c182aa02d1be8a0803e8446cb495f93cd8f",
+      "repo": "omdsh-dev/dsh_workflow",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/66",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/72",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32628960096",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：1) 身份一致（id/name/version/commit/subpath 全符）。2) 报告零 findings，本人亲自打开 src/lib/tests/scripts 全部关键面验证：10 条机械命中（DSH-X03→DG-R3-55）路径行号全部属实且被逐条裁决，无覆盖缺口；child_process 仅固定数组 git 命令（reviewGit/requiredPathFingerprint/gitRepository），不经 shell；source-policy FORBIDDEN 清单确为安全拦截机制；QuickJS 沙箱（runtime.ts:260-497）",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T08:16:57.022Z",
       "plugin_id": "dsh-cost-meter",
       "name": "dsh-cost-meter",
