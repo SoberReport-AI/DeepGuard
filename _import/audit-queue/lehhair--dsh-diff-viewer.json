@@ -1,0 +1,38 @@
+{
+  "id": "lehhair--dsh-diff-viewer",
+  "name": "dsh-diff-viewer",
+  "repo": "lehhair/dsh-diff-viewer",
+  "url": "https://github.com/lehhair/dsh-diff-viewer",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 16 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 175,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:42.033Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "d576c00cc7db52695d69f86142d4454380fed236",
+    "default_branch": "master",
+    "pushed_at": "2026-08-19T10:48:24Z",
+    "stars": 24,
+    "version": "0.1.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-diff-viewer"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:42.033Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
