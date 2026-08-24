@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T08:45:44.397Z",
+      "plugin_id": "amlyczz--dsh-lark-link",
+      "name": "dsh-lark-link",
+      "version": "0.5.1",
+      "commit": "d77fab8341b43a648178ab1d4fd64370cb2b1a68",
+      "repo": "amlyczz/dsh-lark-link",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/170",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/216",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32707075022",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 逐字一致）。报告无 findings，全部 6 个风险维度 clean——逐条独立核验其 checked_items 声明全部属实：凭据仅存 ctx.credentials（不落盘 config.json）、工具描述与系统提示段（index.ts:2652-2668）无注入、src 无危险函数、cordis.patch.yml 三处 !!js 均为标准 env 插值且不触碰安全插件配置、网络仅飞书官方端点、package-lock 全 npmmirror、无安装钩子、无指令面文件。机械预扫 10 条命中全部在 audit_sco",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T08:34:41.985Z",
       "plugin_id": "zp-home--dsh-recommend",
       "name": "dsh-recommend",
