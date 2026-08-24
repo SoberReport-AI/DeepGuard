@@ -1,0 +1,38 @@
+{
+  "id": "wssfk12138--dsh-damage-pulse",
+  "name": "dsh-damage-pulse",
+  "repo": "wssfk12138/dsh-damage-pulse",
+  "url": "https://github.com/wssfk12138/dsh-damage-pulse",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #6 (catalog star ranking, 118 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 245,
+  "status": "pending",
+  "submitted_at": "2026-08-24T19:22:16.204Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "0c726c0d493982dcfd5d86289ee6949a4b09eeeb",
+    "default_branch": "master",
+    "pushed_at": "2026-08-23T08:41:02Z",
+    "stars": 118,
+    "version": "0.3.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-damage-pulse"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T19:22:16.204Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
