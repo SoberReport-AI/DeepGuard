@@ -1,0 +1,38 @@
+{
+  "id": "senmuuuuw--dsh-whale-report",
+  "name": "dsh-whale-report",
+  "repo": "senmuuuuw/dsh-whale-report",
+  "url": "https://github.com/senmuuuuw/dsh-whale-report",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 19 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 162,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:45.240Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "84cdb066d0921f2e5a17363c844c36f4b2823d42",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T13:24:06Z",
+    "stars": 28,
+    "version": "0.5.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-whale-report"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:45.240Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
