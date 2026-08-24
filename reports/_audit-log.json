@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T20:29:47.300Z",
+      "plugin_id": "totoro-qaq--dsh-plugin-bridge",
+      "name": "dsh-plugin-bridge",
+      "version": "0.2.11",
+      "commit": "e491b6c30ec7d5aa7d26b1f6072b4c65a84a2569",
+      "repo": "totoro-qaq/dsh-plugin-bridge",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/243",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/250",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32773422610",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/name/version/commit/subpath 全部一致）。报告 findings 为空，无可核验证据条目。机械规则面预扫 14 条命中全部在 ds_scenarios 中以显式规则 ID（DG-R3-51/55/59）给出排除理由，且我已逐文件核实：cordis.patch.yml 9 处 !!js 均为带默认值的只读环境变量插值；3 个 workflow 为常规构建/扫描/发布；package-smoke.mjs:6 与 test/cli.test.mjs:10 的 child_process 为开发/测试自检，均不进插件运行面——无覆盖缺口。独立快扫：无安装期",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T20:20:49.286Z",
       "plugin_id": "zseven-w--dsh-noema",
       "name": "dsh-noema",
