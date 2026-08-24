@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T06:12:34.312Z",
+      "plugin_id": "a179-sanae--dsh-auto-collapse",
+      "name": "dsh-auto-collapse",
+      "version": "0.1.4",
+      "commit": "1c39946e530d5a9f07a3941285c0c690f5cdf9f0",
+      "repo": "a179-sanae/dsh-auto-collapse",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/152",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/200",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32695844810",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份三要素（id/version/commit）与任务卡逐字一致；findings 为空，逐条核验了报告所有 checked_items 声明的证据位置（src/fold.ts、src/settings.ts、src/client.ts、src/index.ts、lib/client.js:68/1221、lib/index.js、cordis.patch.yml、deploy.mjs、test/*、ci.yml），均与描述相符，无注入文本被当作功能的迹象。13 条机械预扫命中全部在 DG-D3 中以明确规则 ID 裁决，无覆盖缺口；manifest 32 文件全部在树中，无越界",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T06:04:19.878Z",
       "plugin_id": "lhh010--dsh-minigames",
       "name": "dsh-minigames",

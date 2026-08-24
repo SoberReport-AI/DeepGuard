@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 14:12 | a179-sanae--dsh-auto-collapse | 0.1.4 | [1c39946](https://github.com/a179-sanae/dsh-auto-collapse/commit/1c39946e530d5a9f07a3941285c0c690f5cdf9f0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#152](https://github.com/SoberReport-AI/DeepGuard/issues/152) |
 | 2026-08-24 14:04 | lhh010--dsh-minigames | 0.3.6 | [1bb6d86](https://github.com/lhh010/dsh-minigames/commit/1bb6d8664281ea8d03cdf82050a398a69222a3ff) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#151](https://github.com/SoberReport-AI/DeepGuard/issues/151) |
 | 2026-08-24 13:57 | hellodigua--dsh-share | 0.3.1 | [c109330](https://github.com/hellodigua/dsh-share/commit/c109330b755c793cbc701a4e6a972d620a6667da) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#150](https://github.com/SoberReport-AI/DeepGuard/issues/150) |
 | 2026-08-24 13:48 | hsiangnianian--dsh-auto-continue | 0.8.1 | [e865b0b](https://github.com/hsiangnianian/dsh-auto-continue/commit/e865b0b179331769cdce4a1e407a488056c1633d) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#149](https://github.com/SoberReport-AI/DeepGuard/issues/149) |
