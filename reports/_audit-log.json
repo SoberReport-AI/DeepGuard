@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T04:34:48.878Z",
+      "plugin_id": "moeblack--dsh-message-edit",
+      "name": "dsh-message-edit",
+      "version": "0.2.3",
+      "commit": "b78a167064ca612f1c400060d2bfc1dc9bc46436",
+      "repo": "moeblack/dsh-message-edit",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/130",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/140",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32690083402",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：身份逐字一致；报告无 findings，各维度 clean 主张经我亲自扫描源码/打包产物/锁文件后成立（网络仅同源 /message-edit、无凭据读取、无 eval/child_process 于分发产物、无安装钩子、无模型面指令注入、依赖均来自官方 registry）；3 条机械命中（DSH-X08 client.js:796 内联 CSS、DSH-X08 client.js.map:1 源码映射、DSH-X03 scripts/build.mjs:3 开发编译脚本）均以规则 ID 在 audit_scope.limits 中给出排除理由且我逐一开档验证属实；manife",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T04:27:04.392Z",
       "plugin_id": "yyyyukari--dsh-plugin-workshop",
       "name": "dsh-plugin-workshop",
