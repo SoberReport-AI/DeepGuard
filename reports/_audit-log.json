@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T04:18:49.804Z",
+      "plugin_id": "omdsh-dev--dsh-lark",
+      "name": "dsh-lark",
+      "version": "0.0.7",
+      "commit": "632807d9abafbb866a5e208a0298eff21c7856d1",
+      "repo": "omdsh-dev/dsh-lark",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/127",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/138",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32688976179",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：身份核验逐字一致（id/version/commit/subpath）；报告 findings 为空，无逐条证据路径需核验，但其维度结论经我独立取证全部成立——DG-D1 仅读取 LARK_APP_ID/LARK_APP_SECRET 与宿主凭据通道（credentials.ts、cordis.patch.yml），DG-D2 三个注册工具描述（ask_user_question/exit_plan_mode shadow/send_file）均为纯功能说明且 presence.ts 含防注入告诫，DG-D3 全树无 eval/new Function、install 钩子仅本地编译",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T04:09:15.541Z",
       "plugin_id": "toolclub--dsh-agent-team-gui",
       "name": "dsh-agent-team-gui",
