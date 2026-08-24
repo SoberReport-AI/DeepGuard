@@ -1,0 +1,40 @@
+{
+  "id": "dingyi222666--dsh-focus-chat",
+  "name": "dsh-focus-chat",
+  "repo": "dingyi222666/dsh-focus-chat",
+  "url": "https://github.com/dingyi222666/dsh-focus-chat",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 20 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 160,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:36.669Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "8127d69c2b657dc4fd20f4628b8775d8933d633e",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T11:41:37Z",
+    "stars": 21,
+    "version": "0.1.11",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-focus-chat"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:36.670Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
