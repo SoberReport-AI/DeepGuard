@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T11:30:46.735Z",
+      "plugin_id": "omdsh-dev--dsh-gomoku",
+      "name": "dsh-gomoku",
+      "version": "0.0.1",
+      "commit": "5b27af9808f5bd8f2d753dfdf6157d86a54a4947",
+      "repo": "omdsh-dev/dsh-gomoku",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/188",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/232",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32721549524",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份四元组逐字一致；报告 findings 为空，各维度 clean 声明经独立 grep/read 验证成立：全树无 child_process/exec/eval/new Function/vm、无外部网络目标（fetch 仅 /plugins/gomoku/* 自身路由）、无凭据读取、无浏览器敏感 API、cordis.patch.yml 仅插入插件行、package.json 无安装后钩子。机械预扫 2 条命中（DSH-X08→DG-R3-60 @ lib/client.js:484 与 lib/client.js.map:1）Sonar 均以显式规则 ID 裁决为正常构",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T11:22:07.765Z",
       "plugin_id": "609476965--dsh-lorebookmd",
       "name": "dsh-lorebookmd",
