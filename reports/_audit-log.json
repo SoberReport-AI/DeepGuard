@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T03:35:26.677Z",
+      "plugin_id": "shaobeichen--dsh-pocket",
+      "name": "dsh-pocket",
+      "version": "1.13.4",
+      "commit": "472524a45ef7b1ff6fbd9c3bf50787680a5497c3",
+      "repo": "shaobeichen/dsh-pocket",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/124",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/133",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32686503730",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。身份核验通过（plugin.id/version/commit/subpath 逐字一致）；10 条机械命中全部在报告中对应裁决（DSH-X03/X05/X07/X08 均有逐条引用）；独立快扫未发现漏检（无 eval、无安装钩子、无凭据读取、无外联未声明域名、无模型面指令文件）；manifest 所列 43 文件全部在树中可定位。Sonar 的 checked_items 中声称「进程调用共 5 处」实际为 6 处（spawn×4+execFile×1+execSync×1），属轻微描述不精确，不影响安全定级——所有调用均已判定为良性功能用法。声明功能（反代 0.0",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T03:26:54.061Z",
       "plugin_id": "thewolfwalker--dsh-notifier",
       "name": "dsh-notifier",

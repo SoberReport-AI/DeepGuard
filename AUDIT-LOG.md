@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 11:35 | shaobeichen--dsh-pocket | 1.13.4 | [472524a](https://github.com/shaobeichen/dsh-pocket/commit/472524a45ef7b1ff6fbd9c3bf50787680a5497c3) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#124](https://github.com/SoberReport-AI/DeepGuard/issues/124) |
 | 2026-08-24 11:26 | thewolfwalker--dsh-notifier | 0.8.5 | [db42908](https://github.com/thewolfwalker/dsh-notifier/commit/db4290830329799148475d1c17de6c21f2fde4e4) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#122](https://github.com/SoberReport-AI/DeepGuard/issues/122) |
 | 2026-08-24 11:18 | noob-stupid--dsh-plugin-hub | 0.3.19 | [3370884](https://github.com/noob-stupid/dsh-plugin-hub/commit/3370884f71b2e282a13a33d54325b20617296695) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#121](https://github.com/SoberReport-AI/DeepGuard/issues/121) |
 | 2026-08-24 10:17 | icetomoyo--dsh-workflow | 0.1.2 | [44b83c1](https://github.com/icetomoyo/dsh_workflow/commit/44b83c182aa02d1be8a0803e8446cb495f93cd8f) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#119](https://github.com/SoberReport-AI/DeepGuard/issues/119) |
