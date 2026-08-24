@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T20:49:54.809Z",
+      "plugin_id": "wssfk12138--dsh-damage-pulse",
+      "name": "dsh-damage-pulse",
+      "version": "0.3.1",
+      "commit": "0c726c0d493982dcfd5d86289ee6949a4b09eeeb",
+      "repo": "wssfk12138/dsh-damage-pulse",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/245",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/252",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32775410464",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：身份核验通过；报告 findings 为空（6 维全 clean），我对 checked_items 的关键断言逐一在树中实测——DG-D1 密钥经 credentialRef 解析后仅发往 https://api.deepseek.com/user/balance（plugins/dsh-token-monitor/src/balance.ts:13-36），无直读凭据文件路径；DG-D2 无工具注册/无 AGENTS/CLAUDE/SKILL 指令文件/客户端仅注册 UI 槽位；DG-D3 无 child_process/eval，两个 cordis.patch.yml 均为纯配",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T20:41:55.445Z",
       "plugin_id": "lire1131--dsh-undo-savepoint",
       "name": "dsh-undo-savepoint",
