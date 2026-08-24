@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T08:16:02.666Z",
+      "plugin_id": "shengsheng90--dsh-taskboard",
+      "name": "dsh-taskboard-shengsheng90",
+      "version": "0.1.3",
+      "commit": "dd5455bdeec3a86eaf84482ef2dd42d86c7b88aa",
+      "repo": "shengsheng90/dsh-taskboard",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/166",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/213",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32704706793",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：approve。身份一致；报告无 findings（全维度 clean），其各维度 checked_items 所引证据我逐项实开文件核验成立——27 条机械命中（X07/P01/C05/X10/X05/X08）全部有明确裁决并引用规则 ID，无覆盖缺口；独立快扫（exec/eval/子进程、外联、凭据读取、注入措辞、安装钩子、patch 安全行）未见漏检：唯一 fetch 指向相对路径附件票据、写 RPC 强制 loopback、Typert 载体只读、策略层强制 human-only、patch 仅插入自身配置。定级/结论推导合规（clean 无浮夸问题）。仅一处笔误：D1 ",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T08:06:51.259Z",
       "plugin_id": "bill9109--dsh-web-ui-notify",
       "name": "dsh-web-ui-notify",
