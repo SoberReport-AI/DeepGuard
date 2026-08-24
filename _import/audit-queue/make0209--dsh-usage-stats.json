@@ -1,0 +1,38 @@
+{
+  "id": "make0209--dsh-usage-stats",
+  "name": "dsh-usage-stats",
+  "repo": "make0209/dsh-usage-stats",
+  "url": "https://github.com/make0209/dsh-usage-stats",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 16 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 172,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:25.930Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "8992d306cdca8857b4362868d591fde3689765b0",
+    "default_branch": "main",
+    "pushed_at": "2026-08-14T15:05:17Z",
+    "stars": 26,
+    "version": "1.0.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-usage-stats"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:25.930Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
