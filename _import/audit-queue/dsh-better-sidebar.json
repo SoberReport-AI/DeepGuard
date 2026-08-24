@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "issue",
   "issue": 3,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-22T09:09:59.786Z",
   "prescreen": {
     "ok": true,
@@ -45,7 +45,12 @@
       "at": "2026-08-24T03:44:18.898Z",
       "action": "requeue",
       "reason": "report retracted: prior run audited drifted HEAD 9a40164d instead of prescreen-locked b7aab48 (prepare bug, fixed in DeepGuardWeb@c9547f0); re-audit against locked snapshot"
+    },
+    {
+      "at": "2026-08-24T04:35:18.718Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 0
+  "attempts": 1
 }
