@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T21:25:48.740Z",
+      "plugin_id": "elysia395--dsh-wallpaper-engine",
+      "name": "dsh-wallpaper-engine",
+      "version": "0.6.2",
+      "commit": "3dbed7121d6c9734ce51b2b3fafcf96d78ea8026",
+      "repo": "elysia395/dsh-wallpaper-engine",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/240",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/254",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32778342160",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：报告整体 clean，0 条 findings。身份核验通过（id/version/commit 与任务卡逐字一致）。机械预扫 13 条命中均已裁决（DSH-X 编号引用）。维度一致性校验通过。独立快扫未发现漏检恶意模式（child_process 仅用于固定参数的 reg.exe 查询和 ffmpeg 转码；ffmpeg 下载有 sha256 固定哈希 + 魔数 + 大小三重校验；网络外发仅限两个已知域名；无模型面工具注册/提示词注入/凭据读取/编码外发）。install 命令符合规范。主要瑕疵：机械预扫中 2 条 DSH-X05（document 级 keydown）引用行不存在",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T21:13:00.288Z",
       "plugin_id": "zseven-w--dsh-crew",
       "name": "dsh-crew",
