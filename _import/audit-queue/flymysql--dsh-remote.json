@@ -1,0 +1,38 @@
+{
+  "id": "flymysql--dsh-remote",
+  "name": "dsh-remote-flymysql",
+  "repo": "flymysql/dsh-remote",
+  "url": "https://github.com/flymysql/dsh-remote",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 16 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 173,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:30.609Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "5ae197a94c0fe4f0a8ffe5de14822f79418dc3bd",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T17:26:51Z",
+    "stars": 35,
+    "version": "0.8.8",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-remote-flymysql"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:30.609Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
