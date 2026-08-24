@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T05:15:49.886Z",
+      "plugin_id": "geml-spec--geml",
+      "name": "dsh-plugin-geml-spec",
+      "version": null,
+      "commit": "8b6dc6241f36435facbf482245c36450898a3486",
+      "repo": "geml-spec/geml",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "gate",
+      "status": "rejected-gate",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/144",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32692864288",
+      "extended_review": false,
+      "reason": "cannot determine plugin version: no version field in the repository's package.json and none pinned by prescreen — add a semver version to package.json and re-submit",
+      "compactions": null,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T05:14:44.903Z",
       "plugin_id": "xmanrui--dsh-im",
       "name": "dsh-im",

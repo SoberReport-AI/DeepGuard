@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #5 (catalog star ranking, 24 stars). Whitelist batch submission.",
   "source": "issue",
   "issue": 144,
-  "status": "auditing",
+  "status": "rejected",
   "submitted_at": "2026-08-24T04:49:34.337Z",
   "prescreen": {
     "ok": true,
@@ -37,7 +37,54 @@
       "at": "2026-08-24T05:15:20.374Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-24T05:15:34.213Z",
+      "action": "gate-pass",
+      "reason": null
+    },
+    {
+      "at": "2026-08-24T05:15:36.840Z",
+      "action": "gate-reject",
+      "reason": "cannot determine plugin version: no version field in the repository's package.json and none pinned by prescreen — add a semver version to package.json and re-submit"
     }
   ],
-  "attempts": 1
+  "attempts": 1,
+  "gate": {
+    "at": "2026-08-24T05:15:34.213Z",
+    "submitter": "SoberReport-AI",
+    "whitelisted": true,
+    "association": null,
+    "checks": [
+      {
+        "check": "whitelist",
+        "ok": true,
+        "note": "whitelisted (Sim public-repo owner: runs triggered by dispatcher/cron fall back to repository_owner for identity verification at the gate, so the sim/formal public-repo owner must be whitelisted or all submissions are rejected), skipping identity and account-age checks"
+      },
+      {
+        "check": "identity",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "account-age",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "blacklist",
+        "ok": true,
+        "note": "no hit"
+      },
+      {
+        "check": "duplicate",
+        "ok": true,
+        "note": "no locked version in queue entry — commit-locked, version-dimension dedup skipped (resolved later at prepare)"
+      }
+    ],
+    "decision": "reject",
+    "reasons": [
+      "cannot determine plugin version: no version field in the repository's package.json and none pinned by prescreen — add a semver version to package.json and re-submit"
+    ]
+  }
 }

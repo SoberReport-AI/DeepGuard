@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 13:15 | geml-spec--geml | — | [8b6dc62](https://github.com/geml-spec/geml/commit/8b6dc6241f36435facbf482245c36450898a3486) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#144](https://github.com/SoberReport-AI/DeepGuard/issues/144) |
 | 2026-08-24 13:14 | xmanrui--dsh-im | 2.0.1 | [dea9a8f](https://github.com/xmanrui/dsh-im/commit/dea9a8f2d1a3fdbb12a7b2a227ce93d0004257d9) | SoberReport-AI | clean | 0 | extended review | uphold Sonar | pass | merged | [#143](https://github.com/SoberReport-AI/DeepGuard/issues/143) |
 | 2026-08-24 13:01 | dhicoc--dsh-reverse-skill | 1.0.5 | [1bc4d63](https://github.com/dhicoc/dsh-reverse-skill/commit/1bc4d63ee9a5268419170f4c5fb4a4e59e0e815c) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#142](https://github.com/SoberReport-AI/DeepGuard/issues/142) |
 | 2026-08-24 12:45 | dsh-better-sidebar | 0.15.0 | [b7aab48](https://github.com/omdsh-dev/dsh-better-sidebar/commit/b7aab48deb17b7dd92094c84441783fccaf51561) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#3](https://github.com/SoberReport-AI/DeepGuard/issues/3) |
