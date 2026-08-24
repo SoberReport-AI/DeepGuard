@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T05:25:25.241Z",
+      "plugin_id": "omdsh-dev--dsh-custom-tool",
+      "name": "dsh-custom-tool",
+      "version": "0.1.2",
+      "commit": "7cb95649dca9b380c9a30af96bdbef87a76a2259",
+      "repo": "omdsh-dev/dsh-custom-tool",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "gate",
+      "status": "rejected-gate",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/146",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32693451823",
+      "extended_review": false,
+      "reason": "context-preflight: audit scope totals ~9196603 weighted tokens (limit 8000000); an audit at this scale cannot complete within the free-tier rate budget — shrink the plugin directory and resubmit",
+      "compactions": null,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T05:24:23.267Z",
       "plugin_id": "hellodigua--dsh-emoji",
       "name": "dsh-emoji",
