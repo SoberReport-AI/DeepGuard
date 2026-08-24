@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 19:54 | mombrane--dsh-subagent-monitor | 0.2.0 | [125278d](https://github.com/mombrane/dsh-subagent-monitor/commit/125278d445e42705354e039a45d1321499d6be32) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#191](https://github.com/SoberReport-AI/DeepGuard/issues/191) |
 | 2026-08-24 19:47 | linenxi-ctrl--dsh-vision | 0.2.6 | [50f6ba0](https://github.com/linenxi-ctrl/dsh-vision/commit/50f6ba065e8cf42c4ecc5a06c4e96dc2d5c69b11) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#190](https://github.com/SoberReport-AI/DeepGuard/issues/190) |
 | 2026-08-24 19:40 | bill9109--dsh-drag-and-drop | 0.1.6 | [3b70ec4](https://github.com/bill9109/dsh-drag-and-drop/commit/3b70ec46926a37d96d08d396f4948e4509126ecd) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#189](https://github.com/SoberReport-AI/DeepGuard/issues/189) |
 | 2026-08-24 19:30 | omdsh-dev--dsh-gomoku | 0.0.1 | [5b27af9](https://github.com/omdsh-dev/dsh-gomoku/commit/5b27af9808f5bd8f2d753dfdf6157d86a54a4947) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#188](https://github.com/SoberReport-AI/DeepGuard/issues/188) |

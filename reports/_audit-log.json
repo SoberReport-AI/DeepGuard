@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T11:54:29.056Z",
+      "plugin_id": "mombrane--dsh-subagent-monitor",
+      "name": "dsh-subagent-monitor",
+      "version": "0.2.0",
+      "commit": "125278d445e42705354e039a45d1321499d6be32",
+      "repo": "mombrane/dsh-subagent-monitor",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/191",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/235",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32723710734",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过，同意 clean 结论。(1) 身份逐字一致（id/name/version/commit/subpath）。 (2) findings[] 为空，报告所有 checked_items/ds_scenarios 主张均经我亲自打开源文件验证：src/index.ts 仅注册回环只读快照路由（无 child_process/fs/凭据/外联）；src/client/panel.tsx 与 lib/client.js 仅同源 fetch 轮询 + localStorage 面板布局，无键盘/剪贴板/凭据面；cordis.patch.yml 仅插入自身 bundle 一行，未触碰安全配",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T11:47:20.638Z",
       "plugin_id": "linenxi-ctrl--dsh-vision",
       "name": "dsh-vision-linenxi-ctrl",
