@@ -1,0 +1,38 @@
+{
+  "id": "hsiangnianian--dsh-auto-continue",
+  "name": "dsh-auto-continue",
+  "repo": "hsiangnianian/dsh-auto-continue",
+  "url": "https://github.com/hsiangnianian/dsh-auto-continue",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 23 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 149,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:49:52.097Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "e865b0b179331769cdce4a1e407a488056c1633d",
+    "default_branch": "main",
+    "pushed_at": "2026-08-21T06:15:05Z",
+    "stars": 36,
+    "version": "0.8.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-auto-continue"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:49:52.097Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
