@@ -1,0 +1,40 @@
+{
+  "id": "ghost011118--dsh-balance-meter",
+  "name": "dsh-balance-meter",
+  "repo": "ghost011118/dsh-balance-meter",
+  "url": "https://github.com/ghost011118/dsh-balance-meter",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 16 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 176,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:40.287Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "1a277e8eb9ee5ebbf8589e6bbb96bfe9ac282c11",
+    "default_branch": "master",
+    "pushed_at": "2026-08-20T11:34:08Z",
+    "stars": 19,
+    "version": "0.1.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-balance-meter"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:40.287Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
