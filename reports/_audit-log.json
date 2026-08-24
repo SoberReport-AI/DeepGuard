@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T09:59:52.576Z",
+      "plugin_id": "anacondakc--dsh-stock-market",
+      "name": "dsh-stock-market",
+      "version": "0.2.0",
+      "commit": "02278af12330102c534c843a668d1c8407dbde1b",
+      "repo": "anacondakc/dsh-stock-market",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/177",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/222",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32713908695",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。身份核验一致（plugin.id/version/commit/subpath 均逐字匹配）。3 条机械命中（DSH-X03×2→DG-R3-55, DSH-X08→DG-R3-60）均已由 Sonar 在 audit_scope.limits 中引用规则 ID 明确排除为良性（dev-only 构建脚本、生成的数据目录），无覆盖缺口。所有维度（D1-D6）经独立源文件复核：无凭据处理（localStorage 仅存侧栏界面状态）、工具描述为纯行情查询说明无注入、无动态求值或安装钩子（子进程仅在 dev-only 构建脚本中）、外联目标仅向东方财富/腾讯/新浪/同花顺",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T09:52:34.286Z",
       "plugin_id": "lehhair--dsh-diff-viewer",
       "name": "dsh-diff-viewer",
