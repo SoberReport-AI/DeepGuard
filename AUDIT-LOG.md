@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 16:06 | bill9109--dsh-web-ui-notify | 0.1.3 | [865d2f6](https://github.com/bill9109/dsh-web-ui-notify/commit/865d2f6fc93f2e0d051d53df772646cb831a43ed) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#165](https://github.com/SoberReport-AI/DeepGuard/issues/165) |
 | 2026-08-24 15:59 | kingao294--dsh-skin | 0.4.0 | [0a571a2](https://github.com/kingao294/dsh-skin/commit/0a571a27adcc5f780b7b72386c9c294243eec5b3) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#164](https://github.com/SoberReport-AI/DeepGuard/issues/164) |
 | 2026-08-24 15:53 | dietcokewithsugar--dsh-user-experience | 0.4.2 | [bba21e6](https://github.com/dietcokewithsugar/dsh-user-experience/commit/bba21e6a634844b448b34aae4e7c8af1d8bbd9d4) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#163](https://github.com/SoberReport-AI/DeepGuard/issues/163) |
 | 2026-08-24 15:44 | senmuuuuw--dsh-whale-report | 0.5.0 | [84cdb06](https://github.com/senmuuuuw/dsh-whale-report/commit/84cdb066d0921f2e5a17363c844c36f4b2823d42) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#162](https://github.com/SoberReport-AI/DeepGuard/issues/162) |
