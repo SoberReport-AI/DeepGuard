@@ -1,0 +1,37 @@
+{
+  "id": "furongjun-1999--dsh-memory",
+  "name": "dsh-memory-furongjun-1999",
+  "repo": "furongjun-1999/dsh-memory",
+  "url": "https://github.com/furongjun-1999/dsh-memory",
+  "subpath": null,
+  "category_hint": "memory",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 13 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 186,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:22.254Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "5ba5f975669b0191f1811d434a996e0f5593d7cc",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T05:48:24Z",
+    "stars": 32,
+    "version": "0.2.8",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-memory-furongjun-1999"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:22.254Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
