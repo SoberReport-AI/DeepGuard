@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T20:41:55.445Z",
+      "plugin_id": "lire1131--dsh-undo-savepoint",
+      "name": "dsh-undo-savepoint",
+      "version": "0.4.1",
+      "commit": "7d21c941a06ef46508e96aa0bd33e5af65488d8b",
+      "repo": "lire1131/dsh-undo-savepoint",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/244",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/251",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32774280702",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论 approve。身份与哈希逐字一致；报告 0 findings，checked_items 引用的证据路径均实测存在且内容支撑描述（PROMPT_TEXT、15 工具、键盘监听/超长 CSS、子进程调用 6 处、凭据脱敏 25+/29 处、CI、127.0.0.1 绑定局外服务器、无网络外发、无 eval/Function、无安装钩子）；39 条机械命中全部有规则 ID 级排除理由。独立漏检快扫未发现 Sonar 遗漏的高危点；ZIP 导入路径穿越观察项（写仅限不存在目标、需用户主动导入外部 ZIP）与 Sonar 记录一致，按观察项处理可接受。唯一瑕疵为 DSH-C01 命中计数（",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T20:29:47.300Z",
       "plugin_id": "totoro-qaq--dsh-plugin-bridge",
       "name": "dsh-plugin-bridge",

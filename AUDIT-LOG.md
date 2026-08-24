@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-25 04:41 | lire1131--dsh-undo-savepoint | 0.4.1 | [7d21c94](https://github.com/lire1131/dsh-undo-savepoint/commit/7d21c941a06ef46508e96aa0bd33e5af65488d8b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#244](https://github.com/SoberReport-AI/DeepGuard/issues/244) |
 | 2026-08-25 04:29 | totoro-qaq--dsh-plugin-bridge | 0.2.11 | [e491b6c](https://github.com/totoro-qaq/dsh-plugin-bridge/commit/e491b6c30ec7d5aa7d26b1f6072b4c65a84a2569) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#243](https://github.com/SoberReport-AI/DeepGuard/issues/243) |
 | 2026-08-25 04:20 | zseven-w--dsh-noema | 0.1.0-rc.3 | [9cc3ab1](https://github.com/zseven-w/dsh-noema/commit/9cc3ab1ee00de04bf318be9cf2b102ae668ceeb2) | SoberReport-AI | clean | 0 | approve | — | — | failed, flagged for extended review | [#242](https://github.com/SoberReport-AI/DeepGuard/issues/242) |
 | 2026-08-25 04:13 | shanliuling--dsh-image-gen | 0.1.7 | [82480dd](https://github.com/shanliuling/dsh-image-gen/commit/82480ddb8876f2e7abf9a30bf5113ca645fb88cc) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#241](https://github.com/SoberReport-AI/DeepGuard/issues/241) |
