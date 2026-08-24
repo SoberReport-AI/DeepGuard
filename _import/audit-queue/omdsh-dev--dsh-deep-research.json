@@ -1,0 +1,37 @@
+{
+  "id": "omdsh-dev--dsh-deep-research",
+  "name": "dsh-deep-research",
+  "repo": "omdsh-dev/dsh-deep-research",
+  "url": "https://github.com/omdsh-dev/dsh-deep-research",
+  "subpath": null,
+  "category_hint": "memory",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 14 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 185,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:19.773Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "c0b329e02cd0195f810a7c3608cb58701a7fe0f1",
+    "default_branch": "main",
+    "pushed_at": "2026-08-12T07:12:36Z",
+    "stars": 18,
+    "version": "0.1.0",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-deep-research"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:19.773Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
