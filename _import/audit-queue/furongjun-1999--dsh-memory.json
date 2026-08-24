@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #5 (catalog star ranking, 13 stars). Whitelist batch submission.",
   "source": "issue",
   "issue": 186,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-24T04:52:22.254Z",
   "prescreen": {
     "ok": true,
@@ -42,7 +42,12 @@
       "at": "2026-08-24T11:14:20.537Z",
       "action": "requeued",
       "reason": "orphaned dispatch: no terminal write within 30 min of dispatch (run died or was cancelled)"
+    },
+    {
+      "at": "2026-08-24T12:05:11.914Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 1
+  "attempts": 2
 }
