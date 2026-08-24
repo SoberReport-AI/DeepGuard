@@ -1,0 +1,38 @@
+{
+  "id": "franksong2702--dsh-codex-connect",
+  "name": "dsh-codex-connect",
+  "repo": "franksong2702/dsh-codex-connect",
+  "url": "https://github.com/franksong2702/dsh-codex-connect",
+  "subpath": null,
+  "category_hint": "model",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 20 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 161,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:41.754Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "15f1c6f6b0715c63395e4852ec37c4dd5a9f598c",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T02:37:23Z",
+    "stars": 41,
+    "version": "0.1.0-alpha.4.18",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-codex-connect"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:41.754Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
