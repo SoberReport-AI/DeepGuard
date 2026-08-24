@@ -1,0 +1,38 @@
+{
+  "id": "linenxi-ctrl--dsh-vision",
+  "name": "dsh-vision-linenxi-ctrl",
+  "repo": "linenxi-ctrl/dsh-vision",
+  "url": "https://github.com/linenxi-ctrl/dsh-vision",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 12 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 190,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:38.898Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "50f6ba065e8cf42c4ecc5a06c4e96dc2d5c69b11",
+    "default_branch": "main",
+    "pushed_at": "2026-08-15T15:01:12Z",
+    "stars": 12,
+    "version": "0.2.6",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-vision-linenxi-ctrl"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:38.898Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
