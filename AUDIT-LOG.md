@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 20:07 | furongjun-1999--dsh-memory | 0.2.8 | [5ba5f97](https://github.com/furongjun-1999/dsh-memory/commit/5ba5f975669b0191f1811d434a996e0f5593d7cc) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#186](https://github.com/SoberReport-AI/DeepGuard/issues/186) |
 | 2026-08-24 20:04 | deepseek-harness-desktop | 3.0.1 | [f718ac0](https://github.com/ningbainb/deepseek-harness-desktop/commit/f718ac012e80fccd0b3b123e58d780f0f8ed7abc) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
 | 2026-08-24 20:03 | ai-novel-writer | 0.1.0 | [cb767d8](https://github.com/ethanyoq/ai-novel-writer/commit/cb767d89277927ecd2986e70b9f0a9f57c72c9f8) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-08-24 19:54 | mombrane--dsh-subagent-monitor | 0.2.0 | [125278d](https://github.com/mombrane/dsh-subagent-monitor/commit/125278d445e42705354e039a45d1321499d6be32) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#191](https://github.com/SoberReport-AI/DeepGuard/issues/191) |
