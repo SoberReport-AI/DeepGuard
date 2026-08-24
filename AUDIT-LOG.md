@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 17:26 | snowcrescenter-tech--dsh-milestone | 0.6.6 | [7568fc2](https://github.com/snowcrescenter-tech/dsh-milestone/commit/7568fc271aa2ac54f541d725989de2720ffe3a5b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#174](https://github.com/SoberReport-AI/DeepGuard/issues/174) |
 | 2026-08-24 17:12 | flymysql--dsh-remote | 0.8.8 | [5ae197a](https://github.com/flymysql/dsh-remote/commit/5ae197a94c0fe4f0a8ffe5de14822f79418dc3bd) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#173](https://github.com/SoberReport-AI/DeepGuard/issues/173) |
 | 2026-08-24 17:00 | make0209--dsh-usage-stats | 1.0.0 | [8992d30](https://github.com/make0209/dsh-usage-stats/commit/8992d306cdca8857b4362868d591fde3689765b0) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#172](https://github.com/SoberReport-AI/DeepGuard/issues/172) |
 | 2026-08-24 16:53 | acidgr--dsh-web-lan-access | 1.2.1 | [8eeb1d0](https://github.com/acidgr/dsh-web-lan-access/commit/8eeb1d0cb79a6e199bde94f16f1e2f2b5a818f01) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#171](https://github.com/SoberReport-AI/DeepGuard/issues/171) |

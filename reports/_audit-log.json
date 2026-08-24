@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T09:26:13.331Z",
+      "plugin_id": "snowcrescenter-tech--dsh-milestone",
+      "name": "dsh-milestone",
+      "version": "0.6.6",
+      "commit": "7568fc271aa2ac54f541d725989de2720ffe3a5b",
+      "repo": "snowcrescenter-tech/dsh-milestone",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/174",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/220",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32710762956",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：身份三要素（id/version/commit）与任务卡逐字一致，subpath=null 与仓库根一致；报告无 findings，其 checked_items 与 ds_scenarios 引用的全部证据路径已逐个实际打开验证（version-logic.ts:228、bookmarkStore.ts、locales.ts、index.ts、runtime-client.ts:33、cordis.patch.yml），行号与内容均相符且为良性 UI/测试设施；9 条机械规则命中全部在精确行号复核为良性（剪贴板复制、Escape 关闭、测试辅助动态函数），报告以 DG-R3-5",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T09:12:29.843Z",
       "plugin_id": "flymysql--dsh-remote",
       "name": "dsh-remote-flymysql",
