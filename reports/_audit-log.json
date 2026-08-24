@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T00:14:00.180Z",
+      "plugin_id": "dsh-find-plugin",
+      "name": "dsh-find-plugin",
+      "version": "0.3.7",
+      "commit": "e7a27eb01606e6deccdaacccb8e0cfd992c0bcdc",
+      "repo": "awesome-dsh-plugin/dsh-find-plugin",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/105",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/115",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32675649099",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：身份逐字一致；报告无 findings，引用的全部证据路径均实际打开验证存在且内容支撑描述（工具说明良性、网络端点正确、无安装钩子、publish.yml 标准发布流程）；51 条机械命中全部有明确裁决（DG-R3-59、DG-R3-54 均被引用排除理由）；manifest 21 文件全覆盖无缺口；漏检快扫（install 钩子/eval/child_process/外联/凭据/注入）未发现 Sonar 遗漏的高危点；安装命令形态与哈希完全合规。定级与结论（clean/clean）与证据相称，无浮夸、无误报。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T00:06:34.030Z",
       "plugin_id": "dsh-dream-skin",
       "name": "dsh-dream-skin",

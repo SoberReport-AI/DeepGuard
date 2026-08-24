@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 08:14 | dsh-find-plugin | 0.3.7 | [e7a27eb](https://github.com/awesome-dsh-plugin/dsh-find-plugin/commit/e7a27eb01606e6deccdaacccb8e0cfd992c0bcdc) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#105](https://github.com/SoberReport-AI/DeepGuard/issues/105) |
 | 2026-08-24 08:06 | dsh-dream-skin | 0.4.10 | [68c554c](https://github.com/revolutionla/dsh-dream-skin/commit/68c554c2fd4701b560315a7513b0ee73b668874f) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#104](https://github.com/SoberReport-AI/DeepGuard/issues/104) |
 | 2026-08-24 07:58 | dsh-multica-runtime | 0.1.0-private.1 | [e29aae2](https://github.com/forrestchang/dsh-multica-runtime/commit/e29aae228449dfe50e88af60ef4281e38ca44e2a) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#103](https://github.com/SoberReport-AI/DeepGuard/issues/103) |
 | 2026-08-24 07:49 | dsh-open-in-vscode | 0.1.6 | [8aed144](https://github.com/omdsh-dev/dsh-open-in-vscode/commit/8aed144abdc158a332aa73bce42fc217d962f751) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#101](https://github.com/SoberReport-AI/DeepGuard/issues/101) |
