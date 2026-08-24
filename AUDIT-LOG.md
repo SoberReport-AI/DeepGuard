@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 11:56 | chinesezjc--dsh-interconnect | 0.9.0 | [32ca0ec](https://github.com/chinesezjc/dsh-interconnect/commit/32ca0ec0441983f7eded7c6d2bfbecfda02087b0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#126](https://github.com/SoberReport-AI/DeepGuard/issues/126) |
 | 2026-08-24 11:49 | huanlinoto--dsh-plugin-mineru | 0.2.4 | [67abfed](https://github.com/huanlinoto/dsh-plugin-mineru/commit/67abfedd5e3bd63043bac62222f5fbdc3281dae7) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#125](https://github.com/SoberReport-AI/DeepGuard/issues/125) |
 | 2026-08-24 11:41 | vlln--dsh-navbar | 0.4.0 | [d89ba74](https://github.com/vlln/dsh-navbar/commit/d89ba74f4e0403462a5e4c4feeec84a3e7a1cca2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#123](https://github.com/SoberReport-AI/DeepGuard/issues/123) |
 | 2026-08-24 11:35 | shaobeichen--dsh-pocket | 1.13.4 | [472524a](https://github.com/shaobeichen/dsh-pocket/commit/472524a45ef7b1ff6fbd9c3bf50787680a5497c3) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#124](https://github.com/SoberReport-AI/DeepGuard/issues/124) |
