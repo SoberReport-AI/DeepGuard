@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #5 (catalog star ranking, 13 stars). Whitelist batch submission.",
   "source": "issue",
   "issue": 186,
-  "status": "pending",
+  "status": "rejected",
   "submitted_at": "2026-08-24T04:52:22.254Z",
   "prescreen": {
     "ok": true,
@@ -77,6 +77,11 @@
       "at": "2026-08-24T14:01:31.892Z",
       "action": "requeued",
       "reason": "orphaned dispatch: no terminal write within 30 min of dispatch (run died or was cancelled)"
+    },
+    {
+      "at": "2026-08-24T14:52:07.773Z",
+      "action": "rejected",
+      "reason": "provider content_filter is deterministic on snapshot 5ba5f975 (verified by owner-requested retry: 2 more runs, same refusal). Trigger: plugin-shipped defensive NSFW/minor wordlists in src/roleplay_web.ts. Unlocks: author relocates wordlists to runtime-loaded config, or a future no-moderation audit endpoint, or manual audit."
     }
   ],
   "attempts": 2
