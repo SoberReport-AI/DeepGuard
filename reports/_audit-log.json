@@ -2,6 +2,45 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T00:35:08.056Z",
+      "plugin_id": "dsh-data-agent",
+      "name": "dsh-data-agent",
+      "version": "0.1.1",
+      "commit": "b34f01f6ccaa1d3b8eb7aab403a833a45065ddb4",
+      "repo": "omdsh-dev/dsh-data-agent",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "extended_review",
+      "beacon": "uphold_sonar",
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/108",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/117",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32676553600",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "extended_review",
+          "notes": "身份核验通过（plugin.id/version/commit/subpath 与任务卡逐字一致）。报告 findings 为空，故无逐条 finding 证据需核验；对其 checked_items 中的关键断言独立复核：7 个工具注册（sql-query/sql-write/sql-cmd/render-analysis/catalog-search/catalog-get/metric-get）描述均无注入语义，catalog 工具明确标注 untrusted；cordis.patch.yml 仅 insert 无 !!js；package.json 无 install 钩子；运行时无 ",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "uphold_sonar",
+          "rationale": "双审分歧的唯一实质争议点是 Aegis 的 missed_concerns[0]：报告声称 DSH-X08/DG-R3-60『14 条命中全部排除』但只逐条列出 13 条路径，漏列 lib/command-CzzSPmag.js:194。该指控的事实基础成立（证据摘录确认该行真实存在：lib/command-CzzSPmag.js:194 为 cleanup() 中的 `output.write(\"\\x1B[0m\\x1B[?25h\\x1B[2J\\x1B[H\")`，是 TUI 连接表单清理阶段的 ANSI 终端复位/清屏序列），但该漏列不构成否决级问题：(1) 内容经证据摘录与 Aegis 本人"
+        },
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T00:23:20.242Z",
       "plugin_id": "dsh-openbiliclaw",
       "name": "dsh-openbiliclaw",
