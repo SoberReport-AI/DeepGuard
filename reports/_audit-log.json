@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T05:48:34.200Z",
+      "plugin_id": "hsiangnianian--dsh-auto-continue",
+      "name": "dsh-auto-continue",
+      "version": "0.8.1",
+      "commit": "e865b0b179331769cdce4a1e407a488056c1633d",
+      "repo": "hsiangnianian/dsh-auto-continue",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/149",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/197",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32694432934",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：1) 身份（id/version/commit/subpath）逐字一致；2) 报告无 findings，但各维度 checked_items 声明逐项实际打开源码验证均属实（错误分类 regex 仅用于永久性失败判定、无工具注册、无 child_process/eval、网络仅本机 /api/ 两路径、依赖均为 @deepseek-ai 官方包、锁文件 0.8.0 差异属实、两本地 webServer 端点属实）；3) 6 条机械预扫命中（DSH-X07/DG-R3-59 ×2、DSH-X08/DG-R3-60 ×4）在 DG-D3 checked_items[2] 中全部被引",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T05:41:01.301Z",
       "plugin_id": "omdsh-dev--dsh-plugin-check",
       "name": "dsh-plugin-check",
