@@ -1,0 +1,38 @@
+{
+  "id": "anionex--dsh-computer-use",
+  "name": "dsh-computer-use-anionex",
+  "repo": "anionex/dsh-computer-use",
+  "url": "https://github.com/anionex/dsh-computer-use",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 21 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 155,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:18.084Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "387eae931b1852e3c3433e0e004fa460d3da2883",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T14:38:27Z",
+    "stars": 28,
+    "version": "0.1.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-computer-use-anionex"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:18.084Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
