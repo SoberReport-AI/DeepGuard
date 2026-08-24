@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T08:24:29.836Z",
+      "plugin_id": "01virex--dsh-status-rotator",
+      "name": "dsh-status-rotator",
+      "version": "0.6.6",
+      "commit": "c67fe4c20b6e0eb3c1c0e80900fde505eabdbcdc",
+      "repo": "01virex/dsh-status-rotator",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/167",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/214",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32705472645",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "首版 full 审计、clean 报告。身份核验通过；报告无 findings，故无逐条证据路径可核验，但对其全部 checked_items/ds_scenarios 声明逐一亲自开文件验证成立：node half 仅注册本地配置路由（PUT 有 5MiB 上限+结构校验）、client half 默认仅 fetch 本机路由且 DOM 更新全走 textContent（无 XSS）、外部 JSON 地址默认关闭需用户显式设置、fetch-qq-group 为开发者工具默认 127.0.0.1、cordis.patch.yml 仅一行插入、无 install 钩子/依赖/git 可变引用、两",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T08:16:02.666Z",
       "plugin_id": "shengsheng90--dsh-taskboard",
       "name": "dsh-taskboard-shengsheng90",
