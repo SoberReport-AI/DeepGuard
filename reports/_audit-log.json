@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T21:35:57.270Z",
+      "plugin_id": "zseven-w--dsh-noema",
+      "name": "dsh-noema",
+      "version": "0.1.0-rc.3",
+      "commit": "9cc3ab1ee00de04bf318be9cf2b102ae668ceeb2",
+      "repo": "zseven-w/dsh-noema",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/242",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/255",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32779493681",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：身份一致；findings 为空故无证据条目可质疑；9 条机械命中全部有规则 ID 引用的排除理由（仅 DSH-X03 数量 5 vs 6 的叙述笔误，实质覆盖完整）；manifest 71 文件与树对账无缺口、无模型面指令文件；独立快扫未发现 eval、外联、凭据读取、安装钩子或注入措辞；status-route 具备回环+Host 校验+Origin/CSRF 校验+大小上限+写字段白名单；client bundle 仅访问回环状态接口；供应链依赖为官方 @deepseek-ai/* + 自有一致版本可选二进制包，无浮动 git 依赖；安装命令四元组正确。整体 clean 结",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T21:25:48.740Z",
       "plugin_id": "elysia395--dsh-wallpaper-engine",
       "name": "dsh-wallpaper-engine",

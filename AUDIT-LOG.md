@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-25 05:35 | zseven-w--dsh-noema | 0.1.0-rc.3 | [9cc3ab1](https://github.com/zseven-w/dsh-noema/commit/9cc3ab1ee00de04bf318be9cf2b102ae668ceeb2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#242](https://github.com/SoberReport-AI/DeepGuard/issues/242) |
 | 2026-08-25 05:25 | elysia395--dsh-wallpaper-engine | 0.6.2 | [3dbed71](https://github.com/elysia395/dsh-wallpaper-engine/commit/3dbed7121d6c9734ce51b2b3fafcf96d78ea8026) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#240](https://github.com/SoberReport-AI/DeepGuard/issues/240) |
 | 2026-08-25 05:13 | zseven-w--dsh-crew | 0.1.0-rc.6 | [de3babc](https://github.com/zseven-w/dsh-crew/commit/de3babcefd4e261ae003385262694d6ae02904b2) | SoberReport-AI | clean | 0 | extended review | uphold Sonar | pass | merged | [#246](https://github.com/SoberReport-AI/DeepGuard/issues/246) |
 | 2026-08-25 04:49 | wssfk12138--dsh-damage-pulse | 0.3.1 | [0c726c0](https://github.com/wssfk12138/dsh-damage-pulse/commit/0c726c0d493982dcfd5d86289ee6949a4b09eeeb) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#245](https://github.com/SoberReport-AI/DeepGuard/issues/245) |
