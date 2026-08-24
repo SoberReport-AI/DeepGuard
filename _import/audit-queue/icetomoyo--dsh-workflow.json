@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #3 addendum (catalog star ranking, 68 stars — the actual top-starred dsh-workflow repo). Same-name repo as the already-audited omdsh-dev/dsh_workflow; exercises the owner-qualified queue id (expected: icetomoyo--dsh-workflow). Whitelist batch submission.",
   "source": "issue",
   "issue": 119,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-24T02:08:07.082Z",
   "prescreen": {
     "ok": true,
@@ -32,6 +32,12 @@
     {
       "at": "2026-08-24T02:08:07.082Z",
       "action": "prescreen-pass"
+    },
+    {
+      "at": "2026-08-24T02:08:22.032Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
-  ]
+  ],
+  "attempts": 1
 }
