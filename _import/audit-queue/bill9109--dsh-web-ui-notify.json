@@ -1,0 +1,38 @@
+{
+  "id": "bill9109--dsh-web-ui-notify",
+  "name": "dsh-web-ui-notify",
+  "repo": "bill9109/dsh-web-ui-notify",
+  "url": "https://github.com/bill9109/dsh-web-ui-notify",
+  "subpath": null,
+  "category_hint": "bridge",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 17 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 165,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:00.183Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "865d2f6fc93f2e0d051d53df772646cb831a43ed",
+    "default_branch": "main",
+    "pushed_at": "2026-08-14T07:40:47Z",
+    "stars": 22,
+    "version": "0.1.3",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-web-ui-notify"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:00.184Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
