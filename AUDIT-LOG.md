@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 15:59 | kingao294--dsh-skin | 0.4.0 | [0a571a2](https://github.com/kingao294/dsh-skin/commit/0a571a27adcc5f780b7b72386c9c294243eec5b3) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#164](https://github.com/SoberReport-AI/DeepGuard/issues/164) |
 | 2026-08-24 15:53 | dietcokewithsugar--dsh-user-experience | 0.4.2 | [bba21e6](https://github.com/dietcokewithsugar/dsh-user-experience/commit/bba21e6a634844b448b34aae4e7c8af1d8bbd9d4) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#163](https://github.com/SoberReport-AI/DeepGuard/issues/163) |
 | 2026-08-24 15:44 | senmuuuuw--dsh-whale-report | 0.5.0 | [84cdb06](https://github.com/senmuuuuw/dsh-whale-report/commit/84cdb066d0921f2e5a17363c844c36f4b2823d42) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#162](https://github.com/SoberReport-AI/DeepGuard/issues/162) |
 | 2026-08-24 15:35 | franksong2702--dsh-codex-connect | 0.1.0-alpha.4.18 | [15f1c6f](https://github.com/franksong2702/dsh-codex-connect/commit/15f1c6f6b0715c63395e4852ec37c4dd5a9f598c) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#161](https://github.com/SoberReport-AI/DeepGuard/issues/161) |

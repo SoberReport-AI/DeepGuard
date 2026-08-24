@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T07:59:55.455Z",
+      "plugin_id": "kingao294--dsh-skin",
+      "name": "dsh-skin",
+      "version": "0.4.0",
+      "commit": "0a571a27adcc5f780b7b72386c9c294243eec5b3",
+      "repo": "kingao294/dsh-skin",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/164",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/211",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32703603478",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核清单逐项结论：1)身份核验通过（id/version/commit/subpath 逐字一致）。2)findings[] 为空，无逐条证据需核验；我独立通读全部 10 个清单文件（含 lib/client.js 2092 行全文），未发现 Sonar 声称之外的可疑行为。3)维度一致性通过：DG-D1~D6 均 clean、0 findings，checked_items 描述与实际代码吻合（7 套皮肤纯 CSS 令牌、静态 UI 字典、无工具注册、无网络外联、无执行原语、仅 @deepseek-ai 官方同行依赖、无 scripts 字段、补丁仅插入一个加载条目）。4)动态证据：l4-s",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T07:53:04.978Z",
       "plugin_id": "dietcokewithsugar--dsh-user-experience",
       "name": "dsh-user-experience",
