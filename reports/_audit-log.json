@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T11:11:52.477Z",
+      "plugin_id": "omdsh-dev--dsh-deep-research",
+      "name": "dsh-deep-research",
+      "version": "0.1.0",
+      "commit": "c0b329e02cd0195f810a7c3608cb58701a7fe0f1",
+      "repo": "omdsh-dev/dsh-deep-research",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/185",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/230",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32720120352",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份逐字一致；findings[] 为空故 per_finding 为空，报告全部 6 维度 checked_items 中引用的证据行号（src/index.ts 70/403-413/483、package.json 26-30/41-45、cordis.patch.yml 6-8）均已亲自打开核实成立；3 条机械命中（DG-R3-55、DG-R3-60×2）Sonar 均以规则 ID 明确排除且排除理由实测属实（tsbuildinfo 为构建缓存文件路径列表、index.js.map 为标准 source map）；独立快扫未发现 install 钩子、child_process/eva",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T11:05:36.686Z",
       "plugin_id": "juanwang-buaa--dsh-full-remote",
       "name": "dsh-full-remote",
