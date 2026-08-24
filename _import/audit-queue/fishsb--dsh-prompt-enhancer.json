@@ -1,0 +1,38 @@
+{
+  "id": "fishsb--dsh-prompt-enhancer",
+  "name": "dsh-prompt-enhancer",
+  "repo": "fishsb/dsh-prompt-enhancer",
+  "url": "https://github.com/fishsb/dsh-prompt-enhancer",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 15 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 182,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:09.012Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "4fc9d3836e2f3855bcbf4c24afd2156a1574f3d3",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T02:48:59Z",
+    "stars": 46,
+    "version": "3.3.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-prompt-enhancer"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:09.012Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
