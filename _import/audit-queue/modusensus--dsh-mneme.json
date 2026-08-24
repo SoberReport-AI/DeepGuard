@@ -1,0 +1,38 @@
+{
+  "id": "modusensus--dsh-mneme",
+  "name": "dsh-mneme",
+  "repo": "modusensus/dsh-mneme",
+  "url": "https://github.com/modusensus/dsh-mneme",
+  "subpath": null,
+  "category_hint": "memory",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 21 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 154,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:13.547Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "d8a568b66a563a3422667369026cf71fa82276d9",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T18:29:07Z",
+    "stars": 39,
+    "version": "0.7.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-mneme"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:13.547Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
