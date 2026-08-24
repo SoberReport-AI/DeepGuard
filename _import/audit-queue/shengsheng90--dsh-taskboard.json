@@ -1,0 +1,38 @@
+{
+  "id": "shengsheng90--dsh-taskboard",
+  "name": "dsh-taskboard-shengsheng90",
+  "repo": "shengsheng90/dsh-taskboard",
+  "url": "https://github.com/shengsheng90/dsh-taskboard",
+  "subpath": null,
+  "category_hint": "memory",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 17 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 166,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:02.955Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "dd5455bdeec3a86eaf84482ef2dd42d86c7b88aa",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T07:59:16Z",
+    "stars": 110,
+    "version": "0.1.3",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-taskboard-shengsheng90"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:02.955Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
