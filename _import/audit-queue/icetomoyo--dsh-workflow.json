@@ -1,0 +1,37 @@
+{
+  "id": "icetomoyo--dsh-workflow",
+  "name": "dsh-workflow",
+  "repo": "icetomoyo/dsh_workflow",
+  "url": "https://github.com/icetomoyo/dsh_workflow",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #3 addendum (catalog star ranking, 68 stars — the actual top-starred dsh-workflow repo). Same-name repo as the already-audited omdsh-dev/dsh_workflow; exercises the owner-qualified queue id (expected: icetomoyo--dsh-workflow). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 119,
+  "status": "pending",
+  "submitted_at": "2026-08-24T02:08:07.082Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "44b83c182aa02d1be8a0803e8446cb495f93cd8f",
+    "default_branch": "main",
+    "pushed_at": "2026-08-13T23:53:40Z",
+    "stars": 99,
+    "version": "0.1.2",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-workflow"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T02:08:07.082Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
