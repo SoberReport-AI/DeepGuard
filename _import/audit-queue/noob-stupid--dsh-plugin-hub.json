@@ -1,0 +1,38 @@
+{
+  "id": "noob-stupid--dsh-plugin-hub",
+  "name": "dsh-plugin-hub",
+  "repo": "noob-stupid/dsh-plugin-hub",
+  "url": "https://github.com/noob-stupid/dsh-plugin-hub",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #4 (catalog star ranking, 34 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 121,
+  "status": "pending",
+  "submitted_at": "2026-08-24T03:07:47.380Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "3370884f71b2e282a13a33d54325b20617296695",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T00:30:58Z",
+    "stars": 67,
+    "version": "0.3.19",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plugin-hub"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T03:07:47.380Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
