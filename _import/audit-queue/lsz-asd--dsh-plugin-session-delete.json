@@ -1,0 +1,38 @@
+{
+  "id": "lsz-asd--dsh-plugin-session-delete",
+  "name": "dsh-plugin-session-delete",
+  "repo": "lsz-asd/dsh-plugin-session-delete",
+  "url": "https://github.com/lsz-asd/dsh-plugin-session-delete",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 20 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 159,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:32.319Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "352510e552983dcfcb993cf9124181c55e2070f5",
+    "default_branch": "main",
+    "pushed_at": "2026-08-14T19:12:06Z",
+    "stars": 24,
+    "version": "0.3.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plugin-session-delete"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:32.320Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
