@@ -1,0 +1,38 @@
+{
+  "id": "kingao294--dsh-skin",
+  "name": "dsh-skin",
+  "repo": "kingao294/dsh-skin",
+  "url": "https://github.com/kingao294/dsh-skin",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 18 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 164,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:52.546Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "0a571a27adcc5f780b7b72386c9c294243eec5b3",
+    "default_branch": "main",
+    "pushed_at": "2026-08-18T11:42:23Z",
+    "stars": 19,
+    "version": "0.4.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-skin"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:52.546Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
