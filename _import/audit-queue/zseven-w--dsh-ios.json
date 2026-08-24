@@ -1,0 +1,38 @@
+{
+  "id": "zseven-w--dsh-ios",
+  "name": "dsh-ios",
+  "repo": "zseven-w/dsh-ios",
+  "url": "https://github.com/zseven-w/dsh-ios",
+  "subpath": null,
+  "category_hint": "sandbox",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #6 (catalog star ranking, 241 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 238,
+  "status": "pending",
+  "submitted_at": "2026-08-24T19:21:39.375Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "9e3b600ba556baf64bbe74ebf39fa1b2ce30545c",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T15:57:29Z",
+    "stars": 241,
+    "version": "0.1.0-rc.5",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-ios"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T19:21:39.375Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
