@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T05:24:23.267Z",
+      "plugin_id": "hellodigua--dsh-emoji",
+      "name": "dsh-emoji",
+      "version": "0.3.1",
+      "commit": "96b653a473c978a474dd7d42e86e5b2c79e6dc7c",
+      "repo": "hellodigua/dsh-emoji",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/145",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/194",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32692927466",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：①身份（id/version/commit/subpath）与任务卡逐字一致；②findings 为空，逐条打开代码核验了各维度 checked_items 的关键主张——systemPrompt.section 协议文本良性（src/index.ts:88 与编译产物 lib/index.js:2584 一致）、AGENTS.md 无注入措辞、packs.ts ZIP 严格校验（路径白名单/体积上限/PNG头+CRC/仅落私有目录）、cordis.patch.yml 仅插入插件标识、CI/release 工作流标准、运行时 src/lib 无 eval/child_proces",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T05:15:49.886Z",
       "plugin_id": "geml-spec--geml",
       "name": "dsh-plugin-geml-spec",
