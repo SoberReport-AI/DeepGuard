@@ -1,0 +1,39 @@
+{
+  "id": "omdsh-dev--dsh-lark",
+  "name": "dsh-lark",
+  "repo": "omdsh-dev/dsh-lark",
+  "url": "https://github.com/omdsh-dev/dsh-lark",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #4 (catalog star ranking, 29 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 127,
+  "status": "pending",
+  "submitted_at": "2026-08-24T03:08:00.553Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "632807d9abafbb866a5e208a0298eff21c7856d1",
+    "default_branch": "main",
+    "pushed_at": "2026-08-19T09:02:20Z",
+    "stars": 41,
+    "version": "0.0.7",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-lark"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T03:08:00.553Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
