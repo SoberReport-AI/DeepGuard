@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T10:46:28.955Z",
+      "plugin_id": "fishsb--dsh-prompt-enhancer",
+      "name": "dsh-prompt-enhancer",
+      "version": "3.3.1",
+      "commit": "4fc9d3836e2f3855bcbf4c24afd2156a1574f3d3",
+      "repo": "fishsb/dsh-prompt-enhancer",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/182",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/227",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32717644696",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份一致；唯一 finding（FND-001）证据全部成立且定级（MEDIUM/high）与静态铁证相称；机械命中 121 条全部落入 8 个规则族且 Sonar 均已逐族裁决（DSH-X07/P01/X03/X05/X08/C05/X10/C01）；manifest 149 文件在树中全部可打开，无覆盖缺口；漏检快扫未发现明显高危遗漏（外联均为声明域名、更新哈希强校验、无凭据读取、技能文本为良性工程指令、CI 常规）。整体结论 risk 与机械汇总规则一致。次要卫生观察（不影响裁决）：代码注释与 CHANGELOG [Unreleased] 含 v3.3.2 功能（如供应链加固）而 pac",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T10:36:00.966Z",
       "plugin_id": "starslittle--dsh-queue-plus",
       "name": "dsh-queue-plus",
