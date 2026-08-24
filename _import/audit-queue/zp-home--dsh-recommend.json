@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #5 (catalog star ranking, 17 stars). Whitelist batch submission.",
   "source": "issue",
   "issue": 169,
-  "status": "auditing",
+  "status": "rejected",
   "submitted_at": "2026-08-24T04:51:18.541Z",
   "prescreen": {
     "ok": true,
@@ -38,7 +38,64 @@
       "at": "2026-08-24T08:34:12.413Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-24T08:34:23.655Z",
+      "action": "gate-pass",
+      "reason": null
+    },
+    {
+      "at": "2026-08-24T08:34:28.837Z",
+      "action": "auditing",
+      "reason": null
+    },
+    {
+      "at": "2026-08-24T08:34:30.868Z",
+      "action": "gate-reject",
+      "reason": "context-preflight: audit scope totals ~28358410 weighted tokens (limit 8000000); an audit at this scale cannot complete within the free-tier rate budget — shrink the plugin directory and resubmit"
     }
   ],
-  "attempts": 1
+  "attempts": 1,
+  "gate": {
+    "at": "2026-08-24T08:34:23.655Z",
+    "submitter": "SoberReport-AI",
+    "whitelisted": true,
+    "association": null,
+    "checks": [
+      {
+        "check": "whitelist",
+        "ok": true,
+        "note": "whitelisted (Sim public-repo owner: runs triggered by dispatcher/cron fall back to repository_owner for identity verification at the gate, so the sim/formal public-repo owner must be whitelisted or all submissions are rejected), skipping identity and account-age checks"
+      },
+      {
+        "check": "identity",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "account-age",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "blacklist",
+        "ok": true,
+        "note": "no hit"
+      },
+      {
+        "check": "duplicate",
+        "ok": true,
+        "note": "no existing report for zp-home--dsh-recommend@0.3.0#2fc5b608"
+      }
+    ],
+    "decision": "reject",
+    "reasons": [
+      "context-preflight: audit scope totals ~28358410 weighted tokens (limit 8000000); an audit at this scale cannot complete within the free-tier rate budget — shrink the plugin directory and resubmit"
+    ]
+  },
+  "locked": {
+    "commit": "2fc5b6087b7c76f1a8bd294d2b09490a902c9182",
+    "version": "0.3.0",
+    "at": "2026-08-24T08:34:28.837Z"
+  }
 }

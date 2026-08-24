@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T08:34:41.985Z",
+      "plugin_id": "zp-home--dsh-recommend",
+      "name": "dsh-recommend",
+      "version": "0.3.0",
+      "commit": "2fc5b6087b7c76f1a8bd294d2b09490a902c9182",
+      "repo": "zp-home/dsh-recommend",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "gate",
+      "status": "rejected-gate",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/169",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32706979138",
+      "extended_review": false,
+      "reason": "context-preflight: audit scope totals ~28358410 weighted tokens (limit 8000000); an audit at this scale cannot complete within the free-tier rate budget — shrink the plugin directory and resubmit",
+      "compactions": null,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T08:33:35.711Z",
       "plugin_id": "laplace-bit--dsh-smooth-stream",
       "name": "dsh-smooth-stream",
