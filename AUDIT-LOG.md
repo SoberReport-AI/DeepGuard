@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 17:52 | lehhair--dsh-diff-viewer | 0.1.1 | [d576c00](https://github.com/lehhair/dsh-diff-viewer/commit/d576c00cc7db52695d69f86142d4454380fed236) | SoberReport-AI | clean | 0 | extended review | escalated | — | failed, flagged for extended review | [#175](https://github.com/SoberReport-AI/DeepGuard/issues/175) |
 | 2026-08-24 17:35 | ghost011118--dsh-balance-meter | 0.1.0 | [1a277e8](https://github.com/ghost011118/dsh-balance-meter/commit/1a277e8eb9ee5ebbf8589e6bbb96bfe9ac282c11) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#176](https://github.com/SoberReport-AI/DeepGuard/issues/176) |
 | 2026-08-24 17:26 | snowcrescenter-tech--dsh-milestone | 0.6.6 | [7568fc2](https://github.com/snowcrescenter-tech/dsh-milestone/commit/7568fc271aa2ac54f541d725989de2720ffe3a5b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#174](https://github.com/SoberReport-AI/DeepGuard/issues/174) |
 | 2026-08-24 17:12 | flymysql--dsh-remote | 0.8.8 | [5ae197a](https://github.com/flymysql/dsh-remote/commit/5ae197a94c0fe4f0a8ffe5de14822f79418dc3bd) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#173](https://github.com/SoberReport-AI/DeepGuard/issues/173) |

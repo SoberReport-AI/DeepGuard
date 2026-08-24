@@ -2,6 +2,45 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T09:52:34.286Z",
+      "plugin_id": "lehhair--dsh-diff-viewer",
+      "name": "dsh-diff-viewer",
+      "version": "0.1.1",
+      "commit": "d576c00cc7db52695d69f86142d4454380fed236",
+      "repo": "lehhair/dsh-diff-viewer",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "extended_review",
+      "beacon": "escalate",
+      "postcheck": null,
+      "stage_reached": "publish",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/175",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32712412788",
+      "extended_review": true,
+      "reason": "publish did not pass (postcheck FAIL, or push/PR creation failed; see run logs)",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "extended_review",
+          "notes": "身份核验通过（plugin.id/version/commit/subpath 与任务卡逐字一致）；报告 findings 为空，故无逐条证据可驳；9 条机械命中（DSH-X07/X05/X08/C05）全部在 audit_scope.limits 中以规则 ID 给出排除裁决，无未裁决缺口；manifest 25 个文件与树全量对账一致，无覆盖缺口；源码侧独立快扫未见 install 钩子、child_process/eval、外联域名、凭据读取、注入文本，插件仅为纯浏览器端 UI 槽位注册，declare 能力（network/shell/fs/modelFacing=false）与实现相",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "escalate",
+          "rationale": "Aegis 的驳回为 needs_human，其 per_finding 为空（Sonar 无 finding，无逐条证据可驳）；blacklist_check.consistent=true、install_check.command_ok=true（commit 与任务卡逐字一致且为完整 40 位 hex、subpath 为 null 对应仓库根、install_command 恰为规范四元组），这两块无分歧。争议集中在三条 missed_concerns（以 FND-901/902/903 编号对应）：① lib/client.js 约 15% 未逐行核验——该主张事实成立且与 Sona"
+        },
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T09:35:21.154Z",
       "plugin_id": "ghost011118--dsh-balance-meter",
       "name": "dsh-balance-meter",
