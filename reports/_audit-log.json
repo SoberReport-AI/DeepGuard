@@ -2,6 +2,123 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T19:30:36.095Z",
+      "plugin_id": "v1ki--dsh-plugin-subscriptions",
+      "name": "dsh-plugin-subscriptions",
+      "version": "0.5.2",
+      "commit": "08b9b7cc30e72e8eedd559ac01af9fc576157453",
+      "repo": "v1ki/dsh-plugin-subscriptions",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "extended_review",
+      "beacon": "uphold_aegis",
+      "postcheck": null,
+      "stage_reached": "publish",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/237",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32767719591",
+      "extended_review": true,
+      "reason": "publish did not pass (postcheck FAIL, or push/PR creation failed; see run logs)",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "extended_review",
+          "notes": "身份、机械命中覆盖（10/10 已裁决且行号内容逐一验证）、manifest 对账（64 文件全在树内）、安装命令均通过；独立快扫未发现漏检的恶意行为。唯一实质问题：DG-D6/DG-S10 关于「无 createServer/未启动 web 服务」的证据表述可证伪（oauth-flow.ts 存在临时 loopback OAuth 回调服务器，属标准良性机制，不影响安全结论），但 clean 报告含事实性错误，按纪律不勉强 approve，交人工确认 D6 表述修正后放行。",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "uphold_aegis",
+          "rationale": "Aegis 的两条 missed_concerns 均在证据摘录中得到证实，驳回理由成立。核心争议点是 DG-D6/DG-S10：Sonar 报告明确声称「插件未启动 web 服务（无 createServer 或 ctx.webServer 注册），无本机 RPC 面」和「插件未启动 web 服务或监听端口」，但证据摘录 src/auth/oauth-flow.ts:9 显示 `import { createServer, type RequestListener, type Server } from 'node:http'`，且该文件头部注释（L1-7）自述「one temporary "
+        },
+        "harbor": null
+      }
+    },
+    {
+      "ts": "2026-08-24T14:46:28.520Z",
+      "plugin_id": "lzszq--dsh-scholar",
+      "name": "dsh-scholar",
+      "version": "0.1.0",
+      "commit": "76bfe960e9107a992dae506c3ebc298a99f57760",
+      "repo": "lzszq/dsh-scholar",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "needs_human",
+      "beacon": "escalate",
+      "postcheck": "flagged",
+      "stage_reached": "publish (manual owner release)",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/158",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32699318453",
+      "extended_review": false,
+      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "needs_human",
+          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "escalate",
+          "notes": "escalate：两条 missed_concerns（kernel.ts 517KB/server.ts 226KB 未逐行通读、无 L4 动态产物）在事实层面与报告 audit_scope.limits 自述一致，128 条机械命中已逐条裁决，属披露的覆盖边界。"
+        },
+        "harbor": null
+      }
+    },
+    {
+      "ts": "2026-08-24T14:46:28.520Z",
+      "plugin_id": "lehhair--dsh-diff-viewer",
+      "name": "dsh-diff-viewer",
+      "version": "0.1.1",
+      "commit": "d576c00cc7db52695d69f86142d4454380fed236",
+      "repo": "lehhair/dsh-diff-viewer",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "needs_human",
+      "beacon": "escalate",
+      "postcheck": "flagged",
+      "stage_reached": "publish (manual owner release)",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/175",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32712412788",
+      "extended_review": false,
+      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "needs_human",
+          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "escalate",
+          "notes": "escalate：三条 missed_concerns 中 FND-902（压缩 bundle 标识符不可识别属正常）指控较弱、FND-903（树内 patch 未被引用）不构成否决级；FND-901（704KB 打包产物约 15% 未逐行核验）与 Sonar limits 如实披露一致，属披露的覆盖边界。"
+        },
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T14:01:00.725Z",
       "plugin_id": "furongjun-1999--dsh-memory",
       "name": "dsh-memory-furongjun-1999",
@@ -4748,84 +4865,6 @@
           "install_ok": true
         },
         "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T14:46:28.520Z",
-      "plugin_id": "lehhair--dsh-diff-viewer",
-      "name": "dsh-diff-viewer",
-      "version": "0.1.1",
-      "commit": "d576c00cc7db52695d69f86142d4454380fed236",
-      "repo": "lehhair/dsh-diff-viewer",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "needs_human",
-      "beacon": "escalate",
-      "postcheck": "flagged",
-      "stage_reached": "publish (manual owner release)",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/175",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32712412788",
-      "extended_review": false,
-      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "needs_human",
-          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
-          "install_ok": true
-        },
-        "beacon": {
-          "ruling": "escalate",
-          "notes": "escalate：三条 missed_concerns 中 FND-902（压缩 bundle 标识符不可识别属正常）指控较弱、FND-903（树内 patch 未被引用）不构成否决级；FND-901（704KB 打包产物约 15% 未逐行核验）与 Sonar limits 如实披露一致，属披露的覆盖边界。"
-        },
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T14:46:28.520Z",
-      "plugin_id": "lzszq--dsh-scholar",
-      "name": "dsh-scholar",
-      "version": "0.1.0",
-      "commit": "76bfe960e9107a992dae506c3ebc298a99f57760",
-      "repo": "lzszq/dsh-scholar",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "needs_human",
-      "beacon": "escalate",
-      "postcheck": "flagged",
-      "stage_reached": "publish (manual owner release)",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/158",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32699318453",
-      "extended_review": false,
-      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "needs_human",
-          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
-          "install_ok": true
-        },
-        "beacon": {
-          "ruling": "escalate",
-          "notes": "escalate：两条 missed_concerns（kernel.ts 517KB/server.ts 226KB 未逐行通读、无 L4 动态产物）在事实层面与报告 audit_scope.limits 自述一致，128 条机械命中已逐条裁决，属披露的覆盖边界。"
-        },
         "harbor": null
       }
     }
