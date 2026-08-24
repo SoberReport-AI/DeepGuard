@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T06:55:05.439Z",
+      "plugin_id": "william-jin-cmu--dsh-stickers",
+      "name": "dsh-stickers",
+      "version": "0.1.0",
+      "commit": "1703f09915db1058b6031b31e52fd404560e0a78",
+      "repo": "william-jin-cmu/dsh-stickers",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/157",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/205",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32698879092",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核完成。身份核验通过（plugin.id/version/commit/subpath 均与任务卡一致）。报告无 findings（全部维度 clean），所有证据路径经实际读文件验证存在且内容准确。机械预扫命中 27 条全部在报告中明确排除（24 条 ANSI 艺术数据、2 条 systemPrompt.section、1 条 prepare 钩子）。漏检快扫：grep 检查 child_process/eval/fetch/凭据/注入模式均无命中。客户端 bundle 为纯被动 UI 组件，无键盘监听/剪贴板/凭据调用。构建脚本均为本地图片处理。安装命令哈希与形态完全正确。动态层无数",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T06:48:44.620Z",
       "plugin_id": "anweat--dsh-web-search-pro",
       "name": "dsh-web-search-pro",
