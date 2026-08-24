@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #5 (catalog star ranking, 13 stars). Whitelist batch submission.",
   "source": "issue",
   "issue": 186,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-24T04:52:22.254Z",
   "prescreen": {
     "ok": true,
@@ -57,7 +57,12 @@
       "at": "2026-08-24T13:54:54.744Z",
       "action": "attempts-reset",
       "reason": "manual retry per owner request; provider content_filter on snapshot 5ba5f975 (src/roleplay_web.ts embedded wordlists), single retry to test filter determinism"
+    },
+    {
+      "at": "2026-08-24T13:55:55.993Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 0
+  "attempts": 1
 }
