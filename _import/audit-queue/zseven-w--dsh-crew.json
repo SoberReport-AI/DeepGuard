@@ -1,0 +1,38 @@
+{
+  "id": "zseven-w--dsh-crew",
+  "name": "dsh-crew",
+  "repo": "zseven-w/dsh-crew",
+  "url": "https://github.com/zseven-w/dsh-crew",
+  "subpath": null,
+  "category_hint": "workflow",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #6 (catalog star ranking, 110 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 246,
+  "status": "pending",
+  "submitted_at": "2026-08-24T19:22:29.380Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "de3babcefd4e261ae003385262694d6ae02904b2",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T06:14:27Z",
+    "stars": 110,
+    "version": "0.1.0-rc.6",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-crew-zseven-w"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T19:22:29.380Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
