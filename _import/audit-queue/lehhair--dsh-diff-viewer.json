@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #5 (catalog star ranking, 16 stars). Whitelist batch submission.",
   "source": "issue",
   "issue": 175,
-  "status": "needs-human",
+  "status": "audited",
   "submitted_at": "2026-08-24T04:51:42.033Z",
   "prescreen": {
     "ok": true,
@@ -43,6 +43,11 @@
       "at": "2026-08-24T09:52:19.048Z",
       "action": "needs-human",
       "reason": "review-verdict: review.verdict=needs_human, Beacon ruling=escalate (not approved, not admitted); translation-integrity: report-zh.json (Sonar zh draft) missing — translate stage did not deliver; cannot admit a monolingual report under the v3 contract"
+    },
+    {
+      "at": "2026-08-24T14:46:28.520Z",
+      "action": "audited",
+      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path"
     }
   ],
   "attempts": 1
