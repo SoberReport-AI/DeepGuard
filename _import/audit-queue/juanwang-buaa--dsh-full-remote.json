@@ -1,0 +1,40 @@
+{
+  "id": "juanwang-buaa--dsh-full-remote",
+  "name": "dsh-full-remote",
+  "repo": "juanwang-buaa/dsh-full-remote",
+  "url": "https://github.com/juanwang-buaa/dsh-full-remote",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 14 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 184,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:16.643Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "83d3957c9f2f1b61a51621af0ff4d82707155eb1",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T20:54:52Z",
+    "stars": 22,
+    "version": "0.3.7",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-full-remote"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:16.643Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
