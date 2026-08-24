@@ -1,0 +1,38 @@
+{
+  "id": "xmanrui--dsh-im",
+  "name": "dsh-im",
+  "repo": "xmanrui/dsh-im",
+  "url": "https://github.com/xmanrui/dsh-im",
+  "subpath": null,
+  "category_hint": "bridge",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 25 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 143,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:49:24.647Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "dea9a8f2d1a3fdbb12a7b2a227ce93d0004257d9",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T03:49:36Z",
+    "stars": 706,
+    "version": "2.0.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-im"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:49:24.647Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
