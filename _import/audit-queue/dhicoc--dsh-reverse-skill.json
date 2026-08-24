@@ -1,0 +1,37 @@
+{
+  "id": "dhicoc--dsh-reverse-skill",
+  "name": "dsh-reverse-skill",
+  "repo": "dhicoc/dsh-reverse-skill",
+  "url": "https://github.com/dhicoc/dsh-reverse-skill",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 25 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 142,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:49:21.445Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "1bc4d63ee9a5268419170f4c5fb4a4e59e0e815c",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T08:43:14Z",
+    "stars": 70,
+    "version": "1.0.5",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-reverse-skill"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:49:21.445Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
