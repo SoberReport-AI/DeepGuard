@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 17:00 | make0209--dsh-usage-stats | 1.0.0 | [8992d30](https://github.com/make0209/dsh-usage-stats/commit/8992d306cdca8857b4362868d591fde3689765b0) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#172](https://github.com/SoberReport-AI/DeepGuard/issues/172) |
 | 2026-08-24 16:53 | acidgr--dsh-web-lan-access | 1.2.1 | [8eeb1d0](https://github.com/acidgr/dsh-web-lan-access/commit/8eeb1d0cb79a6e199bde94f16f1e2f2b5a818f01) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#171](https://github.com/SoberReport-AI/DeepGuard/issues/171) |
 | 2026-08-24 16:45 | amlyczz--dsh-lark-link | 0.5.1 | [d77fab8](https://github.com/amlyczz/dsh-lark-link/commit/d77fab8341b43a648178ab1d4fd64370cb2b1a68) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#170](https://github.com/SoberReport-AI/DeepGuard/issues/170) |
 | 2026-08-24 16:34 | zp-home--dsh-recommend | 0.3.0 | [2fc5b60](https://github.com/zp-home/dsh-recommend/commit/2fc5b6087b7c76f1a8bd294d2b09490a902c9182) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#169](https://github.com/SoberReport-AI/DeepGuard/issues/169) |

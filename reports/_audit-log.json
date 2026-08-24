@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T09:00:46.345Z",
+      "plugin_id": "make0209--dsh-usage-stats",
+      "name": "dsh-usage-stats",
+      "version": "1.0.0",
+      "commit": "8992d306cdca8857b4362868d591fde3689765b0",
+      "repo": "make0209/dsh-usage-stats",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/172",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/218",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32708667449",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份/证据/定级/结论全部核验通过。FND-001 证据路径 lib/index.js:435,439,437,440 与 lib/client.js:292 逐行实读确认；机械命中 DSH-C05→DG-R4-53 已被 FND-001 覆盖；manifest 9 文件与树一致，无点目录指令文件；漏检快扫无新发现；黑名单空缺与结论一致；安装命令四元组锁定同一份码。整体 approve。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T08:53:57.027Z",
       "plugin_id": "acidgr--dsh-web-lan-access",
       "name": "dsh-web-lan-access",
