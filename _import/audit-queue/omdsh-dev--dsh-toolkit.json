@@ -1,0 +1,37 @@
+{
+  "id": "omdsh-dev--dsh-toolkit",
+  "name": "dsh-toolkit",
+  "repo": "omdsh-dev/dsh-toolkit",
+  "url": "https://github.com/omdsh-dev/dsh-toolkit",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 21 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 153,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:05.517Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "2113d11a4e4510720251aa49a800bab917b14330",
+    "default_branch": "main",
+    "pushed_at": "2026-08-21T12:00:44Z",
+    "stars": 26,
+    "version": "0.0.1",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-toolkit"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:05.517Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
