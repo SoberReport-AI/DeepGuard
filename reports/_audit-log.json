@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T03:49:51.370Z",
+      "plugin_id": "huanlinoto--dsh-plugin-mineru",
+      "name": "dsh-plugin-mineru",
+      "version": "0.2.4",
+      "commit": "67abfedd5e3bd63043bac62222f5fbdc3281dae7",
+      "repo": "huanlinoto/dsh-plugin-mineru",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/125",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/135",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32687352734",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 与任务卡一致）。findings[] 为空，逐维度声明已打开源码亲自验证：凭据链仅发往用户配置 baseURL 且拒绝重定向；5 个工具说明与 AGENTS.md 无注入措辞；全树无 eval/Function/child_process，无安装钩子；唯一网络出口为用户配置的 MinerU 服务（默认 localhost:18000）；cordis.patch.yml 仅插入插件自身配置；运行时依赖仅 schemastery。7 条机械预扫命中（DSH-X10/DG-R2-57、DSH-X08/DG-R3-60×2、DSH-C0",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T03:41:29.127Z",
       "plugin_id": "vlln--dsh-navbar",
       "name": "dsh-navbar",
