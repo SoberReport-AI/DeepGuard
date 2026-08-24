@@ -1,0 +1,38 @@
+{
+  "id": "hellodigua--dsh-share",
+  "name": "dsh-share",
+  "repo": "hellodigua/dsh-share",
+  "url": "https://github.com/hellodigua/dsh-share",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 22 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 150,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:49:56.106Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "c109330b755c793cbc701a4e6a972d620a6667da",
+    "default_branch": "main",
+    "pushed_at": "2026-08-19T09:16:59Z",
+    "stars": 32,
+    "version": "0.3.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-share"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:49:56.106Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
