@@ -1,0 +1,38 @@
+{
+  "id": "01virex--dsh-status-rotator",
+  "name": "dsh-status-rotator",
+  "repo": "01virex/dsh-status-rotator",
+  "url": "https://github.com/01virex/dsh-status-rotator",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 17 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 167,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:11.085Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "c67fe4c20b6e0eb3c1c0e80900fde505eabdbcdc",
+    "default_branch": "main",
+    "pushed_at": "2026-08-21T16:05:20Z",
+    "stars": 51,
+    "version": "0.6.6",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-status-rotator"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:11.086Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
