@@ -1,0 +1,38 @@
+{
+  "id": "fredalxin--dsh-solo-thinking",
+  "name": "dsh-solo-thinking",
+  "repo": "fredalxin/dsh-solo-thinking",
+  "url": "https://github.com/fredalxin/dsh-solo-thinking",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 15 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 178,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:49.963Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "a77f3bb45ae8557df8a849e03ca0ed0b2d1a9e5d",
+    "default_branch": "main",
+    "pushed_at": "2026-08-21T07:05:01Z",
+    "stars": 21,
+    "version": "0.1.19",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-solo-thinking"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:49.963Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
