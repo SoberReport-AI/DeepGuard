@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T05:41:01.301Z",
+      "plugin_id": "omdsh-dev--dsh-plugin-check",
+      "name": "dsh-plugin-check",
+      "version": "0.1.0",
+      "commit": "16fa22316f11d06476bc2f57fdc0a62843d0c5d5",
+      "repo": "omdsh-dev/dsh-plugin-check",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/148",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/196",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32693960283",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份与安装命令逐项核验通过。报告 findings 为空，各维度 clean 主张经独立源码核验全部属实：无硬编码凭据/凭据读取（token/secret 命中仅为测试夹具 ../secret.js）；工具描述与参数无注入措辞、无点目录指令文件；子进程仅 src/hub.ts:7 与 lib/hub.js:6 的 execFile 导入（固定参数调 gh api 抓公开 catalog、git remote get-url，无 shell、无输入拼接、带超时与输出上限），README 两处命中为文档文本；唯一外联为固定 GitHub URL，无 fetch/net 库、无 base64/混淆载",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T05:33:03.826Z",
       "plugin_id": "mexiaosqwq--dsh-web-mobile",
       "name": "dsh-web-mobile",
