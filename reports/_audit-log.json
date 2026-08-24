@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T00:23:20.242Z",
+      "plugin_id": "dsh-openbiliclaw",
+      "name": "dsh-openbiliclaw",
+      "version": "0.3.206",
+      "commit": "b91ff7850df0722bc6133a6a312fa7b8984196c0",
+      "repo": "whiteguo233/dsh-openbiliclaw",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/106",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/116",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32676050010",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份、证据路径、维度一致性、31 条机械命中覆盖（30×DG-R3-60 于 DG-D3 排除、1×DG-R2-57 于 DG-D2 排除，均引用规则 ID 给良性理由）、覆盖面（manifest 130 文件全在树中，无点目录缺口）、安装命令四元组全部核验通过。独立漏检快扫未发现 install 钩子、child_process/eval、凭据读取或外联通道；全部 fetch/WebSocket 指向本机 127.0.0.1:8420，bilibili 链接仅 window.open 用户导航。唯一轻微不精确：DG-D4 称『唯一的非本机 URL 是项目主页链接』，实际另有 bilibili",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T00:14:00.180Z",
       "plugin_id": "dsh-find-plugin",
       "name": "dsh-find-plugin",

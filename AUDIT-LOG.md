@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 08:23 | dsh-openbiliclaw | 0.3.206 | [b91ff78](https://github.com/whiteguo233/dsh-openbiliclaw/commit/b91ff7850df0722bc6133a6a312fa7b8984196c0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#106](https://github.com/SoberReport-AI/DeepGuard/issues/106) |
 | 2026-08-24 08:14 | dsh-find-plugin | 0.3.7 | [e7a27eb](https://github.com/awesome-dsh-plugin/dsh-find-plugin/commit/e7a27eb01606e6deccdaacccb8e0cfd992c0bcdc) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#105](https://github.com/SoberReport-AI/DeepGuard/issues/105) |
 | 2026-08-24 08:06 | dsh-dream-skin | 0.4.10 | [68c554c](https://github.com/revolutionla/dsh-dream-skin/commit/68c554c2fd4701b560315a7513b0ee73b668874f) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#104](https://github.com/SoberReport-AI/DeepGuard/issues/104) |
 | 2026-08-24 07:58 | dsh-multica-runtime | 0.1.0-private.1 | [e29aae2](https://github.com/forrestchang/dsh-multica-runtime/commit/e29aae228449dfe50e88af60ef4281e38ca44e2a) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#103](https://github.com/SoberReport-AI/DeepGuard/issues/103) |
