@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T07:53:04.978Z",
+      "plugin_id": "dietcokewithsugar--dsh-user-experience",
+      "name": "dsh-user-experience",
+      "version": "0.4.2",
+      "commit": "bba21e6a634844b448b34aae4e7c8af1d8bbd9d4",
+      "repo": "dietcokewithsugar/dsh-user-experience",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/163",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/210",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32702938376",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份、证据路径、机械命中裁决（10/10 全覆盖）、维度一致性（6 维度 clean 均挂 checked_items，findings 空数组与 summary 一致）、安装命令均核验通过；独立漏检快扫（网络/child_process/eval/凭据/base64/安装钩子/注入模式/YAML 可执行标量）未发现遗漏。两处非阻断性说明：(1) DG-D5 checked_items 称宿主 SDK '精确锁版（无 ^/~ 范围）'不准确——peerDependencies 中 @deepseek-ai/cordis 为 ^4.0.1、dsh-* 为 >=0.1.0-rc.6 <0.2.0 ",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T07:44:28.237Z",
       "plugin_id": "senmuuuuw--dsh-whale-report",
       "name": "dsh-whale-report",
