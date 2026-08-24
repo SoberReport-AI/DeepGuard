@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 19:40 | bill9109--dsh-drag-and-drop | 0.1.6 | [3b70ec4](https://github.com/bill9109/dsh-drag-and-drop/commit/3b70ec46926a37d96d08d396f4948e4509126ecd) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#189](https://github.com/SoberReport-AI/DeepGuard/issues/189) |
 | 2026-08-24 19:30 | omdsh-dev--dsh-gomoku | 0.0.1 | [5b27af9](https://github.com/omdsh-dev/dsh-gomoku/commit/5b27af9808f5bd8f2d753dfdf6157d86a54a4947) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#188](https://github.com/SoberReport-AI/DeepGuard/issues/188) |
 | 2026-08-24 19:22 | 609476965--dsh-lorebookmd | 1.0.0 | [4bc4110](https://github.com/609476965/dsh-lorebookmd/commit/4bc4110efbfb4888286b81aaf53191705dade9dd) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#187](https://github.com/SoberReport-AI/DeepGuard/issues/187) |
 | 2026-08-24 19:13 | furongjun-1999--dsh-memory | 0.2.8 | [5ba5f97](https://github.com/furongjun-1999/dsh-memory/commit/5ba5f975669b0191f1811d434a996e0f5593d7cc) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#186](https://github.com/SoberReport-AI/DeepGuard/issues/186) |
