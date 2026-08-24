@@ -1,0 +1,38 @@
+{
+  "id": "hellodigua--dsh-emoji",
+  "name": "dsh-emoji",
+  "repo": "hellodigua/dsh-emoji",
+  "url": "https://github.com/hellodigua/dsh-emoji",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 24 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 145,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:49:36.898Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "96b653a473c978a474dd7d42e86e5b2c79e6dc7c",
+    "default_branch": "main",
+    "pushed_at": "2026-08-19T08:35:02Z",
+    "stars": 39,
+    "version": "0.3.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-emoji"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:49:36.898Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
