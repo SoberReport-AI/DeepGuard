@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T12:03:40.188Z",
+      "plugin_id": "ai-novel-writer",
+      "name": "dsh-ai-novel-writer",
+      "version": "0.1.0",
+      "commit": "cb767d89277927ecd2986e70b9f0a9f57c72c9f8",
+      "repo": "ethanyoq/ai-novel-writer",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/77",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/236",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32724316066",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 逐字一致）。报告零 findings，六维度 clean；我独立复核了关键支撑面：src 无 eval/child_process/网络/凭据读取；novel-project.ts 具备 realpath 根校验+逐段 symlink 拒绝+越界拒绝+原子写；agent.ts 仅注册 novel_read/novel_apply_change 并对 novel_apply_change 强制原生审批、对其他工具 restrict/deny，属正向安全设计；cordis.patch.yml 为纯插入；人格提示与工作台生成提示为功能",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T11:54:29.056Z",
       "plugin_id": "mombrane--dsh-subagent-monitor",
       "name": "dsh-subagent-monitor",
