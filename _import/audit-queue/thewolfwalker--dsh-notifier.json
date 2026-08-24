@@ -1,0 +1,37 @@
+{
+  "id": "thewolfwalker--dsh-notifier",
+  "name": "dsh-notifier",
+  "repo": "thewolfwalker/dsh-notifier",
+  "url": "https://github.com/thewolfwalker/dsh-notifier",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #4 (catalog star ranking, 33 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 122,
+  "status": "pending",
+  "submitted_at": "2026-08-24T03:07:49.852Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "db4290830329799148475d1c17de6c21f2fde4e4",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T04:34:56Z",
+    "stars": 62,
+    "version": "0.8.5",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-notifier"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T03:07:49.852Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
