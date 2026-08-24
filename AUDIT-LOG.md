@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 12:09 | toolclub--dsh-agent-team-gui | 1.0.1 | [e3997ce](https://github.com/toolclub/dsh-agent-team-gui/commit/e3997ce798e495ad8051b95c4e96920780c96aed) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#128](https://github.com/SoberReport-AI/DeepGuard/issues/128) |
 | 2026-08-24 11:56 | chinesezjc--dsh-interconnect | 0.9.0 | [32ca0ec](https://github.com/chinesezjc/dsh-interconnect/commit/32ca0ec0441983f7eded7c6d2bfbecfda02087b0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#126](https://github.com/SoberReport-AI/DeepGuard/issues/126) |
 | 2026-08-24 11:49 | huanlinoto--dsh-plugin-mineru | 0.2.4 | [67abfed](https://github.com/huanlinoto/dsh-plugin-mineru/commit/67abfedd5e3bd63043bac62222f5fbdc3281dae7) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#125](https://github.com/SoberReport-AI/DeepGuard/issues/125) |
 | 2026-08-24 11:41 | vlln--dsh-navbar | 0.4.0 | [d89ba74](https://github.com/vlln/dsh-navbar/commit/d89ba74f4e0403462a5e4c4feeec84a3e7a1cca2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#123](https://github.com/SoberReport-AI/DeepGuard/issues/123) |

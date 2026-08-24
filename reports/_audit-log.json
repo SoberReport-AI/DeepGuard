@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T04:09:15.541Z",
+      "plugin_id": "toolclub--dsh-agent-team-gui",
+      "name": "dsh-agent-team-gui",
+      "version": "1.0.1",
+      "commit": "e3997ce798e495ad8051b95c4e96920780c96aed",
+      "repo": "toolclub/dsh-agent-team-gui",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/128",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/137",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32688242640",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：身份逐字一致；报告 findings 为空，所有引用的证据行号（src/index.ts:71-75、definition-service.ts:700-733、rpc.ts:262-263/565-567、common.mjs:58-66、cordis.patch.yml 等）均实际打开验证且内容支撑相应声明；机械预扫 10 条命中全部按正确 DG-R3-5x 规则 ID 在 audit_scope.limits 裁决且排除理由成立（逐一核对 CI/发布流水线 SHA 钉版、prepare 标准构建、PLAN.md:298 的 !!js 仅文档代码块、两处 keydown 为 Es",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T03:56:50.588Z",
       "plugin_id": "chinesezjc--dsh-interconnect",
       "name": "dsh-interconnect",
