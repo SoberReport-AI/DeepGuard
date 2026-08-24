@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T09:12:29.843Z",
+      "plugin_id": "flymysql--dsh-remote",
+      "name": "dsh-remote-flymysql",
+      "version": "0.8.8",
+      "commit": "5ae197a94c0fe4f0a8ffe5de14822f79418dc3bd",
+      "repo": "flymysql/dsh-remote",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/173",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/219",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32709275667",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit 逐字一致，subpath=null=仓库根）。报告无 findings（findings: []），per_finding 为空。29 条机械预扫命中全部通过规则 ID 引用（DSH-P01→DG-R3-51, DSH-C01→DG-R1-51, DSH-X03→DG-R3-55, DSH-T02→DG-R2-52, DSH-X07→DG-R3-59, DSH-C05→DG-R4-53）在 audit_scope.limits 中逐类裁决，未遗漏。姑且算一处微瑕：Sonar 说「19 处 ~/.ssh 相关命中」，实际机械命中清单中 DSH-C",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T09:00:46.345Z",
       "plugin_id": "make0209--dsh-usage-stats",
       "name": "dsh-usage-stats",
