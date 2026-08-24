@@ -173,6 +173,22 @@
       }
     },
     {
+      "id": "content-filter",
+      "match": {
+        "message_regex": "finish_reason:\\s*content_filter"
+      },
+      "category": "content_filter",
+      "retry": {
+        "max_attempts": 0
+      },
+      "note": "Status-less refusal: the provider's content moderation cuts generation mid-run (HTTP 200, finish_reason=content_filter). Deterministic on the audited snapshot's raw token stream (empirically verified: furongjun-1999--dsh-memory failed 3/3 attempts on the same snapshot, 2026-08-24) — blind retry only burns tokens. Never resolve by excluding the triggering files from audit scope: moderation-tripping text would become an audit-blinding vector. Human reviews the trigger content and rules: author relocates the content / different endpoint / manual audit.",
+      "issue": {
+        "template": "issue-templates/content-filter.md",
+        "close": false,
+        "queue_status": "needs-human"
+      }
+    },
+    {
       "id": "server-error",
       "match": {
         "status": [
