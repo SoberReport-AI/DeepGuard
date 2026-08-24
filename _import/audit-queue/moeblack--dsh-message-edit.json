@@ -1,0 +1,38 @@
+{
+  "id": "moeblack--dsh-message-edit",
+  "name": "dsh-message-edit",
+  "repo": "moeblack/dsh-message-edit",
+  "url": "https://github.com/moeblack/dsh-message-edit",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #4 (catalog star ranking, 26 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 130,
+  "status": "pending",
+  "submitted_at": "2026-08-24T03:08:08.313Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "b78a167064ca612f1c400060d2bfc1dc9bc46436",
+    "default_branch": "main",
+    "pushed_at": "2026-08-16T11:33:37Z",
+    "stars": 42,
+    "version": "0.2.3",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-message-edit"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T03:08:08.313Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
