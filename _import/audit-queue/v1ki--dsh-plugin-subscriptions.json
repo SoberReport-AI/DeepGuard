@@ -1,0 +1,40 @@
+{
+  "id": "v1ki--dsh-plugin-subscriptions",
+  "name": "dsh-plugin-subscriptions",
+  "repo": "v1ki/dsh-plugin-subscriptions",
+  "url": "https://github.com/v1ki/dsh-plugin-subscriptions",
+  "subpath": null,
+  "category_hint": "model",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #6 (catalog star ranking, 264 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 237,
+  "status": "pending",
+  "submitted_at": "2026-08-24T19:21:35.615Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "08b9b7cc30e72e8eedd559ac01af9fc576157453",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T11:16:31Z",
+    "stars": 264,
+    "version": "0.5.2",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plugin-subscriptions"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T19:21:35.615Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
