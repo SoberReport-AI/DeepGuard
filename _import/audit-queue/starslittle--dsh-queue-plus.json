@@ -1,0 +1,40 @@
+{
+  "id": "starslittle--dsh-queue-plus",
+  "name": "dsh-queue-plus",
+  "repo": "starslittle/dsh-queue-plus",
+  "url": "https://github.com/starslittle/dsh-queue-plus",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 15 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 181,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:02.800Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "ed6448d4828d5fd5c3933dc3c1e08340b9fbc2f9",
+    "default_branch": "main",
+    "pushed_at": "2026-08-16T07:01:19Z",
+    "stars": 17,
+    "version": "0.3.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-queue-plus"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:02.800Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
