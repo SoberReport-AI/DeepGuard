@@ -1,0 +1,37 @@
+{
+  "id": "geml-spec--geml",
+  "name": "dsh-plugin-geml-spec",
+  "repo": "geml-spec/geml",
+  "url": "https://github.com/geml-spec/geml",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 24 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 144,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:49:34.337Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "8b6dc6241f36435facbf482245c36450898a3486",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T04:09:48Z",
+    "stars": 24,
+    "version": null,
+    "dsh_kind": [],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plugin-geml-spec"
+    },
+    "warnings": [
+      "no package.json at the repo root (non-standard npm package layout; audit scope needs human confirmation)"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:49:34.337Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
