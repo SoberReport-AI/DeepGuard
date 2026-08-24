@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T07:35:29.709Z",
+      "plugin_id": "franksong2702--dsh-codex-connect",
+      "name": "dsh-codex-connect",
+      "version": "0.1.0-alpha.4.18",
+      "commit": "15f1c6f6b0715c63395e4852ec37c4dd5a9f598c",
+      "repo": "franksong2702/dsh-codex-connect",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/161",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/208",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32701257141",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "Identity verification: plugin.id/version/commit all match task card ✓. Evidence verification: all 16+ checked_items line references in the report verified against actual file contents (store.ts:32-50, view-image.ts:81, image-tool.ts:179, transport.ts:291-301, search.ts:282-294, usage.ts:237-248, loc",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T07:22:29.899Z",
       "plugin_id": "dingyi222666--dsh-focus-chat",
       "name": "dsh-focus-chat",
