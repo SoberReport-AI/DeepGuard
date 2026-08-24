@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T06:30:18.357Z",
+      "plugin_id": "modusensus--dsh-mneme",
+      "name": "dsh-mneme",
+      "version": "0.7.0",
+      "commit": "d8a568b66a563a3422667369026cf71fa82276d9",
+      "repo": "modusensus/dsh-mneme",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/154",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/202",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32696911266",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/name/version/commit/subpath 逐字一致）。报告为 clean 且无 findings，逐条核验了全部 checked_items 主张：21 条机械命中（DSH-C01/DSH-X03/X05/X08）全部在报告中有明确规则 ID 引用并逐一打开命中点核实排除理由属实（evaluateRetrieval/Retrieval( 子串误报、Esc 键监听、点击复制、JSONL 转义、测试子进程）。独立漏检快扫未发现 runtime eval/child_process、凭据读取、未声明外联或安装钩子载体；外联仅嵌入服务（用户配置）、localhost ",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T06:19:56.837Z",
       "plugin_id": "omdsh-dev--dsh-toolkit",
       "name": "dsh-toolkit",
