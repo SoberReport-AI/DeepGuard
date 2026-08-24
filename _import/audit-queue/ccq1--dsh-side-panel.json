@@ -1,0 +1,40 @@
+{
+  "id": "ccq1--dsh-side-panel",
+  "name": "dsh-side-panel",
+  "repo": "ccq1/dsh-side-panel",
+  "url": "https://github.com/ccq1/dsh-side-panel",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 15 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 179,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:56.613Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "baca7806714ac577ac529647f105d58a2a10b228",
+    "default_branch": "main",
+    "pushed_at": "2026-08-14T17:45:41Z",
+    "stars": 16,
+    "version": "0.2.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-side-panel"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:56.613Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
