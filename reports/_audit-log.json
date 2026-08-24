@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T00:06:34.030Z",
+      "plugin_id": "dsh-dream-skin",
+      "name": "dsh-dream-skin",
+      "version": "0.4.10",
+      "commit": "68c554c2fd4701b560315a7513b0ee73b668874f",
+      "repo": "revolutionla/dsh-dream-skin",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/104",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/114",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32675197240",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份核验一致（id/version/commit/subpath 逐字匹配，commit 完整 40 位 hex）；报告无 findings，5 条机械命中（DSH-X10/X07×2/X05/X08）在报告中均有明确裁决且我逐一打开原始文件验证：SKILL.md 为要求用户确认的安装引导、ci.yml/stats-chart.yml 为仓库自身 CI（package.json files 不含 .github，不随插件分发）、client.js:2980 为分享链接剪贴板写入、client.js:2576 为壁纸 URL 控制字符拒绝正则，均判定良性成立；manifest.js",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-23T23:58:06.539Z",
       "plugin_id": "dsh-multica-runtime",
       "name": "dsh-multica-runtime",
