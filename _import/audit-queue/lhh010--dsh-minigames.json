@@ -1,0 +1,38 @@
+{
+  "id": "lhh010--dsh-minigames",
+  "name": "dsh-minigames",
+  "repo": "lhh010/dsh-minigames",
+  "url": "https://github.com/lhh010/dsh-minigames",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 22 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 151,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:00.985Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "1bb6d8664281ea8d03cdf82050a398a69222a3ff",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T10:54:59Z",
+    "stars": 27,
+    "version": "0.3.6",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-minigames"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:00.985Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
