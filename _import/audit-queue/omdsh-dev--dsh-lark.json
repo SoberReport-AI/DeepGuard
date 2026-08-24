@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #4 (catalog star ranking, 29 stars). Whitelist batch submission.",
   "source": "issue",
   "issue": 127,
-  "status": "auditing",
+  "status": "audited",
   "submitted_at": "2026-08-24T03:08:00.553Z",
   "prescreen": {
     "ok": true,
@@ -39,6 +39,11 @@
       "at": "2026-08-24T04:09:47.179Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-24T04:18:32.096Z",
+      "action": "audited",
+      "reason": null
     }
   ],
   "attempts": 1
