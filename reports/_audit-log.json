@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T06:04:19.878Z",
+      "plugin_id": "lhh010--dsh-minigames",
+      "name": "dsh-minigames",
+      "version": "0.3.6",
+      "commit": "1bb6d8664281ea8d03cdf82050a398a69222a3ff",
+      "repo": "lhh010/dsh-minigames",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/151",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/199",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32695406946",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 逐字一致，commit 40 位 hex）。findings 为空，报告引用的全部证据路径（dsh.plugin.json:10-11、README.md:294-311、cordis.patch.yml:5-7、src/client/index.tsx:15、src/index.ts:22、package.json:19-21/30-33、tetris/index.ts:60、aimtrack/index.ts:89）均已亲自打开验证存在且内容支撑描述；dsh.plugin.json version=0.1.0 与 packa",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T05:57:20.567Z",
       "plugin_id": "hellodigua--dsh-share",
       "name": "dsh-share",
