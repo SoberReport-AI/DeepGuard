@@ -1,0 +1,40 @@
+{
+  "id": "william-jin-cmu--dsh-stickers",
+  "name": "dsh-stickers",
+  "repo": "william-jin-cmu/dsh-stickers",
+  "url": "https://github.com/william-jin-cmu/dsh-stickers",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 20 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 157,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:26.091Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "1703f09915db1058b6031b31e52fd404560e0a78",
+    "default_branch": "main",
+    "pushed_at": "2026-08-13T02:26:59Z",
+    "stars": 22,
+    "version": "0.1.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-stickers"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:26.091Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
