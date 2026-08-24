@@ -2,6 +2,45 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T07:06:47.931Z",
+      "plugin_id": "lzszq--dsh-scholar",
+      "name": "dsh-scholar",
+      "version": "0.1.0",
+      "commit": "76bfe960e9107a992dae506c3ebc298a99f57760",
+      "repo": "lzszq/dsh-scholar",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "extended_review",
+      "beacon": "escalate",
+      "postcheck": null,
+      "stage_reached": "publish",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/158",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32699318453",
+      "extended_review": true,
+      "reason": "publish did not pass (postcheck FAIL, or push/PR creation failed; see run logs)",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "extended_review",
+          "notes": "复核结论：报告身份一致、形态合规、机械命中（51 条列示）全部按规则 ID 裁决无缺口、install 命令与哈希正确、动态层 na 标注如实、覆盖限制披露诚实。独立抽查（CI、patch、workspace-patch、SKILL.md、外联域名、token 读取、kernel 绑定、prepare 钩子）均与报告一致，未发现恶意模式或报告造假迹象。但鉴于：报告为 clean 判定，而最大最敏感文件 kernel.ts(517KB)/server.ts(226KB) 未被逐行通读（报告与复核者均受 16MB 读取预算限制），且无动态沙箱佐证运行时行为；首版审计无基线可对照。按『拿不准选 ne",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "escalate",
+          "rationale": "本案分歧并非事实性争议：Aegis 的 per_finding 为空（无 evidence_ok:false 条目可逐条对账），blacklist_check.consistent=true 且无黑名单建议，install_check.command_ok=true（commit 40 位小写 hex 与任务卡逐字一致、subpath=null 与「仓库根」一致、install 命令形态与 owner/repo 完全正确），dynamic_check 与报告 L4=na 一致。分歧唯一来源是 Aegis 的两条 missed_concerns（下文以 FND-901/FND-902 编号指代，"
+        },
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T06:55:05.439Z",
       "plugin_id": "william-jin-cmu--dsh-stickers",
       "name": "dsh-stickers",
