@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T04:45:56.585Z",
+      "plugin_id": "dsh-better-sidebar",
+      "name": "dsh-better-sidebar",
+      "version": "0.15.0",
+      "commit": "b7aab48deb17b7dd92094c84441783fccaf51561",
+      "repo": "omdsh-dev/dsh-better-sidebar",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/3",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/141",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32690574555",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 与任务卡逐字一致，commit 为完整 40 位小写 hex）。findings[] 为空，无需逐条证据核验；对报告 checked_items 引用的全部关键证据位置（cordis.patch.yml:49 防双挂载 js 表达式、package.json:80 prepare=tsdown、git.ts spawn 固定参数无 shell、8 个终端工具描述、ime-guard/mermaid/UploadOverlay 键盘监听、e2e-aggregate-mount.sh curl 仅对本机 scratch 实例、bro",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T04:34:48.878Z",
       "plugin_id": "moeblack--dsh-message-edit",
       "name": "dsh-message-edit",
