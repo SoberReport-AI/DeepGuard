@@ -1,0 +1,38 @@
+{
+  "id": "omdsh-dev--dsh-custom-tool",
+  "name": "dsh-custom-tool",
+  "repo": "omdsh-dev/dsh-custom-tool",
+  "url": "https://github.com/omdsh-dev/dsh-custom-tool",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 24 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 146,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:49:40.192Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "7cb95649dca9b380c9a30af96bdbef87a76a2259",
+    "default_branch": "main",
+    "pushed_at": "2026-08-16T05:24:56Z",
+    "stars": 24,
+    "version": "0.1.2",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-custom-tool"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:49:40.193Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
