@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T11:22:07.765Z",
+      "plugin_id": "609476965--dsh-lorebookmd",
+      "name": "dsh-lorebookmd",
+      "version": "1.0.0",
+      "commit": "4bc4110efbfb4888286b81aaf53191705dade9dd",
+      "repo": "609476965/dsh-lorebookmd",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/187",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/231",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32720839662",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份/哈希/命令三要素逐字核验一致。报告 findings 为空，其全部肯定性断言均经源码核实：8 个对话工具（src/index.ts:134-363）描述纯功能、无注入措辞；6 条机械命中（DSH-X03×3、DSH-X08×2、DSH-T02×1）全部亲自打开证据行验证——install-deps.mjs:13 的 execFileSync 仅用于开发期 junction 链接、tsdown/run.mjs:5 的 spawnSync 为构建转发 shim（二者均无 install 钩子，package.json scripts 仅 bundle/typecheck/tes",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T11:13:51.454Z",
       "plugin_id": "furongjun-1999--dsh-memory",
       "name": "dsh-memory-furongjun-1999",
