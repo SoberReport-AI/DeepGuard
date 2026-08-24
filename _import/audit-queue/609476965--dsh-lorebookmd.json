@@ -1,0 +1,38 @@
+{
+  "id": "609476965--dsh-lorebookmd",
+  "name": "dsh-lorebookmd",
+  "repo": "609476965/dsh-lorebookmd",
+  "url": "https://github.com/609476965/dsh-lorebookmd",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 13 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 187,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:26.844Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "4bc4110efbfb4888286b81aaf53191705dade9dd",
+    "default_branch": "main",
+    "pushed_at": "2026-08-14T18:34:21Z",
+    "stars": 17,
+    "version": "1.0.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-lorebookmd"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:26.844Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
