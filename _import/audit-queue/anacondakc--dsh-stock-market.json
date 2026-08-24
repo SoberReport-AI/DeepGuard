@@ -1,0 +1,38 @@
+{
+  "id": "anacondakc--dsh-stock-market",
+  "name": "dsh-stock-market",
+  "repo": "anacondakc/dsh-stock-market",
+  "url": "https://github.com/anacondakc/dsh-stock-market",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 15 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 177,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:47.770Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "02278af12330102c534c843a668d1c8407dbde1b",
+    "default_branch": "main",
+    "pushed_at": "2026-08-13T06:26:46Z",
+    "stars": 16,
+    "version": "0.2.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-stock-market"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:47.770Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
