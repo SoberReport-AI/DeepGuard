@@ -1,0 +1,37 @@
+{
+  "id": "acidgr--dsh-web-lan-access",
+  "name": "dsh-web-lan-access",
+  "repo": "acidgr/dsh-web-lan-access",
+  "url": "https://github.com/acidgr/dsh-web-lan-access",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 16 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 171,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:22.506Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "8eeb1d0cb79a6e199bde94f16f1e2f2b5a818f01",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T00:55:21Z",
+    "stars": 25,
+    "version": "1.2.1",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-web-lan-access"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:22.506Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
