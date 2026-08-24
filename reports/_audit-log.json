@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T19:53:46.449Z",
+      "plugin_id": "howmp--dsh-pentest",
+      "name": "dsh-pentest",
+      "version": "0.1.0-rc.25",
+      "commit": "9cc3a10c3701965bf355b1eee9af5971a0d92cc6",
+      "repo": "howmp/dsh-pentest",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/239",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/248",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32769786622",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。\n\n1. 身份核验通过：plugin.id/version/commit/subpath 与任务卡逐字一致。\n2. 无任何 finding（findings[] 为空），checked_items 全部有证据支撑：\n   - DG-D1：无硬编码凭据，无敏感文件读取（grep 全域扫描确认）\n   - DG-D2：9 工具描述均为功能说明（已逐条阅读 tools.ts）；PENTEST_INSTRUCTIONS 为渗透工作流协议（中文，限定授权范围、禁止臆造证据，已读 instructions.ts）；AGENTS.md/README/全部预设文本无注入措辞（grep",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T19:42:44.078Z",
       "plugin_id": "zseven-w--dsh-ios",
       "name": "dsh-ios",
