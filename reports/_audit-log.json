@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T10:36:00.966Z",
+      "plugin_id": "starslittle--dsh-queue-plus",
+      "name": "dsh-queue-plus",
+      "version": "0.3.0",
+      "commit": "ed6448d4828d5fd5c3933dc3c1e08340b9fbc2f9",
+      "repo": "starslittle/dsh-queue-plus",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/181",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/226",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32716955661",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过；findings 为空、六维度全部 clean 与独立源码核验一致（无执行/外联/凭据/注入面，唯一网络调用为同源 /queue-plus，prepare 为构建脚本并已被 DSH-X02 排除理由覆盖）；manifest 28 文件全覆盖无缺失；安装命令四元组正确。仅元数据小瑕疵：报告 plugin.engines.dsh=0.1.0-rc.6 系从 peerDependencies/dsh 字段推断，package.json 无 engines.dsh 字段，属描述性偏差不影响安全结论。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T10:27:52.368Z",
       "plugin_id": "biociao--dsh-science",
       "name": "dsh-science",

@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 18:36 | starslittle--dsh-queue-plus | 0.3.0 | [ed6448d](https://github.com/starslittle/dsh-queue-plus/commit/ed6448d4828d5fd5c3933dc3c1e08340b9fbc2f9) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#181](https://github.com/SoberReport-AI/DeepGuard/issues/181) |
 | 2026-08-24 18:27 | biociao--dsh-science | 0.2.0 | [23767ab](https://github.com/biociao/dsh-science/commit/23767ab2f8d7bcf84a0820daa4c6ae79549da000) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#180](https://github.com/SoberReport-AI/DeepGuard/issues/180) |
 | 2026-08-24 18:18 | ccq1--dsh-side-panel | 0.2.0 | [baca780](https://github.com/ccq1/dsh-side-panel/commit/baca7806714ac577ac529647f105d58a2a10b228) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#179](https://github.com/SoberReport-AI/DeepGuard/issues/179) |
 | 2026-08-24 18:07 | fredalxin--dsh-solo-thinking | 0.1.19 | [a77f3bb](https://github.com/fredalxin/dsh-solo-thinking/commit/a77f3bb45ae8557df8a849e03ca0ed0b2d1a9e5d) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#178](https://github.com/SoberReport-AI/DeepGuard/issues/178) |
