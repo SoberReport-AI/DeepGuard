@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T19:42:44.078Z",
+      "plugin_id": "zseven-w--dsh-ios",
+      "name": "dsh-ios",
+      "version": "0.1.0-rc.5",
+      "commit": "9e3b600ba556baf64bbe74ebf39fa1b2ce30545c",
+      "repo": "zseven-w/dsh-ios",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/238",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/247",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32768626207",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份一致；FND-001 证据全部成立且定级相称；43 条机械命中逐一有裁决（唯一小瑕疵为 C05 计数 8 vs 9 及'3 处下载调用'措辞略宽，均不影响实质）；维度 clean/risk 分布与 checked_items 非空对勾相符；快速漏检扫描（install 钩子/eval/外联域名/凭据读取/注入模式）无遗漏；安装命令与哈希合规。裁决 approve。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T19:30:36.095Z",
       "plugin_id": "v1ki--dsh-plugin-subscriptions",
       "name": "dsh-plugin-subscriptions",

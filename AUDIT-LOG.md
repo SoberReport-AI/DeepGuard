@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-25 03:42 | zseven-w--dsh-ios | 0.1.0-rc.5 | [9e3b600](https://github.com/zseven-w/dsh-ios/commit/9e3b600ba556baf64bbe74ebf39fa1b2ce30545c) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#238](https://github.com/SoberReport-AI/DeepGuard/issues/238) |
 | 2026-08-25 03:30 | v1ki--dsh-plugin-subscriptions | 0.5.2 | [08b9b7c](https://github.com/v1ki/dsh-plugin-subscriptions/commit/08b9b7cc30e72e8eedd559ac01af9fc576157453) | SoberReport-AI | clean | 0 | extended review | uphold Aegis | — | failed, flagged for extended review | [#237](https://github.com/SoberReport-AI/DeepGuard/issues/237) |
 | 2026-08-24 22:46 | lzszq--dsh-scholar | 0.1.0 | [76bfe96](https://github.com/lzszq/dsh-scholar/commit/76bfe960e9107a992dae506c3ebc298a99f57760) | SoberReport-AI | clean | 0 | needs_human | escalated | flagged | merged | [#158](https://github.com/SoberReport-AI/DeepGuard/issues/158) |
 | 2026-08-24 22:46 | lehhair--dsh-diff-viewer | 0.1.1 | [d576c00](https://github.com/lehhair/dsh-diff-viewer/commit/d576c00cc7db52695d69f86142d4454380fed236) | SoberReport-AI | clean | 0 | needs_human | escalated | flagged | merged | [#175](https://github.com/SoberReport-AI/DeepGuard/issues/175) |
