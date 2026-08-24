@@ -1,0 +1,40 @@
+{
+  "id": "laplace-bit--dsh-smooth-stream",
+  "name": "dsh-smooth-stream",
+  "repo": "laplace-bit/dsh-smooth-stream",
+  "url": "https://github.com/laplace-bit/dsh-smooth-stream",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 17 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 168,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:14.645Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "3320436a4cf4d842ad89b361093a2ae6d6aa08df",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T01:38:52Z",
+    "stars": 53,
+    "version": "0.3.4",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-smooth-stream"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:14.645Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
