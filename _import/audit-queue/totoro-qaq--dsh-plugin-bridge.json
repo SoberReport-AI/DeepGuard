@@ -1,0 +1,37 @@
+{
+  "id": "totoro-qaq--dsh-plugin-bridge",
+  "name": "dsh-plugin-bridge",
+  "repo": "totoro-qaq/dsh-plugin-bridge",
+  "url": "https://github.com/totoro-qaq/dsh-plugin-bridge",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #6 (catalog star ranking, 123 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 243,
+  "status": "pending",
+  "submitted_at": "2026-08-24T19:22:08.484Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "e491b6c30ec7d5aa7d26b1f6072b4c65a84a2569",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T10:31:52Z",
+    "stars": 123,
+    "version": "0.2.11",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plugin-bridge"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T19:22:08.484Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
