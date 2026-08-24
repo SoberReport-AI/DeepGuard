@@ -1,0 +1,38 @@
+{
+  "id": "zp-home--dsh-recommend",
+  "name": "dsh-recommend",
+  "repo": "zp-home/dsh-recommend",
+  "url": "https://github.com/zp-home/dsh-recommend",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 17 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 169,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:18.541Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "2fc5b6087b7c76f1a8bd294d2b09490a902c9182",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T03:28:26Z",
+    "stars": 19,
+    "version": "0.3.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-recommend"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:18.542Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
