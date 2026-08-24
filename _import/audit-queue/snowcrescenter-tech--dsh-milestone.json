@@ -1,0 +1,38 @@
+{
+  "id": "snowcrescenter-tech--dsh-milestone",
+  "name": "dsh-milestone",
+  "repo": "snowcrescenter-tech/dsh-milestone",
+  "url": "https://github.com/snowcrescenter-tech/dsh-milestone",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 16 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 174,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:33.449Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "7568fc271aa2ac54f541d725989de2720ffe3a5b",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T14:19:08Z",
+    "stars": 20,
+    "version": "0.6.6",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-milestone"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:33.449Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
