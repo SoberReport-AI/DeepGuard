@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T06:19:56.837Z",
+      "plugin_id": "omdsh-dev--dsh-toolkit",
+      "name": "dsh-toolkit",
+      "version": "0.0.1",
+      "commit": "2113d11a4e4510720251aa49a800bab917b14330",
+      "repo": "omdsh-dev/dsh-toolkit",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/153",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/201",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32696397143",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过，未发现 Sonar 报告被污染或偷懒迹象。逐项核验：(1) 身份三要素与任务卡逐字一致；(2) 报告无 findings，所有 clean 声明经独立抽样+全树 grep 验证成立——无网络外联（fetch/http/WebSocket/net.connect/curl 零匹配）、无 eval/new Function/child_process 代码调用（calculator 为白名单递归下降解析器，已读 evaluate.ts；regex 用 node:worker_threads 本地 worker 属合法 ReDoS 防护）、无凭据/敏感路径读取、无提示注入措辞、11 个",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T06:12:34.312Z",
       "plugin_id": "a179-sanae--dsh-auto-collapse",
       "name": "dsh-auto-collapse",
