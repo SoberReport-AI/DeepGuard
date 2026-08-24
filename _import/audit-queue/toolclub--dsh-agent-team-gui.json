@@ -1,0 +1,40 @@
+{
+  "id": "toolclub--dsh-agent-team-gui",
+  "name": "dsh-agent-team-gui",
+  "repo": "toolclub/dsh-agent-team-gui",
+  "url": "https://github.com/toolclub/dsh-agent-team-gui",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #4 (catalog star ranking, 28 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 128,
+  "status": "pending",
+  "submitted_at": "2026-08-24T03:08:00.511Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "e3997ce798e495ad8051b95c4e96920780c96aed",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T10:37:55Z",
+    "stars": 121,
+    "version": "1.0.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-agent-team-gui"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T03:08:00.511Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
