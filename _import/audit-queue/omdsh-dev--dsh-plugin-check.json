@@ -1,0 +1,37 @@
+{
+  "id": "omdsh-dev--dsh-plugin-check",
+  "name": "dsh-plugin-check",
+  "repo": "omdsh-dev/dsh-plugin-check",
+  "url": "https://github.com/omdsh-dev/dsh-plugin-check",
+  "subpath": null,
+  "category_hint": "sandbox",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 23 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 148,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:49:47.854Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "16fa22316f11d06476bc2f57fdc0a62843d0c5d5",
+    "default_branch": "main",
+    "pushed_at": "2026-08-21T12:58:48Z",
+    "stars": 27,
+    "version": "0.1.0",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plugin-check"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:49:47.854Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
