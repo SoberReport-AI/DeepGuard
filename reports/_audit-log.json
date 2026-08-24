@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T05:57:20.567Z",
+      "plugin_id": "hellodigua--dsh-share",
+      "name": "dsh-share",
+      "version": "0.3.1",
+      "commit": "c109330b755c793cbc701a4e6a972d620a6667da",
+      "repo": "hellodigua/dsh-share",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/150",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/198",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32694880000",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：1) 身份与任务卡逐字一致；2) 报告 findings 为空，8 条机械命中（DSH-X07×2、DSH-X10、DSH-X05×2、DSH-X08×2、DSH-X03）全部在报告中以规则 ID 明确裁决为良性，且我逐一亲验内容属实（CI/发布工作流常规、AGENTS.md 无注入、两处剪贴板均为 write 只写不读、两处超长行为 SVG 路径数据、spawnSync 仅存于未分发的开发校验脚本）；3) 独立快扫确认插件自身无网络请求/无凭据读取/无动态执行/无安装钩子，唯一 fetch 位于内联 html-to-image 渲染库且 skipFonts:true、image",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T05:48:34.200Z",
       "plugin_id": "hsiangnianian--dsh-auto-continue",
       "name": "dsh-auto-continue",

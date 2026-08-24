@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 13:57 | hellodigua--dsh-share | 0.3.1 | [c109330](https://github.com/hellodigua/dsh-share/commit/c109330b755c793cbc701a4e6a972d620a6667da) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#150](https://github.com/SoberReport-AI/DeepGuard/issues/150) |
 | 2026-08-24 13:48 | hsiangnianian--dsh-auto-continue | 0.8.1 | [e865b0b](https://github.com/hsiangnianian/dsh-auto-continue/commit/e865b0b179331769cdce4a1e407a488056c1633d) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#149](https://github.com/SoberReport-AI/DeepGuard/issues/149) |
 | 2026-08-24 13:41 | omdsh-dev--dsh-plugin-check | 0.1.0 | [16fa223](https://github.com/omdsh-dev/dsh-plugin-check/commit/16fa22316f11d06476bc2f57fdc0a62843d0c5d5) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#148](https://github.com/SoberReport-AI/DeepGuard/issues/148) |
 | 2026-08-24 13:33 | mexiaosqwq--dsh-web-mobile | 2.1.1 | [cea163a](https://github.com/mexiaosqwq/dsh-web-mobile/commit/cea163af7d3acfd4da02631caa7394ba8a3079c2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#147](https://github.com/SoberReport-AI/DeepGuard/issues/147) |
