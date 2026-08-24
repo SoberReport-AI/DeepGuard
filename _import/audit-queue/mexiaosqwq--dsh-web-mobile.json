@@ -1,0 +1,38 @@
+{
+  "id": "mexiaosqwq--dsh-web-mobile",
+  "name": "dsh-web-mobile",
+  "repo": "mexiaosqwq/dsh-web-mobile",
+  "url": "https://github.com/mexiaosqwq/dsh-web-mobile",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 23 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 147,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:49:43.875Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "cea163af7d3acfd4da02631caa7394ba8a3079c2",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T02:54:56Z",
+    "stars": 51,
+    "version": "2.1.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-web-mobile"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:49:43.875Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
