@@ -1,0 +1,38 @@
+{
+  "id": "bill9109--dsh-drag-and-drop",
+  "name": "dsh-drag-and-drop-bill9109",
+  "repo": "bill9109/dsh-drag-and-drop",
+  "url": "https://github.com/bill9109/dsh-drag-and-drop",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 13 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 189,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:36.217Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "3b70ec46926a37d96d08d396f4948e4509126ecd",
+    "default_branch": "main",
+    "pushed_at": "2026-08-21T04:39:54Z",
+    "stars": 21,
+    "version": "0.1.6",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-drag-and-drop-bill9109"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:36.217Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
