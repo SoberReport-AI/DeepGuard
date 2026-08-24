@@ -1,0 +1,40 @@
+{
+  "id": "shanliuling--dsh-image-gen",
+  "name": "dsh-image-gen",
+  "repo": "shanliuling/dsh-image-gen",
+  "url": "https://github.com/shanliuling/dsh-image-gen",
+  "subpath": null,
+  "category_hint": "workflow",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #6 (catalog star ranking, 177 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 241,
+  "status": "pending",
+  "submitted_at": "2026-08-24T19:21:55.650Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "82480ddb8876f2e7abf9a30bf5113ca645fb88cc",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T03:11:48Z",
+    "stars": 177,
+    "version": "0.1.7",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-image-gen-shanliuling"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T19:21:55.651Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
