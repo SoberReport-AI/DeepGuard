@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 12:27 | yyyyukari--dsh-plugin-workshop | 1.6.2 | [f53a7e4](https://github.com/yyyyukari/dsh-plugin-workshop/commit/f53a7e466948a6c5636f2079b2382976a1eea4c8) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#129](https://github.com/SoberReport-AI/DeepGuard/issues/129) |
 | 2026-08-24 12:18 | omdsh-dev--dsh-lark | 0.0.7 | [632807d](https://github.com/omdsh-dev/dsh-lark/commit/632807d9abafbb866a5e208a0298eff21c7856d1) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#127](https://github.com/SoberReport-AI/DeepGuard/issues/127) |
 | 2026-08-24 12:09 | toolclub--dsh-agent-team-gui | 1.0.1 | [e3997ce](https://github.com/toolclub/dsh-agent-team-gui/commit/e3997ce798e495ad8051b95c4e96920780c96aed) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#128](https://github.com/SoberReport-AI/DeepGuard/issues/128) |
 | 2026-08-24 11:56 | chinesezjc--dsh-interconnect | 0.9.0 | [32ca0ec](https://github.com/chinesezjc/dsh-interconnect/commit/32ca0ec0441983f7eded7c6d2bfbecfda02087b0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#126](https://github.com/SoberReport-AI/DeepGuard/issues/126) |

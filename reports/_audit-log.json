@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T04:27:04.392Z",
+      "plugin_id": "yyyyukari--dsh-plugin-workshop",
+      "name": "dsh-plugin-workshop",
+      "version": "1.6.2",
+      "commit": "f53a7e466948a6c5636f2079b2382976a1eea4c8",
+      "repo": "yyyyukari/dsh-plugin-workshop",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/129",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/139",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32689569147",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit 逐字一致）。报告 0 findings、六维度全 clean：我逐项独立核验了 checked_items 的实质主张——DG-D1 token 仅存 localStorage 且 ghFetch 唯一调用点（src/client/index.js:130）只指向 api.github.com，无第三方转发路径；DG-D2 客户端仅注册 shell.overlay/settings.plugins.tab 两个 UI 槽位、宿主仅注册 webServer 路由，无模型面工具/系统提示注入接口，全树 grep 无注入措辞与模型面指令文件；DG-D",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T04:18:49.804Z",
       "plugin_id": "omdsh-dev--dsh-lark",
       "name": "dsh-lark",
