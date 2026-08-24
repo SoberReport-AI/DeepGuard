@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T03:26:54.061Z",
+      "plugin_id": "thewolfwalker--dsh-notifier",
+      "name": "dsh-notifier",
+      "version": "0.8.5",
+      "commit": "db4290830329799148475d1c17de6c21f2fde4e4",
+      "repo": "thewolfwalker/dsh-notifier",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/122",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/132",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32686036513",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：身份四元组一致；报告无 findings，各维度 checked_items 的实质性声明均经我亲自打开源码验证（tool-register.mjs 限流、index.mjs admin token SHA-256+回环绑定、store.mjs 0600+写锁、approval/router.mjs 静默永不批准、http-callback.mjs 密径+64KB 上限、cordis.patch.yml 仅一行插件插入）；12 条机械命中全部在 L1 汇总与 audit_scope.limits 中以规则 ID 裁决，且每条命中点行号内容经我逐一核对属实；漏检快扫未见遗漏（生产代",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T03:18:27.416Z",
       "plugin_id": "noob-stupid--dsh-plugin-hub",
       "name": "dsh-plugin-hub",
