@@ -1,0 +1,38 @@
+{
+  "id": "a179-sanae--dsh-auto-collapse",
+  "name": "dsh-auto-collapse",
+  "repo": "a179-sanae/dsh-auto-collapse",
+  "url": "https://github.com/a179-sanae/dsh-auto-collapse",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 22 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 152,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:03.621Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "1c39946e530d5a9f07a3941285c0c690f5cdf9f0",
+    "default_branch": "main",
+    "pushed_at": "2026-08-22T15:39:03Z",
+    "stars": 45,
+    "version": "0.1.4",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-auto-collapse"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:03.621Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
