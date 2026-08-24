@@ -326,12 +326,27 @@ function cloneAndInspect(url, subpath) {
   };
 }
 
-/* ---------- id generation (owner suffix on collision) ---------- */
+/* ---------- id generation (owner-qualified, 2026-08-23) ----------
+ * Queue id = `${slugify(owner)}--${slugify(repo)}` — the queue file stem, report dir, artifact
+ * suffix, and PR/branch token are all derived from this one identity, so same-name repos
+ * (omdsh-dev/dsh_workflow vs icetomoyo/dsh_workflow, both slugify to "dsh-workflow") no longer
+ * collide or get silently renamed at intake. "--" is unambiguous: GitHub usernames disallow
+ * consecutive hyphens, so owner never contains "--" (split at the FIRST "--" recovers owner/repo).
+ * The id charset gates (workflow input + intake-gate + prepare: ^[a-z0-9][a-z0-9-]*$) accept this
+ * unchanged. Entries admitted before this change keep their legacy short ids (grandfathered —
+ * published report URLs must not churn); dup detection is repo-URL-based, so a legacy-id repo
+ * re-submitted as an issue is still caught, and tripleIds already re-checks the legacy id.
+ * Slugify degradation (CJK repo names strip to "") falls back to the legacy dance. */
 function pickId(repo, owner, takenIds) {
-  const base = slugify(repo);
-  if (base && !takenIds.has(base)) return base;
-  const withOwner = slugify(`${repo}-${owner}`);
-  if (withOwner && !takenIds.has(withOwner)) return withOwner;
+  const rs = slugify(repo), os = slugify(owner);
+  if (rs && os) {
+    const qualified = `${os}--${rs}`;
+    if (!takenIds.has(qualified)) return qualified;
+    let i = 2;
+    while (takenIds.has(`${qualified}-${i}`)) i++;
+    return `${qualified}-${i}`;
+  }
+  const base = rs || os;
   let i = 2;
   while (takenIds.has(`${base}-${i}`)) i++;
   return `${base}-${i}`;
@@ -398,7 +413,7 @@ async function cmdSubmit(input) {
   if (insp.warning) warnings.push(insp.warning);
 
   const id = pickId(norm.repo, norm.owner, takenIds);
-  if (id !== slugify(norm.repo)) warnings.push(`id collides with an admitted plugin; using ${id} instead`);
+  if (id !== `${slugify(norm.owner)}--${slugify(norm.repo)}`) warnings.push(`owner-qualified id collides with an existing entry; using ${id} instead`);
 
   // same-triple dedup: if a report already exists for id@version#commit, reject outright
   // (same rule as intake-gate check ⑤; this is the fast-feedback path).
