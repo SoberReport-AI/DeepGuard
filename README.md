@@ -72,7 +72,7 @@ DeepGuard 的能力有边界。静态分析覆盖不了全部运行时行为，A
 ```text
 本项目完成后，向 DeepGuard 提交安全审计入驻申请：
 1. 确认 GitHub 仓库为 public 且代码已全部推送（预审锁定 HEAD commit）。
-2. 在浏览器打开以下链接（尖括号内容替换为实际值并做 URL 编码；category 取值：UI Extension (ui) / Tools (tools) / Sandbox / Execution (sandbox) / Bridge (bridge) / Model Adapter (model) / Workflow / Memory (memory)，拿不准填 Uncertain）：
+2. 在浏览器打开以下链接（尖括号内容替换为实际值并做 URL 编码；category 取值：UI Extension (ui) / Tools (tools) / Sandbox / Execution (sandbox) / Bridge (bridge) / Model Adapter (model) / Workflow (workflow) / Memory (memory)，拿不准填 Uncertain）：
    https://github.com/SoberReport-AI/DeepGuard/issues/new?template=plugin-submission.yml&title=[Audit]%20<插件名>&name=<插件名>&repo=<仓库根URL>&category=<分类>&notes=<补充说明，可留空>
 3. 在表单页按插件实际运行时能力勾选 Declared Capabilities，勾上全部三条 Submission Confirmations，然后提交。
 4. 跟踪这个 issue：预审结果和审计判决都会回帖。同一版本同一 commit 只审一次，重审先升 version 或推新 commit。

@@ -68,7 +68,7 @@
             "url": { "type": "string", "pattern": "^https://github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$" }
           }
         },
-        "category": { "enum": ["ui", "tools", "sandbox", "bridge", "model", "memory"] },
+        "category": { "enum": ["ui", "tools", "sandbox", "bridge", "model", "memory", "workflow"] },
         "author": {
           "type": "object",
           "additionalProperties": false,
@@ -94,6 +94,12 @@
             "fs": { "enum": [false, "read", "write", "full"] },
             "modelFacing": { "type": "boolean" }
           }
+        },
+        "meta_caps": {
+          "type": "array",
+          "items": { "enum": ["config-patch", "client-bundle"] },
+          "uniqueItems": true,
+          "description": "元能力徽章（可选；审计时机械判定的结构性事实，非风险结论）：config-patch=审计树内存在非空 cordis.patch.yml（叠加层可改写宿主配置与安全行）；client-bundle=manifest 声明 dsh.client（浏览器 bundle 自动进 __DSH_BOOT__）。sonar 机械填写，build-index 透传，前端渲染徽章；历史报告无此字段"
         }
       }
     },
@@ -162,7 +168,7 @@
               "additionalProperties": false,
               "required": ["id", "status", "evidence"],
               "properties": {
-                "id": { "type": "string", "pattern": "^DG-S(0[1-9]|1[0-2])$" },
+                "id": { "type": "string", "pattern": "^DG-S(0[1-9]|1[0-6])$" },
                 "status": { "enum": ["pass", "fail", "na"] },
                 "evidence": {
                   "description": "核查依据，大白话撰写（同 checked_items 文风），na 写明理由",
@@ -206,7 +212,7 @@
           },
           "dimension": { "enum": ["DG-D1", "DG-D2", "DG-D3", "DG-D4", "DG-D5", "DG-D6"] },
           "rule_id": { "type": "string", "pattern": "^DG-R[1-6]-\\d{2}$" },
-          "ds_scenario": { "type": "string", "pattern": "^DG-S(0[1-9]|1[0-2])$" },
+          "ds_scenario": { "type": "string", "pattern": "^DG-S(0[1-9]|1[0-6])$" },
           "threat_mapping": { "type": "string", "pattern": "^DG-T(0[1-9]|10)$" },
           "description": {
             "description": "审计发现：代码做了什么（机制、触发面、位置），只写事实；技术风格但让普通技术人员看懂，多段内容以空行（\\n\\n）分段",

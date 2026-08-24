@@ -26,7 +26,7 @@ const ROOT = path.join(__dirname, '..');
 const SRC_REPO = 'awesome-dsh-plugin/awesome-dsh-plugin';
 const SRC_URL = `https://github.com/${SRC_REPO}/blob/main/README.md`;
 
-/* awesome category → DeepGuard category (six-value enum: ui/tools/sandbox/bridge/model/memory)
+/* awesome category → DeepGuard category (seven-value enum: ui/tools/sandbox/bridge/model/memory/workflow)
  * preliminary guess only; the audit agent judges by actual code shape (see report-contract.md §4) */
 const CAT_MAP = {
   'UI Enhancements': 'ui',
@@ -35,10 +35,11 @@ const CAT_MAP = {
   'Memory': 'memory',
   'Tools & Capabilities': 'tools',
   'Skills': 'tools',
-  'Workflow & Automation': 'memory',
+  'Workflow & Automation': 'workflow',
   'Notifications & Integrations': 'bridge',
   'Models & Providers': 'model',
   'Development & Runtime': 'sandbox',
+  'Usage & Billing': 'tools',
   'Plugin Markets & Managers': 'tools',
   'Just for Fun': 'ui'
 };

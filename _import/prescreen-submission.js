@@ -43,12 +43,14 @@ const CLONE_BASE = path.join(os.tmpdir(), 'deepguard-prescreen');
 
 const MIN_ACCOUNT_AGE_DAYS = 10; // same threshold as agent/scripts/intake-gate.mjs
 
-const CATS = ['ui', 'tools', 'sandbox', 'bridge', 'model', 'memory'];
+const CATS = ['ui', 'tools', 'sandbox', 'bridge', 'model', 'memory', 'workflow'];
 const CAT_ALIASES = {
   'UI Extension (ui)': 'ui', 'Tools (tools)': 'tools', 'Sandbox / Execution (sandbox)': 'sandbox',
-  'Bridge (bridge)': 'bridge', 'Model Adapter (model)': 'model', 'Workflow / Memory (memory)': 'memory',
-  // legacy Chinese labels (compatible with old issues) — keys are matched verbatim against
+  'Bridge (bridge)': 'bridge', 'Model Adapter (model)': 'model', 'Memory (memory)': 'memory',
+  'Workflow (workflow)': 'workflow',
+  // legacy labels (compatible with old issues) — keys are matched verbatim against
   // issue-form content; do NOT translate
+  'Workflow / Memory (memory)': 'memory',
   'ui 扩展（ui）': 'ui', '工具（tools）': 'tools', '沙箱/执行（sandbox）': 'sandbox',
   '桥接（bridge）': 'bridge', '模型适配（model）': 'model', '工作流/记忆（memory）': 'memory'
 };

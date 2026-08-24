@@ -265,15 +265,28 @@ function semanticChecks(rpt, filePath, errors, warnings) {
     }
   }
 
-  // 7. DG-S scenario full coverage: DG-S01–DG-S12 must each appear in at least one dimension
+  // 7. DG-S scenario full coverage: each DG-S id defined by the report's framework version
+  //    must appear in at least one dimension. Scenario catalog is versioned: dsh-overlay
+  //    v1.3 introduced DG-S13–DG-S16; reports audited under v1.2 and earlier only owe 12.
+  //    Unparseable version = current contract (fail-closed toward the latest catalog).
+  const overlayMatch = /dsh-overlay v(\d+)\.(\d+)/.exec((rpt.metadata || {}).framework_version || '');
+  const overlayVer = overlayMatch ? [Number(overlayMatch[1]), Number(overlayMatch[2])] : null;
+  const requiredScenarios = overlayVer && (overlayVer[0] < 1 || (overlayVer[0] === 1 && overlayVer[1] < 3)) ? 12 : 16;
   const allDs = new Set();
   for (const d of rpt.dimensions || []) for (const s of d.ds_scenarios) allDs.add(s.id);
   const missing = [];
-  for (let i = 1; i <= 12; i++) {
+  for (let i = 1; i <= requiredScenarios; i++) {
     const id = 'DG-S' + String(i).padStart(2, '0');
     if (!allDs.has(id)) missing.push(id);
   }
   if (missing.length) errors.push(fail(`dsh-specific attack scenarios not fully covered, missing: ${missing.join(', ')}`));
+
+  // 7.5 meta_caps (optional): item values are enum-locked by the schema; duplicates are a contract
+  // violation (the mini validator has no uniqueItems support, so enforce it here explicitly).
+  const mc = (rpt.plugin || {}).meta_caps;
+  if (mc !== undefined && (!Array.isArray(mc) || mc.length === 0 || new Set(mc).size !== mc.length)) {
+    errors.push(fail('plugin.meta_caps must be a non-empty array without duplicates when present'));
+  }
 
   // 8. bilingual completeness: every human-readable slot ({zh} object) must also carry a non-empty en.
   // The schema keeps en optional so the draft stage validates; this hard gate is what makes published

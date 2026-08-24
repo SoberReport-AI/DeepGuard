@@ -48,7 +48,8 @@ body:
         - Sandbox / Execution (sandbox)
         - Bridge (bridge)
         - Model Adapter (model)
-        - Workflow / Memory (memory)
+        - Workflow (workflow)
+        - Memory (memory)
         - Uncertain
     validations:
       required: true

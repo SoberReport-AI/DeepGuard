@@ -72,7 +72,7 @@ Use the "Plugin Audit Submission" Issue Form in this repo. The template applies 
 ```text
 When this project is finished, submit it for a DeepGuard security audit and market listing:
 1. Make sure the GitHub repository is public and fully pushed (pre-screening pins the HEAD commit).
-2. Open this URL in a browser (replace the bracketed values and URL-encode them; category is one of: UI Extension (ui) / Tools (tools) / Sandbox / Execution (sandbox) / Bridge (bridge) / Model Adapter (model) / Workflow / Memory (memory), or Uncertain):
+2. Open this URL in a browser (replace the bracketed values and URL-encode them; category is one of: UI Extension (ui) / Tools (tools) / Sandbox / Execution (sandbox) / Bridge (bridge) / Model Adapter (model) / Workflow (workflow) / Memory (memory), or Uncertain):
    https://github.com/SoberReport-AI/DeepGuard/issues/new?template=plugin-submission.yml&title=[Audit]%20<plugin name>&name=<plugin name>&repo=<repo root URL>&category=<category>&notes=<optional notes>
 3. On the form page, tick Declared Capabilities to match the plugin's actual runtime behavior, tick all three Submission Confirmations, and submit.
 4. Watch the issue: the pre-screening result and the audit verdict are posted back as comments. One audit per version + commit; bump the version or push new commits before resubmitting.
