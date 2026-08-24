@@ -1,0 +1,40 @@
+{
+  "id": "lzszq--dsh-scholar",
+  "name": "dsh-scholar",
+  "repo": "lzszq/dsh-scholar",
+  "url": "https://github.com/lzszq/dsh-scholar",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 20 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 158,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:28.458Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "76bfe960e9107a992dae506c3ebc298a99f57760",
+    "default_branch": "main",
+    "pushed_at": "2026-08-20T14:51:20Z",
+    "stars": 26,
+    "version": "0.1.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-scholar"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:28.459Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
