@@ -52,7 +52,12 @@
       "at": "2026-08-24T12:08:26.514Z",
       "action": "requeued",
       "reason": "orphaned dispatch: no terminal write within 30 min of dispatch (run died or was cancelled)"
+    },
+    {
+      "at": "2026-08-24T13:54:54.744Z",
+      "action": "attempts-reset",
+      "reason": "manual retry per owner request; provider content_filter on snapshot 5ba5f975 (src/roleplay_web.ts embedded wordlists), single retry to test filter determinism"
     }
   ],
-  "attempts": 2
+  "attempts": 0
 }
