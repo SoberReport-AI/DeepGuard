@@ -1,0 +1,38 @@
+{
+  "id": "shaobeichen--dsh-pocket",
+  "name": "dsh-pocket",
+  "repo": "shaobeichen/dsh-pocket",
+  "url": "https://github.com/shaobeichen/dsh-pocket",
+  "subpath": null,
+  "category_hint": null,
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #4 (catalog star ranking, 31 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 124,
+  "status": "pending",
+  "submitted_at": "2026-08-24T03:07:52.149Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "472524a45ef7b1ff6fbd9c3bf50787680a5497c3",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T13:28:38Z",
+    "stars": 543,
+    "version": "1.13.4",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-pocket"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T03:07:52.149Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
