@@ -1,0 +1,38 @@
+{
+  "id": "omdsh-dev--dsh-gomoku",
+  "name": "dsh-gomoku",
+  "repo": "omdsh-dev/dsh-gomoku",
+  "url": "https://github.com/omdsh-dev/dsh-gomoku",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 13 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 188,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:32.111Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "5b27af9808f5bd8f2d753dfdf6157d86a54a4947",
+    "default_branch": "main",
+    "pushed_at": "2026-08-15T05:42:26Z",
+    "stars": 14,
+    "version": "0.0.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-gomoku"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:32.111Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
