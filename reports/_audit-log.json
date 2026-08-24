@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T12:04:43.271Z",
+      "plugin_id": "deepseek-harness-desktop",
+      "name": "deepseek-harness-desktop",
+      "version": "3.0.1",
+      "commit": "f718ac012e80fccd0b3b123e58d780f0f8ed7abc",
+      "repo": "ningbainb/deepseek-harness-desktop",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "gate",
+      "status": "rejected-gate",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/80",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32725114957",
+      "extended_review": false,
+      "reason": "already-audited: report exists for deepseek-harness-desktop@3.0.1#f718ac01 — re-auditing the same version+commit is not meaningful; bump the version or push new commits, then re-submit",
+      "compactions": null,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T12:03:40.188Z",
       "plugin_id": "ai-novel-writer",
       "name": "dsh-ai-novel-writer",

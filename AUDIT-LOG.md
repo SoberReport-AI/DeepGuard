@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 20:04 | deepseek-harness-desktop | 3.0.1 | [f718ac0](https://github.com/ningbainb/deepseek-harness-desktop/commit/f718ac012e80fccd0b3b123e58d780f0f8ed7abc) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
 | 2026-08-24 20:03 | ai-novel-writer | 0.1.0 | [cb767d8](https://github.com/ethanyoq/ai-novel-writer/commit/cb767d89277927ecd2986e70b9f0a9f57c72c9f8) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-08-24 19:54 | mombrane--dsh-subagent-monitor | 0.2.0 | [125278d](https://github.com/mombrane/dsh-subagent-monitor/commit/125278d445e42705354e039a45d1321499d6be32) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#191](https://github.com/SoberReport-AI/DeepGuard/issues/191) |
 | 2026-08-24 19:47 | linenxi-ctrl--dsh-vision | 0.2.6 | [50f6ba0](https://github.com/linenxi-ctrl/dsh-vision/commit/50f6ba065e8cf42c4ecc5a06c4e96dc2d5c69b11) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#190](https://github.com/SoberReport-AI/DeepGuard/issues/190) |
