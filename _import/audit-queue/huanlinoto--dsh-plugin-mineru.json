@@ -1,0 +1,38 @@
+{
+  "id": "huanlinoto--dsh-plugin-mineru",
+  "name": "dsh-plugin-mineru",
+  "repo": "huanlinoto/dsh-plugin-mineru",
+  "url": "https://github.com/huanlinoto/dsh-plugin-mineru",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #4 (catalog star ranking, 30 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 125,
+  "status": "pending",
+  "submitted_at": "2026-08-24T03:07:55.790Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "67abfedd5e3bd63043bac62222f5fbdc3281dae7",
+    "default_branch": "master",
+    "pushed_at": "2026-08-23T09:35:13Z",
+    "stars": 41,
+    "version": "0.2.4",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plugin-mineru"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T03:07:55.790Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
