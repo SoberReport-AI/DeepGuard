@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 14:39 | anionex--dsh-computer-use | 0.1.0 | [387eae9](https://github.com/anionex/dsh-computer-use/commit/387eae931b1852e3c3433e0e004fa460d3da2883) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#155](https://github.com/SoberReport-AI/DeepGuard/issues/155) |
 | 2026-08-24 14:30 | modusensus--dsh-mneme | 0.7.0 | [d8a568b](https://github.com/modusensus/dsh-mneme/commit/d8a568b66a563a3422667369026cf71fa82276d9) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#154](https://github.com/SoberReport-AI/DeepGuard/issues/154) |
 | 2026-08-24 14:19 | omdsh-dev--dsh-toolkit | 0.0.1 | [2113d11](https://github.com/omdsh-dev/dsh-toolkit/commit/2113d11a4e4510720251aa49a800bab917b14330) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#153](https://github.com/SoberReport-AI/DeepGuard/issues/153) |
 | 2026-08-24 14:12 | a179-sanae--dsh-auto-collapse | 0.1.4 | [1c39946](https://github.com/a179-sanae/dsh-auto-collapse/commit/1c39946e530d5a9f07a3941285c0c690f5cdf9f0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#152](https://github.com/SoberReport-AI/DeepGuard/issues/152) |

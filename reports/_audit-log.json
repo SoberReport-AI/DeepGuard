@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T06:39:36.786Z",
+      "plugin_id": "anionex--dsh-computer-use",
+      "name": "dsh-computer-use-anionex",
+      "version": "0.1.0",
+      "commit": "387eae931b1852e3c3433e0e004fa460d3da2883",
+      "repo": "anionex/dsh-computer-use",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/155",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/203",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32697641812",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核确认：身份信息逐字一致；无 findings 无需证据路径核验；全部30条机械命中已逐条裁决（DSH-X10→DG-R2-57已排除、DSH-X08→DG-R3-60共21/22条为源码映射/编译输出/光标图片/样式行已排除、DSH-X03→DG-R3-55共7条为开发期脚本/测试已排除）；manifest 161个文件均在树中，无 .dsh/ 等点目录覆盖缺口；独立漏检快扫无发现（无安装钩子、无eval/child_process运行时代码、无网络外联、无凭据读取、原生助手哈希锁定+源码校验+拒绝系统光标位移原语）；定级无可校准项（全clean）。Sonar的21与22条微小差异系C",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T06:30:18.357Z",
       "plugin_id": "modusensus--dsh-mneme",
       "name": "dsh-mneme",
