@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T00:43:31.943Z",
+      "plugin_id": "dsh-stock-watch",
+      "name": "dsh-stock-watch",
+      "version": "1.0.8",
+      "commit": "0bd76f3f72b647249b2168fc50ae4955c6c86575",
+      "repo": "awu12277/dsh-stock-watch",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/107",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/118",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32677165459",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：身份/版本/commit/subpath 逐字一致；报告 0 findings，各维度 checked_items 描述与源码实测吻合（index.js 数据路由+条件式系统提示、client.js 仅同源 fetch 与 CDN 固定版本懒加载+宿主会话 API、技能文件语义良性、cordis.patch.yml 仅插入插件本体）；static-scan 8 条机械命中全部在 L1 裁决且裁决正确（5×DSH-X03 为 playwright page.$eval 测试脚本、1×DSH-X08 为纯 JSON 股票数据、2×DSH-X10 技能文件内容审查良性）；manifes",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T00:35:08.056Z",
       "plugin_id": "dsh-data-agent",
       "name": "dsh-data-agent",
