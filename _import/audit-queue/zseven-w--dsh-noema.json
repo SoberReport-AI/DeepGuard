@@ -1,0 +1,38 @@
+{
+  "id": "zseven-w--dsh-noema",
+  "name": "dsh-noema",
+  "repo": "zseven-w/dsh-noema",
+  "url": "https://github.com/zseven-w/dsh-noema",
+  "subpath": null,
+  "category_hint": "memory",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #6 (catalog star ranking, 125 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 242,
+  "status": "pending",
+  "submitted_at": "2026-08-24T19:22:04.751Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "9cc3ab1ee00de04bf318be9cf2b102ae668ceeb2",
+    "default_branch": "main",
+    "pushed_at": "2026-08-21T14:50:44Z",
+    "stars": 125,
+    "version": "0.1.0-rc.3",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-noema"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T19:22:04.751Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
