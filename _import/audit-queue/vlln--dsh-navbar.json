@@ -1,0 +1,38 @@
+{
+  "id": "vlln--dsh-navbar",
+  "name": "dsh-navbar",
+  "repo": "vlln/dsh-navbar",
+  "url": "https://github.com/vlln/dsh-navbar",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #4 (catalog star ranking, 32 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 123,
+  "status": "pending",
+  "submitted_at": "2026-08-24T03:07:52.484Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "d89ba74f4e0403462a5e4c4feeec84a3e7a1cca2",
+    "default_branch": "main",
+    "pushed_at": "2026-08-20T22:20:54Z",
+    "stars": 59,
+    "version": "0.4.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-navbar"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T03:07:52.484Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
