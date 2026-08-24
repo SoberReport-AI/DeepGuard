@@ -2,6 +2,45 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T05:14:44.903Z",
+      "plugin_id": "xmanrui--dsh-im",
+      "name": "dsh-im",
+      "version": "2.0.1",
+      "commit": "dea9a8f2d1a3fdbb12a7b2a227ce93d0004257d9",
+      "repo": "xmanrui/dsh-im",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "extended_review",
+      "beacon": "uphold_sonar",
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/143",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/193",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32692104086",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "extended_review",
+          "notes": "身份核验通过（id/version/commit/subpath 逐字一致）。逐条核验：无 findings[]，checked_items/ds_scenarios 引用的大部分关键证据路径均已亲自打开验证为良性（spawnSync dsh 安装 CLI、execFileSync /usr/bin/security 钥匙串读取、spawn dsh web 本机 Harness 自启、唯一 systemPrompt.section 为文件投递说明、唯一工具 dsh_im_return_file 描述良性、cordis.patch.yml 单 insert、Escape 键盘监听、Slack M",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "uphold_sonar",
+          "rationale": "Aegis 的驳回/挂起理由在证据摘录面前不成立。其最具体的指控——lib/client.js:6882 不存在（文件仅 4951 行）——被机械装配的证据直接推翻：摘录显示 lib/client.js 至少延伸到 6897 行，6882 行恰为 `await navigator.clipboard.writeText(SLACK_APP_MANIFEST_YAML);`（SlackCredentialPanel.copyManifest 内），与 Sonar 所述良性剪贴板交互完全一致；文件头证实这是 esbuild bundle 且带 `// plugin-src/client/chann"
+        },
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T05:01:21.379Z",
       "plugin_id": "dhicoc--dsh-reverse-skill",
       "name": "dsh-reverse-skill",

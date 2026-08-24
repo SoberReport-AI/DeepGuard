@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 13:14 | xmanrui--dsh-im | 2.0.1 | [dea9a8f](https://github.com/xmanrui/dsh-im/commit/dea9a8f2d1a3fdbb12a7b2a227ce93d0004257d9) | SoberReport-AI | clean | 0 | extended review | uphold Sonar | pass | merged | [#143](https://github.com/SoberReport-AI/DeepGuard/issues/143) |
 | 2026-08-24 13:01 | dhicoc--dsh-reverse-skill | 1.0.5 | [1bc4d63](https://github.com/dhicoc/dsh-reverse-skill/commit/1bc4d63ee9a5268419170f4c5fb4a4e59e0e815c) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#142](https://github.com/SoberReport-AI/DeepGuard/issues/142) |
 | 2026-08-24 12:45 | dsh-better-sidebar | 0.15.0 | [b7aab48](https://github.com/omdsh-dev/dsh-better-sidebar/commit/b7aab48deb17b7dd92094c84441783fccaf51561) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#3](https://github.com/SoberReport-AI/DeepGuard/issues/3) |
 | 2026-08-24 12:34 | moeblack--dsh-message-edit | 0.2.3 | [b78a167](https://github.com/moeblack/dsh-message-edit/commit/b78a167064ca612f1c400060d2bfc1dc9bc46436) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#130](https://github.com/SoberReport-AI/DeepGuard/issues/130) |
