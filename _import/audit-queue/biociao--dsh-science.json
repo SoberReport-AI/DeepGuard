@@ -1,0 +1,38 @@
+{
+  "id": "biociao--dsh-science",
+  "name": "dsh-science",
+  "repo": "biociao/dsh-science",
+  "url": "https://github.com/biociao/dsh-science",
+  "subpath": null,
+  "category_hint": "memory",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 15 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 180,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:01.227Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "23767ab2f8d7bcf84a0820daa4c6ae79549da000",
+    "default_branch": "main",
+    "pushed_at": "2026-08-18T09:50:28Z",
+    "stars": 26,
+    "version": "0.2.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-science"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:01.227Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
