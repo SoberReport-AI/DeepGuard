@@ -1,0 +1,40 @@
+{
+  "id": "elysia395--dsh-wallpaper-engine",
+  "name": "dsh-wallpaper-engine",
+  "repo": "elysia395/dsh-wallpaper-engine",
+  "url": "https://github.com/elysia395/dsh-wallpaper-engine",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #6 (catalog star ranking, 178 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 240,
+  "status": "pending",
+  "submitted_at": "2026-08-24T19:21:51.875Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "3dbed7121d6c9734ce51b2b3fafcf96d78ea8026",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T15:49:33Z",
+    "stars": 178,
+    "version": "0.6.2",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-wallpaper-engine-elysia395"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T19:21:51.875Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
