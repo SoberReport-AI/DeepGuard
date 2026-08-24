@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T09:35:21.154Z",
+      "plugin_id": "ghost011118--dsh-balance-meter",
+      "name": "dsh-balance-meter",
+      "version": "0.1.0",
+      "commit": "1a277e8eb9ee5ebbf8589e6bbb96bfe9ac282c11",
+      "repo": "ghost011118/dsh-balance-meter",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/176",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/221",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32711596669",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：身份字段逐字一致；findings 为空故无逐条证据需核验，但各 clean 维度均经我亲自读码支撑（Key 仅随余额查询外发、无 eval/子进程、无模型面工具/提示词注入、外联仅官方 DeepSeek 两域名、挂载补丁仅一行插件声明、路由仅 3 个 GET 只读接口、manualLedger 标记 secret+hidden）；机械预扫 6 条命中全部在 audit_scope.limits 中给出带规则 ID 的排除理由且命中位置/内容经我逐一验证属实（source map 含真实 sourcesContent，非混淆；prepare=tsdown 为常规构建钩子；READ",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T09:26:13.331Z",
       "plugin_id": "snowcrescenter-tech--dsh-milestone",
       "name": "dsh-milestone",
