@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T05:33:03.826Z",
+      "plugin_id": "mexiaosqwq--dsh-web-mobile",
+      "name": "dsh-web-mobile",
+      "version": "2.1.1",
+      "commit": "cea163af7d3acfd4da02631caa7394ba8a3079c2",
+      "repo": "mexiaosqwq/dsh-web-mobile",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/147",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/195",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32693518920",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核认可 Sonar 的 clean 结论。逐项核验：身份一致；report findings[] 为空故无 finding 证据项需核验，checked_items 关键断言均经我亲自打开文件验证属实（cordis.patch.yml 仅 insert 无 js 标量；src/index.ts 空 apply；package.json 无 install/prepare 钩子仅 prepack；src/ 与 lib/ 无 eval/child_process/fetch/XHR/WS/base64，网络/子进程仅存在于 dev 脚本 scripts/cdp-probe.mjs；AGENT",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T05:25:25.241Z",
       "plugin_id": "omdsh-dev--dsh-custom-tool",
       "name": "dsh-custom-tool",

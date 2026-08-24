@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 13:33 | mexiaosqwq--dsh-web-mobile | 2.1.1 | [cea163a](https://github.com/mexiaosqwq/dsh-web-mobile/commit/cea163af7d3acfd4da02631caa7394ba8a3079c2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#147](https://github.com/SoberReport-AI/DeepGuard/issues/147) |
 | 2026-08-24 13:25 | omdsh-dev--dsh-custom-tool | 0.1.2 | [7cb9564](https://github.com/omdsh-dev/dsh-custom-tool/commit/7cb95649dca9b380c9a30af96bdbef87a76a2259) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#146](https://github.com/SoberReport-AI/DeepGuard/issues/146) |
 | 2026-08-24 13:24 | hellodigua--dsh-emoji | 0.3.1 | [96b653a](https://github.com/hellodigua/dsh-emoji/commit/96b653a473c978a474dd7d42e86e5b2c79e6dc7c) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#145](https://github.com/SoberReport-AI/DeepGuard/issues/145) |
 | 2026-08-24 13:15 | geml-spec--geml | — | [8b6dc62](https://github.com/geml-spec/geml/commit/8b6dc6241f36435facbf482245c36450898a3486) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#144](https://github.com/SoberReport-AI/DeepGuard/issues/144) |
