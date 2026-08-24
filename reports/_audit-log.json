@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T10:27:52.368Z",
+      "plugin_id": "biociao--dsh-science",
+      "name": "dsh-science",
+      "version": "0.2.0",
+      "commit": "23767ab2f8d7bcf84a0820daa4c6ae79549da000",
+      "repo": "biociao/dsh-science",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/180",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/225",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32716129938",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：Approve。\n\n1. 身份核验通过：plugin.id=biociao--dsh-science, version=0.2.0, commit=23767ab2f8d7bcf84a0820daa4c6ae79549da000 均与任务卡逐字一致；subpath=null（仓库根）。\n2. 报告无 findings（全部 clean），checked_items 声明经逐项与源代码比对验证真实可信：（a）DG-D1 凭据引用均为文档/UI 占位提示，测试脚本隔离复制-清理循环已确认；（b）DG-D2 工具描述/人格文本/11 个技能文件已复核，均为科研工作流说明，无注入措辞；（c）",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T10:18:03.216Z",
       "plugin_id": "ccq1--dsh-side-panel",
       "name": "dsh-side-panel",
