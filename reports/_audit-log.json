@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T10:07:34.211Z",
+      "plugin_id": "fredalxin--dsh-solo-thinking",
+      "name": "dsh-solo-thinking",
+      "version": "0.1.19",
+      "commit": "a77f3bb45ae8557df8a849e03ca0ed0b2d1a9e5d",
+      "repo": "fredalxin/dsh-solo-thinking",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/178",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/223",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32714536862",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过。报告 findings 为空（clean），独立核实：8 个工具 description 均为头脑风暴功能性说明、无注入措辞；systemPrompt context 仅渲染分支拓扑与 Handoff 内容、无恶意指令；无 child_process/eval/network 调用；无凭据读取；无安装生命周期钩子；patch 仅插入插件 ID 与 UI slot、未触及安全配置行；依赖均为 @deepseek-ai/* 官方包 + zod；安装脚本透明公开、SHA-256 校验；14 条机械命中均在 L1 有明确裁决排除理由。无漏检、无定级浮夸、无证据造假。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T09:59:52.576Z",
       "plugin_id": "anacondakc--dsh-stock-market",
       "name": "dsh-stock-market",
