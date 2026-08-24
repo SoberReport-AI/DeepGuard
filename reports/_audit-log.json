@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T08:33:35.711Z",
+      "plugin_id": "laplace-bit--dsh-smooth-stream",
+      "name": "dsh-smooth-stream",
+      "version": "0.3.4",
+      "commit": "3320436a4cf4d842ad89b361093a2ae6d6aa08df",
+      "repo": "laplace-bit/dsh-smooth-stream",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/168",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/215",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32706209513",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 与任务卡一致）。报告 findings 为空、六维全 clean，逐项独立核验：①网络面 src 零命中（fetch/XMLHttpRequest/WebSocket/node:http 均无），repro/bundle.js:919 为 React lazy 报错文案（'curly braces' 含 curl 致 DSH-C05 误匹配）、:2571 为 React 属性名校验 unicode 表，均为打包生成产物，Sonar 裁决属实；②DSH-X03 的 spawn 以固定命令 pnpm + 固定包名 + shell:f",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T08:24:29.836Z",
       "plugin_id": "01virex--dsh-status-rotator",
       "name": "dsh-status-rotator",

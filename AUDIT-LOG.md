@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 16:33 | laplace-bit--dsh-smooth-stream | 0.3.4 | [3320436](https://github.com/laplace-bit/dsh-smooth-stream/commit/3320436a4cf4d842ad89b361093a2ae6d6aa08df) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#168](https://github.com/SoberReport-AI/DeepGuard/issues/168) |
 | 2026-08-24 16:24 | 01virex--dsh-status-rotator | 0.6.6 | [c67fe4c](https://github.com/01virex/dsh-status-rotator/commit/c67fe4c20b6e0eb3c1c0e80900fde505eabdbcdc) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#167](https://github.com/SoberReport-AI/DeepGuard/issues/167) |
 | 2026-08-24 16:16 | shengsheng90--dsh-taskboard | 0.1.3 | [dd5455b](https://github.com/shengsheng90/dsh-taskboard/commit/dd5455bdeec3a86eaf84482ef2dd42d86c7b88aa) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#166](https://github.com/SoberReport-AI/DeepGuard/issues/166) |
 | 2026-08-24 16:06 | bill9109--dsh-web-ui-notify | 0.1.3 | [865d2f6](https://github.com/bill9109/dsh-web-ui-notify/commit/865d2f6fc93f2e0d051d53df772646cb831a43ed) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#165](https://github.com/SoberReport-AI/DeepGuard/issues/165) |
