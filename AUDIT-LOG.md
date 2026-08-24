@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 10:17 | icetomoyo--dsh-workflow | 0.1.2 | [44b83c1](https://github.com/icetomoyo/dsh_workflow/commit/44b83c182aa02d1be8a0803e8446cb495f93cd8f) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#119](https://github.com/SoberReport-AI/DeepGuard/issues/119) |
 | 2026-08-24 08:43 | dsh-stock-watch | 1.0.8 | [0bd76f3](https://github.com/awu12277/dsh-stock-watch/commit/0bd76f3f72b647249b2168fc50ae4955c6c86575) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#107](https://github.com/SoberReport-AI/DeepGuard/issues/107) |
 | 2026-08-24 08:35 | dsh-data-agent | 0.1.1 | [b34f01f](https://github.com/omdsh-dev/dsh-data-agent/commit/b34f01f6ccaa1d3b8eb7aab403a833a45065ddb4) | SoberReport-AI | clean | 0 | extended review | uphold Sonar | pass | merged | [#108](https://github.com/SoberReport-AI/DeepGuard/issues/108) |
 | 2026-08-24 08:23 | dsh-openbiliclaw | 0.3.206 | [b91ff78](https://github.com/whiteguo233/dsh-openbiliclaw/commit/b91ff7850df0722bc6133a6a312fa7b8984196c0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#106](https://github.com/SoberReport-AI/DeepGuard/issues/106) |

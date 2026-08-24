@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T02:17:47.088Z",
+      "plugin_id": "icetomoyo--dsh-workflow",
+      "name": "dsh-workflow",
+      "version": "0.1.2",
+      "commit": "44b83c182aa02d1be8a0803e8446cb495f93cd8f",
+      "repo": "icetomoyo/dsh_workflow",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/119",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/120",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32682050438",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结果：身份信息一致，Sonar 报告无 findings，全部 6 个维度均为 clean。对 10 条机械命中（DSH-X03/DG-R3-55）逐一核验路径和行号，均存在且为良性用途（git 固定参数只读调用/策略静态清单/开发脚本与测试基建），Sonar 在 DG-D3 checked_item[0] 中明确引用规则 ID 并给出排除理由，覆盖完整。Manifest 74 个文件全部存在于树中，无隐藏目录或模型指令文件。代码扫描确认：无凭据读取、无网络外联、无任意代码执行面（execFile 仅以固定参数执行 git，路径经逃逸校验且不经 shell；QuickJS WASM 沙",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T00:43:31.943Z",
       "plugin_id": "dsh-stock-watch",
       "name": "dsh-stock-watch",
