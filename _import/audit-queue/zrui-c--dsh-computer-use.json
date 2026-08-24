@@ -1,0 +1,39 @@
+{
+  "id": "zrui-c--dsh-computer-use",
+  "name": "dsh-computer-use-zrui-c",
+  "repo": "zrui-c/dsh-computer-use",
+  "url": "https://github.com/zrui-c/dsh-computer-use",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 15 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 183,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:12.568Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "0b0a0844018b56a6a8e95aefea6529004b8341c4",
+    "default_branch": "main",
+    "pushed_at": "2026-08-14T17:10:31Z",
+    "stars": 21,
+    "version": "0.3.0",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-computer-use-zrui-c"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:12.568Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
