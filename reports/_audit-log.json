@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T20:13:31.207Z",
+      "plugin_id": "shanliuling--dsh-image-gen",
+      "name": "dsh-image-gen",
+      "version": "0.1.7",
+      "commit": "82480ddb8876f2e7abf9a30bf5113ca645fb88cc",
+      "repo": "shanliuling/dsh-image-gen",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/241",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/249",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32772084489",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核 approve。身份一致；findings 为空，无逐条证据问题；对 DG-D1~D6 全部维度声明亲自读码验证属实（凭据仅经宿主 credentials 服务、无代码执行面、网络出口仅 4 个官方厂商端点、工作区写入含词法+realpath 双重边界校验、image-route 同源+JSON+body 限长）；10 条机械命中全部在 audit_scope.limits 按规则 ID 明确排除，且我逐行在精确行号验证（gallery-view.tsx:152/309/420/528/549、index.tsx:343/474、package.json:60、ci.yml:1、SK",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T20:06:42.607Z",
       "plugin_id": "elysia395--dsh-wallpaper-engine",
       "name": "dsh-wallpaper-engine",

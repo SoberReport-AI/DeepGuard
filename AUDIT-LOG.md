@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-25 04:13 | shanliuling--dsh-image-gen | 0.1.7 | [82480dd](https://github.com/shanliuling/dsh-image-gen/commit/82480ddb8876f2e7abf9a30bf5113ca645fb88cc) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#241](https://github.com/SoberReport-AI/DeepGuard/issues/241) |
 | 2026-08-25 04:06 | elysia395--dsh-wallpaper-engine | 0.6.2 | [3dbed71](https://github.com/elysia395/dsh-wallpaper-engine/commit/3dbed7121d6c9734ce51b2b3fafcf96d78ea8026) | SoberReport-AI | risk | 2 | approve | — | — | failed, flagged for extended review | [#240](https://github.com/SoberReport-AI/DeepGuard/issues/240) |
 | 2026-08-25 03:53 | howmp--dsh-pentest | 0.1.0-rc.25 | [9cc3a10](https://github.com/howmp/dsh-pentest/commit/9cc3a10c3701965bf355b1eee9af5971a0d92cc6) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#239](https://github.com/SoberReport-AI/DeepGuard/issues/239) |
 | 2026-08-25 03:42 | zseven-w--dsh-ios | 0.1.0-rc.5 | [9e3b600](https://github.com/zseven-w/dsh-ios/commit/9e3b600ba556baf64bbe74ebf39fa1b2ce30545c) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#238](https://github.com/SoberReport-AI/DeepGuard/issues/238) |
