@@ -1,0 +1,38 @@
+{
+  "id": "dietcokewithsugar--dsh-user-experience",
+  "name": "dsh-user-experience",
+  "repo": "dietcokewithsugar/dsh-user-experience",
+  "url": "https://github.com/dietcokewithsugar/dsh-user-experience",
+  "subpath": null,
+  "category_hint": "sandbox",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 19 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 163,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:50:52.425Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "bba21e6a634844b448b34aae4e7c8af1d8bbd9d4",
+    "default_branch": "main",
+    "pushed_at": "2026-08-17T09:12:17Z",
+    "stars": 19,
+    "version": "0.4.2",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-user-experience"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:50:52.426Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
