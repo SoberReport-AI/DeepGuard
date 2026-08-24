@@ -3,7 +3,7 @@
   "name": "dsh-mneme",
   "repo": "modusensus/dsh-mneme",
   "url": "https://github.com/modusensus/dsh-mneme",
-  "subpath": null,
+  "subpath": "dsh-mneme",
   "category_hint": "memory",
   "capabilities_hint": [],
   "note": "dsh-* E2E batch intake #5 (catalog star ranking, 21 stars). Whitelist batch submission.",

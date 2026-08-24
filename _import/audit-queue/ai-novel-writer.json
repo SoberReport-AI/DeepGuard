@@ -3,13 +3,13 @@
   "name": "dsh-ai-novel-writer",
   "repo": "ethanyoq/ai-novel-writer",
   "url": "https://github.com/ethanyoq/ai-novel-writer",
-  "subpath": null,
+  "subpath": "plugins/dsh-ai-novel-writer",
   "category_hint": "memory",
   "capabilities_hint": [],
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 372 stars).",
   "source": "issue",
   "issue": 77,
-  "status": "audited",
+  "status": "pending",
   "submitted_at": "2026-08-23T09:54:21.002Z",
   "prescreen": {
     "ok": true,
@@ -42,7 +42,12 @@
       "at": "2026-08-23T11:58:01.245Z",
       "action": "audited",
       "reason": null
+    },
+    {
+      "at": "2026-08-24T06:10:40Z",
+      "action": "manual-reenqueue",
+      "reason": "metadata correction: the audited report recorded version 0.8.5 from the repo-root package.json (the writer app); the actual plugin is @ethanyoq/dsh-ai-novel-writer@0.1.0 at plugins/dsh-ai-novel-writer (catalog subpath). Batch-intake omitted the Monorepo subpath line. Re-audit with corrected scope; the wrong-scope 0.8.5 report is removed in the same commit so the market current-version pointer (semver-desc) cannot keep it on top."
     }
   ],
-  "attempts": 1
+  "attempts": 0
 }

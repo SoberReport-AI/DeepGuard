@@ -1,6 +1,6 @@
 {
   "id": "deepseek-harness-desktop",
-  "name": "dsh-desktop-base",
+  "name": "deepseek-harness-desktop",
   "repo": "ningbainb/deepseek-harness-desktop",
   "url": "https://github.com/ningbainb/deepseek-harness-desktop",
   "subpath": null,
@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 69 stars).",
   "source": "issue",
   "issue": 80,
-  "status": "audited",
+  "status": "pending",
   "submitted_at": "2026-08-23T09:54:25.680Z",
   "prescreen": {
     "ok": true,
@@ -72,7 +72,12 @@
       "at": "2026-08-23T18:43:03.765Z",
       "action": "audited",
       "reason": null
+    },
+    {
+      "at": "2026-08-24T06:10:40Z",
+      "action": "manual-reenqueue",
+      "reason": "metadata correction: catalog subpath packages/dsh-desktop-base verified NONEXISTENT (repo restructured — now apps/dsh-desktop + packages/* bundled plugins; it is the desktop app monorepo, not a plugin repo). Full-repo scope is the only correct scope and stays; queue name corrected dsh-desktop-base -> deepseek-harness-desktop (the audited 3.0.1 report is versioned from the repo root, which matches apps/dsh-desktop@3.0.1). Re-audit regenerates the report in place at the same version+commit path with the corrected plugin name."
     }
   ],
-  "attempts": 1
+  "attempts": 0
 }

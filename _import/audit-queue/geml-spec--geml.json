@@ -3,7 +3,7 @@
   "name": "dsh-plugin-geml-spec",
   "repo": "geml-spec/geml",
   "url": "https://github.com/geml-spec/geml",
-  "subpath": null,
+  "subpath": "integrations/dsh-plugin",
   "category_hint": "tools",
   "capabilities_hint": [],
   "note": "dsh-* E2E batch intake #5 (catalog star ranking, 24 stars). Whitelist batch submission.",
