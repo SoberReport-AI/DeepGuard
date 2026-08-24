@@ -1,0 +1,40 @@
+{
+  "id": "mombrane--dsh-subagent-monitor",
+  "name": "dsh-subagent-monitor",
+  "repo": "mombrane/dsh-subagent-monitor",
+  "url": "https://github.com/mombrane/dsh-subagent-monitor",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 12 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 191,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:52:43.489Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "125278d445e42705354e039a45d1321499d6be32",
+    "default_branch": "master",
+    "pushed_at": "2026-08-17T06:17:58Z",
+    "stars": 18,
+    "version": "0.2.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-subagent-monitor"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:52:43.490Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
