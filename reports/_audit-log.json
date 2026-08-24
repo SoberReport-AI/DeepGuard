@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T10:55:52.535Z",
+      "plugin_id": "zrui-c--dsh-computer-use",
+      "name": "dsh-computer-use-zrui-c",
+      "version": "0.3.0",
+      "commit": "0b0a0844018b56a6a8e95aefea6529004b8341c4",
+      "repo": "zrui-c/dsh-computer-use",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/183",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/228",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32718525630",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：approve。(1) 身份四项与任务卡逐字一致。(2) FND-001 全部证据路径逐一打开核实存在且行号精确，内容真实支撑描述，MEDIUM/medium 定级与静态证据相称（无插件自身恶意证据，危害需同用户进程前提，属设计缺陷非误报）。(3) 12 条机械命中全部在报告中有裁决（DSH-X07×3→DG-D3/DG-S08、DSH-P01→DG-S01、DSH-X05×3→DG-D4、DSH-X02→DG-S08、DSH-X03×3→DG-D3、DSH-T02→DG-D2），无覆盖缺口。(4) 维度一致性：仅 DG-D6 risk 挂 1 finding，其余 clean/",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T10:46:28.955Z",
       "plugin_id": "fishsb--dsh-prompt-enhancer",
       "name": "dsh-prompt-enhancer",
