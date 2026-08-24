@@ -2,6 +2,45 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T21:13:00.288Z",
+      "plugin_id": "zseven-w--dsh-crew",
+      "name": "dsh-crew",
+      "version": "0.1.0-rc.6",
+      "commit": "de3babcefd4e261ae003385262694d6ae02904b2",
+      "repo": "zseven-w/dsh-crew",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "extended_review",
+      "beacon": "uphold_sonar",
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/246",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/253",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32776171569",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "extended_review",
+          "notes": "身份、安装命令、src 层全部证据（子进程/外联/凭据/模型面/客户端/配置/CI）经独立复核均成立且良性，未发现漏检的明显恶意点。但 lib/server.mjs 证据链断裂：机械命中 14470/14943 行不存在、bundle 不完整、Sonar 对打包产物的描述（内联 MCP SDK+zod、DG-R3-55 命中来自第三方库）无法在当前树复现。根因不明（可能是静态扫描基于不同文件版本、树被截断、或 Sonar 未实核 lib/server.mjs 而依赖命中列表），按 fail-closed 不能 approve；又因不确定严重度与根因，选 needs_human 而非直接 rej",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "uphold_sonar",
+          "rationale": "Aegis 的驳回（needs_human）建立在三条 missed_concerns 上，而这三条在机械装配的证据摘录面前全部不成立。其一，Aegis 声称 lib/server.mjs:14470 与 14943 不存在、文件仅 5951 行——但证据摘录恰以 path:line ±15 的形式给出了这两处原文：14470 行是 `import { spawn } from \"node:child_process\";`（注释标明 src/cli-workers.mjs），14943 行是 `const { execSync } = require2(\"node:child_process\""
+        },
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T20:49:54.809Z",
       "plugin_id": "wssfk12138--dsh-damage-pulse",
       "name": "dsh-damage-pulse",
