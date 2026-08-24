@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 19:13 | furongjun-1999--dsh-memory | 0.2.8 | [5ba5f97](https://github.com/furongjun-1999/dsh-memory/commit/5ba5f975669b0191f1811d434a996e0f5593d7cc) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#186](https://github.com/SoberReport-AI/DeepGuard/issues/186) |
 | 2026-08-24 19:11 | omdsh-dev--dsh-deep-research | 0.1.0 | [c0b329e](https://github.com/omdsh-dev/dsh-deep-research/commit/c0b329e02cd0195f810a7c3608cb58701a7fe0f1) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#185](https://github.com/SoberReport-AI/DeepGuard/issues/185) |
 | 2026-08-24 19:05 | juanwang-buaa--dsh-full-remote | 0.3.7 | [83d3957](https://github.com/juanwang-buaa/dsh-full-remote/commit/83d3957c9f2f1b61a51621af0ff4d82707155eb1) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#184](https://github.com/SoberReport-AI/DeepGuard/issues/184) |
 | 2026-08-24 18:55 | zrui-c--dsh-computer-use | 0.3.0 | [0b0a084](https://github.com/zrui-c/dsh-computer-use/commit/0b0a0844018b56a6a8e95aefea6529004b8341c4) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#183](https://github.com/SoberReport-AI/DeepGuard/issues/183) |
