@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T06:48:44.620Z",
+      "plugin_id": "anweat--dsh-web-search-pro",
+      "name": "dsh-web-search-pro",
+      "version": "0.1.9",
+      "commit": "2efaba33bfabb7574f9acfea31bc51addaf9a6dc",
+      "repo": "anweat/dsh-web-search-pro",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/156",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/204",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32698263965",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（plugin.id/name/version/commit/subpath 与任务卡一致）。报告无 findings，各 clean 维度的 checked_items 均有实质内容且我逐条打开验证：resolveKey（router.ts:109-120）、credentials.set 用户触发（form.ts:380/save 流）、systemPrompt 无注入措辞（src/index.ts:116-119 与 lib/index.js:96 一致）、11 个工具描述全部功能化（src/tools.ts:51-618）、SSRF 防护（safe-http.ts）、文档命",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T06:39:36.786Z",
       "plugin_id": "anionex--dsh-computer-use",
       "name": "dsh-computer-use-anionex",
