@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T03:41:29.127Z",
+      "plugin_id": "vlln--dsh-navbar",
+      "name": "dsh-navbar",
+      "version": "0.4.0",
+      "commit": "d89ba74f4e0403462a5e4c4feeec84a3e7a1cca2",
+      "repo": "vlln/dsh-navbar",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/123",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/134",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32687009901",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。插件 vlln--dsh-navbar@0.4.0 为纯 UI 插件：Node half 空 apply，浏览器端 half 仅做 DOM 操作（导航条创建、悬停预览、点击跳转、滚轮切换），localStorage 仅存取精选 pin 状态（按会话 id 键存储 messageId/text/ts/turn），不涉及网络外联、eval/动态执行、凭据读取、剪贴板、键盘监听、模型工具注册或系统提示注入。package.json 存在模板占位符（+process.argv[1]+）仅影响元数据展示，无安全影响。README 推荐分支安装属文档习惯建议，Sonar 已如实标注。无漏检、",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T03:35:26.677Z",
       "plugin_id": "shaobeichen--dsh-pocket",
       "name": "dsh-pocket",
