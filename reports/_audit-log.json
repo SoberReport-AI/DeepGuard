@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T05:01:21.379Z",
+      "plugin_id": "dhicoc--dsh-reverse-skill",
+      "name": "dsh-reverse-skill",
+      "version": "1.0.5",
+      "commit": "1bc4d63ee9a5268419170f4c5fb4a4e59e0e815c",
+      "repo": "dhicoc/dsh-reverse-skill",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/142",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/192",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32691434766",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。① 身份逐字一致；② 报告无 findings，逐条核验 checked_items 关键断言全部成立——lib/index.js 运行时代码纯数据驱动（仅读包内 SKILL.md 并注册 provider），无 eval/child_process/网络/凭据读取；cordis.patch.yml 仅 insert 声明；package.json 无安装钩子；CI 为标准 npm 发布流水线；③ 机械规则面预扫 51 条 + 全量 245 条命中所属规则族（X07/X10/C05/X03/C01/X02/X08/X09/X05）在报告均有明确规则 ID 引用裁决，D",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T04:45:56.585Z",
       "plugin_id": "dsh-better-sidebar",
       "name": "dsh-better-sidebar",
