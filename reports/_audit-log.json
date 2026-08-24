@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T03:18:27.416Z",
+      "plugin_id": "noob-stupid--dsh-plugin-hub",
+      "name": "dsh-plugin-hub",
+      "version": "0.3.19",
+      "commit": "3370884f71b2e282a13a33d54325b20617296695",
+      "repo": "noob-stupid/dsh-plugin-hub",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/121",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/131",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32685415206",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：1) 身份/版本/commit/subpath 逐字一致；2) 报告 findings 为空，故无逐条证据待验，但对各维度 checked_items 的关键断言已在源码逐项核实（0600 凭据文件、仅平台 API 发送 token、execFile 参数数组、无 eval、cordis.patch.yml 纯 insert、AI 兜底在 ai-consent 授权后执行且提示词含安全约束、回环+Host+Origin 三层校验、宿主保护名单、无安装钩子、出站域名清单准确、当前代码无 --insecure）；3) 机械命中 57 条全部落在 DSH-X07/C05/X05/X08",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T02:17:47.088Z",
       "plugin_id": "icetomoyo--dsh-workflow",
       "name": "dsh-workflow",
