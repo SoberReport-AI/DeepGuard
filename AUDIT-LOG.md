@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-24 15:22 | dingyi222666--dsh-focus-chat | 0.1.11 | [8127d69](https://github.com/dingyi222666/dsh-focus-chat/commit/8127d69c2b657dc4fd20f4628b8775d8933d633e) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#160](https://github.com/SoberReport-AI/DeepGuard/issues/160) |
 | 2026-08-24 15:14 | lsz-asd--dsh-plugin-session-delete | 0.3.1 | [352510e](https://github.com/lsz-asd/dsh-plugin-session-delete/commit/352510e552983dcfcb993cf9124181c55e2070f5) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#159](https://github.com/SoberReport-AI/DeepGuard/issues/159) |
 | 2026-08-24 15:06 | lzszq--dsh-scholar | 0.1.0 | [76bfe96](https://github.com/lzszq/dsh-scholar/commit/76bfe960e9107a992dae506c3ebc298a99f57760) | SoberReport-AI | clean | 0 | extended review | escalated | — | failed, flagged for extended review | [#158](https://github.com/SoberReport-AI/DeepGuard/issues/158) |
 | 2026-08-24 14:55 | william-jin-cmu--dsh-stickers | 0.1.0 | [1703f09](https://github.com/william-jin-cmu/dsh-stickers/commit/1703f09915db1058b6031b31e52fd404560e0a78) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#157](https://github.com/SoberReport-AI/DeepGuard/issues/157) |

@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T07:22:29.899Z",
+      "plugin_id": "dingyi222666--dsh-focus-chat",
+      "name": "dsh-focus-chat",
+      "version": "0.1.11",
+      "commit": "8127d69c2b657dc4fd20f4628b8775d8933d633e",
+      "repo": "dingyi222666/dsh-focus-chat",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/160",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/207",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32700646141",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份四项逐字一致；findings 为空故无逐条证据可造假，报告引用的关键证据路径（apply.ts、cordis.patch.yml、package.json:47、ImageLightbox.tsx、MessageFeedbackActions.tsx）全部实际打开验证，内容支撑其 clean 论断；3 条机械预扫命中（DG-R3-54、DG-R3-57×2）均在 limits 中以规则 ID 明确裁决；manifest 78 文件与树一一对应，无点目录/越界路径，覆盖无缺口；独立漏检快扫（外联/执行/凭据/注入/混淆）无命中，反馈与文件打开仅经宿主标准接口；供应链无 git",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T07:14:02.137Z",
       "plugin_id": "lsz-asd--dsh-plugin-session-delete",
       "name": "dsh-plugin-session-delete",
