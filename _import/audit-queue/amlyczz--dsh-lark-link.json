@@ -1,0 +1,38 @@
+{
+  "id": "amlyczz--dsh-lark-link",
+  "name": "dsh-lark-link",
+  "repo": "amlyczz/dsh-lark-link",
+  "url": "https://github.com/amlyczz/dsh-lark-link",
+  "subpath": null,
+  "category_hint": "bridge",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #5 (catalog star ranking, 17 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 170,
+  "status": "pending",
+  "submitted_at": "2026-08-24T04:51:19.712Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "d77fab8341b43a648178ab1d4fd64370cb2b1a68",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T02:01:31Z",
+    "stars": 27,
+    "version": "0.5.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-lark-link"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T04:51:19.712Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
