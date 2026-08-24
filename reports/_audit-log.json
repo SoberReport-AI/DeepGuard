@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-24T08:53:57.027Z",
+      "plugin_id": "acidgr--dsh-web-lan-access",
+      "name": "dsh-web-lan-access",
+      "version": "1.2.1",
+      "commit": "8eeb1d0cb79a6e199bde94f16f1e2f2b5a818f01",
+      "repo": "acidgr/dsh-web-lan-access",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/171",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/217",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32707998926",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。身份（id/version/commit/subpath）与任务卡逐字一致；FND-001 证据全部实开验证成立且定级相称；4 条机械命中（DSH-P01×2、DSH-C05×2）均已按规则 ID 明确裁决；manifest 8 个文件全部对账存在、无点目录或越界路径、二进制截图仅清单校验已如实披露；独立漏检快扫（install 钩子/child_process/eval/外联/凭据读取/注入模式）未发现 Sonar 遗漏的高危点；动态层无产物故各面 na 且报告如实标注。未发现证据造假、定级浮夸、误报或结论推导违规，准予 approve。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-24T08:45:44.397Z",
       "plugin_id": "amlyczz--dsh-lark-link",
       "name": "dsh-lark-link",
