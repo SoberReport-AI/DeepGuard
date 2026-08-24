@@ -1,0 +1,38 @@
+{
+  "id": "yyyyukari--dsh-plugin-workshop",
+  "name": "dsh-plugin-workshop",
+  "repo": "yyyyukari/dsh-plugin-workshop",
+  "url": "https://github.com/yyyyukari/dsh-plugin-workshop",
+  "subpath": null,
+  "category_hint": "tools",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #4 (catalog star ranking, 26 stars). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 129,
+  "status": "pending",
+  "submitted_at": "2026-08-24T03:08:02.323Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "f53a7e466948a6c5636f2079b2382976a1eea4c8",
+    "default_branch": "master",
+    "pushed_at": "2026-08-17T14:53:20Z",
+    "stars": 25,
+    "version": "1.6.2",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plugin-workshop"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-24T03:08:02.323Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
