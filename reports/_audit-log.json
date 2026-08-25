@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T19:19:06.268Z",
+      "plugin_id": "shaobeichen--dsh-pocket",
+      "name": "dsh-pocket",
+      "version": "1.14.4",
+      "commit": "db7763d923295d039668870eeca066c538e89e73",
+      "repo": "shaobeichen/dsh-pocket",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/124",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/269",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32888097933",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "【复核结论】通过。\n\n1. 身份核验 ✓：plugin.id、version、commit、subpath 均与任务卡逐字一致。\n\n2. 证据核验：报告 findings[] 为空，无证据路径需核验。\n\n3. 维度一致性 ✓：DG-D1~DG-D6 六个维度均 clean、findings=0，checked_items 覆盖各维度应有检查项，无空头对勾。\n\n4. 机械命中全覆盖 ✓：10 条机械规则预扫命中（DSH-X03/DSH-X05/DSH-X07/DSH-X08 → DG-R3-55/57/59/60）全部在 Sonar 报告的 checked_items 及 audit_scope",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T19:10:27.812Z",
       "plugin_id": "dsh-web-ui",
       "name": "dsh-web-ui",
