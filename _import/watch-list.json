@@ -1,8 +1,29 @@
 {
-  "description": "Version tracking list and audit policy config. agent/scripts/watch-updates.mjs polls periodically: projects with releases are audited by release_mode (all=audit every historical and new release individually; new=only new releases from the current latest onward, do not backfill history, default; periodic=best-effort, audit only the latest release at detection time, skip intermediates). Projects without releases → diff audit on HEAD commit change (24h cooldown). Metadata is read from _import/audit-queue/<id>.json; only id and policy are listed here. Initially seeded with star top20.",
-  "description_zh": "版本追踪清单与审计策略配置。agent/scripts/watch-updates.mjs 定时检测：有 release 的项目按 release_mode 策略审计（all=全部历史+新增 release 逐个全量审计；new=仅当前最新起的新增 release 全量审计，历史不补，默认；periodic=尽力而为，只审检测时刻最新 release，中间跳过不补）；无 release 的项目 → HEAD commit 变化（24h 冷却）→ diff 审计。元数据从 _import/audit-queue/<id>.json 读取，此处只列 id 与策略。初始为 star top20。",
+  "description": "Version tracking list and audit policy config. agent/scripts/watch-updates.mjs polls periodically: projects with releases are audited by release_mode (periodic=best-effort, audit only the latest release at detection time, skip intermediates). Projects without releases are NOT tracked (release-only list). Only the 20 highest-star currently audited plugins are enrolled (repo-deduped, one entry per repo). Metadata is read from _import/audit-queue/<id>.json; only id and policy are listed here.",
+  "description_zh": "版本追踪清单与审计策略配置。agent/scripts/watch-updates.mjs 定时检测：有 release 的项目按 release_mode 策略审计（periodic=尽力而为，只审检测时刻最新 release，中间跳过不补）；无 release 的项目不纳入追踪（release-only 列表）。仅纳入当前已上架插件中 star 排名前 20（按仓库去重，同仓只留一条）。元数据从 _import/audit-queue/<id>.json 读取，此处只列 id 与策略。",
   "created_at": "2026-08-16T00:00:00Z",
-  "default_release_mode": "new",
+  "default_release_mode": "periodic",
   "release_mode": {},
-  "ids": []
+  "ids": [
+    "dsh-web-ui",
+    "dsh-better-sidebar",
+    "dsh-tui",
+    "dsh-market",
+    "dsh-deep-whale",
+    "aegis",
+    "dsh-context",
+    "dsh-agent-teams",
+    "dsh-vision-router",
+    "xmanrui--dsh-im",
+    "dsh-vision-toolkit",
+    "shaobeichen--dsh-pocket",
+    "treg",
+    "ai-novel-writer",
+    "dsh-browser-lum1104",
+    "dsh-genui",
+    "dsh-tianshu-tui",
+    "dsh-mnemon",
+    "deepseek-harness-desktop",
+    "dsh-cost-meter"
+  ]
 }
