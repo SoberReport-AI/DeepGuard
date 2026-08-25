@@ -4,6 +4,8 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-26 00:56 | aegis | 2.8.8 | [1dc0faa](https://github.com/ganyuanran/aegis/commit/1dc0faa633039983e58b82893e3268fced6ac4d3) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
+| 2026-08-25 08:51 | v1ki--dsh-plugin-subscriptions | 0.5.2 | [08b9b7c](https://github.com/v1ki/dsh-plugin-subscriptions/commit/08b9b7cc30e72e8eedd559ac01af9fc576157453) | SoberReport-AI | clean | 0 | needs_human | uphold Aegis | — | merged | [#237](https://github.com/SoberReport-AI/DeepGuard/issues/237) |
 | 2026-08-25 05:35 | zseven-w--dsh-noema | 0.1.0-rc.3 | [9cc3ab1](https://github.com/zseven-w/dsh-noema/commit/9cc3ab1ee00de04bf318be9cf2b102ae668ceeb2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#242](https://github.com/SoberReport-AI/DeepGuard/issues/242) |
 | 2026-08-25 05:25 | elysia395--dsh-wallpaper-engine | 0.6.2 | [3dbed71](https://github.com/elysia395/dsh-wallpaper-engine/commit/3dbed7121d6c9734ce51b2b3fafcf96d78ea8026) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#240](https://github.com/SoberReport-AI/DeepGuard/issues/240) |
 | 2026-08-25 05:13 | zseven-w--dsh-crew | 0.1.0-rc.6 | [de3babc](https://github.com/zseven-w/dsh-crew/commit/de3babcefd4e261ae003385262694d6ae02904b2) | SoberReport-AI | clean | 0 | extended review | uphold Sonar | pass | merged | [#246](https://github.com/SoberReport-AI/DeepGuard/issues/246) |
