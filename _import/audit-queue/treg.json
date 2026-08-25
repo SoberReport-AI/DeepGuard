@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 57,
-  "status": "auditing",
+  "status": "not-dsh-plugin",
   "submitted_at": "2026-08-22T14:21:30.638Z",
   "prescreen": {
     "ok": true,
@@ -67,6 +67,11 @@
       "at": "2026-08-25T22:19:15.681Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-25T22:20:26.040Z",
+      "action": "not-dsh-plugin",
+      "reason": "该快照是一个独立的工具注册表服务（treg / tools-registry），包含 FastAPI 后端、CLI 工具和本地代理，没有 dsh 生态的任何集成点。pyproject.toml 中没有 dsh 字段声明，依赖中不含 @dsh/* 系列 SDK 包，代码中无 dsh 接入面（插件注册、清单声明、宿主 API 调用），源码树中不存在 dsh.plugin.json 或 cordis.patch.yml。.agents/skills 目录下的 SKILL.md 文件是给 Claude Code 等 AI Coding Agent 使用的技能定义，与 dsh 插件体系无关。"
     }
   ],
   "attempts": 1,

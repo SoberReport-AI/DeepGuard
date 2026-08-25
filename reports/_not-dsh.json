@@ -2,6 +2,22 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T22:20:26.040Z",
+      "plugin_id": "treg",
+      "repo": "superdesigndev/treg",
+      "version": "0.12.0",
+      "commit": "bbabb5ab753b78953915f207066cb2567831a47f",
+      "reason": "该快照是一个独立的工具注册表服务（treg / tools-registry），包含 FastAPI 后端、CLI 工具和本地代理，没有 dsh 生态的任何集成点。pyproject.toml 中没有 dsh 字段声明，依赖中不含 @dsh/* 系列 SDK 包，代码中无 dsh 接入面（插件注册、清单声明、宿主 API 调用），源码树中不存在 dsh.plugin.json 或 cordis.patch.yml。.agents/skills 目录下的 SKILL.md 文件是给 Claude Code 等 AI Coding Agent 使用的技能定义，与 dsh 插件体系无关。",
+      "evidence": [
+        "pyproject.toml 中无 dsh 字段（仅含 tools-registry 项目元数据）",
+        "依赖仅为 httpx / questionary（服务器附加：fastapi/uvicorn/sqlmodel 等），无 @dsh/* 系列依赖",
+        "grep 搜索 'dsh.plugin|cordis|dsh\\.bundle|dsh\\.client|@dsh/|deepseek-harness|plugin add' 无匹配结果",
+        "README.md 描述为独立工具注册表，无 dsh 接入面",
+        "项目为 Python FastAPI 应用 + CLI + 本地代理，不属 dsh 插件生态"
+      ],
+      "run_url": null
+    },
+    {
       "ts": "2026-08-25T19:21:11.117Z",
       "plugin_id": "treg",
       "repo": "superdesigndev/treg",
