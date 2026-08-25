@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-26 02:35 | dsh-mnemon | 0.3.1 | [692de09](https://github.com/omdsh-dev/dsh-mnemon/commit/692de09e2321cad2d89cdb497050f9a2efee73ce) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
 | 2026-08-26 02:24 | dsh-market | 1.29.2 | [9bb879f](https://github.com/dsh-market/dsh-market/commit/9bb879fa1f956e913d9077b669cbba04fdaa1bae) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#6](https://github.com/SoberReport-AI/DeepGuard/issues/6) |
 | 2026-08-26 02:15 | dsh-genui | 0.8.6 | [2187fa4](https://github.com/omdsh-dev/dsh-genui/commit/2187fa48dfb05126850d3a1516be910718afdc79) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#48](https://github.com/SoberReport-AI/DeepGuard/issues/48) |
 | 2026-08-26 02:07 | dsh-deep-whale | 0.0.1 | [fb0c771](https://github.com/small-tailqwq/dsh-deep-whale/commit/fb0c771b5748760a91aec88c085f5b23ca90fad1) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#92](https://github.com/SoberReport-AI/DeepGuard/issues/92) |

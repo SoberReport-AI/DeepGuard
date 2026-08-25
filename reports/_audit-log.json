@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T18:35:00.021Z",
+      "plugin_id": "dsh-mnemon",
+      "name": "dsh-mnemon",
+      "version": "0.3.1",
+      "commit": "692de09e2321cad2d89cdb497050f9a2efee73ce",
+      "repo": "omdsh-dev/dsh-mnemon",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/81",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/266",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32883667772",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。身份核验通过（id/version/commit/subpath 全部一致）。报告 findings 为空，维度全部 clean，与源码实际行为一致。22 处证据路径全部逐行验证，文件存在且内容支撑描述。33 条机械命中全部在 L1 层以规则 ID 明确裁决（DSH-X07/X08/L02/C05/X03/C01/X05/L03/L07 对应 DG-R3-59/60/R4-55/R4-53/R3-55/R1-51/R3-57/R2-58/R3-64），无一遗漏。独立漏检快扫未发现注入模式、隐藏外联、凭据外发、安装钩子或混淆载荷。工具描述为记忆功能说明，无注入措辞。ag",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T18:24:54.360Z",
       "plugin_id": "dsh-market",
       "name": "dsh-market",
