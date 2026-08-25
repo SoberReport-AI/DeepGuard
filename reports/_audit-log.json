@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T17:13:11.799Z",
+      "plugin_id": "deepseek-harness-desktop",
+      "name": "deepseek-harness-desktop",
+      "version": "3.0.9",
+      "commit": "3a4c9ea7e815d5ca52248e5f77ed9369b96e1422",
+      "repo": "ningbainb/deepseek-harness-desktop",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/80",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/257",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32875622211",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "Independent review confirms Sonar's clean verdict is well-supported by available evidence. Zero findings across all dimensions. Key evidence claims (legacy-credential-compat constraints, dsh-liangshen pre-step guard semantics, repair-model-availability local-only read, skin-center curl doc comments,",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T17:02:45.654Z",
       "plugin_id": "ai-novel-writer",
       "name": "dsh-ai-novel-writer",

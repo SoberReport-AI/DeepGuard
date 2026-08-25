@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-26 01:13 | deepseek-harness-desktop | 3.0.9 | [3a4c9ea](https://github.com/ningbainb/deepseek-harness-desktop/commit/3a4c9ea7e815d5ca52248e5f77ed9369b96e1422) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
 | 2026-08-26 01:02 | ai-novel-writer | 0.8.5 | [cb767d8](https://github.com/ethanyoq/ai-novel-writer/commit/cb767d89277927ecd2986e70b9f0a9f57c72c9f8) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-08-26 00:56 | aegis | 2.8.8 | [1dc0faa](https://github.com/ganyuanran/aegis/commit/1dc0faa633039983e58b82893e3268fced6ac4d3) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
 | 2026-08-25 08:51 | v1ki--dsh-plugin-subscriptions | 0.5.2 | [08b9b7c](https://github.com/v1ki/dsh-plugin-subscriptions/commit/08b9b7cc30e72e8eedd559ac01af9fc576157453) | SoberReport-AI | clean | 0 | needs_human | uphold Aegis | — | merged | [#237](https://github.com/SoberReport-AI/DeepGuard/issues/237) |
