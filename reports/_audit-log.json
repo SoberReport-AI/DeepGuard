@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T18:24:54.360Z",
+      "plugin_id": "dsh-market",
+      "name": "dsh-market",
+      "version": "1.29.2",
+      "commit": "9bb879fa1f956e913d9077b669cbba04fdaa1bae",
+      "repo": "dsh-market/dsh-market",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/6",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/265",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32882795508",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：通过（approve）。\n\n1. 身份核验：plugin.id/version/commit/subpath 均与任务卡逐字一致。\n2. 证据核验：报告无 findings（findings: []），无需要验证的证据路径。\n3. 维度一致性：6 个维度均为 clean，0 findings，checked_items 数量合理。\n4. 动态证据：l4-sandbox.json 不存在，动态层全部 na，Sonar 正确标注。\n5. 机械命中覆盖：static-scan-hits.json 中 8 个规则族（DSH-X07/C05/X05/X08/X01/X02/X03/P01）共约",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T18:15:49.061Z",
       "plugin_id": "dsh-genui",
       "name": "dsh-genui",
