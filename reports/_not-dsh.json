@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "ts": "2026-08-25T19:21:11.117Z",
+      "plugin_id": "treg",
+      "repo": "superdesigndev/treg",
+      "version": "0.12.0",
+      "commit": "bbabb5ab753b78953915f207066cb2567831a47f",
+      "reason": "该快照是独立的产品级服务（treg：凭据注入代理的工具注册表，Python FastAPI 服务器 + CLI + npm 启动器），与 dsh 生态无任何集成点：树内不存在 dsh 插件声明（dsh.plugin.json / dsh.bundle / dsh.client / dsh.service）、无 @dsh/* 宿主 SDK 依赖、无 cordis/deepseek-harness 接入代码，唯一的 package.json（packages/npm）仅为 npm 启动器且不含 dsh 字段；全树大小写不敏感搜索 dsh 仅命中 \"handshake\" 单词子串。.agents/skills 与 AGENTS.md 属通用 AI 编码代理指令文件，不构成 dsh 插件接入。",
+      "evidence": [
+        "pyproject.toml:2-4 项目名为 tools-registry，描述为独立远程注册表/凭据注入代理服务，无 dsh 字段",
+        "packages/npm/package.json:1-34 npm 启动器 package.json，无 dsh 字段、无 @dsh/* 依赖",
+        "全树 grep 'dsh\\.plugin|dsh\\.bundle|dsh\\.client|dsh\\.service|@dsh/|cordis|deepseek-harness' → 零命中",
+        "全树大小写不敏感 grep 'dsh' 仅命中 handshake 单词子串（如 docs/context/interface/api.md:210、src/treg/cli.py:287），无真实 dsh 宿主接入",
+        "src/treg 下 grep 'dsh' 无真实命中（仅 handshake 子串）",
+        "树内无 dsh.plugin.json、无 ctx.* 宿主 API 调用、无 registerAdapter/registerProvider 类 dsh 接入面"
+      ],
+      "run_url": null
+    }
+  ]
+}
