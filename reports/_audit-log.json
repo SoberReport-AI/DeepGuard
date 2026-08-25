@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T17:49:19.290Z",
+      "plugin_id": "dsh-context",
+      "name": "dsh-context",
+      "version": "0.32.0",
+      "commit": "8531298303ff0014bd732802d69a98a1397ebea7",
+      "repo": "bowenliang123/dsh-context",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/33",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/261",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32879425102",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（plugin.id/version/commit 与任务卡一致）；findings[] 为空，无需逐条证据核验；6 个维度全部 clean，与报告结论一致；15 条机械规则命中全部在 audit_scope.limits 中逐条裁决（含规则 ID 映射），无覆盖缺口；独立快扫未发现 child_process/eval/凭据读取/异常外联/注入风险；唯二网络请求为 registry.npmjs.org 版本检查（良性，1h 缓存、静默降级）；所有键盘监听仅用于 Escape 关闭弹窗/灯箱，不记录按键；无 install 钩子、无 git 依赖、无混淆载荷；补丁仅插入自身条目，不",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T17:41:22.321Z",
       "plugin_id": "dsh-browser-lum1104",
       "name": "dsh-browser-lum1104",
