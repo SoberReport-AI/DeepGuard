@@ -1,51 +1,56 @@
 {
-  "id": "v1ki--dsh-plugin-subscriptions",
-  "name": "dsh-plugin-subscriptions",
-  "repo": "v1ki/dsh-plugin-subscriptions",
-  "url": "https://github.com/v1ki/dsh-plugin-subscriptions",
-  "subpath": null,
-  "category_hint": "model",
-  "capabilities_hint": [],
-  "note": "dsh-* E2E batch intake #6 (catalog star ranking, 264 stars). Whitelist batch submission.",
-  "source": "issue",
-  "issue": 237,
-  "status": "needs-human",
-  "submitted_at": "2026-08-24T19:21:35.615Z",
-  "prescreen": {
-    "ok": true,
-    "commit": "08b9b7cc30e72e8eedd559ac01af9fc576157453",
-    "default_branch": "main",
-    "pushed_at": "2026-08-24T11:16:31Z",
-    "stars": 264,
-    "version": "0.5.2",
-    "dsh_kind": [
-      "bundle",
-      "client"
-    ],
-    "install_hooks": [
-      "prepare"
-    ],
-    "dup": {
-      "in": "catalog",
-      "id": "dsh-plugin-subscriptions"
-    },
-    "warnings": []
-  },
-  "history": [
-    {
-      "at": "2026-08-24T19:21:35.615Z",
-      "action": "prescreen-pass"
-    },
-    {
-      "at": "2026-08-24T19:21:48.325Z",
-      "action": "dispatched",
-      "reason": "audit-dispatch → agent-audit"
-    },
-    {
-      "at": "2026-08-24T19:30:24.465Z",
-      "action": "needs-human",
-      "reason": "review-verdict: review.verdict=needs_human, Beacon ruling=uphold_aegis (not approved, not admitted); translation-integrity: report-zh.json (Sonar zh draft) missing — translate stage did not deliver; cannot admit a monolingual report under the v3 contract"
-    }
+ "id": "v1ki--dsh-plugin-subscriptions",
+ "name": "dsh-plugin-subscriptions",
+ "repo": "v1ki/dsh-plugin-subscriptions",
+ "url": "https://github.com/v1ki/dsh-plugin-subscriptions",
+ "subpath": null,
+ "category_hint": "model",
+ "capabilities_hint": [],
+ "note": "dsh-* E2E batch intake #6 (catalog star ranking, 264 stars). Whitelist batch submission.",
+ "source": "issue",
+ "issue": 237,
+ "status": "audited",
+ "submitted_at": "2026-08-24T19:21:35.615Z",
+ "prescreen": {
+  "ok": true,
+  "commit": "08b9b7cc30e72e8eedd559ac01af9fc576157453",
+  "default_branch": "main",
+  "pushed_at": "2026-08-24T11:16:31Z",
+  "stars": 264,
+  "version": "0.5.2",
+  "dsh_kind": [
+   "bundle",
+   "client"
   ],
-  "attempts": 1
+  "install_hooks": [
+   "prepare"
+  ],
+  "dup": {
+   "in": "catalog",
+   "id": "dsh-plugin-subscriptions"
+  },
+  "warnings": []
+ },
+ "history": [
+  {
+   "at": "2026-08-24T19:21:35.615Z",
+   "action": "prescreen-pass"
+  },
+  {
+   "at": "2026-08-24T19:21:48.325Z",
+   "action": "dispatched",
+   "reason": "audit-dispatch → agent-audit"
+  },
+  {
+   "at": "2026-08-24T19:30:24.465Z",
+   "action": "needs-human",
+   "reason": "review-verdict: review.verdict=needs_human, Beacon ruling=uphold_aegis (not approved, not admitted); translation-integrity: report-zh.json (Sonar zh draft) missing — translate stage did not deliver; cannot admit a monolingual report under the v3 contract"
+  },
+  {
+   "at": "2026-08-25T00:51:18.000Z",
+   "action": "audited",
+   "reason": "owner override: factual-correction release (first precedent) — Aegis/Beacon confirmed the clean conclusion stands, but DG-D6/DG-S10 wording was falsifiable (temporary loopback OAuth callback server at src/auth/oauth-flow.ts:118/:123) and DG-S16 omitted the benign 5-min Claude sync timer (src/index.ts:638); wording corrected, timer disclosed, en translations completed, validate-report passed; report published via manual release path"
+  }
+ ],
+ "attempts": 1
 }
