@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-26 01:21 | dsh-agent-teams | 0.1.13 | [912aae5](https://github.com/nanmicoder/dsh-agent-teams/commit/912aae5225d3d85fa841a1b0c8a5c77021876c25) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#30](https://github.com/SoberReport-AI/DeepGuard/issues/30) |
 | 2026-08-26 01:13 | deepseek-harness-desktop | 3.0.9 | [3a4c9ea](https://github.com/ningbainb/deepseek-harness-desktop/commit/3a4c9ea7e815d5ca52248e5f77ed9369b96e1422) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
 | 2026-08-26 01:02 | ai-novel-writer | 0.8.5 | [cb767d8](https://github.com/ethanyoq/ai-novel-writer/commit/cb767d89277927ecd2986e70b9f0a9f57c72c9f8) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-08-26 00:56 | aegis | 2.8.8 | [1dc0faa](https://github.com/ganyuanran/aegis/commit/1dc0faa633039983e58b82893e3268fced6ac4d3) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |

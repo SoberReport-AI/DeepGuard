@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T17:21:54.397Z",
+      "plugin_id": "dsh-agent-teams",
+      "name": "dsh-agent-teams",
+      "version": "0.1.13",
+      "commit": "912aae5225d3d85fa841a1b0c8a5c77021876c25",
+      "repo": "nanmicoder/dsh-agent-teams",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/30",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/258",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32876658727",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit 与任务卡逐字一致，40 位小写 hex）。报告为 clean、零 finding，独立复核关键支撑证据全部成立：10 个工具描述为正常协作协议（src/tools.ts）、pre-step 监听仅扫 source.kind==='user' 且激活消息来源标注为插件自身（src/command.ts:130-147）、systemPrompt 使用策略段正常（src/index.ts:134）、补丁仅一行 insert 两项配置无表达式（cordis.patch.yml）、无安装钩子且 scripts/.dsh/.github 不在分发 fil",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T17:13:11.799Z",
       "plugin_id": "deepseek-harness-desktop",
       "name": "deepseek-harness-desktop",
