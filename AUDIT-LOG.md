@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-26 03:42 | ai-novel-writer | 0.1.0 | [036f3af](https://github.com/ethanyoq/ai-novel-writer/commit/036f3af2b8c856e735e8c62d85c95b967fed0beb) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-08-26 03:32 | xmanrui--dsh-im | 3.0.0 | [40b5a46](https://github.com/xmanrui/dsh-im/commit/40b5a46516b44e30fa90e084400a8c3d578214e9) | SoberReport-AI | clean | 0 | extended review | uphold Sonar | pass | merged | [#143](https://github.com/SoberReport-AI/DeepGuard/issues/143) |
 | 2026-08-26 03:21 | treg | 0.12.0 | [603540f](https://github.com/superdesigndev/treg/commit/603540f653994080d4f507a9a3564e1017c28eef) | SoberReport-AI | — | — | — | — | — | not a dsh plugin | [#57](https://github.com/SoberReport-AI/DeepGuard/issues/57) |
 | 2026-08-26 03:19 | shaobeichen--dsh-pocket | 1.14.4 | [db7763d](https://github.com/shaobeichen/dsh-pocket/commit/db7763d923295d039668870eeca066c538e89e73) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#124](https://github.com/SoberReport-AI/DeepGuard/issues/124) |

@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T19:42:46.236Z",
+      "plugin_id": "ai-novel-writer",
+      "name": "dsh-ai-novel-writer",
+      "version": "0.1.0",
+      "commit": "036f3af2b8c856e735e8c62d85c95b967fed0beb",
+      "repo": "ethanyoq/ai-novel-writer",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/77",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/271",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32890209468",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份四元组全部与任务卡逐字一致，报告 plugin 元数据可信。findings[] 为空，故无逐条证据路径需核验；我对报告 checked_items 各主张独立验证全部成立：src/ 无外联（fetch/http/ws/curl 零命中）、无 eval/new Function/child_process、无凭据读取、无 base64/混淆；package.json 无 preinstall/install/postinstall 钩子，files 白名单不含 scripts//tests/；cordis.patch.yml 仅插入插件入口，未触碰 sandbox/approval/per",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T19:32:24.018Z",
       "plugin_id": "xmanrui--dsh-im",
       "name": "dsh-im",
