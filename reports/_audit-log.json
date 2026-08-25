@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T18:57:52.327Z",
+      "plugin_id": "dsh-vision-router",
+      "name": "dsh-vision-router",
+      "version": "2.0.0",
+      "commit": "7ec4c403a1b41236944258bdf2544f27a47baff6",
+      "repo": "ysr666/dsh-vision-router",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/8",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/267",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32885970677",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份逐字一致；报告为 clean 且无 findings，逐条证据核验不适用（无 FND 可查）；维度一致性 OK——clean 维度均有实质性 checked_items、无空头对勾，risk 维度无 findings；机械预扫 51 条命中均能在报告 checked_items 中找到对应规则 ID 的排除理由（DSH-X03/X05/X07/X08/C01/L01/L02/L03 分类裁决），无覆盖缺口；manifest 全部路径可在树中打开，无未披露缺口（预算限制已如实披露且复核已独立补齐关键区域）；定级/误报检查无对象；独立漏检快扫（install 钩子、child_process/",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T18:48:29.126Z",
       "plugin_id": "dsh-tui",
       "name": "dsh-TUI",
