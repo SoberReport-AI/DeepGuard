@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T19:52:27.152Z",
+      "plugin_id": "dsh-mnemon",
+      "name": "dsh-mnemon",
+      "version": "0.3.2",
+      "commit": "65bdb93d7b2deec762a72c5b1a70224f14a8738d",
+      "repo": "omdsh-dev/dsh-mnemon",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/81",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/272",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32891192820",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：身份/版本/commit 逐字一致；报告无 findings，全部 checked_items/ds_scenarios 的关键证据路径均实际打开验证成立（pre-step 先 next() 再追加 source.kind=plugin 的引导消息；turn-stopping 仅 scheduleIdleReview 无 steer/jobs；src/process.ts spawn shell:false 输出有界；3 处 registerAdapter 均为插件内部 MemoryCatalog；MnemonDialog keydown 仅 Esc/Tab、MnemonView",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T19:42:46.236Z",
       "plugin_id": "ai-novel-writer",
       "name": "dsh-ai-novel-writer",
