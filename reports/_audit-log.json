@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T17:57:14.920Z",
+      "plugin_id": "dsh-cost-meter",
+      "name": "dsh-cost-meter",
+      "version": "1.5.50",
+      "commit": "d211dfa76e1b990afad6a80f571458f111fe4d62",
+      "repo": "han-1413141/dsh-cost-meter",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/68",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/262",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32880182774",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。身份核验通过；FND-001 五项证据路径全部亲自打开验证，内容与描述吻合，LOW 定级与证据相称；4 条机械命中全部在报告中有明确排除理由；维度一致性完整（risk 维度有 1 finding，clean 维度无 finding）；无 l4-sandbox 动态产物，Sonar 已如实披露；独立快速扫描未发现漏检（无 eval/child_process 在运行时 lib、无硬编码密钥、无隐蔽外联、凭据只发官方端点或用户显式配置端点）；安装命令形态正确；blacklist 无建议。未发现证据造假、定级浮夸、误报或漏检。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T17:49:19.290Z",
       "plugin_id": "dsh-context",
       "name": "dsh-context",
