@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T18:07:39.875Z",
+      "plugin_id": "dsh-deep-whale",
+      "name": "dsh-deep-whale",
+      "version": "0.0.1",
+      "commit": "fb0c771b5748760a91aec88c085f5b23ca90fad1",
+      "repo": "small-tailqwq/dsh-deep-whale",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/92",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/263",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32880992348",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 逐字一致）。报告无 findings，其 checked_items/ds_scenarios/limits 全部证据引用已逐一实际打开验证：客户端代码纯 DOM 装饰（无工具注册/提示词注入/网络/子进程/凭据读取）；cordis.patch.yml 仅 insert 客户端入口；package.json 无安装钩子、仅 build/test 脚本、peer 依赖仅官方 cordis；titlebar-brand.ts:8 的 http 为 SVG 命名空间；maid-atelier.module.css:532 的 curl",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T17:57:14.920Z",
       "plugin_id": "dsh-cost-meter",
       "name": "dsh-cost-meter",

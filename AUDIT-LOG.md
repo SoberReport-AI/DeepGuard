@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-26 02:07 | dsh-deep-whale | 0.0.1 | [fb0c771](https://github.com/small-tailqwq/dsh-deep-whale/commit/fb0c771b5748760a91aec88c085f5b23ca90fad1) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#92](https://github.com/SoberReport-AI/DeepGuard/issues/92) |
 | 2026-08-26 01:57 | dsh-cost-meter | 1.5.50 | [d211dfa](https://github.com/han-1413141/dsh-cost-meter/commit/d211dfa76e1b990afad6a80f571458f111fe4d62) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
 | 2026-08-26 01:49 | dsh-context | 0.32.0 | [8531298](https://github.com/bowenliang123/dsh-context/commit/8531298303ff0014bd732802d69a98a1397ebea7) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#33](https://github.com/SoberReport-AI/DeepGuard/issues/33) |
 | 2026-08-26 01:41 | dsh-browser-lum1104 | 0.1.1 | [d2b9d6d](https://github.com/lum1104/dsh-browser/commit/d2b9d6dab606eaef56503f4365f4ec94b764c4ce) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#78](https://github.com/SoberReport-AI/DeepGuard/issues/78) |
