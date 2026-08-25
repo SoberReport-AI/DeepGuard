@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-26 01:31 | dsh-better-sidebar | 0.16.1 | [f9153df](https://github.com/omdsh-dev/dsh-better-sidebar/commit/f9153dfc1ce47cf43445c1b351ee3ae47b4ad9f1) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#3](https://github.com/SoberReport-AI/DeepGuard/issues/3) |
 | 2026-08-26 01:21 | dsh-agent-teams | 0.1.13 | [912aae5](https://github.com/nanmicoder/dsh-agent-teams/commit/912aae5225d3d85fa841a1b0c8a5c77021876c25) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#30](https://github.com/SoberReport-AI/DeepGuard/issues/30) |
 | 2026-08-26 01:13 | deepseek-harness-desktop | 3.0.9 | [3a4c9ea](https://github.com/ningbainb/deepseek-harness-desktop/commit/3a4c9ea7e815d5ca52248e5f77ed9369b96e1422) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
 | 2026-08-26 01:02 | ai-novel-writer | 0.8.5 | [cb767d8](https://github.com/ethanyoq/ai-novel-writer/commit/cb767d89277927ecd2986e70b9f0a9f57c72c9f8) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |

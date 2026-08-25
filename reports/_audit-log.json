@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T17:31:18.680Z",
+      "plugin_id": "dsh-better-sidebar",
+      "name": "dsh-better-sidebar",
+      "version": "0.16.1",
+      "commit": "f9153dfc1ce47cf43445c1b351ee3ae47b4ad9f1",
+      "repo": "omdsh-dev/dsh-better-sidebar",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/3",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/259",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32877507588",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核（Aegis）：①身份逐字一致；②报告 0 findings，但全部 checked_items 的实质声明已逐一打开源码验证成立（cordis.patch.yml:49 防双挂载 js 表达式、index.ts:507-576 browser.probe 只读 HEAD/GET 头探测限 http/https 非回环 8s 超时、tools.ts 8 终端工具 + agent-opens.ts sidebar_open、git.ts 固定 argv、open-external.ts argv 数组、ime-guard/md-toc/mermaid/UploadOverlay 键盘监听",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T17:21:54.397Z",
       "plugin_id": "dsh-agent-teams",
       "name": "dsh-agent-teams",
