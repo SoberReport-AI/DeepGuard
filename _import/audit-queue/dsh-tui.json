@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 4,
-  "status": "auditing",
+  "status": "rejected",
   "submitted_at": "2026-08-22T09:10:31.216Z",
   "prescreen": {
     "ok": true,
@@ -49,6 +49,16 @@
       "at": "2026-08-25T18:47:59.189Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-25T18:48:14.939Z",
+      "action": "gate-pass",
+      "reason": null
+    },
+    {
+      "at": "2026-08-25T18:48:16.470Z",
+      "action": "gate-reject",
+      "reason": "repository contains a link entry (symlink/hardlink): \"CLAUDE.md\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit"
     }
   ],
   "attempts": 1,
@@ -58,5 +68,42 @@
     "commit": "b166c2ecc03ab61ec5aee16fe69cdeaf0e2a03a9",
     "release_tag": "v0.9.2",
     "release_mode": "periodic"
+  },
+  "gate": {
+    "at": "2026-08-25T18:48:14.939Z",
+    "submitter": "SoberReport-AI",
+    "whitelisted": true,
+    "association": null,
+    "checks": [
+      {
+        "check": "whitelist",
+        "ok": true,
+        "note": "whitelisted (Sim public-repo owner: runs triggered by dispatcher/cron fall back to repository_owner for identity verification at the gate, so the sim/formal public-repo owner must be whitelisted or all submissions are rejected), skipping identity and account-age checks"
+      },
+      {
+        "check": "identity",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "account-age",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "blacklist",
+        "ok": true,
+        "note": "no hit"
+      },
+      {
+        "check": "duplicate",
+        "ok": true,
+        "note": "no existing report for dsh-tui@0.8.8#b166c2ec"
+      }
+    ],
+    "decision": "reject",
+    "reasons": [
+      "repository contains a link entry (symlink/hardlink): \"CLAUDE.md\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit"
+    ]
   }
 }
