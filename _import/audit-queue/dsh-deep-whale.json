@@ -9,7 +9,7 @@
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #5). Monorepo subpath: `maid-atelier`.",
   "source": "watch-update",
   "issue": 92,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-23T16:08:31.357Z",
   "prescreen": {
     "ok": true,
@@ -48,9 +48,14 @@
       "at": "2026-08-25T16:03:59.221Z",
       "action": "watch-update",
       "reason": "release v0.1.0 full audit (mode=periodic)"
+    },
+    {
+      "at": "2026-08-25T17:58:00.207Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 0,
+  "attempts": 1,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-08-25T16:03:59.221Z",
