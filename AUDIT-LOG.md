@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-26 03:09 | dsh-vision-toolkit | 0.1.39 | [c0a9e86](https://github.com/anionex/dsh-vision-toolkit/commit/c0a9e8667bf03bed760160b6ac5abdcdb468d15e) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#7](https://github.com/SoberReport-AI/DeepGuard/issues/7) |
 | 2026-08-26 02:57 | dsh-vision-router | 2.0.0 | [7ec4c40](https://github.com/ysr666/dsh-vision-router/commit/7ec4c403a1b41236944258bdf2544f27a47baff6) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#8](https://github.com/SoberReport-AI/DeepGuard/issues/8) |
 | 2026-08-26 02:48 | dsh-tui | 0.8.8 | [f4e302b](https://github.com/ccch1mneyyy/dsh-tui/commit/f4e302b764afa71596025713b859cbbffcd52a9f) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#4](https://github.com/SoberReport-AI/DeepGuard/issues/4) |
 | 2026-08-26 02:47 | dsh-tianshu-tui | 0.1.2-rc.17 | [38c5b53](https://github.com/huiliyi37/dsh-tianshu-tui/commit/38c5b536e4062277f6ea84db3e1a35e601b7ff56) | SoberReport-AI | clean | 0 | extended review | escalated | — | failed, flagged for extended review | [#93](https://github.com/SoberReport-AI/DeepGuard/issues/93) |
