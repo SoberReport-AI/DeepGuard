@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).\n- Monorepo subpath: `packages/dsh-web-ui-all`",
   "source": "watch-update",
   "issue": 2,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-22T09:09:36.075Z",
   "prescreen": {
     "ok": true,
@@ -56,6 +56,11 @@
       "at": "2026-08-25T19:10:49.510Z",
       "action": "requeued",
       "reason": "orphaned dispatch: no terminal write within 30 min of dispatch (run died or was cancelled)"
+    },
+    {
+      "at": "2026-08-25T20:02:56.743Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
   "mode": "release-full",
@@ -65,5 +70,5 @@
     "release_tag": "v0.3.4",
     "release_mode": "periodic"
   },
-  "attempts": 1
+  "attempts": 2
 }
