@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T18:15:49.061Z",
+      "plugin_id": "dsh-genui",
+      "name": "dsh-genui",
+      "version": "0.8.6",
+      "commit": "2187fa48dfb05126850d3a1516be910718afdc79",
+      "repo": "omdsh-dev/dsh-genui",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/48",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/264",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32881994080",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核通过。独立核验结论：\n1. 身份信息逐字一致 ✓\n2. 报告无 finding，已逐条核验 checked_items 证据：系统提示词段落含秘密禁令（src/plugin/index.ts:137）、SKILL.md 为 UI 教学文本无注入措辞、工具描述良性、child_process 仅限开发脚本、CI 流水线为常规 CI、three.js/mermaid.js 为真实第三方库、剪贴板为复制组件功能、mermaid-safe.ts 含 SVG 消毒检查、guard.ts 含 safeHref/SAFE_COLOR_RE 等安全边界 ✓\n3. 所有 16 条机械规则命中均已裁决（各维度",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T18:07:39.875Z",
       "plugin_id": "dsh-deep-whale",
       "name": "dsh-deep-whale",
