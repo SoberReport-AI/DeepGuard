@@ -7,9 +7,9 @@
   "category_hint": "memory",
   "capabilities_hint": [],
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 66 stars).",
-  "source": "issue",
+  "source": "watch-update",
   "issue": 81,
-  "status": "audited",
+  "status": "pending",
   "submitted_at": "2026-08-23T09:54:24.556Z",
   "prescreen": {
     "ok": true,
@@ -43,7 +43,19 @@
       "at": "2026-08-23T12:13:04.836Z",
       "action": "audited",
       "reason": null
+    },
+    {
+      "at": "2026-08-25T16:03:59.221Z",
+      "action": "watch-update",
+      "reason": "release v0.3.1 full audit (mode=periodic)"
     }
   ],
-  "attempts": 1
+  "attempts": 0,
+  "mode": "release-full",
+  "watch": {
+    "detected_at": "2026-08-25T16:03:59.221Z",
+    "commit": "692de09e2321cad2d89cdb497050f9a2efee73ce",
+    "release_tag": "v0.3.1",
+    "release_mode": "periodic"
+  }
 }

@@ -7,9 +7,9 @@
   "category_hint": null,
   "capabilities_hint": [],
   "note": "dsh-* E2E batch intake #4 (catalog star ranking, 31 stars). Whitelist batch submission.",
-  "source": "issue",
+  "source": "watch-update",
   "issue": 124,
-  "status": "audited",
+  "status": "pending",
   "submitted_at": "2026-08-24T03:07:52.149Z",
   "prescreen": {
     "ok": true,
@@ -43,7 +43,19 @@
       "at": "2026-08-24T03:35:08.185Z",
       "action": "audited",
       "reason": null
+    },
+    {
+      "at": "2026-08-25T16:03:59.221Z",
+      "action": "watch-update",
+      "reason": "release v1.14.4 full audit (mode=periodic)"
     }
   ],
-  "attempts": 1
+  "attempts": 0,
+  "mode": "release-full",
+  "watch": {
+    "detected_at": "2026-08-25T16:03:59.221Z",
+    "commit": "db7763d923295d039668870eeca066c538e89e73",
+    "release_tag": "v1.14.4",
+    "release_mode": "periodic"
+  }
 }

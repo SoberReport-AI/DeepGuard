@@ -7,9 +7,9 @@
   "category_hint": "ui",
   "capabilities_hint": [],
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #14). Top-starred dsh plugin (catalog star ranking).",
-  "source": "issue",
+  "source": "watch-update",
   "issue": 93,
-  "status": "audited",
+  "status": "pending",
   "submitted_at": "2026-08-23T16:08:32.847Z",
   "prescreen": {
     "ok": true,
@@ -47,7 +47,19 @@
       "at": "2026-08-23T16:39:47.944Z",
       "action": "audited",
       "reason": null
+    },
+    {
+      "at": "2026-08-25T16:03:59.221Z",
+      "action": "watch-update",
+      "reason": "release v0.1.2-rc.17 full audit (mode=periodic)"
     }
   ],
-  "attempts": 1
+  "attempts": 0,
+  "mode": "release-full",
+  "watch": {
+    "detected_at": "2026-08-25T16:03:59.221Z",
+    "commit": "38c5b536e4062277f6ea84db3e1a35e601b7ff56",
+    "release_tag": "v0.1.2-rc.17",
+    "release_mode": "periodic"
+  }
 }

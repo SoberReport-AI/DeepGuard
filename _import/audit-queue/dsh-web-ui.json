@@ -7,9 +7,9 @@
   "category_hint": "ui",
   "capabilities_hint": [],
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).\n- Monorepo subpath: `packages/dsh-web-ui-all`",
-  "source": "issue",
+  "source": "watch-update",
   "issue": 2,
-  "status": "audited",
+  "status": "pending",
   "submitted_at": "2026-08-22T09:09:36.075Z",
   "prescreen": {
     "ok": true,
@@ -41,6 +41,19 @@
     {
       "at": "2026-08-22T10:18:45.054Z",
       "action": "version-repair: prescreen read the monorepo root manifest at intake (0.1.1); corrected to the subpath manifest value 0.2.8 (the commit lock is unchanged)"
+    },
+    {
+      "at": "2026-08-25T16:03:59.221Z",
+      "action": "watch-update",
+      "reason": "release v0.3.4 full audit (mode=periodic)"
     }
-  ]
+  ],
+  "mode": "release-full",
+  "watch": {
+    "detected_at": "2026-08-25T16:03:59.221Z",
+    "commit": "83bc8e843ec109bba34faf8f831ab306ef69fb94",
+    "release_tag": "v0.3.4",
+    "release_mode": "periodic"
+  },
+  "attempts": 0
 }

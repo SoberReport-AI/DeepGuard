@@ -7,9 +7,9 @@
   "category_hint": "ui",
   "capabilities_hint": [],
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 69 stars).",
-  "source": "issue",
+  "source": "watch-update",
   "issue": 80,
-  "status": "audited",
+  "status": "pending",
   "submitted_at": "2026-08-23T09:54:25.680Z",
   "prescreen": {
     "ok": true,
@@ -87,9 +87,14 @@
       "at": "2026-08-24T12:04:27.783Z",
       "action": "gate-reject",
       "reason": "already-audited: report exists for deepseek-harness-desktop@3.0.1#f718ac01 — re-auditing the same version+commit is not meaningful; bump the version or push new commits, then re-submit"
+    },
+    {
+      "at": "2026-08-25T16:03:59.221Z",
+      "action": "watch-update",
+      "reason": "release desktop-v3.0.9 full audit (mode=periodic)"
     }
   ],
-  "attempts": 1,
+  "attempts": 0,
   "gate": {
     "at": "2026-08-24T12:04:27.783Z",
     "submitter": "SoberReport-AI",
@@ -126,5 +131,12 @@
     "reasons": [
       "already-audited: report exists for deepseek-harness-desktop@3.0.1#f718ac01 — re-auditing the same version+commit is not meaningful; bump the version or push new commits, then re-submit"
     ]
+  },
+  "mode": "release-full",
+  "watch": {
+    "detected_at": "2026-08-25T16:03:59.221Z",
+    "commit": "3a4c9ea7e815d5ca52248e5f77ed9369b96e1422",
+    "release_tag": "desktop-v3.0.9",
+    "release_mode": "periodic"
   }
 }

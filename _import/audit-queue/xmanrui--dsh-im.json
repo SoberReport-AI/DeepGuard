@@ -7,9 +7,9 @@
   "category_hint": "bridge",
   "capabilities_hint": [],
   "note": "dsh-* E2E batch intake #5 (catalog star ranking, 25 stars). Whitelist batch submission.",
-  "source": "issue",
+  "source": "watch-update",
   "issue": 143,
-  "status": "audited",
+  "status": "pending",
   "submitted_at": "2026-08-24T04:49:24.647Z",
   "prescreen": {
     "ok": true,
@@ -43,7 +43,19 @@
       "at": "2026-08-24T05:14:25.181Z",
       "action": "audited",
       "reason": null
+    },
+    {
+      "at": "2026-08-25T16:03:59.221Z",
+      "action": "watch-update",
+      "reason": "release v3.0.0 full audit (mode=periodic)"
     }
   ],
-  "attempts": 1
+  "attempts": 0,
+  "mode": "release-full",
+  "watch": {
+    "detected_at": "2026-08-25T16:03:59.221Z",
+    "commit": "40b5a46516b44e30fa90e084400a8c3d578214e9",
+    "release_tag": "v3.0.0",
+    "release_mode": "periodic"
+  }
 }
