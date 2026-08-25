@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 57,
-  "status": "not-dsh-plugin",
+  "status": "pending",
   "submitted_at": "2026-08-22T14:21:30.638Z",
   "prescreen": {
     "ok": true,
@@ -57,12 +57,17 @@
       "at": "2026-08-25T19:21:11.117Z",
       "action": "not-dsh-plugin",
       "reason": "该快照是独立的产品级服务（treg：凭据注入代理的工具注册表，Python FastAPI 服务器 + CLI + npm 启动器），与 dsh 生态无任何集成点：树内不存在 dsh 插件声明（dsh.plugin.json / dsh.bundle / dsh.client / dsh.service）、无 @dsh/* 宿主 SDK 依赖、无 cordis/deepseek-harness 接入代码，唯一的 package.json（packages/npm）仅为 npm 启动器且不含 dsh 字段；全树大小写不敏感搜索 dsh 仅命中 \"handshake\" 单词子串。.agents/skills 与 AGENTS.md 属通用 AI 编码代理指令文件，不构成 dsh 插件接入。"
+    },
+    {
+      "at": "2026-08-25T21:47:57.206Z",
+      "action": "watch-update",
+      "reason": "release meta-consent-notice-evidence full audit (mode=periodic)"
     }
   ],
-  "attempts": 1,
+  "attempts": 0,
   "mode": "release-full",
   "watch": {
-    "detected_at": "2026-08-25T16:03:59.221Z",
+    "detected_at": "2026-08-25T21:47:57.206Z",
     "commit": "bbabb5ab753b78953915f207066cb2567831a47f",
     "release_tag": "meta-consent-notice-evidence",
     "release_mode": "periodic"
