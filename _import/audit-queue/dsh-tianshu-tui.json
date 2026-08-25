@@ -9,7 +9,7 @@
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #14). Top-starred dsh plugin (catalog star ranking).",
   "source": "watch-update",
   "issue": 93,
-  "status": "auditing",
+  "status": "needs-human",
   "submitted_at": "2026-08-23T16:08:32.847Z",
   "prescreen": {
     "ok": true,
@@ -57,6 +57,11 @@
       "at": "2026-08-25T18:35:28.450Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-25T18:47:05.268Z",
+      "action": "needs-human",
+      "reason": "review-verdict: review.verdict=needs_human, Beacon ruling=escalate (not approved, not admitted); translation-integrity: report-zh.json (Sonar zh draft) missing — translate stage did not deliver; cannot admit a monolingual report under the v3 contract"
     }
   ],
   "attempts": 1,
