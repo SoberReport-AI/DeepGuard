@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T22:18:42.362Z",
+      "plugin_id": "shaobeichen--dsh-pocket",
+      "name": "dsh-pocket",
+      "version": "1.14.5",
+      "commit": "13e52db3ece072a17ee76fcd5125cebd66c809eb",
+      "repo": "shaobeichen/dsh-pocket",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/124",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/274",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32904885237",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：身份核验通过（plugin.id/version/commit/subpath 与任务卡一致）；无 findings 需要逐条验证；10 条机械命中全部在 audit_scope.limits 中明确裁决（5 处 child_process 调用参数固定，2 处键盘监听为 Escape 关闭抽屉，2 处转义文本为中文注释/测试数据 Unicode 转义，1 处 CI 工作流为常规 npm 发布）；manifest 43 个文件全部在树中可定位；安装命令格式正确、commit 完整 40 位、owner/repo 匹配；漏检快扫未发现明显恶意行为（无 eval/注入/凭据窃取/隐藏",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T20:03:29.863Z",
       "plugin_id": "dsh-web-ui",
       "name": "dsh-web-ui",

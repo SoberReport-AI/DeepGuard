@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-26 06:18 | shaobeichen--dsh-pocket | 1.14.5 | [13e52db](https://github.com/shaobeichen/dsh-pocket/commit/13e52db3ece072a17ee76fcd5125cebd66c809eb) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#124](https://github.com/SoberReport-AI/DeepGuard/issues/124) |
 | 2026-08-26 04:03 | dsh-web-ui | 0.2.8 | [f91a264](https://github.com/zhu1090093659/dsh-web-ui/commit/f91a2641cee74f97457741c06a12a2c91c97fef5) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#2](https://github.com/SoberReport-AI/DeepGuard/issues/2) |
 | 2026-08-26 04:02 | dsh-vision-router | 2.0.1 | [39c8f2b](https://github.com/ysr666/dsh-vision-router/commit/39c8f2b2d69aa398418fd6c8ab40b691a92a1a3d) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#8](https://github.com/SoberReport-AI/DeepGuard/issues/8) |
 | 2026-08-26 03:52 | dsh-mnemon | 0.3.2 | [65bdb93](https://github.com/omdsh-dev/dsh-mnemon/commit/65bdb93d7b2deec762a72c5b1a70224f14a8738d) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
