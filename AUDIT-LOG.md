@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-26 04:02 | dsh-vision-router | 2.0.1 | [39c8f2b](https://github.com/ysr666/dsh-vision-router/commit/39c8f2b2d69aa398418fd6c8ab40b691a92a1a3d) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#8](https://github.com/SoberReport-AI/DeepGuard/issues/8) |
 | 2026-08-26 03:52 | dsh-mnemon | 0.3.2 | [65bdb93](https://github.com/omdsh-dev/dsh-mnemon/commit/65bdb93d7b2deec762a72c5b1a70224f14a8738d) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
 | 2026-08-26 03:42 | ai-novel-writer | 0.1.0 | [036f3af](https://github.com/ethanyoq/ai-novel-writer/commit/036f3af2b8c856e735e8c62d85c95b967fed0beb) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-08-26 03:32 | xmanrui--dsh-im | 3.0.0 | [40b5a46](https://github.com/xmanrui/dsh-im/commit/40b5a46516b44e30fa90e084400a8c3d578214e9) | SoberReport-AI | clean | 0 | extended review | uphold Sonar | pass | merged | [#143](https://github.com/SoberReport-AI/DeepGuard/issues/143) |

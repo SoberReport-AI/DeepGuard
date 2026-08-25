@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T20:02:20.517Z",
+      "plugin_id": "dsh-vision-router",
+      "name": "dsh-vision-router",
+      "version": "2.0.1",
+      "commit": "39c8f2b2d69aa398418fd6c8ab40b691a92a1a3d",
+      "repo": "ysr666/dsh-vision-router",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/8",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/273",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32892106678",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论: approve\n\n1. 身份核验 ✓: plugin.id/version/commit/subpath 均与任务卡逐字一致。\n\n2. 证据核验 ✓: 报告findings[]为空,无逐条证据需核验。checked_items引用路径(index.js:28,5005,5282等)均已实际打开验证,文件存在且内容与描述相符。\n\n3. 维度一致性 ✓: 6个维度均为clean,0 finding,checked_items与实际扫描范围对账一致。\n\n4. 动态证据: na (无沙箱产物)。\n\n5. 机械命中裁决覆盖 ✓: 静态预扫各规则类别(DSH-X03/X05/X07/X08, ",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T19:52:27.152Z",
       "plugin_id": "dsh-mnemon",
       "name": "dsh-mnemon",
