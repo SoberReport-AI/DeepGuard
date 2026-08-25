@@ -2,6 +2,45 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-25T19:32:24.018Z",
+      "plugin_id": "xmanrui--dsh-im",
+      "name": "dsh-im",
+      "version": "3.0.0",
+      "commit": "40b5a46516b44e30fa90e084400a8c3d578214e9",
+      "repo": "xmanrui/dsh-im",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "extended_review",
+      "beacon": "uphold_sonar",
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/143",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/270",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32889150180",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "extended_review",
+          "notes": "报告结论（clean）在实质层面成立：关键行为（子进程仅用于固定参数的安装 CLI/钥匙串读取/本机 Harness 自启、凭据仅 set/unset 无 get/describe 回读、唯一工具与系统提示为良性文件投递说明、无安装钩子、cordis.patch.yml 仅 insert、外联为官方 IM 平台与用户自配 HTTPS 端点）均经我实开文件独立验证属实，未发现恶意行为或明显漏检。不判 approve 的原因：两处核心证据行号不可核实（lib/client.js:7121 幻影行、harness-client.mjs 1,720 超出行数），显示 Sonar 对机械命中存在未基于当",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "uphold_sonar",
+          "rationale": "Aegis 的驳回理由在证据摘录面前不成立，核心指控被直接反驳，其余为披露性/引用精度问题，不构成否决级漏检。① 最关键的「幻影行号」指控被证伪：证据摘录显示 lib/client.js:7121 真实存在且内容恰为 `await navigator.clipboard.writeText(SLACK_APP_MANIFEST_YAML);`，文件头摘录亦证实该文件为从 line 1 起、7000+ 行的 esbuild 浏览器 bundle（7113 行含 plugin-src/client/channels/slack/index.js 源映射注释），Aegis 所称「文件仅 4900 行"
+        },
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T19:21:23.913Z",
       "plugin_id": "treg",
       "name": "treg",
