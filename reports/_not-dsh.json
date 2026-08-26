@@ -2,6 +2,22 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-26T10:21:55.497Z",
+      "plugin_id": "treg",
+      "repo": "superdesigndev/treg",
+      "version": "0.12.0",
+      "commit": "bbabb5ab753b78953915f207066cb2567831a47f",
+      "reason": "treg (tools-registry) 是一个独立的 Python/FastAPI 工具注册表服务 + 凭据注入代理 + CLI，属于独立 Web 产品，非 dsh 生态插件。树内无 dsh 字段声明、无 @dsh/* 依赖、无 dsh 接入代码（插件注册、清单声明、宿主 API 调用均不存在）。.agents/skills/ 和 AGENTS.md 是面向 AI 编码助手（Claude Code 等）的开发指引，非 dsh 插件接口。",
+      "evidence": [
+        "根目录无 package.json；pyproject.toml 依赖为 httpx/fastapi/uvicorn/sqlmodel/cryptography 等通用 Python 包，不含 dsh 字段或 @dsh/* 依赖",
+        "packages/npm/package.json 无 dsh 字段",
+        "树内不存在 dsh.plugin.json",
+        "对全树 grep 'dsh'（大小写不敏感）仅命中自然语言 false positives（friendship/handshake 等），无 dsh API 调用或插件注册代码",
+        "README.md 描述为独立的工具注册表服务，非 dsh 生态组件"
+      ],
+      "run_url": null
+    },
+    {
       "ts": "2026-08-26T08:26:00.119Z",
       "plugin_id": "treg",
       "repo": "superdesigndev/treg",
