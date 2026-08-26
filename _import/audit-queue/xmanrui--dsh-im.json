@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #5 (catalog star ranking, 25 stars). Whitelist batch submission.",
   "source": "watch-update",
   "issue": 143,
-  "status": "needs-human",
+  "status": "pending",
   "submitted_at": "2026-08-24T04:49:24.647Z",
   "prescreen": {
     "ok": true,
@@ -103,14 +103,19 @@
       "at": "2026-08-26T10:25:48.460Z",
       "action": "needs-human",
       "reason": "llm-error:gateway-timeout (Server requested 120s retry delay (max: 60s). 524 status code (no body))"
+    },
+    {
+      "at": "2026-08-26T13:46:44.000Z",
+      "action": "manual-reenqueue",
+      "reason": "requeued after llm-error:gateway-timeout at sonar (transient provider 524 on the v3.0.3 run); bumped to latest release v3.0.5 per periodic mode (intermediates skipped)"
     }
   ],
   "attempts": 1,
   "mode": "release-full",
   "watch": {
-    "detected_at": "2026-08-26T10:00:59.122Z",
-    "commit": "a9bb0ed3baf40fe9e82da4ac062b57855ce4b866",
-    "release_tag": "v3.0.3",
+    "detected_at": "2026-08-26T13:46:44.000Z",
+    "commit": "64587b3b6162fa34f1c3ddb335a254d4154c9175",
+    "release_tag": "v3.0.5",
     "release_mode": "periodic"
   }
 }
