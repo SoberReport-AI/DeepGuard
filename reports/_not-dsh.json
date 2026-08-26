@@ -2,6 +2,22 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-26T03:17:42.651Z",
+      "plugin_id": "treg",
+      "repo": "superdesigndev/treg",
+      "version": "0.12.0",
+      "commit": "bbabb5ab753b78953915f207066cb2567831a47f",
+      "reason": "treg 是一个独立的工具注册表服务（自托管 Web 应用 + CLI + 凭据注入代理），与 dsh 生态无任何集成点：全树无 dsh 声明字段、无 dsh.plugin.json、无 @dsh/* 宿主 SDK 依赖、无 cordis/插件注册/宿主 API 调用。它面向通用 agent 生态（Claude Code 等）提供服务，但自身不是 dsh 插件，不消费 dsh 宿主 seam。",
+      "evidence": [
+        "全树 grep \"dsh\"（不区分大小写）仅命中 \"handshake\" 等无关词，无任何 dsh 接入信号；grep \"cordis|dsh.plugin|dsh.bundle|dsh.client|ctx.tools|registerAdapter|plugin add|deepseek-harness|@dsh/\" 零命中",
+        "根目录无 package.json；packages/npm/package.json 仅声明 npm CLI 启动器（bin: treg），无 dsh 字段、无 dsh SDK 依赖",
+        "pyproject.toml 声明 Python 项目 tools-registry，依赖为 httpx/questionary/fastapi/uvicorn/sqlmodel/aiosqlite 等通用 Web 服务组件，无 dsh 相关依赖",
+        "README.md 自述为团队共享的 skills/CLIs/endpoints/secrets 注册表服务（自托管 Web 应用 + treg CLI + 本地代理），属独立应用而非 dsh 插件",
+        "仓库为 Python Web 服务形态（src/treg/api.py、localproxy.py 等），无 dsh 插件注册面、无 cordis.patch.yml、无 dsh.client 声明"
+      ],
+      "run_url": null
+    },
+    {
       "ts": "2026-08-25T22:20:26.040Z",
       "plugin_id": "treg",
       "repo": "superdesigndev/treg",
