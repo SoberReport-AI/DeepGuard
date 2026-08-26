@@ -2,6 +2,45 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-26T08:42:50.938Z",
+      "plugin_id": "xmanrui--dsh-im",
+      "name": "dsh-im",
+      "version": "3.0.2",
+      "commit": "54468bbe1e93b30ae5778941cd65e725877dae74",
+      "repo": "xmanrui/dsh-im",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "extended_review",
+      "beacon": "uphold_sonar",
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/143",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/279",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32947794482",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "extended_review",
+          "notes": "身份核验通过（id/version/commit/subpath 与任务卡逐字一致）。报告 findings 为空、全部维度 clean，我逐条打开了报告引用的证据文件：4 处子进程调用、客户端键盘/剪贴板、7 处混淆信号、artifact.mjs 工具注册与 systemPrompt.section、ci.yml、cordis.patch.yml、package.json 均与裁决相符且良性。机械预扫 52 条命中（static-scan-hits.json 的 hit_count=52）逐条核对均有裁决，仅 lib/client.js:7124 的裁决证据路径不存在（见 missed_co",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "uphold_sonar",
+          "rationale": "Aegis 的三条驳回点均不构成否决级问题：(1) lib/client.js:7124 证据路径——证据摘录机械装配自实际文件，明确展示了 7109-7139 行原文，第 7124 行存在 `navigator.clipboard.writeText(SLACK_APP_MANIFEST_YAML)` 代码，Aegis 称文件仅 4897 行与证据矛盾；且 Aegis 自身承认该行为真实良性、结论不受影响。(2) lib/index.js 覆盖缺口——Sonar 已如实披露此限制，证据确认 banner 与 build.mjs 一致，源文件已审查，此属审计范围固有边界非报告错误。(3) DG"
+        },
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-26T08:26:11.057Z",
       "plugin_id": "treg",
       "name": "treg",
