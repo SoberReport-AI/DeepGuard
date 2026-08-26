@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 6,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-22T09:11:34.718Z",
   "prescreen": {
     "ok": true,
@@ -75,9 +75,14 @@
       "at": "2026-08-26T13:46:44.000Z",
       "action": "manual-reenqueue",
       "reason": "requeued after llm-error:gateway-timeout at sonar (transient provider 524); v1.31.1 remains the latest release, watch pin unchanged"
+    },
+    {
+      "at": "2026-08-26T14:04:32.586Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 1,
+  "attempts": 2,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-08-26T07:12:50.913Z",
