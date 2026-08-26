@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).\n- Monorepo subpath: `packages/dsh-web-ui-all`",
   "source": "watch-update",
   "issue": 2,
-  "status": "auditing",
+  "status": "needs-human",
   "submitted_at": "2026-08-22T09:09:36.075Z",
   "prescreen": {
     "ok": true,
@@ -76,6 +76,11 @@
       "at": "2026-08-26T14:20:56.899Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-26T14:25:47.073Z",
+      "action": "needs-human",
+      "reason": "llm-error:gateway-timeout (Server requested 120s retry delay (max: 60s). 524 status code (no body))"
     }
   ],
   "mode": "release-full",
