@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 57,
-  "status": "not-dsh-plugin",
+  "status": "pending",
   "submitted_at": "2026-08-22T14:21:30.638Z",
   "prescreen": {
     "ok": true,
@@ -87,12 +87,17 @@
       "at": "2026-08-26T03:17:42.651Z",
       "action": "not-dsh-plugin",
       "reason": "treg 是一个独立的工具注册表服务（自托管 Web 应用 + CLI + 凭据注入代理），与 dsh 生态无任何集成点：全树无 dsh 声明字段、无 dsh.plugin.json、无 @dsh/* 宿主 SDK 依赖、无 cordis/插件注册/宿主 API 调用。它面向通用 agent 生态（Claude Code 等）提供服务，但自身不是 dsh 插件，不消费 dsh 宿主 seam。"
+    },
+    {
+      "at": "2026-08-26T04:07:10.118Z",
+      "action": "watch-update",
+      "reason": "release meta-consent-notice-evidence full audit (mode=periodic)"
     }
   ],
-  "attempts": 1,
+  "attempts": 0,
   "mode": "release-full",
   "watch": {
-    "detected_at": "2026-08-26T02:02:13.504Z",
+    "detected_at": "2026-08-26T04:07:10.118Z",
     "commit": "bbabb5ab753b78953915f207066cb2567831a47f",
     "release_tag": "meta-consent-notice-evidence",
     "release_mode": "periodic"
