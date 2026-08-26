@@ -9,7 +9,7 @@
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #14). Top-starred dsh plugin (catalog star ranking).",
   "source": "watch-update",
   "issue": 93,
-  "status": "auditing",
+  "status": "needs-human",
   "submitted_at": "2026-08-23T16:08:32.847Z",
   "prescreen": {
     "ok": true,
@@ -72,6 +72,11 @@
       "at": "2026-08-26T14:17:17.616Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-26T14:20:16.918Z",
+      "action": "needs-human",
+      "reason": "llm-error:gateway-timeout (Server requested 120s retry delay (max: 60s). 524 status code (no body))"
     }
   ],
   "attempts": 2,
