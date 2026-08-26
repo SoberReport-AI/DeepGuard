@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-26T08:05:36.904Z",
+      "plugin_id": "dsh-context",
+      "name": "dsh-context",
+      "version": "0.33.1",
+      "commit": "02878dd6bdc72eac51e0f587619870777e9a8374",
+      "repo": "bowenliang123/dsh-context",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/33",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/277",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32945239331",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：approve。身份核验：id/name/version/commit/subpath 与任务卡全部逐字一致。报告无 findings[]，其 clean 结论引用的全部证据路径逐一实际打开核验存在且行号准确、内容支撑所述（latestVersion.ts:8,18 唯一外联为 npm 官方仓库版本检查；i18n.ts 命令文案为普通功能说明；contextModal.tsx:77 与 images.tsx:72 键盘监听仅 Escape 关闭弹窗/灯箱；bundle-smoke.mjs:58 的 new Function 为不在发布清单的开发辅助脚本；research 笔记 :",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-26T04:54:38.462Z",
       "plugin_id": "treg",
       "name": "treg",
