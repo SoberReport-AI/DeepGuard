@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-26T20:30:50.147Z",
+      "plugin_id": "dsh-genui",
+      "name": "dsh-genui",
+      "version": "0.9.3",
+      "commit": "16a314916c07854315f27dd9fc3040e408883ae3",
+      "repo": "omdsh-dev/dsh-genui",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/48",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/281",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33010091862",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 逐字一致）。报告 findings 为空，无需逐条证据核验。29 条机械规则面预扫命中（DSH-X03/05/07/08/10、DSH-T02、DSH-C05）全部在 audit_scope.limits 中按规则 ID 明确裁决排除，无覆盖缺口。挂载配置 cordis.patch.yml 仅插入插件行，无安全行触碰。系统提示词（src/plugin/index.ts:127-131）含 Secrets ban 禁令，无注入措辞。工具描述（render_ui/validate_dsh_ui）为功能说明，无诱导措辞。SKILL.m",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-26T17:01:46.612Z",
       "plugin_id": "dsh-context",
       "name": "dsh-context",

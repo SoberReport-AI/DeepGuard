@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-27 04:30 | dsh-genui | 0.9.3 | [16a3149](https://github.com/omdsh-dev/dsh-genui/commit/16a314916c07854315f27dd9fc3040e408883ae3) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#48](https://github.com/SoberReport-AI/DeepGuard/issues/48) |
 | 2026-08-27 01:01 | dsh-context | 0.34.0 | [53209a1](https://github.com/bowenliang123/dsh-context/commit/53209a14df522e3d01083492c6f862591625ac56) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#33](https://github.com/SoberReport-AI/DeepGuard/issues/33) |
 | 2026-08-26 22:34 | xmanrui--dsh-im | 2.0.1 | [dea9a8f](https://github.com/xmanrui/dsh-im/commit/dea9a8f2d1a3fdbb12a7b2a227ce93d0004257d9) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#143](https://github.com/SoberReport-AI/DeepGuard/issues/143) |
 | 2026-08-26 22:30 | treg | 0.12.0 | [603540f](https://github.com/superdesigndev/treg/commit/603540f653994080d4f507a9a3564e1017c28eef) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#57](https://github.com/SoberReport-AI/DeepGuard/issues/57) |
