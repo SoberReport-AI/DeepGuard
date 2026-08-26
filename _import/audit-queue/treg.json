@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 57,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-22T14:21:30.638Z",
   "prescreen": {
     "ok": true,
@@ -142,9 +142,14 @@
       "at": "2026-08-26T13:46:44.000Z",
       "action": "manual-reenqueue",
       "reason": "manual re-audit at main HEAD 8266bc71: the dsh plugin bundle (dsh/cordis.patch.yml, dsh/index.js, dsh/skills/) was added on 2026-08-15 (931a5356) after both evidence-tag releases; watch-pinned snapshots legitimately lacked dsh/, so the not-dsh verdicts were correct for those snapshots. dsh/ has no package.json, so root scope is retained (same as the merged 0.12.0 audit); sonar should focus on the dsh/ bundle."
+    },
+    {
+      "at": "2026-08-26T14:26:18.772Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 0,
+  "attempts": 1,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-08-26T13:46:44.000Z",
