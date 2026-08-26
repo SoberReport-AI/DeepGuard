@@ -1163,7 +1163,7 @@ jobs:
           LLM_SENTINEL=$(find probe -name llm-error.json 2>/dev/null | head -1)
           LLM_CLOSE=false
           if [ -n "$LLM_SENTINEL" ]; then
-            VER_Q=$(node -p "try{const q=JSON.parse(require('fs').readFileSync('$Q','utf8'));q.version||q.prescreen?.version||'n/a'}catch(e){'n/a'}")
+            VER_Q=$(node -p "try{const q=JSON.parse(require('fs').readFileSync('$Q','utf8'));(/^v?\d/.test(q.watch?.release_tag||'')?q.watch.release_tag.replace(/^v/,''):'')||q.version||q.prescreen?.version||'n/a'}catch(e){'n/a'}")
             CMT_Q=$(node -p "try{const q=JSON.parse(require('fs').readFileSync('$Q','utf8'));String(q.watch?.commit||q.prescreen?.commit||'n/a').slice(0,8)}catch(e){'n/a'}")
             REPO_URL_Q=$(node -p "try{const q=JSON.parse(require('fs').readFileSync('$Q','utf8'));q.url||q.repo||'n/a'}catch(e){'n/a'}")
             # Read the model from the repo-root agents.config.json (the same file the audit ran on —
