@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-27 01:01 | dsh-context | 0.34.0 | [53209a1](https://github.com/bowenliang123/dsh-context/commit/53209a14df522e3d01083492c6f862591625ac56) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#33](https://github.com/SoberReport-AI/DeepGuard/issues/33) |
 | 2026-08-26 22:34 | xmanrui--dsh-im | 2.0.1 | [dea9a8f](https://github.com/xmanrui/dsh-im/commit/dea9a8f2d1a3fdbb12a7b2a227ce93d0004257d9) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#143](https://github.com/SoberReport-AI/DeepGuard/issues/143) |
 | 2026-08-26 22:30 | treg | 0.12.0 | [603540f](https://github.com/superdesigndev/treg/commit/603540f653994080d4f507a9a3564e1017c28eef) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#57](https://github.com/SoberReport-AI/DeepGuard/issues/57) |
 | 2026-08-26 22:25 | dsh-web-ui | 0.2.8 | [f91a264](https://github.com/zhu1090093659/dsh-web-ui/commit/f91a2641cee74f97457741c06a12a2c91c97fef5) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#2](https://github.com/SoberReport-AI/DeepGuard/issues/2) |

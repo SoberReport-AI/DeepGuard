@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-26T17:01:46.612Z",
+      "plugin_id": "dsh-context",
+      "name": "dsh-context",
+      "version": "0.34.0",
+      "commit": "53209a14df522e3d01083492c6f862591625ac56",
+      "repo": "bowenliang123/dsh-context",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/33",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/280",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32989853874",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：身份核验通过（id/name/version/commit/subpath 与任务卡逐字一致）。findings[] 为空，无逐条证据需核。机械规则面 7 条命中我逐一独立打开原始文件核验证据路径与行号均真实存在，且 Sonar 的排除裁决（CI 工作流、oxlint 规则名子串误报、AGENTS.md 开发指引、bundle-smoke 开发脚本 new Function、两处 Escape-only 键盘监听）判读正确、引用规则 ID 齐全，无覆盖缺口。manifest.json 138 文件与树一致，无 .dsh/ 或模型面点目录文件，audit_scope.limits 如实",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-26T14:34:25.754Z",
       "plugin_id": "xmanrui--dsh-im",
       "name": "dsh-im",
