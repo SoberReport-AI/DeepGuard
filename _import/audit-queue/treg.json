@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 57,
-  "status": "not-dsh-plugin",
+  "status": "pending",
   "submitted_at": "2026-08-22T14:21:30.638Z",
   "prescreen": {
     "ok": true,
@@ -102,12 +102,17 @@
       "at": "2026-08-26T04:54:26.587Z",
       "action": "not-dsh-plugin",
       "reason": "该快照是独立的工具注册表服务（tools-registry）：Python CLI + FastAPI 服务器 + npm 启动器，并附带面向 Claude Code 风格的技能文件。全树无任何 dsh 宿主（deepseek-harness）集成点——没有 package.json 含 dsh 字段、无 dsh.plugin.json、无 @dsh/* 系列依赖、无 cordis 或 dsh 接入代码，不构成 dsh 生态插件。"
+    },
+    {
+      "at": "2026-08-26T07:12:50.913Z",
+      "action": "watch-update",
+      "reason": "release meta-consent-notice-evidence full audit (mode=periodic)"
     }
   ],
-  "attempts": 1,
+  "attempts": 0,
   "mode": "release-full",
   "watch": {
-    "detected_at": "2026-08-26T04:07:10.118Z",
+    "detected_at": "2026-08-26T07:12:50.913Z",
     "commit": "bbabb5ab753b78953915f207066cb2567831a47f",
     "release_tag": "meta-consent-notice-evidence",
     "release_mode": "periodic"
