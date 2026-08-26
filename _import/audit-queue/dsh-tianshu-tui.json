@@ -9,7 +9,7 @@
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #14). Top-starred dsh plugin (catalog star ranking).",
   "source": "watch-update",
   "issue": 93,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-23T16:08:32.847Z",
   "prescreen": {
     "ok": true,
@@ -67,9 +67,14 @@
       "at": "2026-08-26T13:46:44.000Z",
       "action": "manual-reenqueue",
       "reason": "rc.17 needs-human (Aegis evidence-traceability concerns: line numbers beyond lib/index.js bounds and hit-count mismatch; translate stage did not deliver zh draft) is superseded by a fresh re-audit at latest release rc.19; upstream rc.18/rc.19 changes are unrelated to the report-evidence concerns"
+    },
+    {
+      "at": "2026-08-26T14:17:17.616Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 1,
+  "attempts": 2,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-08-26T13:46:44.000Z",
