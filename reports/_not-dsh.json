@@ -2,6 +2,23 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-26T04:54:26.587Z",
+      "plugin_id": "treg",
+      "repo": "superdesigndev/treg",
+      "version": "0.12.0",
+      "commit": "bbabb5ab753b78953915f207066cb2567831a47f",
+      "reason": "该快照是独立的工具注册表服务（tools-registry）：Python CLI + FastAPI 服务器 + npm 启动器，并附带面向 Claude Code 风格的技能文件。全树无任何 dsh 宿主（deepseek-harness）集成点——没有 package.json 含 dsh 字段、无 dsh.plugin.json、无 @dsh/* 系列依赖、无 cordis 或 dsh 接入代码，不构成 dsh 生态插件。",
+      "evidence": [
+        "树根无 package.json，项目主体为 Python 包 pyproject.toml（包名 tools-registry，纯 CLI+服务端产品，无 dsh 字段）",
+        "packages/npm/package.json 为 treg CLI 的 npm 启动器（@superdesign/treg），无 dsh 字段、无 @dsh/* 依赖",
+        "全树 grep 'dsh.plugin|dsh.bundle|dsh.client|dsh.service|@dsh/|cordis' 命中 0",
+        "全树 grep 整词 '\\bdsh\\b' 命中 0（唯一出现 'dsh' 字符串的地方是英文单词 handshake 的子串）",
+        ".agents/skills/** 为 treg 自身的 Claude Code 风格技能（SKILL.md），非 dsh 插件清单",
+        "无任何 dsh 插件注册、清单声明或宿主 API 调用的接入代码"
+      ],
+      "run_url": null
+    },
+    {
       "ts": "2026-08-26T03:17:42.651Z",
       "plugin_id": "treg",
       "repo": "superdesigndev/treg",
