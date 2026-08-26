@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-26 16:15 | dsh-cost-meter | 1.6.2 | [6ba221b](https://github.com/han-1413141/dsh-cost-meter/commit/6ba221b84a80e7f0a50ee92696bba58596862ea6) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
 | 2026-08-26 16:05 | dsh-context | 0.33.1 | [02878dd](https://github.com/bowenliang123/dsh-context/commit/02878dd6bdc72eac51e0f587619870777e9a8374) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#33](https://github.com/SoberReport-AI/DeepGuard/issues/33) |
 | 2026-08-26 12:54 | treg | 0.12.0 | [603540f](https://github.com/superdesigndev/treg/commit/603540f653994080d4f507a9a3564e1017c28eef) | SoberReport-AI | — | — | — | — | — | not a dsh plugin | [#57](https://github.com/SoberReport-AI/DeepGuard/issues/57) |
 | 2026-08-26 11:25 | xmanrui--dsh-im | 3.0.1 | [fb8a9df](https://github.com/xmanrui/dsh-im/commit/fb8a9df652ed6eaa4b99a9338cab15db1b626b1c) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#143](https://github.com/SoberReport-AI/DeepGuard/issues/143) |
