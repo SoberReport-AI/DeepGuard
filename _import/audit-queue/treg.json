@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 57,
-  "status": "not-dsh-plugin",
+  "status": "pending",
   "submitted_at": "2026-08-22T14:21:30.638Z",
   "prescreen": {
     "ok": true,
@@ -117,12 +117,17 @@
       "at": "2026-08-26T08:26:00.119Z",
       "action": "not-dsh-plugin",
       "reason": "该快照是「tools-registry (treg)」——一个独立的 Python CLI + FastAPI 服务 + 本地代理，用于管理团队 API 凭据与工具注册。代码树中没有任何 dsh 生态接入信号：pyproject.toml 无 dsh 字段、无 @dsh/* 依赖、无 dsh.plugin.json、无 cordis 集成、无 dsh bundle/client/service 声明。.agents/skills/ 的 SKILL.md 与 AGENTS.md 是针对通用 AI 编码代理（Claude Code、Codex 等）的仓库开发指南，与 dsh 生态无关。该快照是一个独立的全栈应用，而非 dsh 生态插件。"
+    },
+    {
+      "at": "2026-08-26T10:00:59.122Z",
+      "action": "watch-update",
+      "reason": "release meta-consent-notice-evidence full audit (mode=periodic)"
     }
   ],
-  "attempts": 1,
+  "attempts": 0,
   "mode": "release-full",
   "watch": {
-    "detected_at": "2026-08-26T07:12:50.913Z",
+    "detected_at": "2026-08-26T10:00:59.122Z",
     "commit": "bbabb5ab753b78953915f207066cb2567831a47f",
     "release_tag": "meta-consent-notice-evidence",
     "release_mode": "periodic"
