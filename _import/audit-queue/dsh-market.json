@@ -85,6 +85,11 @@
       "at": "2026-08-26T14:08:27.005Z",
       "action": "needs-human",
       "reason": "llm-error:gateway-timeout (Server requested 120s retry delay (max: 60s). 524 status code (no body))"
+    },
+    {
+      "at": "2026-08-26T14:17:13.000Z",
+      "action": "deterministic-note",
+      "reason": "gateway-timeout 524 reproduced 2/2 on the same snapshot (v1.31.1 @ 3cbe62c9, runs 32946888210 and 32978033687) while other audits succeeded in between — treated as snapshot-deterministic (large prefill killed by the edge ~100s limit), not transient; stays needs-human. Unlock paths: endpoint/provider change for large payloads, scope reduction, or manual audit."
     }
   ],
   "attempts": 2,
