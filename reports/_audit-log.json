@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-26T03:15:58.710Z",
+      "plugin_id": "dsh-context",
+      "name": "dsh-context",
+      "version": "0.33.0",
+      "commit": "6c56230f08168881e5bf547f917f32664be41e14",
+      "repo": "bowenliang123/dsh-context",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/33",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/275",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32925248302",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份/哈希/安装命令逐字核对一致；报告无 findings，ds_scenario 引用的全部证据路径（i18n.ts:104、latestVersion.ts:18、bundle-smoke.mjs:58、contextModal.tsx:77、images.tsx:72、cordis.patch.yml）均已实际打开验证且内容支撑描述。机械预扫 11 条命中全部在 audit_scope.limits 中逐条裁决且文件真实存在，无覆盖缺口。本人漏检快扫未见新增高危点：发布代码无 child_process/eval、无凭据读取、无工具/provider 注册、无安装钩子（pa",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-25T22:20:39.815Z",
       "plugin_id": "treg",
       "name": "treg",
