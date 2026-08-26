@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 6,
-  "status": "needs-human",
+  "status": "pending",
   "submitted_at": "2026-08-22T09:11:34.718Z",
   "prescreen": {
     "ok": true,
@@ -70,6 +70,11 @@
       "at": "2026-08-26T08:23:52.309Z",
       "action": "needs-human",
       "reason": "llm-error:gateway-timeout (Server requested 120s retry delay (max: 60s). 524 status code (no body))"
+    },
+    {
+      "at": "2026-08-26T13:46:44.000Z",
+      "action": "manual-reenqueue",
+      "reason": "requeued after llm-error:gateway-timeout at sonar (transient provider 524); v1.31.1 remains the latest release, watch pin unchanged"
     }
   ],
   "attempts": 1,
