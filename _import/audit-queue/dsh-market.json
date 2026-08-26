@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 6,
-  "status": "auditing",
+  "status": "needs-human",
   "submitted_at": "2026-08-22T09:11:34.718Z",
   "prescreen": {
     "ok": true,
@@ -65,6 +65,11 @@
       "at": "2026-08-26T08:16:10.721Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-26T08:23:52.309Z",
+      "action": "needs-human",
+      "reason": "llm-error:gateway-timeout (Server requested 120s retry delay (max: 60s). 524 status code (no body))"
     }
   ],
   "attempts": 1,
