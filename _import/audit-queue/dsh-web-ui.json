@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).\n- Monorepo subpath: `packages/dsh-web-ui-all`",
   "source": "watch-update",
   "issue": 2,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-22T09:09:36.075Z",
   "prescreen": {
     "ok": true,
@@ -71,6 +71,11 @@
       "at": "2026-08-26T13:46:44.000Z",
       "action": "subpath-repair",
       "reason": "upstream monorepo renamed packages/dsh-web-ui-all to packages/dsh-web-all (verified at 83bc8e84 / v0.3.4: package @linxin666/dsh-web-all version 0.3.4); prepare failed deterministically with 'subpath does not exist' (exit 1) on two runs; subpath corrected, attempts reset"
+    },
+    {
+      "at": "2026-08-26T14:20:56.899Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
   "mode": "release-full",
@@ -80,5 +85,5 @@
     "release_tag": "v0.3.4",
     "release_mode": "periodic"
   },
-  "attempts": 0
+  "attempts": 1
 }
