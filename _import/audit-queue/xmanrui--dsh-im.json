@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #5 (catalog star ranking, 25 stars). Whitelist batch submission.",
   "source": "watch-update",
   "issue": 143,
-  "status": "auditing",
+  "status": "needs-human",
   "submitted_at": "2026-08-24T04:49:24.647Z",
   "prescreen": {
     "ok": true,
@@ -113,6 +113,11 @@
       "at": "2026-08-26T14:31:31.014Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-08-26T14:34:25.867Z",
+      "action": "needs-human",
+      "reason": "llm-error:gateway-timeout (Server requested 120s retry delay (max: 60s). 524 status code (no body))"
     }
   ],
   "attempts": 2,
