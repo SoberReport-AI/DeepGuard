@@ -9,7 +9,7 @@
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #14). Top-starred dsh plugin (catalog star ranking).",
   "source": "watch-update",
   "issue": 93,
-  "status": "needs-human",
+  "status": "pending",
   "submitted_at": "2026-08-23T16:08:32.847Z",
   "prescreen": {
     "ok": true,
@@ -62,14 +62,19 @@
       "at": "2026-08-25T18:47:05.268Z",
       "action": "needs-human",
       "reason": "review-verdict: review.verdict=needs_human, Beacon ruling=escalate (not approved, not admitted); translation-integrity: report-zh.json (Sonar zh draft) missing — translate stage did not deliver; cannot admit a monolingual report under the v3 contract"
+    },
+    {
+      "at": "2026-08-26T13:46:44.000Z",
+      "action": "manual-reenqueue",
+      "reason": "rc.17 needs-human (Aegis evidence-traceability concerns: line numbers beyond lib/index.js bounds and hit-count mismatch; translate stage did not deliver zh draft) is superseded by a fresh re-audit at latest release rc.19; upstream rc.18/rc.19 changes are unrelated to the report-evidence concerns"
     }
   ],
   "attempts": 1,
   "mode": "release-full",
   "watch": {
-    "detected_at": "2026-08-25T16:03:59.221Z",
-    "commit": "38c5b536e4062277f6ea84db3e1a35e601b7ff56",
-    "release_tag": "v0.1.2-rc.17",
+    "detected_at": "2026-08-26T13:46:44.000Z",
+    "commit": "aa9782ea9313e1849699ba13d6fa8fbf04c59f18",
+    "release_tag": "v0.1.2-rc.19",
     "release_mode": "periodic"
   }
 }
