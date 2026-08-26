@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-26T03:25:31.897Z",
+      "plugin_id": "xmanrui--dsh-im",
+      "name": "dsh-im",
+      "version": "3.0.1",
+      "commit": "fb8a9df652ed6eaa4b99a9338cab15db1b626b1c",
+      "repo": "xmanrui/dsh-im",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/143",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/276",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32925953192",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过。报告 findings 为空，故无逐条证据可查；我对支撑 clean 结论的关键声明做了独立核验：credentials 仅 set/unset 无回读（D1）、唯一工具注册 artifact.mjs:650 与唯一 systemPrompt.section artifact.mjs:654 文本良性且全树无模型面指令文件（D2）、4 处子进程调用参数均固定/本机自启（D3）、外联端点为官方 IM 平台+127.0.0.1:3080（D4）、无安装钩子且依赖锁定（D5）、无自开服务（D6），全部属实。机械命中 52 条逐条对应报告裁决，无覆盖缺口。覆盖限制（lib/index.j",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-26T03:17:54.444Z",
       "plugin_id": "treg",
       "name": "treg",
