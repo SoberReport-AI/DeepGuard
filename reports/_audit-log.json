@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T03:42:56.495Z",
+      "plugin_id": "a903067276-rgb--dsh-plan-switch",
+      "name": "dsh-plan-switch",
+      "version": "0.3.2",
+      "commit": "7038ef4f996c577eaeba0c98eb07a233707f0ab9",
+      "repo": "a903067276-rgb/dsh-plan-switch",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/291",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/310",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33036895030",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：身份核验逐字一致；FND-001 三条证据路径全部亲自打开验证成立（行号准确、内容吻合、非注入冒充）；severity LOW 与 confidence high 均与证据相称，impact 三段齐全；六维度状态与 findings 分布一致（仅 DG-D5 挂 1 条 LOW），checked_items 与树体量（12 文件，我已逐一打开全部文本文件）相符非空头对勾；manifest 全部路径在树中可打开，无覆盖缺口；static-scan 零命中无待裁决机械命中；独立快扫（install 钩子、child_process/eval、外联域名、凭据读取、注入模式）未发现 Sona",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T03:36:25.615Z",
       "plugin_id": "a903067276-rgb--dsh-hud",
       "name": "dsh-hud",
@@ -6894,42 +6930,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "身份核验通过（id/version/commit 逐字一致）。FND-001 全部证据路径实际打开核实存在且内容支撑描述。维度一致性：DG-D4 risk 挂 FND-001，其余 clean 维度 findings=0，overall_result=risk 与 market.verdict=risk 推导合规。机械命中 50 条全部落在 DSH-X07/C05/X08/X05/X03 五个规则族（1+2+29+4+14），L1 层对每族引用映射规则 ID（DG-R3-59/59/60/57/55）给出明确排除理由，无覆盖缺口。独立快扫：src 无 eval/new Function；fet",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T10:36:33.758Z",
-      "plugin_id": "dsh-market",
-      "name": "dsh-market",
-      "version": "1.18.0",
-      "commit": "b9323cc85d0148013384a5aca5215be1922eea36",
-      "repo": "dsh-market/dsh-market",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": null,
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/26",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32567600538",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核（Aegis）结论：身份核验逐字一致；报告 findings 为空，逐项验证各维度 checked_items/ds_scenarios 主张均与源码相符（安装目标 TARGET_RE 白名单、变更路由 sameOrigin、进程控制 trustedRestartRequest 回环+拒转发头、备份恢复防穿越、patch 层保护宿主模块、出站端点固定合法、客户端 bundle 关键命中行与源码语义一致且为 UI 用途）；机械预扫 93 条命中全部落入 Sonar 已引用规则 ID（DG-R3-51/54/55/57/59/60、DG-R4-53）明确排除的 7 个类别，逐类抽样验证成立",
           "install_ok": true
         },
         "beacon": null,
