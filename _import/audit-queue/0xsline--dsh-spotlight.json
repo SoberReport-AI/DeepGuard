@@ -1,0 +1,40 @@
+{
+  "id": "0xsline--dsh-spotlight",
+  "name": "dsh-spotlight",
+  "repo": "0xsline/dsh-spotlight",
+  "url": "https://github.com/0xsline/dsh-spotlight",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 282,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:17:46.869Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "b3565e8629d9a393d764681e96f4c41100cc12fa",
+    "default_branch": "main",
+    "pushed_at": "2026-08-24T09:03:11Z",
+    "stars": 18,
+    "version": "0.0.2",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-spotlight"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:17:46.870Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
