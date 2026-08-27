@@ -1,0 +1,38 @@
+{
+  "id": "a903067276-rgb--dsh-hud",
+  "name": "dsh-hud",
+  "repo": "a903067276-rgb/dsh-hud",
+  "url": "https://github.com/a903067276-rgb/dsh-hud",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 290,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:20:15.816Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "ba0e78adae6fc0645d42ec243700e8c81151e98a",
+    "default_branch": "main",
+    "pushed_at": "2026-08-26T06:25:24Z",
+    "stars": 9,
+    "version": "1.2.16",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-hud"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:20:15.817Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
