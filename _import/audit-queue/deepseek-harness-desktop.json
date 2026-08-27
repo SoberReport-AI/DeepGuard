@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 69 stars).",
   "source": "watch-update",
   "issue": 80,
-  "status": "audited",
+  "status": "pending",
   "submitted_at": "2026-08-23T09:54:25.680Z",
   "prescreen": {
     "ok": true,
@@ -102,9 +102,14 @@
       "at": "2026-08-25T17:12:49.610Z",
       "action": "audited",
       "reason": null
+    },
+    {
+      "at": "2026-08-27T14:19:44.043Z",
+      "action": "watch-update",
+      "reason": "release desktop-v3.1.0 full audit (mode=periodic)"
     }
   ],
-  "attempts": 1,
+  "attempts": 0,
   "gate": {
     "at": "2026-08-24T12:04:27.783Z",
     "submitter": "SoberReport-AI",
@@ -144,9 +149,9 @@
   },
   "mode": "release-full",
   "watch": {
-    "detected_at": "2026-08-25T16:03:59.221Z",
-    "commit": "3a4c9ea7e815d5ca52248e5f77ed9369b96e1422",
-    "release_tag": "desktop-v3.0.9",
+    "detected_at": "2026-08-27T14:19:44.043Z",
+    "commit": "799b5fa8a8e5dfee68c9525c2c7c7e8492cb57c8",
+    "release_tag": "desktop-v3.1.0",
     "release_mode": "periodic"
   }
 }
