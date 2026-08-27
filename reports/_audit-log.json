@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T02:33:32.269Z",
+      "plugin_id": "13071301808--dsh-composer-expand",
+      "name": "dsh-composer-expand",
+      "version": "0.1.2",
+      "commit": "cb6162753f6f48923b19275008c9d7a87718068a",
+      "repo": "13071301808/dsh-composer-expand",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/283",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/303",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33033245865",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核裁决：approve。① 身份逐字一致；② 报告零 findings，其引用证据路径（cordis.patch.yml:9-11、package.json:26-29、src/client/index.js:105-115、lib/client.js.map:1、.github/workflows/publish.yml）全部实际打开验证成立——键盘监听仅对无修饰键普通回车 stopPropagation，不记录按键/剪贴板/凭据/外联；sourcemap 为内联 sourcesContent 标准构建产物且与 src 一致；CI 为 tag 触发 npm 发布流水线且不运行于 dsh 宿",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T02:25:10.627Z",
       "plugin_id": "0xsline--dsh-spotlight",
       "name": "dsh-spotlight",
