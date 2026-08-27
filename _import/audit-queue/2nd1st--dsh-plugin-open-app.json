@@ -1,0 +1,38 @@
+{
+  "id": "2nd1st--dsh-plugin-open-app",
+  "name": "dsh-plugin-open-app",
+  "repo": "2nd1st/dsh-plugin-open-app",
+  "url": "https://github.com/2nd1st/dsh-plugin-open-app",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 285,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:19:20.162Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "01706d45221a1c98ac33be9c900a9dc3eec4f9af",
+    "default_branch": "main",
+    "pushed_at": "2026-08-15T17:34:54Z",
+    "stars": 5,
+    "version": "0.1.2",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plugin-open-app"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:19:20.162Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
