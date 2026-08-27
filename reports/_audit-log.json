@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T17:40:10.098Z",
+      "plugin_id": "dsh-agent-teams",
+      "name": "dsh-agent-teams",
+      "version": "0.1.14",
+      "commit": "5fe388f1a30da7b1374294b25bd6f8ad74ab6aa5",
+      "repo": "nanmicoder/dsh-agent-teams",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/30",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/323",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33098734281",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过：id/version/commit/subpath 与任务卡逐字一致，commit 为完整 40 位小写 hex，审计根确为仓库根（package.json/cordis.patch.yml 在根上）。报告 findings 为空，故无逐条 finding 证据需核验；但对其全部 checked_items 引用的证据路径（src/tools.ts 13 个工具、src/index.ts:197/:148、src/command.ts:124/:139、src/members.ts:316/:134-144、src/scheduler.ts:488、src/quality-gat",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T17:29:37.164Z",
       "plugin_id": "deepseek-harness-desktop",
       "name": "deepseek-harness-desktop",
@@ -6894,42 +6930,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核（Aegis）结论：approve。①身份/哈希/命令/维度汇总全部一致；②findings[] 为空，无 finding 证据路径需逐条核验；③checked_items 关键证据我亲自打开复核：dsh/index.js（纯 ESM 技能注册，无子进程/网络）、dsh/cordis.patch.yml（两处 !!js 仅读 TREG_TOKEN，唯一外联 treg.to/mcp/，未触碰沙箱/审批/权限行）、package.json（无安装钩子，dsh.bundle 指向存在的 ./dsh/cordis.patch.yml）、dsh/skills/treg/SKILL.md 及多份同",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T14:59:31.225Z",
-      "plugin_id": "aegis",
-      "name": "aegis",
-      "version": "2.8.5",
-      "commit": "fea84dd545385ebdbe1c7ceab0d2afb8fe9d4600",
-      "repo": "ganyuanran/aegis",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/56",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/62",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32579862724",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核结论：1) 身份/版本/commit 与任务卡逐字一致；2) 报告无 findings，6 个维度 checked_items 叙事均经我逐文件核实（extensions/dsh/bootstrap.js、index.js、cordis.patch.yml、extensions/shared/aegis-bootstrap.ts、hooks/*、skills/using-aegis、scripts/aegis-update.py 等），无空头对勾；3) 9 条机械预扫命中全部被裁决且引用规则 ID，我逐一打开可见证据复核均成立；.github/.opencode 等隐藏目录本环境同样不",
           "install_ok": true
         },
         "beacon": null,
