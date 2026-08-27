@@ -1,0 +1,38 @@
+{
+  "id": "anitman--dsh-plugin-video-player",
+  "name": "dsh-plugin-video-player",
+  "repo": "anitman/dsh-plugin-video-player",
+  "url": "https://github.com/anitman/dsh-plugin-video-player",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 299,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:21:45.127Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "d7436a80cdfcdc8eb28f864a63e14348e99ce816",
+    "default_branch": "main",
+    "pushed_at": "2026-08-19T08:58:31Z",
+    "stars": 3,
+    "version": "0.2.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plugin-video-player"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:21:45.127Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
