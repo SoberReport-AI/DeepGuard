@@ -1,0 +1,38 @@
+{
+  "id": "aks1st--dsh-sysmon",
+  "name": "dsh-sysmon",
+  "repo": "aks1st/dsh-sysmon",
+  "url": "https://github.com/aks1st/dsh-sysmon",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 296,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:21:17.568Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "59d08c303d4575a28e9d35f701cbd3e4f9483724",
+    "default_branch": "main",
+    "pushed_at": "2026-08-18T03:58:31Z",
+    "stars": 3,
+    "version": "0.2.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-sysmon"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:21:17.568Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
