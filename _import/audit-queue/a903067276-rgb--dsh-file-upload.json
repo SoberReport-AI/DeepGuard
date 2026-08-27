@@ -1,0 +1,38 @@
+{
+  "id": "a903067276-rgb--dsh-file-upload",
+  "name": "dsh-file-upload",
+  "repo": "a903067276-rgb/dsh-file-upload",
+  "url": "https://github.com/a903067276-rgb/dsh-file-upload",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 289,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:20:01.125Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "d55d7322492de4776eaab0294f75033113a9f353",
+    "default_branch": "main",
+    "pushed_at": "2026-08-26T06:25:21Z",
+    "stars": 9,
+    "version": "0.1.7",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-file-upload"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:20:01.125Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
