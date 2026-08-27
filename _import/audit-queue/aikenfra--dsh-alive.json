@@ -1,0 +1,38 @@
+{
+  "id": "aikenfra--dsh-alive",
+  "name": "dsh-alive",
+  "repo": "aikenfra/dsh-alive",
+  "url": "https://github.com/aikenfra/dsh-alive",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 294,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:20:53.307Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "b89e53b51e5380900d0b298cbe1e768b5b940a84",
+    "default_branch": "main",
+    "pushed_at": "2026-08-16T06:09:27Z",
+    "stars": 2,
+    "version": "0.1.1",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-alive"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:20:53.307Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
