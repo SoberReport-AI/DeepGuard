@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T05:11:01.297Z",
+      "plugin_id": "appliedyuu--dsh-wallpaperandcost",
+      "name": "dsh-WallpaperAndCost",
+      "version": "1.0.0",
+      "commit": "67bd5c6498610961400d7d3fa97cc5c4133130be",
+      "repo": "appliedyuu/dsh-wallpaperandcost",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/301",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/320",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33041246415",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过：①身份/哈希/subpath/安装命令全部逐字一致；②clean 报告无 findings，但 checked_items 引用的关键证据均已亲自打开验证（index.js:46 execFile 仅以参数数组运行内置 Python 脚本，client.js:1901/2220 为 Escape 关闭下拉面板的良性 UI 行为，5 条 exact 路由、3 个官方外联端点、无安装钩子、无模型面指令文件、无 eval/new Function）；③3 条机械预扫命中（DSH-X05×2、DSH-X03）均在 DG-D3 中按规则 ID 明确裁决为良性，无覆盖缺口；④manifest",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T05:01:54.622Z",
       "plugin_id": "anneheartrecord--dsh-desk-pet",
       "name": "dsh-desk-pet",
@@ -6894,42 +6930,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "身份核验通过（id/version/commit/subpath 与任务卡逐字一致）。报告 findings 为空，无逐条证据可核验；我独立打开并验证了全部维度 clean 声称：node 侧（src/index.ts、src/tool.ts、src/skill.ts）仅注册工具/技能并经由 ctx.fs 写入会话工作区 viz/，无 eval/child_process/凭据读取/外联/本地服务；lib/index.js 与 lib/client.js 构建产物与 src 逐行一致，未发现注入或篡改；iframe 采用 sandbox=allow-scripts（无 allow-same-o",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T13:43:49.207Z",
-      "plugin_id": "dsh-plugins-marketplace",
-      "name": "dsh-plugins-marketplace",
-      "version": "1.5.5",
-      "commit": "42431aa5f29d5d4421c2e2c6bcbb4bf25d282893",
-      "repo": "bradegithub/dsh-plugins-marketplace",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "risk",
-      "findings": 1,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": null,
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/54",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32576054075",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "risk",
-          "findings": 1
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核结论：身份一致；FND-001 关键证据全部成立；46 条机械命中逐条有裁决（引用 DG-R1-51/R4-53/R3-55/R3-57/R3-59/R3-60 形式），无覆盖缺口；维度一致性良好（DG-D3 risk 挂 FND-001，其余 clean 无 findings，checked_items 经抽样验证非空头对勾）；定级与 confidence 均无浮夸。漏检快扫独立执行：无 eval/new Function、子进程全部数组参数无 shell:true、外联仅声明端点（api.github.com/raw.githubusercontent/jsDelivr/npm r",
           "install_ok": true
         },
         "beacon": null,
