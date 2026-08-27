@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-27 12:51 | alexyin-tongji--dsh-ui-enhancer | 0.2.0 | [87f17fe](https://github.com/alexyin-tongji/dsh-ui-enhancer/commit/87f17fe74076570023e01e5d0fc55c21affd2c23) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#298](https://github.com/SoberReport-AI/DeepGuard/issues/298) |
 | 2026-08-27 12:43 | anitman--dsh-plugin-video-player | 0.2.0 | [d7436a8](https://github.com/anitman/dsh-plugin-video-player/commit/d7436a80cdfcdc8eb28f864a63e14348e99ce816) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#299](https://github.com/SoberReport-AI/DeepGuard/issues/299) |
 | 2026-08-27 12:35 | alexpeng07--dsh-custom-plugin | 0.1.5 | [4646fef](https://github.com/alexpeng07/dsh-custom-plugin/commit/4646feff7e77f5e7f0716f836b4647e5741399d8) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#297](https://github.com/SoberReport-AI/DeepGuard/issues/297) |
 | 2026-08-27 12:24 | aks1st--dsh-sysmon | 0.2.0 | [59d08c3](https://github.com/aks1st/dsh-sysmon/commit/59d08c303d4575a28e9d35f701cbd3e4f9483724) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#296](https://github.com/SoberReport-AI/DeepGuard/issues/296) |
@@ -203,4 +204,3 @@
 | 2026-08-22 22:03 | dsh-visualize | 0.1.2 | [e86f68f](https://github.com/nagi-ovo/dsh-visualize/commit/e86f68fe66b980a0ebeed8ef7409522b0b720bed) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#55](https://github.com/SoberReport-AI/DeepGuard/pull/55) |
 | 2026-08-22 21:43 | dsh-plugins-marketplace | 1.5.5 | [42431aa](https://github.com/bradegithub/dsh-plugins-marketplace/commit/42431aa5f29d5d4421c2e2c6bcbb4bf25d282893) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#54](https://github.com/SoberReport-AI/DeepGuard/pull/54) |
 | 2026-08-22 21:28 | dsh-genui | 0.9.1 | [1ca5da4](https://github.com/omdsh-dev/dsh-genui/commit/1ca5da4eb9394972cce2c1ccacfedc22eec3166b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#53](https://github.com/SoberReport-AI/DeepGuard/pull/53) |
-| 2026-08-22 21:02 | dsh-openpencil | 0.1.0-rc.2 | [e3eb3bf](https://github.com/zseven-w/dsh-openpencil/commit/e3eb3bfdb5262db0659c3c6e567fe209199c3eb2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#52](https://github.com/SoberReport-AI/DeepGuard/pull/52) |

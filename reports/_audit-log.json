@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T04:51:05.840Z",
+      "plugin_id": "alexyin-tongji--dsh-ui-enhancer",
+      "name": "dsh-ui-enhancer",
+      "version": "0.2.0",
+      "commit": "87f17fe74076570023e01e5d0fc55c21affd2c23",
+      "repo": "alexyin-tongji/dsh-ui-enhancer",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/298",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/318",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33040299306",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。① 身份逐字一致（id/version/commit/subpath）。② 报告无 findings，所有 checked_items 声明经我逐项直接打开文件核验属实（ci.yml 标准 CI、keydown 仅 Escape、@file 描述良性、两处 fetch 均为 loopback 相对路径、cordis.patch.yml 仅 3 个 insert 无 !!js、无 install 钩子、无凭据/无外部域名/无 AGENTS 类指令文件）。③ 机械命中 DSH-X07/DG-R3-59 与 DSH-X05/DG-R3-57 均被 DG-D3 checked",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T04:43:30.835Z",
       "plugin_id": "anitman--dsh-plugin-video-player",
       "name": "dsh-plugin-video-player",
@@ -6894,42 +6930,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "身份核验通过（plugin.id/version/commit 逐字一致，subpath=null 对应仓库根）。无任何 findings，26 条机械命中全部在 Sonar 报告 audit_scope.limits 中逐规则裁决（DG-R3-59/60/57/R2-52/R3-55/R4-53）。独立漏检快扫：未发现安装钩子、child_process 仅限脚本/测试、无 eval/new Function 运行时调用、无出站网络（fetch/XHR/WebSocket）、无凭据读取、无注入措辞、无隐蔽外联。浏览器端键盘监听为 UI 交互功能（标签页导航、复制按钮、Enter 提交），剪贴",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T13:02:41.595Z",
-      "plugin_id": "dsh-openpencil",
-      "name": "dsh-openpencil",
-      "version": "0.1.0-rc.2",
-      "commit": "e3eb3bfdb5262db0659c3c6e567fe209199c3eb2",
-      "repo": "zseven-w/dsh-openpencil",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": null,
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/52",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32574159577",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "身份核验通过（id/version/commit/subpath 与任务卡逐字一致）。报告为全 clean、无 findings，关键核验点为 11 条机械命中裁决：DG-D3 checked_items[0] 以规则 ID（DSH-X03/DG-R3-55、DSH-X05/DG-R3-57、DSH-X07/DG-R3-59）逐条引用并给出文件位置，覆盖无缺口；我逐一打开源码验证：spawn 均为固定参数数组、无 shell:true、仅启动本机 OpenPencil/Jian 渲染器与编辑器守护进程（声明核心功能）；键盘/剪贴板命中均为 Esc 关闭、Tab 焦点圈定、clipboard.w",
           "install_ok": true
         },
         "beacon": null,
