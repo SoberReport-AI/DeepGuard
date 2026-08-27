@@ -1,0 +1,38 @@
+{
+  "id": "aik358--dsh-anchored-monitor",
+  "name": "dsh-anchored-monitor",
+  "repo": "aik358/dsh-anchored-monitor",
+  "url": "https://github.com/aik358/dsh-anchored-monitor",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 293,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:20:42.531Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "8cb863fa50c3d17dec2683a247b93f90deeb5a16",
+    "default_branch": "main",
+    "pushed_at": "2026-08-19T18:01:06Z",
+    "stars": 11,
+    "version": "0.3.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-anchored-monitor"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:20:42.531Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
