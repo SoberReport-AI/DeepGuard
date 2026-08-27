@@ -1,0 +1,38 @@
+{
+  "id": "akiracod--dsh-drag-and-drop",
+  "name": "dsh-drag-and-drop",
+  "repo": "akiracod/dsh-drag-and-drop",
+  "url": "https://github.com/akiracod/dsh-drag-and-drop",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 295,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:21:05.941Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "c20646ad6d4ee4c4a0ef12163a074716e17a7ba5",
+    "default_branch": "main",
+    "pushed_at": "2026-08-14T08:44:04Z",
+    "stars": 7,
+    "version": "0.2.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-drag-and-drop"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:21:05.941Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
