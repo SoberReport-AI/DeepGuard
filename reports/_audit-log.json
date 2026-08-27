@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T17:19:31.122Z",
+      "plugin_id": "aegis",
+      "name": "aegis",
+      "version": "2.8.9",
+      "commit": "064cb379be322edfdcb60026d968cbc79fd619e6",
+      "repo": "ganyuanran/aegis",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/56",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/321",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33096731450",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核通过。身份一致；报告无 findings（clean），关键证据路径均实际打开验证且内容与描述相符（dsh 扩展无子进程/网络/eval/凭据读取，注入文案为路由纪律且声明用户指令优先，挂载补丁仅一行声明，package.json 无安装钩子）；32 条机械命中全部被引用规则 ID 的排除理由裁决，无覆盖缺口；manifest 对账无 out-of-bounds 路径，audit_scope.limits 如实披露未逐字通读范围与无动态沙箱；独立漏检快扫（child_process/eval/外联/凭据/注入模式）未发现 Sonar 漏掉的高危点。唯一轻微瑕疵：DG-D3 checked_",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T05:11:01.297Z",
       "plugin_id": "appliedyuu--dsh-wallpaperandcost",
       "name": "dsh-WallpaperAndCost",
@@ -6894,42 +6930,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核结论：身份逐字一致；两条 finding 的全部证据路径均实际打开验证、行号精确、内容支撑描述与定级（MEDIUM/high），未见幻觉路径、形态违规或定级浮夸；31 条机械命中全部在报告中有 DSH- 规则 ID + 明确排除理由（或转化为 finding），无覆盖缺口；维度一致性良好（clean 维度无 findings，risk 维度 findings 挂接正确，checked_items 非空头对勾且经抽样核验属实）；独立漏检快扫（install 钩子/child_process/eval/外联域名/凭据读取/注入模式/审计员定向文本）未发现 Sonar 遗漏的高危点；安装命令",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T14:03:44.549Z",
-      "plugin_id": "dsh-visualize",
-      "name": "dsh-visualize",
-      "version": "0.1.2",
-      "commit": "e86f68fe66b980a0ebeed8ef7409522b0b720bed",
-      "repo": "nagi-ovo/dsh-visualize",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": null,
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/55",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32577227984",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "身份核验通过（id/version/commit/subpath 与任务卡逐字一致）。报告 findings 为空，无逐条证据可核验；我独立打开并验证了全部维度 clean 声称：node 侧（src/index.ts、src/tool.ts、src/skill.ts）仅注册工具/技能并经由 ctx.fs 写入会话工作区 viz/，无 eval/child_process/凭据读取/外联/本地服务；lib/index.js 与 lib/client.js 构建产物与 src 逐行一致，未发现注入或篡改；iframe 采用 sandbox=allow-scripts（无 allow-same-o",
           "install_ok": true
         },
         "beacon": null,

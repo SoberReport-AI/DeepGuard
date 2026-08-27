@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-28 01:19 | aegis | 2.8.9 | [064cb37](https://github.com/ganyuanran/aegis/commit/064cb379be322edfdcb60026d968cbc79fd619e6) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
 | 2026-08-27 13:11 | appliedyuu--dsh-wallpaperandcost | 1.0.0 | [67bd5c6](https://github.com/appliedyuu/dsh-wallpaperandcost/commit/67bd5c6498610961400d7d3fa97cc5c4133130be) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#301](https://github.com/SoberReport-AI/DeepGuard/issues/301) |
 | 2026-08-27 13:01 | anneheartrecord--dsh-desk-pet | 0.3.0 | [18bfb38](https://github.com/anneheartrecord/dsh-desk-pet/commit/18bfb38316e5e4fe64f3c1fa50c5dd520776cfae) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#300](https://github.com/SoberReport-AI/DeepGuard/issues/300) |
 | 2026-08-27 12:51 | alexyin-tongji--dsh-ui-enhancer | 0.2.0 | [87f17fe](https://github.com/alexyin-tongji/dsh-ui-enhancer/commit/87f17fe74076570023e01e5d0fc55c21affd2c23) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#298](https://github.com/SoberReport-AI/DeepGuard/issues/298) |
@@ -203,4 +204,3 @@
 | 2026-08-22 23:19 | treg | 0.12.0 | [603540f](https://github.com/superdesigndev/treg/commit/603540f653994080d4f507a9a3564e1017c28eef) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#57](https://github.com/SoberReport-AI/DeepGuard/issues/57) |
 | 2026-08-22 22:59 | aegis | 2.8.5 | [fea84dd](https://github.com/ganyuanran/aegis/commit/fea84dd545385ebdbe1c7ceab0d2afb8fe9d4600) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
 | 2026-08-22 22:31 | dsh-browser | 0.1.2 | [eefd503](https://github.com/lum1104/dsh-browser/commit/eefd503da96097b41826943f49231f761e448e70) | SoberReport-AI | risk | 2 | approve | — | pass | merged | [#47](https://github.com/SoberReport-AI/DeepGuard/issues/47) |
-| 2026-08-22 22:03 | dsh-visualize | 0.1.2 | [e86f68f](https://github.com/nagi-ovo/dsh-visualize/commit/e86f68fe66b980a0ebeed8ef7409522b0b720bed) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#55](https://github.com/SoberReport-AI/DeepGuard/pull/55) |
