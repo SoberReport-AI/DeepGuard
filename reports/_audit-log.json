@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T02:25:10.627Z",
+      "plugin_id": "0xsline--dsh-spotlight",
+      "name": "dsh-spotlight",
+      "version": "0.0.2",
+      "commit": "b3565e8629d9a393d764681e96f4c41100cc12fa",
+      "repo": "0xsline/dsh-spotlight",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/282",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/302",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33032844388",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：核准 Sonar 的 clean 报告。\n\n1. 身份核验通过：plugin.id/version/commit 与任务卡逐字一致，subpath=null 对应仓库根。\n\n2. 零 findings 报告，无需逐条证据核验；所有维度 checked_items 的声明经代码验证属实：\n   - D1：src/ 中无凭据路径读取，仅 localStorage 用于快捷键偏好存储，navigator.platform 用于 Apple 检测。\n   - D2：插件未注册任何工具（runtime.ts apply 为空函数），未使用 systemPrompt.section()，未监",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-26T20:30:50.147Z",
       "plugin_id": "dsh-genui",
       "name": "dsh-genui",
