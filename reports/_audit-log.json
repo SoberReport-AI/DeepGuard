@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T02:41:34.206Z",
+      "plugin_id": "2768651338--dsh-effort-slider",
+      "name": "dsh-effort-slider",
+      "version": "0.2.5",
+      "commit": "b95d997a787ddfc2dfe05e167f59229ccd8bafb2",
+      "repo": "2768651338/dsh-effort-slider",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/284",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/304",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33033669861",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。(1) 身份逐字一致；(2) 报告零 findings，机械命中3条均亲自打开验证为真实形态（CSS 长行/源码映射/测试加载器）且 Sonar 以显式规则 ID 逐条排除，无覆盖缺口；(3) 独立快扫（fetch/child_process/eval/凭据/混淆/安装钩子/外联/模型面指令目录）无漏检，lib/ 构建产物与 src/ 比对一致、无动态解码；(4) manifest.json 28 个文件全部在树中可打开，无 out-of-bounds 覆盖缺口，audit_scope.limits 如实披露 lib/ 未逐行通读及动态层未启用；(5) 结论推导合规（",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T02:33:32.269Z",
       "plugin_id": "13071301808--dsh-composer-expand",
       "name": "dsh-composer-expand",
