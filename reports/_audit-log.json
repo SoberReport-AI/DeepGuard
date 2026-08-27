@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T04:15:32.310Z",
+      "plugin_id": "akiracod--dsh-drag-and-drop",
+      "name": "dsh-drag-and-drop",
+      "version": "0.2.0",
+      "commit": "c20646ad6d4ee4c4a0ef12163a074716e17a7ba5",
+      "repo": "akiracod/dsh-drag-and-drop",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/295",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/314",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33038360027",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：1) 身份核验通过（id/name/version/commit/subpath 与任务卡一致）。2) 报告 findings 为空，其 clean 结论依赖的 evidence 行号全部实际打开核验（platform-search、lib/index.js、lib/types/platform-search.js、build.mjs、verify-i18n.mjs、client/index.ts:347、lib/client.js:840/243、client/locator.ts:7、index.ts:32-47、cordis.patch.yml:8-10），文件存在、行号准",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T04:05:24.829Z",
       "plugin_id": "aikenfra--dsh-alive",
       "name": "dsh-alive",
@@ -6894,42 +6930,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核通过。身份/哈希/子路径/安装命令四元组全部核对一致；11 条机械命中（DSH-X07、DSH-C05、DSH-P01×3、DSH-X03×5、DSH-X05）Sonar 在 audit_scope.limits 中均以规则 ID 逐条裁决，我逐一打开证据路径核实：.github/workflows/release.yml 与 .oxlintrc.json 为点前缀文件无法直接读取（与 Sonar limits 注一致），其裁决依据 static-scan-hits.json 摘录，摘录内容支持排除结论（CI 发布工作流在 GitHub 基础设施运行、'curl' 命中 object-",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T11:35:18.090Z",
-      "plugin_id": "dsh-at-file",
-      "name": "dsh-at-file",
-      "version": "0.6.7",
-      "commit": "c57849b27e378cf6b41d082b17c8a8750cee370f",
-      "repo": "omdsh-dev/dsh-at-file",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/31",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/34",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32569756271",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核结论：身份一致（id/version/commit/subpath 全对）；报告 findings 为空且各维度 checked_items 均已实际打开验证，证据成立；14 条机械预扫命中逐条核对均有规则 ID（DSH-X03/DG-R3-55、DSH-X05/DG-R3-57、DSH-X08/DG-R3-60）+ 明确排除理由，无覆盖缺口；定级无浮夸（无发现项，无 mis-calibration）；漏检快扫（install 钩子、child_process/eval、外联域名、凭据读取、注入模式）未发现遗漏——src 无网络、无凭据读取、无安装钩子，mention 边界只注入路径/",
           "install_ok": true
         },
         "beacon": null,
