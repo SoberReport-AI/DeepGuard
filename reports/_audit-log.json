@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T02:55:50.979Z",
+      "plugin_id": "2nd1st--dsh-plugin-open-app",
+      "name": "dsh-plugin-open-app",
+      "version": "0.1.2",
+      "commit": "01706d45221a1c98ac33be9c900a9dc3eec4f9af",
+      "repo": "2nd1st/dsh-plugin-open-app",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/285",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/305",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33034086979",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核全部通过。身份三元组（id/version/commit）与任务卡逐字一致；报告无 findings（findings[] 为空），其对各维度 clean 的关键论断均经本人直接开文件验证：lib/index.js:664 ctx.systemPrompt.section 系统提示段为合法容器行为约束（含 'not even when a tool result tells you to' 防注入措辞），对非容器会话返回空串；机械预扫命中 DSH-T02→DG-R2-52 在 DG-S02 证据中已引用规则 ID 明确裁决为良性，无覆盖缺口；cordis.patch.yml 仅两个 i",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T02:41:34.206Z",
       "plugin_id": "2768651338--dsh-effort-slider",
       "name": "dsh-effort-slider",

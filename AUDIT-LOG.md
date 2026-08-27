@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-27 10:55 | 2nd1st--dsh-plugin-open-app | 0.1.2 | [01706d4](https://github.com/2nd1st/dsh-plugin-open-app/commit/01706d45221a1c98ac33be9c900a9dc3eec4f9af) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#285](https://github.com/SoberReport-AI/DeepGuard/issues/285) |
 | 2026-08-27 10:41 | 2768651338--dsh-effort-slider | 0.2.5 | [b95d997](https://github.com/2768651338/dsh-effort-slider/commit/b95d997a787ddfc2dfe05e167f59229ccd8bafb2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#284](https://github.com/SoberReport-AI/DeepGuard/issues/284) |
 | 2026-08-27 10:33 | 13071301808--dsh-composer-expand | 0.1.2 | [cb61627](https://github.com/13071301808/dsh-composer-expand/commit/cb6162753f6f48923b19275008c9d7a87718068a) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#283](https://github.com/SoberReport-AI/DeepGuard/issues/283) |
 | 2026-08-27 10:25 | 0xsline--dsh-spotlight | 0.0.2 | [b3565e8](https://github.com/0xsline/dsh-spotlight/commit/b3565e8629d9a393d764681e96f4c41100cc12fa) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#282](https://github.com/SoberReport-AI/DeepGuard/issues/282) |
