@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T03:36:25.615Z",
+      "plugin_id": "a903067276-rgb--dsh-hud",
+      "name": "dsh-hud",
+      "version": "1.2.16",
+      "commit": "ba0e78adae6fc0645d42ec243700e8c81151e98a",
+      "repo": "a903067276-rgb/dsh-hud",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/290",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/309",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33036379328",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "所有复核项通过。身份核验一致；FND-001 证据路径全部实体验证通过（lib/index.js:624/625/639 存在且内容匹配）；机械命中 DSH-C01→DG-R1-51 在 Sonar DG-D1 checked_items 中已明确引用规则 ID 并给出排除理由；manifest 15 文件全部对账一致；漏检快扫未发现未覆盖的高危点；定级校准无浮夸（MEDIUM 与证据相称）。唯一需注意的精度问题：DG-D2 checked_items 称「未挂接任何模型请求/消息事件」，但插件通过 perModelUsageProjection 确实处理了 request/header 等事",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T03:26:11.735Z",
       "plugin_id": "a903067276-rgb--dsh-file-upload",
       "name": "dsh-file-upload",
@@ -6894,42 +6930,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核（Aegis）结论：身份核验逐字一致；报告 findings 为空，逐项验证各维度 checked_items/ds_scenarios 主张均与源码相符（安装目标 TARGET_RE 白名单、变更路由 sameOrigin、进程控制 trustedRestartRequest 回环+拒转发头、备份恢复防穿越、patch 层保护宿主模块、出站端点固定合法、客户端 bundle 关键命中行与源码语义一致且为 UI 用途）；机械预扫 93 条命中全部落入 Sonar 已引用规则 ID（DG-R3-51/54/55/57/59/60、DG-R4-53）明确排除的 7 个类别，逐类抽样验证成立",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T10:23:00.196Z",
-      "plugin_id": "dsh-tui",
-      "name": "dsh-TUI",
-      "version": "0.8.8",
-      "commit": "f4e302b764afa71596025713b859cbbffcd52a9f",
-      "repo": "ccch1mneyyy/dsh-tui",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": null,
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/25",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32566995497",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "复核结论 approve。身份核验通过（plugin.id/version/commit/subpath 与任务卡及 package.json 实测一致，审计根为插件包根）。findings 为空，无证据可伪造；维度结构自洽（clean/na 维度无 findings，checked_items 均有实质内容，无空头对勾）。机械命中 146 条全量（static-scan-hits.json 亲自通读）均被 Sonar 以规则 ID 明确裁决，抽查 cordis.patch.yml/cordis.yml 的 !!js 表达式、prepare 钩子、bin 启动器、'curly' 样式名、src",
           "install_ok": true
         },
         "beacon": null,
