@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T04:24:00.127Z",
+      "plugin_id": "aks1st--dsh-sysmon",
+      "name": "dsh-sysmon",
+      "version": "0.2.0",
+      "commit": "59d08c303d4575a28e9d35f701cbd3e4f9483724",
+      "repo": "aks1st/dsh-sysmon",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/296",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/315",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33038892032",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（plugin.id/version/commit/subpath 与任务卡逐字一致）。报告无 findings，逐条核验所有 checked_items 声称：采样命令仅读 /proc/stat、/proc/meminfo、nproc、df -P /（src/collect.ts:18-26）；cordis.patch.yml 仅一行插件声明；4 处 cordis_define 均为 dynamic/ 目录注释归档文本（dynamic/client.js:1、dynamic/host.js:1、dynamic/README.md:4-5）；3 处 curl 均为同源校验注释（sr",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T04:15:32.310Z",
       "plugin_id": "akiracod--dsh-drag-and-drop",
       "name": "dsh-drag-and-drop",
@@ -6894,42 +6930,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "身份一致；findings[] 为空故无逐条证据可查，但对报告全部实质断言（10 工具、两条 Web 路由、补丁单行 insert、无安装钩子、客户端仅 Escape 监听、唯一子进程在 scripts/verify.mjs、全部 curl 面向 127.0.0.1）逐一打开文件验证属实；15 条机械命中全部裁决且带规则 ID，其中 DSH-X07（.github/workflows/publish.yml）经亲自验证确不在 tarball 树中，排除成立；定级校准 N/A（无 finding、无浮夸）；独立漏检快扫无新增发现；L4 动态层 na 判定正确；结论推导（clean/market ",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T11:48:44.146Z",
-      "plugin_id": "dsh-context",
-      "name": "dsh-context",
-      "version": "0.24.1",
-      "commit": "c40a919e60d86514a18f41e68d2ad3f0c3b13db4",
-      "repo": "bowenliang123/dsh-context",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": null,
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/35",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32570888378",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核通过。身份/哈希/子路径/安装命令四元组全部核对一致；11 条机械命中（DSH-X07、DSH-C05、DSH-P01×3、DSH-X03×5、DSH-X05）Sonar 在 audit_scope.limits 中均以规则 ID 逐条裁决，我逐一打开证据路径核实：.github/workflows/release.yml 与 .oxlintrc.json 为点前缀文件无法直接读取（与 Sonar limits 注一致），其裁决依据 static-scan-hits.json 摘录，摘录内容支持排除结论（CI 发布工作流在 GitHub 基础设施运行、'curl' 命中 object-",
           "install_ok": true
         },
         "beacon": null,
