@@ -1,0 +1,38 @@
+{
+  "id": "alexyin-tongji--dsh-ui-enhancer",
+  "name": "dsh-ui-enhancer",
+  "repo": "alexyin-tongji/dsh-ui-enhancer",
+  "url": "https://github.com/alexyin-tongji/dsh-ui-enhancer",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 298,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:21:49.841Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "87f17fe74076570023e01e5d0fc55c21affd2c23",
+    "default_branch": "main",
+    "pushed_at": "2026-08-23T08:23:13Z",
+    "stars": 1,
+    "version": "0.2.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-ui-enhancer"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:21:49.841Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
