@@ -1,0 +1,38 @@
+{
+  "id": "a735624258--dsh-skill-picker",
+  "name": "dsh-skill-picker",
+  "repo": "a735624258/dsh-skill-picker",
+  "url": "https://github.com/a735624258/dsh-skill-picker",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 287,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:19:41.513Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "aff4f33ea69f59588dec7fc5847c734452a27b2d",
+    "default_branch": "main",
+    "pushed_at": "2026-08-19T00:23:02Z",
+    "stars": 25,
+    "version": "0.2.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-skill-picker"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:19:41.513Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
