@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T03:17:24.414Z",
+      "plugin_id": "a903067276-rgb--dsh-file-mentions",
+      "name": "dsh-file-mentions",
+      "version": "1.0.11",
+      "commit": "21d8da94b174e37eda13274e74c4ed2459be612e",
+      "repo": "a903067276-rgb/dsh-file-mentions",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/288",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/308",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33035499265",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份（id/version/commit/subpath）与任务卡逐字一致；报告 findings 为空，三条机械命中（DSH-X03@docs/install.md:94、DSH-C05@docs/install.md:52、DSH-X03@lib/index.js:24）均已由 Sonar 在 D3/D4 checked_items 中以规则 ID 明确排除为良性，我逐一打开验证：install.md:94 为文档文字、install.md:52 为指向 127.0.0.1 的本机 curl 示例、lib/index.js:24 的 execFile 仅用于固定命令 open",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T03:08:47.728Z",
       "plugin_id": "a735624258--dsh-skill-picker",
       "name": "dsh-skill-picker",
@@ -6894,42 +6930,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "身份核验逐字一致。报告为 clean、无 findings，复核重点是 checked_items 叙述与机械命中覆盖：独立打开验证了 cordis.patch.yml 的 !!js 只读守卫（行 36/49）、package.json prepare=tsdown（行 80）、git.ts 数组式 spawn（行 12/97）、browser.probe 非回环+8s+仅回显头（index.ts 439-481）、e2e curl 指向 127.0.0.1（URL 从 dsh web 日志 127.0.0.1 绑定提取）、client 同源 fetch、fs.read/fs.write 任意",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T09:31:38.104Z",
-      "plugin_id": "dsh-liang-skin",
-      "name": "dsh-liang-skin",
-      "version": "0.1.7",
-      "commit": "976fcbf9b4a91b79f14b90c16cbe0d3f553c2bd3",
-      "repo": "kingofsoysauce/dsh-liang-skin",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/22",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/23",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32564609392",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核通过。身份逐字一致；报告零 findings，六维 clean 与 checked_items 实质内容自洽；机械命中 3 条（DSH-X08→DG-R3-60 @ lib/client.js:282 与 lib/client.js.map:4）均已在 DG-D3 checked item 3 及 L1 引用规则 ID 明确排除，且我亲自打开验证：lib/client.js:282 为皮肤 CSS 对『发送消息』按钮的 aria-label 转义选择器（对应 src/client/skin.css:253 正常主题化），lib/client.js.map:4 为 esbuild sou",
           "install_ok": true
         },
         "beacon": null,
