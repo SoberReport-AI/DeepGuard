@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-27 11:08 | a735624258--dsh-skill-picker | 0.2.0 | [aff4f33](https://github.com/a735624258/dsh-skill-picker/commit/aff4f33ea69f59588dec7fc5847c734452a27b2d) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#287](https://github.com/SoberReport-AI/DeepGuard/issues/287) |
 | 2026-08-27 11:01 | a1073097082--dsh-model-search | 0.1.0 | [8a6293a](https://github.com/a1073097082/dsh-model-search/commit/8a6293a62a19142538830ac898ab62fcfa27f4a8) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#286](https://github.com/SoberReport-AI/DeepGuard/issues/286) |
 | 2026-08-27 10:55 | 2nd1st--dsh-plugin-open-app | 0.1.2 | [01706d4](https://github.com/2nd1st/dsh-plugin-open-app/commit/01706d45221a1c98ac33be9c900a9dc3eec4f9af) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#285](https://github.com/SoberReport-AI/DeepGuard/issues/285) |
 | 2026-08-27 10:41 | 2768651338--dsh-effort-slider | 0.2.5 | [b95d997](https://github.com/2768651338/dsh-effort-slider/commit/b95d997a787ddfc2dfe05e167f59229ccd8bafb2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#284](https://github.com/SoberReport-AI/DeepGuard/issues/284) |
@@ -203,4 +204,3 @@
 | 2026-08-22 18:23 | dsh-tui | 0.8.8 | [f4e302b](https://github.com/ccch1mneyyy/dsh-tui/commit/f4e302b764afa71596025713b859cbbffcd52a9f) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#25](https://github.com/SoberReport-AI/DeepGuard/pull/25) |
 | 2026-08-22 17:44 | dsh-better-sidebar | 0.15.0 | [9a40164](https://github.com/omdsh-dev/dsh-better-sidebar/commit/9a40164d1a69dbc960585d8789ee0d849231979b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#24](https://github.com/SoberReport-AI/DeepGuard/pull/24) |
 | 2026-08-22 17:31 | dsh-liang-skin | 0.1.7 | [976fcbf](https://github.com/kingofsoysauce/dsh-liang-skin/commit/976fcbf9b4a91b79f14b90c16cbe0d3f553c2bd3) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#22](https://github.com/SoberReport-AI/DeepGuard/issues/22) |
-| 2026-08-22 17:25 | dsh-tianshu-tui | 0.1.2-rc.12 | [1ff44e3](https://github.com/huiliyi37/dsh-tianshu-tui/commit/1ff44e3dea8c677f48022c79887849df0248bccc) | SoberReport-AI | clean | 0 | approve | — | — | failed, flagged for extended review | [#14](https://github.com/SoberReport-AI/DeepGuard/issues/14) |
