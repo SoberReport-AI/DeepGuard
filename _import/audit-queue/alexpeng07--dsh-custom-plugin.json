@@ -1,0 +1,40 @@
+{
+  "id": "alexpeng07--dsh-custom-plugin",
+  "name": "dsh-custom-plugin",
+  "repo": "alexpeng07/dsh-custom-plugin",
+  "url": "https://github.com/alexpeng07/dsh-custom-plugin",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 297,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:21:23.908Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "4646feff7e77f5e7f0716f836b4647e5741399d8",
+    "default_branch": "main",
+    "pushed_at": "2026-08-26T05:42:02Z",
+    "stars": 3,
+    "version": "0.1.5",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [
+      "prepare"
+    ],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-custom-plugin"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:21:23.908Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
