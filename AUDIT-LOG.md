@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-28 02:10 | dsh-mnemon | 0.3.3 | [ef25f21](https://github.com/omdsh-dev/dsh-mnemon/commit/ef25f2166ab2d56e8077009c1a1f16467653c888) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
 | 2026-08-28 02:01 | dsh-cost-meter | 1.6.7 | [268b89f](https://github.com/han-1413141/dsh-cost-meter/commit/268b89fd871ab19111845dd7b0b6f65f6e00cc54) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
 | 2026-08-28 01:49 | dsh-context | 0.34.0 | [e24dcda](https://github.com/bowenliang123/dsh-context/commit/e24dcdae87f0fb3a48e0773c9cc1e95b7c14aefb) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#33](https://github.com/SoberReport-AI/DeepGuard/issues/33) |
 | 2026-08-28 01:40 | dsh-agent-teams | 0.1.14 | [5fe388f](https://github.com/nanmicoder/dsh-agent-teams/commit/5fe388f1a30da7b1374294b25bd6f8ad74ab6aa5) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#30](https://github.com/SoberReport-AI/DeepGuard/issues/30) |
@@ -203,4 +204,3 @@
 | 2026-08-23 01:00 | dsh-webui-market-plugin | 0.5.5 | [f0cfc50](https://github.com/sanqi-normal/dsh-webui-market-plugin/commit/f0cfc501a9e66b3c77da37e346d311d092cb1e41) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#65](https://github.com/SoberReport-AI/DeepGuard/issues/65) |
 | 2026-08-23 00:25 | misakanet | — | [a656edb](https://github.com/ikalus1988/misakanet/commit/a656edb8e9427942147d4b8ff3af5d11fb5b1e9c) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#58](https://github.com/SoberReport-AI/DeepGuard/issues/58) |
 | 2026-08-23 00:19 | whale-girl | 0.1.0 | [e22e1fd](https://github.com/vlln/whale-girl/commit/e22e1fd918746e610f7bfb1713cef1e57a56f37c) | SoberReport-AI | clean | 0 | extended review | uphold Aegis | — | failed, flagged for extended review | [#60](https://github.com/SoberReport-AI/DeepGuard/issues/60) |
-| 2026-08-23 00:05 | harmony-next-skills | 1.3.35 | [880420c](https://github.com/linhay/harmony-next.skills/commit/880420ccaede758845daa3e86154c4e02e6f2249) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#59](https://github.com/SoberReport-AI/DeepGuard/issues/59) |

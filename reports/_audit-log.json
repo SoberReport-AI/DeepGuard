@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T18:10:22.237Z",
+      "plugin_id": "dsh-mnemon",
+      "name": "dsh-mnemon",
+      "version": "0.3.3",
+      "commit": "ef25f2166ab2d56e8077009c1a1f16467653c888",
+      "repo": "omdsh-dev/dsh-mnemon",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/81",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/326",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33101403575",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 完全一致）。报告为 clean 结论，无任何 findings，因此 per_finding 为空数组。机械规则面预扫 33 条命中全部在 L1 摘要中逐条裁决（含规则 ID 映射与排除理由），无遗漏。全部关键证据路径已实际打开文件验证：src/process.ts（无 shell 子进程封装，输出有界）、src/lifecycle.ts:242-243（pre-step 先调用 next() 再可选追加引导提示，turn-stopping 仅安排空闲审查）、src/guidance.ts（含安全指令的引导文本）、src/run",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T18:01:03.848Z",
       "plugin_id": "dsh-cost-meter",
       "name": "dsh-cost-meter",
@@ -6911,35 +6947,6 @@
           "ruling": "uphold_aegis",
           "rationale": "Aegis 唯一的驳回点是 install_check.command_ok: false（market.install_command 为 null）。对照任务卡逐项复核：① 报告 plugin.commit=e22e1fd918746e610f7bfb1713cef1e57a56f37c 与任务卡逐字一致且为完整 40 位小写 hex（通过）；② plugin.subpath=null 与任务卡「仓库根」要求一致（通过）；③ market.install_command=null，并非规则要求的精确命令 `dsh plugin --profile web add github:vlln/w"
         },
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T16:05:07.978Z",
-      "plugin_id": "harmony-next-skills",
-      "name": "harmony-next-skills",
-      "version": "1.3.35",
-      "commit": "880420ccaede758845daa3e86154c4e02e6f2249",
-      "repo": "linhay/harmony-next.skills",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "gate",
-      "status": "rejected-gate",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/59",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32583621619",
-      "extended_review": false,
-      "reason": "context-preflight: audit scope totals ~10388740 weighted tokens (limit 8000000); an audit at this scale cannot complete within the free-tier rate budget — shrink the plugin directory and resubmit",
-      "compactions": null,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
-        "beacon": null,
         "harbor": null
       }
     }
