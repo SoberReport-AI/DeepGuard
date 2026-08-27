@@ -1,0 +1,38 @@
+{
+  "id": "a1073097082--dsh-model-search",
+  "name": "dsh-model-search",
+  "repo": "a1073097082/dsh-model-search",
+  "url": "https://github.com/a1073097082/dsh-model-search",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 286,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:19:33.523Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "8a6293a62a19142538830ac898ab62fcfa27f4a8",
+    "default_branch": "main",
+    "pushed_at": "2026-08-15T11:47:54Z",
+    "stars": 4,
+    "version": "0.1.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-model-search"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:19:33.523Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
