@@ -1,0 +1,38 @@
+{
+  "id": "13071301808--dsh-composer-expand",
+  "name": "dsh-composer-expand",
+  "repo": "13071301808/dsh-composer-expand",
+  "url": "https://github.com/13071301808/dsh-composer-expand",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 283,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:19:01.353Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "cb6162753f6f48923b19275008c9d7a87718068a",
+    "default_branch": "main",
+    "pushed_at": "2026-08-17T07:31:15Z",
+    "stars": 6,
+    "version": "0.1.2",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-composer-expand"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:19:01.354Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
