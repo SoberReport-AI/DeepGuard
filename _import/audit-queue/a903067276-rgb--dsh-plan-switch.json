@@ -1,0 +1,38 @@
+{
+  "id": "a903067276-rgb--dsh-plan-switch",
+  "name": "dsh-plan-switch",
+  "repo": "a903067276-rgb/dsh-plan-switch",
+  "url": "https://github.com/a903067276-rgb/dsh-plan-switch",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 291,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:20:22.786Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "7038ef4f996c577eaeba0c98eb07a233707f0ab9",
+    "default_branch": "main",
+    "pushed_at": "2026-08-26T06:25:27Z",
+    "stars": 6,
+    "version": "0.3.2",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-plan-switch"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:20:22.786Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
