@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T18:01:03.848Z",
+      "plugin_id": "dsh-cost-meter",
+      "name": "dsh-cost-meter",
+      "version": "1.6.7",
+      "commit": "268b89fd871ab19111845dd7b0b6f65f6e00cc54",
+      "repo": "han-1413141/dsh-cost-meter",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/68",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/325",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33100406464",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核员独立核验：身份/版本/commit 与任务卡一致；FND-001 全部证据路径亲自打开验证成立，LOW 定级恰当；7 条机械预扫命中（DSH-X07→DG-R3-59、DSH-X10→DG-R2-57、DSH-X08→DG-R3-60×4、DSH-X03→DG-R3-55）在报告中均以明确规则 ID 排除；manifest 177 文件全覆盖无缺口；独立漏检快扫（install 钩子/child_process/eval/外联域名/凭据读取/注入模式）未发现遗漏——凭据（DeepSeek Key、OpenCode Go Key、Anthropic OAuth、火山 AK/SK、各 Cod",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T17:49:20.717Z",
       "plugin_id": "dsh-context",
       "name": "dsh-context",
@@ -6899,35 +6935,6 @@
       "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32583621619",
       "extended_review": false,
       "reason": "context-preflight: audit scope totals ~10388740 weighted tokens (limit 8000000); an audit at this scale cannot complete within the free-tier rate budget — shrink the plugin directory and resubmit",
-      "compactions": null,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T15:35:07.762Z",
-      "plugin_id": "misakanet",
-      "name": "misakanet",
-      "version": null,
-      "commit": "a656edb8e9427942147d4b8ff3af5d11fb5b1e9c",
-      "repo": "ikalus1988/misakanet",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "gate",
-      "status": "failed",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/58",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32582110296",
-      "extended_review": true,
-      "reason": "intake gate script error (see run logs)",
       "compactions": null,
       "stages": {
         "sonar": null,
