@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T17:49:20.717Z",
+      "plugin_id": "dsh-context",
+      "name": "dsh-context",
+      "version": "0.34.0",
+      "commit": "e24dcdae87f0fb3a48e0773c9cc1e95b7c14aefb",
+      "repo": "bowenliang123/dsh-context",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/33",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/324",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33099630795",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。①身份核验：plugin.id/name/version/commit/subpath 与任务卡逐字一致。②报告 findings[] 为空，全部 6 个维度 clean、checked_items 计数与正文一致，无空头对勾。③机械规则面预扫 7 条命中（DSH-X07/DG-R3-59x2、DSH-C05/DG-R4-53、DSH-X10/DG-R2-57、DSH-X03/DG-R3-55、DSH-X05/DG-R3-57x2）均已在 audit_scope.limits 中以显式规则 ID 逐条裁决，覆盖无缺口；我独立打开 static-scan-hits.js",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T17:40:10.098Z",
       "plugin_id": "dsh-agent-teams",
       "name": "dsh-agent-teams",
@@ -6896,42 +6932,6 @@
       "stages": {
         "sonar": null,
         "aegis": null,
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T15:19:57.787Z",
-      "plugin_id": "treg",
-      "name": "treg",
-      "version": "0.12.0",
-      "commit": "603540f653994080d4f507a9a3564e1017c28eef",
-      "repo": "superdesigndev/treg",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/57",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/63",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32580760435",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核（Aegis）结论：approve。①身份/哈希/命令/维度汇总全部一致；②findings[] 为空，无 finding 证据路径需逐条核验；③checked_items 关键证据我亲自打开复核：dsh/index.js（纯 ESM 技能注册，无子进程/网络）、dsh/cordis.patch.yml（两处 !!js 仅读 TREG_TOKEN，唯一外联 treg.to/mcp/，未触碰沙箱/审批/权限行）、package.json（无安装钩子，dsh.bundle 指向存在的 ./dsh/cordis.patch.yml）、dsh/skills/treg/SKILL.md 及多份同",
-          "install_ok": true
-        },
         "beacon": null,
         "harbor": null
       }
