@@ -1,0 +1,37 @@
+{
+  "id": "anneheartrecord--dsh-desk-pet",
+  "name": "dsh-desk-pet",
+  "repo": "anneheartrecord/dsh-desk-pet",
+  "url": "https://github.com/anneheartrecord/dsh-desk-pet",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 300,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:22:01.301Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "18bfb38316e5e4fe64f3c1fa50c5dd520776cfae",
+    "default_branch": "main",
+    "pushed_at": "2026-08-20T08:13:19Z",
+    "stars": 5,
+    "version": "0.3.0",
+    "dsh_kind": [
+      "bundle"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-desk-pet"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:22:01.301Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
