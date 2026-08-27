@@ -1,0 +1,38 @@
+{
+  "id": "appliedyuu--dsh-wallpaperandcost",
+  "name": "dsh-WallpaperAndCost",
+  "repo": "appliedyuu/dsh-wallpaperandcost",
+  "url": "https://github.com/appliedyuu/dsh-wallpaperandcost",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 301,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:22:04.755Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "67bd5c6498610961400d7d3fa97cc5c4133130be",
+    "default_branch": "main",
+    "pushed_at": "2026-08-26T06:09:58Z",
+    "stars": 3,
+    "version": "1.0.0",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-wallpaperandcost"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:22:04.755Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
