@@ -1,0 +1,38 @@
+{
+  "id": "acidgr--dsh-web-mobile-fix",
+  "name": "dsh-web-mobile-fix",
+  "repo": "acidgr/dsh-web-mobile-fix",
+  "url": "https://github.com/acidgr/dsh-web-mobile-fix",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 292,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:20:33.334Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "015d905b5f9196b5d442878e5682d8aaa598aa3f",
+    "default_branch": "main",
+    "pushed_at": "2026-08-16T12:16:23Z",
+    "stars": 5,
+    "version": "1.0.2",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-web-mobile-fix"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:20:33.334Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
