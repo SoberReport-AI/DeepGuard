@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-27T17:29:37.164Z",
+      "plugin_id": "deepseek-harness-desktop",
+      "name": "deepseek-harness-desktop",
+      "version": "3.1.0",
+      "commit": "799b5fa8a8e5dfee68c9525c2c7c7e8492cb57c8",
+      "repo": "ningbainb/deepseek-harness-desktop",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/80",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/322",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33097872423",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：独立通读 static-scan-hits.json 全部 266 条命中（44 规则、1579 文件），报告出现的全部 13 个规则类均以 DG-Rx-5n 规则 ID 明确裁决，任务卡 50 条预扫命中全部落在已裁决规则类内，无覆盖缺口；扫描 excerpt 与报告各维度裁决内容自洽（prepare 全为构建工具、!!js 仅文档/测试、registerAdapter 仅测试夹具、pre-step 为守卫过滤、curl 为注释、键盘/剪贴板为 UI 交互）。报告 identity 与任务卡逐字一致；root package.json version 3.1.0 与 plugin.",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T17:19:31.122Z",
       "plugin_id": "aegis",
       "name": "aegis",
@@ -6894,42 +6930,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核结论：1) 身份/版本/commit 与任务卡逐字一致；2) 报告无 findings，6 个维度 checked_items 叙事均经我逐文件核实（extensions/dsh/bootstrap.js、index.js、cordis.patch.yml、extensions/shared/aegis-bootstrap.ts、hooks/*、skills/using-aegis、scripts/aegis-update.py 等），无空头对勾；3) 9 条机械预扫命中全部被裁决且引用规则 ID，我逐一打开可见证据复核均成立；.github/.opencode 等隐藏目录本环境同样不",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T14:31:15.236Z",
-      "plugin_id": "dsh-browser",
-      "name": "dsh-browser",
-      "version": "0.1.2",
-      "commit": "eefd503da96097b41826943f49231f761e448e70",
-      "repo": "lum1104/dsh-browser",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "risk",
-      "findings": 2,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/47",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/61",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32578470584",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "risk",
-          "findings": 2
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核结论：身份逐字一致；两条 finding 的全部证据路径均实际打开验证、行号精确、内容支撑描述与定级（MEDIUM/high），未见幻觉路径、形态违规或定级浮夸；31 条机械命中全部在报告中有 DSH- 规则 ID + 明确排除理由（或转化为 finding），无覆盖缺口；维度一致性良好（clean 维度无 findings，risk 维度 findings 挂接正确，checked_items 非空头对勾且经抽样核验属实）；独立漏检快扫（install 钩子/child_process/eval/外联域名/凭据读取/注入模式/审计员定向文本）未发现 Sonar 遗漏的高危点；安装命令",
           "install_ok": true
         },
         "beacon": null,
