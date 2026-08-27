@@ -1,0 +1,38 @@
+{
+  "id": "a903067276-rgb--dsh-file-mentions",
+  "name": "dsh-file-mentions",
+  "repo": "a903067276-rgb/dsh-file-mentions",
+  "url": "https://github.com/a903067276-rgb/dsh-file-mentions",
+  "subpath": null,
+  "category_hint": "ui",
+  "capabilities_hint": [],
+  "note": "dsh-* E2E batch intake #7 (catalog ranking). Whitelist batch submission.",
+  "source": "issue",
+  "issue": 288,
+  "status": "pending",
+  "submitted_at": "2026-08-27T02:19:51.216Z",
+  "prescreen": {
+    "ok": true,
+    "commit": "21d8da94b174e37eda13274e74c4ed2459be612e",
+    "default_branch": "main",
+    "pushed_at": "2026-08-26T06:28:52Z",
+    "stars": 12,
+    "version": "1.0.11",
+    "dsh_kind": [
+      "bundle",
+      "client"
+    ],
+    "install_hooks": [],
+    "dup": {
+      "in": "catalog",
+      "id": "dsh-file-mentions"
+    },
+    "warnings": []
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:19:51.217Z",
+      "action": "prescreen-pass"
+    }
+  ]
+}
