@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-27 12:05 | aikenfra--dsh-alive | 0.1.1 | [b89e53b](https://github.com/aikenfra/dsh-alive/commit/b89e53b51e5380900d0b298cbe1e768b5b940a84) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#294](https://github.com/SoberReport-AI/DeepGuard/issues/294) |
 | 2026-08-27 11:59 | aik358--dsh-anchored-monitor | 0.3.0 | [8cb863f](https://github.com/aik358/dsh-anchored-monitor/commit/8cb863fa50c3d17dec2683a247b93f90deeb5a16) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#293](https://github.com/SoberReport-AI/DeepGuard/issues/293) |
 | 2026-08-27 11:48 | acidgr--dsh-web-mobile-fix | 1.0.2 | [015d905](https://github.com/acidgr/dsh-web-mobile-fix/commit/015d905b5f9196b5d442878e5682d8aaa598aa3f) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#292](https://github.com/SoberReport-AI/DeepGuard/issues/292) |
 | 2026-08-27 11:42 | a903067276-rgb--dsh-plan-switch | 0.3.2 | [7038ef4](https://github.com/a903067276-rgb/dsh-plan-switch/commit/7038ef4f996c577eaeba0c98eb07a233707f0ab9) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#291](https://github.com/SoberReport-AI/DeepGuard/issues/291) |
@@ -203,4 +204,3 @@
 | 2026-08-22 20:06 | dsh-agent-teams | 0.1.12 | [6e7e5ee](https://github.com/nanmicoder/dsh-agent-teams/commit/6e7e5eeef3aa39b2aa1dae7aa30ea4d70b44f639) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#41](https://github.com/SoberReport-AI/DeepGuard/pull/41) |
 | 2026-08-22 19:48 | dsh-context | 0.24.1 | [c40a919](https://github.com/bowenliang123/dsh-context/commit/c40a919e60d86514a18f41e68d2ad3f0c3b13db4) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#35](https://github.com/SoberReport-AI/DeepGuard/pull/35) |
 | 2026-08-22 19:35 | dsh-at-file | 0.6.7 | [c57849b](https://github.com/omdsh-dev/dsh-at-file/commit/c57849b27e378cf6b41d082b17c8a8750cee370f) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#31](https://github.com/SoberReport-AI/DeepGuard/issues/31) |
-| 2026-08-22 19:25 | dsh-browser | 0.1.2 | [eefd503](https://github.com/lum1104/dsh-browser/commit/eefd503da96097b41826943f49231f761e448e70) | SoberReport-AI | risk | 1 | approve | — | — | rejected (postcheck) | [#32](https://github.com/SoberReport-AI/DeepGuard/issues/32) |
