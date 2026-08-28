@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-28T01:55:30.973Z",
+      "plugin_id": "dsh-mnemon",
+      "name": "dsh-mnemon",
+      "version": "0.3.4",
+      "commit": "e118094b9836fafbcbd057e4c5fa59572a9df9df",
+      "repo": "omdsh-dev/dsh-mnemon",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/81",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/329",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33133881797",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：身份、版本、commit 与任务卡一致。报告无 findings，全部 checked_items 证据路径均实际打开核验成立（tools.ts/guidance.ts/runtime-memory.ts:66/lifecycle.ts:258,321-328/process.ts/git-branch.ts/MnemonDialog.tsx:302/MnemonView.tsx:529,1349/rpc.ts:644-648/index.ts:124-126/三处 registerAdapter 均为插件内部 MemoryCatalog）。机械规则面 35 条命中在 L1 su",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-28T01:45:53.943Z",
       "plugin_id": "dsh-genui",
       "name": "dsh-genui",
@@ -6912,42 +6948,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "逐项复核结论：(1) 身份核验通过：plugin.id/version/commit 与任务卡逐字一致。(2) 报告 findings 为空（clean），各维度干净结论经独立通读全部 src/lib/tests/docs/脚本支撑：child_process 仅 execFile('git') 参数数组内部构造不经 shell（src/git.ts:89）、无 eval/new Function、宿主无外联、浏览器仅同源 /turn-rewind fetch、无凭据/剪贴板/键盘读取、patch 挂载仅插入自身插件、无 install 钩子、依赖全为官方包。(3) 机械命中覆盖：static",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T17:00:04.289Z",
-      "plugin_id": "dsh-webui-market-plugin",
-      "name": "dsh-webui-market-plugin",
-      "version": "0.5.5",
-      "commit": "f0cfc501a9e66b3c77da37e346d311d092cb1e41",
-      "repo": "sanqi-normal/dsh-webui-market-plugin",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/65",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/69",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32585923585",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "复核结论：身份逐字一致；报告零 findings、全维度 clean，无逐条证据需核验；9 条机械命中（DSH-X03×8 + DSH-C05×1）逐条在报告中裁决（DG-R3-55/DG-R4-53 引用明确），无覆盖缺口；checked_items 均有实义（spawn 数组传参+shell 白名单、snapshot 注释、6 处测试 new Function、cordis.patch.yml 无 !!js、无安装钩子、同源校验、白名单+试装、README 明示 allowBuilds/最小发布年龄自动放行——均经本人亲自开文件核实）；漏检快扫未发现恶意行为，仅 3 条文档化设计取舍（见 ",
           "install_ok": true
         },
         "beacon": null,
