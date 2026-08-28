@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-29 07:11 | aegis | 2.9.0 | [f7ae3a7](https://github.com/ganyuanran/aegis/commit/f7ae3a7b116ae3dbb2f6e901a1bae0a403d5f09a) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
 | 2026-08-28 09:55 | dsh-mnemon | 0.3.4 | [e118094](https://github.com/omdsh-dev/dsh-mnemon/commit/e118094b9836fafbcbd057e4c5fa59572a9df9df) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
 | 2026-08-28 09:45 | dsh-genui | 0.9.6 | [d8e82c5](https://github.com/omdsh-dev/dsh-genui/commit/d8e82c59cfb5b966dedf2a30911a0fa2c0844182) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#48](https://github.com/SoberReport-AI/DeepGuard/issues/48) |
 | 2026-08-28 09:35 | dsh-context | 0.35.0 | [ef97842](https://github.com/bowenliang123/dsh-context/commit/ef9784212984901edbcf47b99b0601e0acd83a2b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#33](https://github.com/SoberReport-AI/DeepGuard/issues/33) |
@@ -203,4 +204,3 @@
 | 2026-08-23 04:38 | dsh-cost-meter | 1.5.40 | [a6ab9d6](https://github.com/han-1413141/dsh-cost-meter/commit/a6ab9d61936e89521e800d16ce9b4dc6723972f9) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
 | 2026-08-23 03:12 | dsh-annotation | 1.4.1 | [599cd1e](https://github.com/omdsh-dev/dsh-annotation/commit/599cd1e68c320da2def27574a57a4e5e786d757b) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#67](https://github.com/SoberReport-AI/DeepGuard/issues/67) |
 | 2026-08-23 01:52 | dsh-workflow | 0.1.2 | [44b83c1](https://github.com/omdsh-dev/dsh_workflow/commit/44b83c182aa02d1be8a0803e8446cb495f93cd8f) | SoberReport-AI | clean | 0 | — | — | — | failed, flagged for extended review | [#66](https://github.com/SoberReport-AI/DeepGuard/issues/66) |
-| 2026-08-23 01:29 | dsh-turn-rewind | 0.1.1 | [b1b85f1](https://github.com/anionex/dsh-turn-rewind/commit/b1b85f18aaaaf71d76c84613429ce04d71f69620) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#64](https://github.com/SoberReport-AI/DeepGuard/issues/64) |
