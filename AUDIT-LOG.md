@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-29 07:42 | dsh-cost-meter | 1.6.8 | [05c95ac](https://github.com/han-1413141/dsh-cost-meter/commit/05c95ac7e0fe1f0feb315e63e082cc629146b3e2) | SoberReport-AI | clean | 1 | extended review | uphold Sonar | pass | merged | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
 | 2026-08-29 07:29 | dsh-context | 0.37.0 | [6d17588](https://github.com/bowenliang123/dsh-context/commit/6d17588a56728ddb861d07e069903c26e62fa38f) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#33](https://github.com/SoberReport-AI/DeepGuard/issues/33) |
 | 2026-08-29 07:21 | dsh-better-sidebar | 0.17.1 | [3b1898f](https://github.com/omdsh-dev/dsh-better-sidebar/commit/3b1898f9cb74edf4ca542ff84430eaf346dd05f4) | SoberReport-AI | clean | 0 | extended review | uphold Sonar | pass | merged | [#3](https://github.com/SoberReport-AI/DeepGuard/issues/3) |
 | 2026-08-29 07:11 | aegis | 2.9.0 | [f7ae3a7](https://github.com/ganyuanran/aegis/commit/f7ae3a7b116ae3dbb2f6e901a1bae0a403d5f09a) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
@@ -203,4 +204,3 @@
 | 2026-08-23 06:22 | dsh-cost-meter | 1.5.40 | [a6ab9d6](https://github.com/han-1413141/dsh-cost-meter/commit/a6ab9d61936e89521e800d16ce9b4dc6723972f9) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
 | 2026-08-23 06:06 | dsh-annotation | 1.4.1 | [599cd1e](https://github.com/omdsh-dev/dsh-annotation/commit/599cd1e68c320da2def27574a57a4e5e786d757b) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#67](https://github.com/SoberReport-AI/DeepGuard/issues/67) |
 | 2026-08-23 05:54 | dsh-workflow | 0.1.2 | [44b83c1](https://github.com/omdsh-dev/dsh_workflow/commit/44b83c182aa02d1be8a0803e8446cb495f93cd8f) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#66](https://github.com/SoberReport-AI/DeepGuard/issues/66) |
-| 2026-08-23 04:38 | dsh-cost-meter | 1.5.40 | [a6ab9d6](https://github.com/han-1413141/dsh-cost-meter/commit/a6ab9d61936e89521e800d16ce9b4dc6723972f9) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |

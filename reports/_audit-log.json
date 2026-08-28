@@ -2,6 +2,45 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-28T23:42:07.080Z",
+      "plugin_id": "dsh-cost-meter",
+      "name": "dsh-cost-meter",
+      "version": "1.6.8",
+      "commit": "05c95ac7e0fe1f0feb315e63e082cc629146b3e2",
+      "repo": "han-1413141/dsh-cost-meter",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 1,
+      "review_aegis": "extended_review",
+      "beacon": "uphold_sonar",
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/68",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/333",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33220601850",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "extended_review",
+          "notes": "复核结论：needs_human。理由：1) FND-001 全部证据路径已验证存在且内容支撑——fix 确实已实施。2) 插件实质内容经独立快扫未发现恶意行为（无 eval/child_process/install 钩子/隐蔽外联/注入措辞；所有固定外联域名均为硬编码官方端点且与声明 16 域名一致；凭据仅发往对应官方端点）。3) 但报告存在机械汇总不一致：FND-001 存在于 findings[] 和 key_findings 中，summary.overall_result=clean，dimension_overview DG-D4 显示 findings=0/status=cle",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "uphold_sonar",
+          "rationale": "裁决理由：Aegis 的两条驳回理由均不构成否决级问题。\n\n1) 报告汇总不一致（FND-001 在 findings[] 但 overall=clean / DG-D4 findings=0）：FND-001 描述为已修复的 LOW 问题（'不再产生实际风险'），本质上是已修复的历史记录。保留已修复记录同时声明整体 clean 在审计实践中合理。该不一致属格式性瑕疵，不影响报告实质结论——插件安全、修复已实施、证据路径全部存在且匹配（Aegis 自身确认 evidence_ok: true）。\n\n2) capability_diff 'match' 判定与上版报告的差异：插件确读取凭据文件（"
+        },
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-28T23:29:13.376Z",
       "plugin_id": "dsh-context",
       "name": "dsh-context",
@@ -6929,35 +6968,6 @@
       "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/66",
       "pr": null,
       "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32600743104",
-      "extended_review": true,
-      "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
-      "compactions": 0,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T20:38:52.180Z",
-      "plugin_id": "dsh-cost-meter",
-      "name": "dsh-cost-meter",
-      "version": "1.5.40",
-      "commit": "a6ab9d61936e89521e800d16ce9b4dc6723972f9",
-      "repo": "han-1413141/dsh-cost-meter",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "sonar",
-      "status": "failed",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/68",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32597164190",
       "extended_review": true,
       "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
       "compactions": 0,
