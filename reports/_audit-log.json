@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-28T01:35:00.397Z",
+      "plugin_id": "dsh-context",
+      "name": "dsh-context",
+      "version": "0.35.0",
+      "commit": "ef9784212984901edbcf47b99b0601e0acd83a2b",
+      "repo": "bowenliang123/dsh-context",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/33",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/327",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33132917655",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "逐项复核通过。插件为 UI 类插件（上下文浏览器），宿主侧为纯投影单元（timeline.ts），无工具注册、无事件监听（agent/pre-step/approval）、无模型可见面；客户端侧唯一网络请求为向 npm 官方及镜像的版本检查（latestVersion.ts），无凭据读取、无剪贴板、无键盘记录（两处 keydown 仅 Escape 关闭弹窗）。8 个机械命中全部逐条裁决。无动态沙箱产物。整体裁决 clean 合理，证据充分，无漏检。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-27T18:10:22.237Z",
       "plugin_id": "dsh-mnemon",
       "name": "dsh-mnemon",
@@ -6908,45 +6944,6 @@
         "sonar": null,
         "aegis": null,
         "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T16:19:06.491Z",
-      "plugin_id": "whale-girl",
-      "name": "whale-girl",
-      "version": "0.1.0",
-      "commit": "e22e1fd918746e610f7bfb1713cef1e57a56f37c",
-      "repo": "vlln/whale-girl",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "extended_review",
-      "beacon": "uphold_aegis",
-      "postcheck": null,
-      "stage_reached": "publish",
-      "status": "failed",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/60",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32583801348",
-      "extended_review": true,
-      "reason": "publish did not pass (postcheck FAIL, or push/PR creation failed; see run logs)",
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "extended_review",
-          "notes": "身份核验、全部 ds_scenarios 证据、16/16 机械命中裁决、维度一致性与漏检快扫均通过：插件为干净的 UI 桌宠（Node half 只做状态/资产/路由，client half 为 a11y 交互，desktop 为独立伴侣程序仅连本地 DSH）。报告无 findings，定级校准 N/A。唯一缺陷：clean 判决下 market.install_command 缺失（null），未向用户提供锁定 commit 的安装命令（README 的 #main 浮动引用已被 Sonar 记为观察项，但审计自身应发布 pinned 命令）。此为交付面/格式面缺陷而非安全结论错误，需人工",
-          "install_ok": false
-        },
-        "beacon": {
-          "ruling": "uphold_aegis",
-          "rationale": "Aegis 唯一的驳回点是 install_check.command_ok: false（market.install_command 为 null）。对照任务卡逐项复核：① 报告 plugin.commit=e22e1fd918746e610f7bfb1713cef1e57a56f37c 与任务卡逐字一致且为完整 40 位小写 hex（通过）；② plugin.subpath=null 与任务卡「仓库根」要求一致（通过）；③ market.install_command=null，并非规则要求的精确命令 `dsh plugin --profile web add github:vlln/w"
-        },
         "harbor": null
       }
     }
