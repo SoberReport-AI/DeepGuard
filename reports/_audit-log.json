@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-28T23:50:45.462Z",
+      "plugin_id": "dsh-mnemon",
+      "name": "dsh-mnemon",
+      "version": "0.3.5",
+      "commit": "82e586d9cc9592a9c972c7f555d40505d1517bff",
+      "repo": "omdsh-dev/dsh-mnemon",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/81",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/334",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33221305697",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（dsh-mnemon@0.3.5#82e586d9, subpath=null）。报告无 findings 项，所有 checked_items 中的证据路径已逐项打开验证：src/lifecycle.ts:258-259（代理步骤监听器/轮次终止监听器）、src/client/MnemonDialog.tsx:302（键盘监听→焦点循环）、src/client/MnemonView.tsx:532/1352（剪贴板写入→复制ID）、packages/extension-sdk/src/index.ts:223（适配器注册→MemoryCatalog）、packages/kern",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-28T23:42:07.080Z",
       "plugin_id": "dsh-cost-meter",
       "name": "dsh-cost-meter",
@@ -6939,35 +6975,6 @@
       "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/67",
       "pr": null,
       "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32601438357",
-      "extended_review": true,
-      "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
-      "compactions": 0,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T21:54:14.496Z",
-      "plugin_id": "dsh-workflow",
-      "name": "dsh-workflow",
-      "version": "0.1.2",
-      "commit": "44b83c182aa02d1be8a0803e8446cb495f93cd8f",
-      "repo": "omdsh-dev/dsh_workflow",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "sonar",
-      "status": "failed",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/66",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32600743104",
       "extended_review": true,
       "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
       "compactions": 0,
