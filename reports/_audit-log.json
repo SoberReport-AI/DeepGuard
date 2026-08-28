@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-28T23:29:13.376Z",
+      "plugin_id": "dsh-context",
+      "name": "dsh-context",
+      "version": "0.37.0",
+      "commit": "6d17588a56728ddb861d07e069903c26e62fa38f",
+      "repo": "bowenliang123/dsh-context",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/33",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/332",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33220200132",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核通过。身份核验一致（id/version/commit/subpath 逐字匹配任务卡）；报告 findings[] 为空，全部 clean 维度无 findings，checked_items 与轨迹摘要的扫描范围吻合；10 条机械规则命中在 audit_scope.limits 内全部按规则 ID 逐条裁决，无覆盖缺口；独立重开报告引用的全部关键证据文件（latestVersion.ts、command.ts/i18n.ts、contextModal.tsx:83、images.tsx:72、toolSources.ts:88/91/93、bundle-smoke.mjs:58、.ox",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-28T23:21:45.104Z",
       "plugin_id": "dsh-better-sidebar",
       "name": "dsh-better-sidebar",
@@ -6922,35 +6958,6 @@
       "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/68",
       "pr": null,
       "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32597164190",
-      "extended_review": true,
-      "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
-      "compactions": 0,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T19:12:21.731Z",
-      "plugin_id": "dsh-annotation",
-      "name": "dsh-annotation",
-      "version": "1.4.1",
-      "commit": "599cd1e68c320da2def27574a57a4e5e786d757b",
-      "repo": "omdsh-dev/dsh-annotation",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "sonar",
-      "status": "failed",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/67",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32592969497",
       "extended_review": true,
       "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
       "compactions": 0,
