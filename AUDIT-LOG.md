@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-08-28 09:45 | dsh-genui | 0.9.6 | [d8e82c5](https://github.com/omdsh-dev/dsh-genui/commit/d8e82c59cfb5b966dedf2a30911a0fa2c0844182) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#48](https://github.com/SoberReport-AI/DeepGuard/issues/48) |
 | 2026-08-28 09:35 | dsh-context | 0.35.0 | [ef97842](https://github.com/bowenliang123/dsh-context/commit/ef9784212984901edbcf47b99b0601e0acd83a2b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#33](https://github.com/SoberReport-AI/DeepGuard/issues/33) |
 | 2026-08-28 02:10 | dsh-mnemon | 0.3.3 | [ef25f21](https://github.com/omdsh-dev/dsh-mnemon/commit/ef25f2166ab2d56e8077009c1a1f16467653c888) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
 | 2026-08-28 02:01 | dsh-cost-meter | 1.6.7 | [268b89f](https://github.com/han-1413141/dsh-cost-meter/commit/268b89fd871ab19111845dd7b0b6f65f6e00cc54) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
@@ -203,4 +204,3 @@
 | 2026-08-23 01:52 | dsh-workflow | 0.1.2 | [44b83c1](https://github.com/omdsh-dev/dsh_workflow/commit/44b83c182aa02d1be8a0803e8446cb495f93cd8f) | SoberReport-AI | clean | 0 | — | — | — | failed, flagged for extended review | [#66](https://github.com/SoberReport-AI/DeepGuard/issues/66) |
 | 2026-08-23 01:29 | dsh-turn-rewind | 0.1.1 | [b1b85f1](https://github.com/anionex/dsh-turn-rewind/commit/b1b85f18aaaaf71d76c84613429ce04d71f69620) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#64](https://github.com/SoberReport-AI/DeepGuard/issues/64) |
 | 2026-08-23 01:00 | dsh-webui-market-plugin | 0.5.5 | [f0cfc50](https://github.com/sanqi-normal/dsh-webui-market-plugin/commit/f0cfc501a9e66b3c77da37e346d311d092cb1e41) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#65](https://github.com/SoberReport-AI/DeepGuard/issues/65) |
-| 2026-08-23 00:25 | misakanet | — | [a656edb](https://github.com/ikalus1988/misakanet/commit/a656edb8e9427942147d4b8ff3af5d11fb5b1e9c) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#58](https://github.com/SoberReport-AI/DeepGuard/issues/58) |

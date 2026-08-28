@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-28T01:45:53.943Z",
+      "plugin_id": "dsh-genui",
+      "name": "dsh-genui",
+      "version": "0.9.6",
+      "commit": "d8e82c59cfb5b966dedf2a30911a0fa2c0844182",
+      "repo": "omdsh-dev/dsh-genui",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/48",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/328",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33133323137",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit 逐字一致）; 无 findings（clean 报告）; 31条机械命中全部在 audit_scope.limits 中逐条裁决，无缺口; 独立快扫未发现漏检（无 install 钩子、无 runtime eval/child_process、无出站外联、无凭据读取、无注入模式）; 资产路由含文件名白名单防路径穿越; 系统提示词段落含秘密禁令; 安装命令形态合规; 结合全文无理由拒绝，予以 approve。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-28T01:35:00.397Z",
       "plugin_id": "dsh-context",
       "name": "dsh-context",
@@ -6914,35 +6950,6 @@
           "notes": "复核结论：身份逐字一致；报告零 findings、全维度 clean，无逐条证据需核验；9 条机械命中（DSH-X03×8 + DSH-C05×1）逐条在报告中裁决（DG-R3-55/DG-R4-53 引用明确），无覆盖缺口；checked_items 均有实义（spawn 数组传参+shell 白名单、snapshot 注释、6 处测试 new Function、cordis.patch.yml 无 !!js、无安装钩子、同源校验、白名单+试装、README 明示 allowBuilds/最小发布年龄自动放行——均经本人亲自开文件核实）；漏检快扫未发现恶意行为，仅 3 条文档化设计取舍（见 ",
           "install_ok": true
         },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T16:25:11.602Z",
-      "plugin_id": "misakanet",
-      "name": "misakanet",
-      "version": null,
-      "commit": "a656edb8e9427942147d4b8ff3af5d11fb5b1e9c",
-      "repo": "ikalus1988/misakanet",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "gate",
-      "status": "rejected-gate",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/58",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32584623179",
-      "extended_review": false,
-      "reason": "cannot determine plugin version: no version field in the repository's package.json and none pinned by prescreen — add a semver version to package.json and re-submit",
-      "compactions": null,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
         "beacon": null,
         "harbor": null
       }
