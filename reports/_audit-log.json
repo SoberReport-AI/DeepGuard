@@ -2,6 +2,45 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-28T23:21:45.104Z",
+      "plugin_id": "dsh-better-sidebar",
+      "name": "dsh-better-sidebar",
+      "version": "0.17.1",
+      "commit": "3b1898f9cb74edf4ca542ff84430eaf346dd05f4",
+      "repo": "omdsh-dev/dsh-better-sidebar",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "extended_review",
+      "beacon": "uphold_sonar",
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/3",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/331",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33219606563",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "extended_review",
+          "notes": "身份核验通过（plugin.id/version/commit 与任务卡逐字一致）。全部 20+ 条证据路径经实际打开验证，文件存在且内容支撑报告描述。证据路径无形态违规、无幻觉路径。静态扫描中 33 条机械命中除 DSH-X05 的 docs/plans/2026-08-14-add-plugins-modal-design.md:49 外均获明确裁决。该未裁决命中属设计文档中 navigator.clipboard 的提及，内容显属良性，但按复核纪律构成覆盖缺口，裁决为 needs_human。安装命令与哈希核验通过。无动态沙箱产物（na）。独立快扫未发现漏检的高危点。",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "uphold_sonar",
+          "rationale": "Aegis 唯一的驳回点（missed_concern：DSH-X05 设计文档 navigator.clipboard 命中未明确裁决）事实成立但严重性不足，不构成否决级问题。证据摘录确认 docs/plans/2026-08-14-add-plugins-modal-design.md:49 确实提及「navigator.clipboard → execCommand 兜底」的 writeClipboard 复制设计讨论，Aegis 引用路径真实存在、内容对得上。但：① 该命中属设计文档（docs/plans/）中对复制功能的良性讨论，非可执行代码；② Aegis 自认「内容显属良性」，其"
+        },
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-28T23:11:35.580Z",
       "plugin_id": "aegis",
       "name": "aegis",
@@ -6917,38 +6956,6 @@
       "compactions": 0,
       "stages": {
         "sonar": null,
-        "aegis": null,
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-22T17:52:52.618Z",
-      "plugin_id": "dsh-workflow",
-      "name": "dsh-workflow",
-      "version": "0.1.2",
-      "commit": "44b83c182aa02d1be8a0803e8446cb495f93cd8f",
-      "repo": "omdsh-dev/dsh_workflow",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "aegis",
-      "status": "failed",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/66",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32588768783",
-      "extended_review": true,
-      "reason": "Aegis produced no review verdict (see run logs)",
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
         "aegis": null,
         "beacon": null,
         "harbor": null
