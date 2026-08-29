@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 372 stars).",
   "source": "watch-update",
   "issue": 77,
-  "status": "audited",
+  "status": "pending",
   "submitted_at": "2026-08-23T09:54:21.002Z",
   "prescreen": {
     "ok": true,
@@ -82,14 +82,19 @@
       "at": "2026-08-25T19:42:27.596Z",
       "action": "audited",
       "reason": null
+    },
+    {
+      "at": "2026-08-29T10:13:14.944Z",
+      "action": "watch-update",
+      "reason": "release v0.8.6 full audit (mode=periodic)"
     }
   ],
-  "attempts": 2,
+  "attempts": 0,
   "mode": "release-full",
   "watch": {
-    "detected_at": "2026-08-25T16:03:59.221Z",
-    "commit": "036f3af2b8c856e735e8c62d85c95b967fed0beb",
-    "release_tag": "v0.8.5",
+    "detected_at": "2026-08-29T10:13:14.944Z",
+    "commit": "a25b503dd290e9e9aa7d963561fe6deb95b5eed3",
+    "release_tag": "v0.8.6",
     "release_mode": "periodic"
   }
 }
