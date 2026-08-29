@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-29T19:02:58.617Z",
+      "plugin_id": "aegis",
+      "name": "aegis",
+      "version": "2.9.1",
+      "commit": "296160cf2e8752a707483d291004a525509c57ea",
+      "repo": "ganyuanran/aegis",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/56",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/335",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33269259451",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过；报告无 findings，各维度 clean 且 checked_items 有实质内容（非空头对勾）；全部 32 条机械命中均被裁决，证据路径逐一实际打开验证均存在且内容相符；漏检快扫（child_process/eval、外联、凭据、base64 混淆、注入措辞）未发现遗漏高危点；scripts/ 与 .opencode/ 宿主适配器中的 git 调用均为文档化、用户显式触发或启动自检，不在 dsh 接入面。唯一轻微不精确：报告称审查了『23 个 SKILL.md』/『DSH-X10 共 24 处』，实际树中为 22 个 SKILL.md、23 处 DSH-X10 命中——属",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-29T11:08:00.259Z",
       "plugin_id": "shaobeichen--dsh-pocket",
       "name": "dsh-pocket",
@@ -6945,35 +6981,6 @@
           "notes": "独立复核结论：1) 身份一致（id/name/version/commit/subpath 全符）。2) 报告零 findings，本人亲自打开 src/lib/tests/scripts 全部关键面验证：10 条机械命中（DSH-X03→DG-R3-55）路径行号全部属实且被逐条裁决，无覆盖缺口；child_process 仅固定数组 git 命令（reviewGit/requiredPathFingerprint/gitRepository），不经 shell；source-policy FORBIDDEN 清单确为安全拦截机制；QuickJS 沙箱（runtime.ts:260-497）",
           "install_ok": true
         },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T08:16:57.022Z",
-      "plugin_id": "dsh-cost-meter",
-      "name": "dsh-cost-meter",
-      "version": "1.5.40",
-      "commit": "a6ab9d61936e89521e800d16ce9b4dc6723972f9",
-      "repo": "han-1413141/dsh-cost-meter",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "sonar",
-      "status": "failed",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/68",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32627701910",
-      "extended_review": true,
-      "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
-      "compactions": 0,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
         "beacon": null,
         "harbor": null
       }
