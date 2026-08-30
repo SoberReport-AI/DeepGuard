@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-30T22:12:24.006Z",
+      "plugin_id": "dsh-mnemon",
+      "name": "dsh-mnemon",
+      "version": "0.4.1",
+      "commit": "d6fa55027527e1483233aca3ede4ac56987cb2bd",
+      "repo": "omdsh-dev/dsh-mnemon",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/81",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/336",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33338020217",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（plugin.id/version/commit/subpath 逐字一致）。逐条证据路径核验全部通过：所有路径均存在且内容支撑报告描述。机械命中38条全部在 L1 pipeline 中按规则ID（DG-Rx-5n 映射）逐条裁决。独立快扫未发现漏检。工具数存在轻微偏差：报告 D2 称「11 个记忆/文档相关工具」实为13个（v0.4.1 新增了 mnemon_memory_body_create 和 mnemon_memory_body_merge）；L1 中 DSH-X08 计数写 3 条实为 4 条（ProviderIcon.tsx 长行+高熵为两个独立命中），DSH-X0",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-29T19:02:58.617Z",
       "plugin_id": "aegis",
       "name": "aegis",
@@ -6943,42 +6979,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "身份核验通过（id/version/commit 逐字一致，commit 完整 40 位 hex，subpath=null 对应仓库根）。报告无 findings，故无逐条证据核验负担；报告在 checked_items/limits 中引用的关键证据均亲自打开验证属实：lib/index.mjs:42 状态文件仅 <dshHome>/data/whale-girl/state.json；全部网络请求指向 /whale-girl/* 相对路由（lib/src/routes.mjs 单一前缀）；桌面伴侣默认 127.0.0.1:3080（desktop/lib/src/config.mjs:12",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T08:51:38.207Z",
-      "plugin_id": "dsh-workflow",
-      "name": "dsh-workflow",
-      "version": "0.1.2",
-      "commit": "44b83c182aa02d1be8a0803e8446cb495f93cd8f",
-      "repo": "omdsh-dev/dsh_workflow",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/66",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/72",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32628960096",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核结论：1) 身份一致（id/name/version/commit/subpath 全符）。2) 报告零 findings，本人亲自打开 src/lib/tests/scripts 全部关键面验证：10 条机械命中（DSH-X03→DG-R3-55）路径行号全部属实且被逐条裁决，无覆盖缺口；child_process 仅固定数组 git 命令（reviewGit/requiredPathFingerprint/gitRepository），不经 shell；source-policy FORBIDDEN 清单确为安全拦截机制；QuickJS 沙箱（runtime.ts:260-497）",
           "install_ok": true
         },
         "beacon": null,
