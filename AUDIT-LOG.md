@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-09-01 03:17 | aegis | 2.9.2 | [aa25804](https://github.com/ganyuanran/aegis/commit/aa25804933a438fa9d31a63587f16a303aeb3832) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
 | 2026-08-31 14:16 | dsh-mnemon | 0.4.3 | [aa446cf](https://github.com/omdsh-dev/dsh-mnemon/commit/aa446cf598ee5928c787d340eb314d3f1803eb4c) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
 | 2026-08-31 14:04 | dsh-agent-teams | 0.1.15 | [da2e2e4](https://github.com/nanmicoder/dsh-agent-teams/commit/da2e2e49242c6ecd7e801a74dba0c8268a0a2f81) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#30](https://github.com/SoberReport-AI/DeepGuard/issues/30) |
 | 2026-08-31 06:12 | dsh-mnemon | 0.4.1 | [d6fa550](https://github.com/omdsh-dev/dsh-mnemon/commit/d6fa55027527e1483233aca3ede4ac56987cb2bd) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
@@ -203,4 +204,3 @@
 | 2026-08-23 19:58 | ai-novel-writer | 0.8.5 | [cb767d8](https://github.com/ethanyoq/ai-novel-writer/commit/cb767d89277927ecd2986e70b9f0a9f57c72c9f8) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-08-23 19:32 | dsh-browser-lum1104 | 0.1.2 | [ef8b551](https://github.com/lum1104/dsh-browser/commit/ef8b551666d6e725e69934e71c3cc0f63c3e51b0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#78](https://github.com/SoberReport-AI/DeepGuard/issues/78) |
 | 2026-08-23 18:51 | dsh-web-ui-zhu1090093659 | 0.1.1 | [08629b9](https://github.com/zhu1090093659/dsh-web-ui/commit/08629b999735016a172f465cf90975289a498eb1) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#76](https://github.com/SoberReport-AI/DeepGuard/issues/76) |
-| 2026-08-23 17:54 | openviking | — | [6e944cc](https://github.com/volcengine/openviking/commit/6e944cc3e14872ec7e7a80edec9265397f367894) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#75](https://github.com/SoberReport-AI/DeepGuard/issues/75) |

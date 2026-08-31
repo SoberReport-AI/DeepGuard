@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-31T19:17:42.259Z",
+      "plugin_id": "aegis",
+      "name": "aegis",
+      "version": "2.9.2",
+      "commit": "aa25804933a438fa9d31a63587f16a303aeb3832",
+      "repo": "ganyuanran/aegis",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/56",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/339",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33428918225",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：1) 身份/版本/commit/subpath 与任务卡逐字一致；2) findings[] 为空，报告中 checked_items 引用的全部证据路径（extensions/dsh/bootstrap.js、index.js、cordis.patch.yml、extensions/shared/aegis-bootstrap.ts、.opencode/plugins/aegis.js:12/375、skills/writing-skills/render-graphs.js:18/72、.github/workflows/ci.yml、AGENTS.md、README.md:",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-31T06:16:55.617Z",
       "plugin_id": "dsh-mnemon",
       "name": "dsh-mnemon",
@@ -6948,35 +6984,6 @@
       "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32634890064",
       "extended_review": false,
       "reason": "context-preflight: audit scope totals ~8820217 weighted tokens (limit 8000000); an audit at this scale cannot complete within the free-tier rate budget — shrink the plugin directory and resubmit",
-      "compactions": null,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T09:54:52.498Z",
-      "plugin_id": "openviking",
-      "name": "dsh-memory-plugin",
-      "version": null,
-      "commit": "6e944cc3e14872ec7e7a80edec9265397f367894",
-      "repo": "volcengine/openviking",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "gate",
-      "status": "failed",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/75",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32632289342",
-      "extended_review": true,
-      "reason": "intake gate script error (see run logs)",
       "compactions": null,
       "stages": {
         "sonar": null,
