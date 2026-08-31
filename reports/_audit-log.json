@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-08-31T06:04:00.548Z",
+      "plugin_id": "dsh-agent-teams",
+      "name": "dsh-agent-teams",
+      "version": "0.1.15",
+      "commit": "da2e2e49242c6ecd7e801a74dba0c8268a0a2f81",
+      "repo": "nanmicoder/dsh-agent-teams",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/30",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/337",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33362117604",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核为 release-full，身份核验通过；全部证据路径均实际打开验证存在且行号正确、内容支撑描述；21 条机械命中在 audit_scope.limits 中逐条以规则 ID + 路径行号裁决，无覆盖缺口；覆盖面 83 文件全开，limits 如实披露 pnpm-lock 未逐字通读等限制。独立漏检快扫（eval/new Function/child_process/外联/凭据/注入措辞/base64/安全事件监听）未发现 Sonar 漏检项：运行时无动态执行、client fetch 全为同源相对路径、无外部域名、无凭据读取、无审批链/工具预执行监听。轻微瑕疵（不构成证据不成立）：So",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-30T22:12:24.006Z",
       "plugin_id": "dsh-mnemon",
       "name": "dsh-mnemon",
@@ -6943,42 +6979,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "身份核验通过（id/version/commit 与任务卡一致）。FND-001 证据逐条实际打开验证，路径/行号均准确。4 条机械预扫命中（DSH-X07→DG-R3-59、DSH-X08→DG-R3-60×2、DSH-X03→DG-R3-55）全部在报告中显式引用规则 ID 裁决为良性，覆盖无缺口。定级校准：FND-001 LOW 适度，confidence high 合理（静态证据），impact 三段齐全。漏检快扫：无 eval/child_process 运行时调用，无安装期钩子，外联均为官方端点或用户配置，凭据流向对应官方端点，无注入模式。install_command 逐项核验通",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T09:24:24.845Z",
-      "plugin_id": "whale-girl",
-      "name": "whale-girl",
-      "version": "0.1.0",
-      "commit": "e22e1fd918746e610f7bfb1713cef1e57a56f37c",
-      "repo": "vlln/whale-girl",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/60",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/73",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32630481366",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "身份核验通过（id/version/commit 逐字一致，commit 完整 40 位 hex，subpath=null 对应仓库根）。报告无 findings，故无逐条证据核验负担；报告在 checked_items/limits 中引用的关键证据均亲自打开验证属实：lib/index.mjs:42 状态文件仅 <dshHome>/data/whale-girl/state.json；全部网络请求指向 /whale-girl/* 相对路由（lib/src/routes.mjs 单一前缀）；桌面伴侣默认 127.0.0.1:3080（desktop/lib/src/config.mjs:12",
           "install_ok": true
         },
         "beacon": null,
