@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-01T00:00:50.147Z",
+      "plugin_id": "dsh-vision-toolkit",
+      "name": "dsh-vision-toolkit",
+      "version": "0.1.40",
+      "commit": "233b4253920c417e37e450440af1f36d3900a537",
+      "repo": "anionex/dsh-vision-toolkit",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "risk",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/7",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/340",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33451899881",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "risk",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份（id/version/commit/subpath）逐字核验通过；FND-001 全部证据路径实测存在且内容支撑结论；clean 维度关键证据（cordis.patch.yml、工具描述防注入、运行时白名单/哈希校验、自更新机制、同源校验、剪贴板用途）全部打开核实；57 条机械命中均获带 rule_id 的明确裁决，无覆盖缺口；漏检快扫（install 钩子/eval/外联/凭据/注入）未发现 Sonar 遗漏高危点；维度一致性、定级校准、install 命令与结论推导均合规。唯一微瑕为 L1 对 X08 命中数的叙述偏差（36 vs 31），不影响任何裁决结论，不构成证据不成立。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-08-31T23:43:15.980Z",
       "plugin_id": "dsh-vision-toolkit",
       "name": "dsh-vision-toolkit",
@@ -6953,42 +6989,6 @@
           "ruling": "escalate",
           "rationale": "证据面不足以判定。Aegis 的唯一实质分歧点是 missed_concerns 第1条——声称 .dsh/skills/dsh-web-ui-release/SKILL.md 与 .dsh/skills/skin-developer/SKILL.md 两个文件属审计树内模型面技能指令文件，Sonar 未覆盖，构成 DG-D2 潜在覆盖缺口。但证据摘录中完全没有任何关于这两个文件的内容（无 manifest.json 摘录验证其是否被列出、无 .dsh/ 目录树结构、无 SKILL.md 原文）。根据规则第6条——摘录缺席即存疑：争议涉及的证据未出现在摘录包中，Aegis 描述具象不似编造路径"
         },
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T12:13:26.455Z",
-      "plugin_id": "dsh-mnemon",
-      "name": "dsh-mnemon",
-      "version": "0.2.16",
-      "commit": "e5aae00797772bee34f414820b545d21391b84c7",
-      "repo": "omdsh-dev/dsh-mnemon",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/81",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/87",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32638243423",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "身份核验通过：package.json name=dsh-mnemon、version=0.2.16，commit/subpath 与任务卡逐字一致。独立复核（不依赖 Sonar 转述）：1) src/tools.ts 实际注册 13 个工具（memory_bodies/recall/related/status/document_search/document_manage/runtime_memory/remember/link/forget/memory_body_create/memory_body_update/memory_body_merge），报告两处称'12 个注册工具'属事",
-          "install_ok": true
-        },
-        "beacon": null,
         "harbor": null
       }
     }

@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-09-01 08:00 | dsh-vision-toolkit | 0.1.40 | [233b425](https://github.com/anionex/dsh-vision-toolkit/commit/233b4253920c417e37e450440af1f36d3900a537) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#7](https://github.com/SoberReport-AI/DeepGuard/issues/7) |
 | 2026-09-01 07:43 | dsh-vision-toolkit | 0.1.38 | [5a33bf6](https://github.com/anionex/dsh-vision-toolkit/commit/5a33bf6e9ff38f2d05d32fd6ee41479b8340ac5c) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#7](https://github.com/SoberReport-AI/DeepGuard/issues/7) |
 | 2026-09-01 07:34 | dsh-mnemon | 0.4.4 | [a990d45](https://github.com/omdsh-dev/dsh-mnemon/commit/a990d45c42d85102ec9390b7df04746d4f6654c9) | SoberReport-AI | clean | 0 | approve | — | — | failed, flagged for extended review | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
 | 2026-09-01 07:22 | deepseek-harness-desktop | 3.2.0 | [3f5e3b6](https://github.com/ningbainb/deepseek-harness-desktop/commit/3f5e3b68cd515c4fdd0e17253ee3c25a9ce9b9d2) | SoberReport-AI | clean | 0 | approve | — | — | failed, flagged for extended review | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
@@ -203,4 +204,3 @@
 | 2026-08-23 22:11 | dsh-pet | — | [82ba588](https://github.com/pc2005-cloud/dsh-pet/commit/82ba588c7f849a62f1af5df81250e2ca8154c3a3) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#79](https://github.com/SoberReport-AI/DeepGuard/issues/79) |
 | 2026-08-23 22:10 | dsh-undo-plugin | 0.4.1 | [7d21c94](https://github.com/lire1131/dsh-undo-plugin/commit/7d21c941a06ef46508e96aa0bd33e5af65488d8b) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#82](https://github.com/SoberReport-AI/DeepGuard/issues/82) |
 | 2026-08-23 21:06 | deepseek-harness-desktop | 3.0.1 | [f718ac0](https://github.com/ningbainb/deepseek-harness-desktop/commit/f718ac012e80fccd0b3b123e58d780f0f8ed7abc) | SoberReport-AI | clean | 0 | extended review | escalated | — | failed, flagged for extended review | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
-| 2026-08-23 20:13 | dsh-mnemon | 0.2.16 | [e5aae00](https://github.com/omdsh-dev/dsh-mnemon/commit/e5aae00797772bee34f414820b545d21391b84c7) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
