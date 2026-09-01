@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 56,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-22T14:21:26.157Z",
   "prescreen": {
     "ok": true,
@@ -122,9 +122,14 @@
       "at": "2026-09-01T18:37:53.748Z",
       "action": "watch-update",
       "reason": "release v2.9.4 full audit (mode=periodic)"
+    },
+    {
+      "at": "2026-09-01T19:38:33.485Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 0,
+  "attempts": 1,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-09-01T18:37:53.748Z",
