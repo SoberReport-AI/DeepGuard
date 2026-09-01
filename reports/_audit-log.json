@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-01T19:48:57.205Z",
+      "plugin_id": "aegis",
+      "name": "aegis",
+      "version": "2.9.4",
+      "commit": "773cce1e620e248310e15d00acd3f05561cba840",
+      "repo": "ganyuanran/aegis",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/56",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/341",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33550694463",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：报告 plugin.id/version/commit/subpath 与任务卡逐字一致；无 findings，checked_items 引用的证据路径全部实际打开验证存在且内容支撑描述——dsh 接入面仅读取 ~/.config/aegis/config.toml 的模式开关（非凭据）与自身技能目录，经 agent/session-start 与 session/event 延迟注入 using-aegis 路由契约（声明用户指令优先）；execFile/execSync 仅限 OpenCode 适配器 git ls-remote 自检（3s 超时不阻塞）与 render-g",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-01T00:00:50.147Z",
       "plugin_id": "dsh-vision-toolkit",
       "name": "dsh-vision-toolkit",
@@ -6950,45 +6986,6 @@
         "sonar": null,
         "aegis": null,
         "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T13:06:55.947Z",
-      "plugin_id": "deepseek-harness-desktop",
-      "name": "dsh-desktop-base",
-      "version": "3.0.1",
-      "commit": "f718ac012e80fccd0b3b123e58d780f0f8ed7abc",
-      "repo": "ningbainb/deepseek-harness-desktop",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "extended_review",
-      "beacon": "escalate",
-      "postcheck": null,
-      "stage_reached": "publish",
-      "status": "failed",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/80",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32640813276",
-      "extended_review": true,
-      "reason": "publish did not pass (postcheck FAIL, or push/PR creation failed; see run logs)",
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "extended_review",
-          "notes": "复核结论：身份核验逐字一致；报告 findings 为空，无逐条证据可推翻；235 条静态命中按规则类别全部裁决、51 条任务卡命中全覆盖且实测 excerpt 与裁决相符；关键证据路径（free-mode-profile-clone.mjs:46/54、dsh-ssh store/tools/index.ts:58、aionui-panel index.ts:34、describe-image README 63/78/90、cordis.patch.yml、runtime-controller loopback、AGENTS.md）均实测存在且内容支撑报告描述；定级校准无对象（无 find",
-          "install_ok": true
-        },
-        "beacon": {
-          "ruling": "escalate",
-          "rationale": "证据面不足以判定。Aegis 的唯一实质分歧点是 missed_concerns 第1条——声称 .dsh/skills/dsh-web-ui-release/SKILL.md 与 .dsh/skills/skin-developer/SKILL.md 两个文件属审计树内模型面技能指令文件，Sonar 未覆盖，构成 DG-D2 潜在覆盖缺口。但证据摘录中完全没有任何关于这两个文件的内容（无 manifest.json 摘录验证其是否被列出、无 .dsh/ 目录树结构、无 SKILL.md 原文）。根据规则第6条——摘录缺席即存疑：争议涉及的证据未出现在摘录包中，Aegis 描述具象不似编造路径"
-        },
         "harbor": null
       }
     }
