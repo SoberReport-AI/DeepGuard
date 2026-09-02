@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-02T19:40:59.462Z",
+      "plugin_id": "dsh-vision-router",
+      "name": "dsh-vision-router",
+      "version": "2.1.0",
+      "commit": "65b3f8ff300fdb0e79326ea2c6c54b5be3f48036",
+      "repo": "ysr666/dsh-vision-router",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/8",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/342",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33673426979",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过(plugin.id/version/commit/subpath与任务卡逐字一致)。报告无findings，各维度状态clean与checked_items一致。机械命中51条复核项(生产代码)均经Sonar在checked_items中按规则ID(DG-Rx-5n)逐一裁决；其余81条测试/脚本/文档命中经类别排除(测试脚手架/CI工程惯例/文档引用)。关键证据抽查确认：index.js:5038 agent/request路由、index.js:4785 pre-step清洗、lib注册适配器均如描述；execFile/spawnSync用于OCR/截图/日志/诊断/自更新，",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-02T07:04:14.839Z",
       "plugin_id": "dsh-genui",
       "name": "dsh-genui",
@@ -6953,35 +6989,6 @@
       "extended_review": true,
       "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
       "compactions": 0,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T14:11:39.245Z",
-      "plugin_id": "dsh-pet",
-      "name": "dsh-pet-pc2005-cloud",
-      "version": null,
-      "commit": "82ba588c7f849a62f1af5df81250e2ca8154c3a3",
-      "repo": "pc2005-cloud/dsh-pet",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "gate",
-      "status": "rejected-gate",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/79",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32644648391",
-      "extended_review": false,
-      "reason": "cannot determine plugin version: no version field in the repository's package.json and none pinned by prescreen — add a semver version to package.json and re-submit",
-      "compactions": null,
       "stages": {
         "sonar": null,
         "aegis": null,
