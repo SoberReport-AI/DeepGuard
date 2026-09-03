@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-03T18:42:04.295Z",
+      "plugin_id": "aegis",
+      "name": "aegis",
+      "version": "2.9.6",
+      "commit": "f055d0eac2bd0c63c3c73b240a75e2e5e713322a",
+      "repo": "ganyuanran/aegis",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/56",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/343",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33791238802",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "【身份核验】plugin.id/name/version/commit/subpath 均与任务卡逐字一致。\n\n【证据核验】报告 findings[] 为空，无可逐条核验的 finding。checked_items 中引用的证据路径（extensions/dsh/index.js, extensions/dsh/bootstrap.js, extensions/dsh/cordis.patch.yml, extensions/shared/aegis-bootstrap.ts, .opencode/plugins/aegis.js, skills/writing-skills/render-",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-02T19:40:59.462Z",
       "plugin_id": "dsh-vision-router",
       "name": "dsh-vision-router",
@@ -6963,35 +6999,6 @@
           "notes": "独立复核通过：身份元数据与任务卡逐字一致；报告 findings 为空，但各维度 checked_items 的实质声明均已亲自打开源码验证（无凭据读取、无网络外联、无安装钩子/CI、无自身代码动态求值——lib/index.js:258 的 new Function 经 sourcemap 确认为打包进产物的第三方 schemastery 校验库、build.mjs:13 的 execFileSync 仅用于开发期 tsc、lib 中 unicode 转义均为多语言界面文案与 sourcemap、styles.d.ts 长行为 cssText 模板串，均为良性构建产物特征）；10 条机械命中",
           "install_ok": true
         },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T14:15:05.962Z",
-      "plugin_id": "dsh-usage-stats",
-      "name": "dsh-usage-stats-ychris12138",
-      "version": "0.2.10",
-      "commit": "7c88a445b73f78af7df6082fd671d22a293acb6d",
-      "repo": "ychris12138/dsh-usage-stats",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "sonar",
-      "status": "failed",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/83",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32644702080",
-      "extended_review": true,
-      "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
-      "compactions": 0,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
         "beacon": null,
         "harbor": null
       }
