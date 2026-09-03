@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-09-04 02:52 | dsh-better-sidebar | 0.18.0 | [9e1a034](https://github.com/omdsh-dev/dsh-better-sidebar/commit/9e1a03452794532cda1f6ac677b72579dff48dfc) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#3](https://github.com/SoberReport-AI/DeepGuard/issues/3) |
 | 2026-09-04 02:42 | aegis | 2.9.6 | [f055d0e](https://github.com/ganyuanran/aegis/commit/f055d0eac2bd0c63c3c73b240a75e2e5e713322a) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
 | 2026-09-03 03:40 | dsh-vision-router | 2.1.0 | [65b3f8f](https://github.com/ysr666/dsh-vision-router/commit/65b3f8ff300fdb0e79326ea2c6c54b5be3f48036) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#8](https://github.com/SoberReport-AI/DeepGuard/issues/8) |
 | 2026-09-02 15:04 | dsh-genui | 0.9.1 | [1ca5da4](https://github.com/omdsh-dev/dsh-genui/commit/1ca5da4eb9394972cce2c1ccacfedc22eec3166b) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#48](https://github.com/SoberReport-AI/DeepGuard/issues/48) |
@@ -203,4 +204,3 @@
 | 2026-08-23 23:21 | dsh-undo-plugin | 0.4.1 | [7d21c94](https://github.com/lire1131/dsh-undo-plugin/commit/7d21c941a06ef46508e96aa0bd33e5af65488d8b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#82](https://github.com/SoberReport-AI/DeepGuard/issues/82) |
 | 2026-08-23 23:02 | deepseek-harness-desktop | 3.0.1 | [f718ac0](https://github.com/ningbainb/deepseek-harness-desktop/commit/f718ac012e80fccd0b3b123e58d780f0f8ed7abc) | SoberReport-AI | risk | 1 | approve | — | — | rejected (postcheck) | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
 | 2026-08-23 22:25 | openviking | — | [6e944cc](https://github.com/volcengine/openviking/commit/6e944cc3e14872ec7e7a80edec9265397f367894) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#75](https://github.com/SoberReport-AI/DeepGuard/issues/75) |
-| 2026-08-23 22:24 | dsh-notification | 0.1.3 | [ddec603](https://github.com/omdsh-dev/dsh-notification/commit/ddec603395a223deb46c75b74274c41849c6a131) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#84](https://github.com/SoberReport-AI/DeepGuard/issues/84) |
