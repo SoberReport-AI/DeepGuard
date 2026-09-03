@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-09-04 03:06 | dsh-vision-router | 2.1.1 | [be0a73e](https://github.com/ysr666/dsh-vision-router/commit/be0a73efbe8f1ec9741247394b4c8c6a46eb82ac) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#8](https://github.com/SoberReport-AI/DeepGuard/issues/8) |
 | 2026-09-04 02:57 | dsh-deep-whale | 0.0.1 | [d3d7ff2](https://github.com/small-tailqwq/dsh-deep-whale/commit/d3d7ff2b7d97260e940306b3e462870b6e033c96) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#92](https://github.com/SoberReport-AI/DeepGuard/issues/92) |
 | 2026-09-04 02:52 | dsh-better-sidebar | 0.18.0 | [9e1a034](https://github.com/omdsh-dev/dsh-better-sidebar/commit/9e1a03452794532cda1f6ac677b72579dff48dfc) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#3](https://github.com/SoberReport-AI/DeepGuard/issues/3) |
 | 2026-09-04 02:42 | aegis | 2.9.6 | [f055d0e](https://github.com/ganyuanran/aegis/commit/f055d0eac2bd0c63c3c73b240a75e2e5e713322a) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
@@ -203,4 +204,3 @@
 | 2026-08-24 00:17 | dsh-deep-whale | 0.0.1 | [d3d7ff2](https://github.com/small-tailqwq/dsh-deep-whale/commit/d3d7ff2b7d97260e940306b3e462870b6e033c96) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#92](https://github.com/SoberReport-AI/DeepGuard/issues/92) |
 | 2026-08-23 23:30 | dsh-usage-stats | 0.2.10 | [7c88a44](https://github.com/ychris12138/dsh-usage-stats/commit/7c88a445b73f78af7df6082fd671d22a293acb6d) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#83](https://github.com/SoberReport-AI/DeepGuard/issues/83) |
 | 2026-08-23 23:21 | dsh-undo-plugin | 0.4.1 | [7d21c94](https://github.com/lire1131/dsh-undo-plugin/commit/7d21c941a06ef46508e96aa0bd33e5af65488d8b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#82](https://github.com/SoberReport-AI/DeepGuard/issues/82) |
-| 2026-08-23 23:02 | deepseek-harness-desktop | 3.0.1 | [f718ac0](https://github.com/ningbainb/deepseek-harness-desktop/commit/f718ac012e80fccd0b3b123e58d780f0f8ed7abc) | SoberReport-AI | risk | 1 | approve | — | — | rejected (postcheck) | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
