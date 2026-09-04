@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T07:46:33.732Z",
+      "plugin_id": "shaobeichen--dsh-pocket",
+      "name": "dsh-pocket",
+      "version": "2.1.4",
+      "commit": "663276bcf8fed483d7fbe6c4119bf2ed1e19e590",
+      "repo": "shaobeichen/dsh-pocket",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/124",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/347",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33849660250",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。身份核验全部一致（id/name/version/commit/subpath/repo）。Sonar 报告无 findings（全维度 clean），所有 16 条机械预扫命中已在 audit_scope.limits 中逐条裁决并给出明确排除理由（DSH-X03/DG-R3-55 进程调用6处、DSH-X05/DG-R3-57 键盘监听2处、DSH-X07/DG-R3-59 CI工作流2处、DSH-X08/DG-R3-60 转义文本2处、DSH-C05/DG-R4-53 curl命令4处），覆盖无缺口。源码树经独立核查：无 eval/new Function、无安装钩子、无凭",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T07:37:55.740Z",
       "plugin_id": "dsh-mnemon",
       "name": "dsh-mnemon",
@@ -6976,35 +7012,6 @@
       "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32659020301",
       "extended_review": false,
       "reason": "repository contains a link entry (symlink/hardlink): \"benchmark/locomo/claudecode/import_to_ov.py\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit",
-      "compactions": null,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T18:44:18.713Z",
-      "plugin_id": "oh-dsh",
-      "name": "oh-dsh",
-      "version": "0.1.8",
-      "commit": "64182e9acb81cc173a6c19136716d51a7d1b679d",
-      "repo": "hust-open-atom-club/oh-dsh",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "gate",
-      "status": "rejected-gate",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/94",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32658962560",
-      "extended_review": false,
-      "reason": "repository contains a link entry (symlink/hardlink): \".agents/notes/implemented/CLAUDE.md\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit",
       "compactions": null,
       "stages": {
         "sonar": null,
