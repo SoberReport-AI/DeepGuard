@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T13:53:21.352Z",
+      "plugin_id": "dsh-browser-lum1104",
+      "name": "dsh-browser-lum1104",
+      "version": "0.1.3",
+      "commit": "e60e6e3f589205a5755b35f234155d3ec17d030b",
+      "repo": "lum1104/dsh-browser",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/78",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/355",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33878283766",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit 逐字一致，commit 40 位完整 hex）。报告无 findings；对 6 个 clean 维度抽查约 20 处 checked_items 证据引用（token.ts:25-44/72-78、server.ts:46-57/211-224/296-309/414-418、index.ts:229-237/252-258、tools.ts:113-278 十二工具、client.js:162-174、package.json:8-19、privacy.ts:30-51、untrusted.ts:11-26、untrusted.spec.t",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T13:28:11.130Z",
       "plugin_id": "shaobeichen--dsh-pocket",
       "name": "dsh-pocket",
@@ -6954,42 +6990,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核通过。插件 vlln--dsh-navbar@0.4.0 为纯 UI 插件：Node half 空 apply，浏览器端 half 仅做 DOM 操作（导航条创建、悬停预览、点击跳转、滚轮切换），localStorage 仅存取精选 pin 状态（按会话 id 键存储 messageId/text/ts/turn），不涉及网络外联、eval/动态执行、凭据读取、剪贴板、键盘监听、模型工具注册或系统提示注入。package.json 存在模板占位符（+process.argv[1]+）仅影响元数据展示，无安全影响。README 推荐分支安装属文档习惯建议，Sonar 已如实标注。无漏检、",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T03:35:26.677Z",
-      "plugin_id": "shaobeichen--dsh-pocket",
-      "name": "dsh-pocket",
-      "version": "1.13.4",
-      "commit": "472524a45ef7b1ff6fbd9c3bf50787680a5497c3",
-      "repo": "shaobeichen/dsh-pocket",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/124",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/133",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32686503730",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "复核结论：approve。身份核验通过（plugin.id/version/commit/subpath 逐字一致）；10 条机械命中全部在报告中对应裁决（DSH-X03/X05/X07/X08 均有逐条引用）；独立快扫未发现漏检（无 eval、无安装钩子、无凭据读取、无外联未声明域名、无模型面指令文件）；manifest 所列 43 文件全部在树中可定位。Sonar 的 checked_items 中声称「进程调用共 5 处」实际为 6 处（spawn×4+execFile×1+execSync×1），属轻微描述不精确，不影响安全定级——所有调用均已判定为良性功能用法。声明功能（反代 0.0",
           "install_ok": true
         },
         "beacon": null,

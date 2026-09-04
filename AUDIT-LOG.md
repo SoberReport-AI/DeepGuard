@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-09-04 21:53 | dsh-browser-lum1104 | 0.1.3 | [e60e6e3](https://github.com/lum1104/dsh-browser/commit/e60e6e3f589205a5755b35f234155d3ec17d030b) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#78](https://github.com/SoberReport-AI/DeepGuard/issues/78) |
 | 2026-09-04 21:28 | shaobeichen--dsh-pocket | 2.10.3 | [eb25503](https://github.com/shaobeichen/dsh-pocket/commit/eb255032991949d95c896f762e681c19e622cbdc) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#124](https://github.com/SoberReport-AI/DeepGuard/issues/124) |
 | 2026-09-04 21:01 | dsh-cost-meter | 1.7.10 | [e9cafb5](https://github.com/han-1413141/dsh-cost-meter/commit/e9cafb5139f350053ac6f521c7ab002ed702e31c) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
 | 2026-09-04 20:36 | dsh-context | 0.41.3 | [dce08e0](https://github.com/bowenliang123/dsh-context/commit/dce08e0db3ad1dae40da0eb586e7da7f587b32b6) | SoberReport-AI | clean | 0 | approve | — | — | failed, flagged for extended review | [#33](https://github.com/SoberReport-AI/DeepGuard/issues/33) |
@@ -203,4 +204,3 @@
 | 2026-08-24 11:56 | chinesezjc--dsh-interconnect | 0.9.0 | [32ca0ec](https://github.com/chinesezjc/dsh-interconnect/commit/32ca0ec0441983f7eded7c6d2bfbecfda02087b0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#126](https://github.com/SoberReport-AI/DeepGuard/issues/126) |
 | 2026-08-24 11:49 | huanlinoto--dsh-plugin-mineru | 0.2.4 | [67abfed](https://github.com/huanlinoto/dsh-plugin-mineru/commit/67abfedd5e3bd63043bac62222f5fbdc3281dae7) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#125](https://github.com/SoberReport-AI/DeepGuard/issues/125) |
 | 2026-08-24 11:41 | vlln--dsh-navbar | 0.4.0 | [d89ba74](https://github.com/vlln/dsh-navbar/commit/d89ba74f4e0403462a5e4c4feeec84a3e7a1cca2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#123](https://github.com/SoberReport-AI/DeepGuard/issues/123) |
-| 2026-08-24 11:35 | shaobeichen--dsh-pocket | 1.13.4 | [472524a](https://github.com/shaobeichen/dsh-pocket/commit/472524a45ef7b1ff6fbd9c3bf50787680a5497c3) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#124](https://github.com/SoberReport-AI/DeepGuard/issues/124) |
