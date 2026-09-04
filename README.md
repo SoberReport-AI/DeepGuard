@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/brand/deepguard-wordmark.svg" alt="DeepGuard" height="72">
+  <img src="https://dsh.sober.report/assets/brand/deepguard-wordmark.svg" alt="DeepGuard" height="72">
 </p>
 <p align="center">
   <a href="README.md">中文</a> · <a href="README.en.md">English</a> · <a href="https://ko-fi.com/G2S825CBZS">☕ Buy me more tokens</a>
