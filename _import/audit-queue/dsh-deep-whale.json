@@ -9,7 +9,7 @@
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #5). Monorepo subpath: `maid-atelier`.",
   "source": "watch-update",
   "issue": 92,
-  "status": "auditing",
+  "status": "needs-human",
   "submitted_at": "2026-08-23T16:08:31.357Z",
   "prescreen": {
     "ok": true,
@@ -128,6 +128,11 @@
       "at": "2026-09-04T09:22:24.830Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-09-04T09:41:58.427Z",
+      "action": "needs-human",
+      "reason": "translation-integrity: report-zh.json (Sonar zh draft) missing — translate stage did not deliver; cannot admit a monolingual report under the v3 contract"
     }
   ],
   "attempts": 2,
