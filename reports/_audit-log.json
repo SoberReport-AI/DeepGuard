@@ -28,6 +28,11 @@
         "aegis": null,
         "beacon": null,
         "harbor": null
+      },
+      "rescheduled": {
+        "at": "2026-09-04T06:53:11.000Z",
+        "by": "owner",
+        "note": "人工介入重新调度审计 (manual re-dispatch after human intervention)"
       }
     },
     {
@@ -93,6 +98,11 @@
         "aegis": null,
         "beacon": null,
         "harbor": null
+      },
+      "rescheduled": {
+        "at": "2026-09-04T06:53:11.000Z",
+        "by": "owner",
+        "note": "人工介入重新调度审计 (manual re-dispatch after human intervention)"
       }
     },
     {
@@ -230,6 +240,11 @@
         "aegis": null,
         "beacon": null,
         "harbor": null
+      },
+      "rescheduled": {
+        "at": "2026-09-04T06:53:11.000Z",
+        "by": "owner",
+        "note": "人工介入重新调度审计 (manual re-dispatch after human intervention)"
       }
     },
     {
@@ -367,6 +382,11 @@
         },
         "beacon": null,
         "harbor": null
+      },
+      "rescheduled": {
+        "at": "2026-09-04T06:53:11.000Z",
+        "by": "owner",
+        "note": "人工介入重新调度审计 (manual re-dispatch after human intervention)"
       }
     },
     {
@@ -403,6 +423,11 @@
         },
         "beacon": null,
         "harbor": null
+      },
+      "rescheduled": {
+        "at": "2026-09-04T06:53:11.000Z",
+        "by": "owner",
+        "note": "人工介入重新调度审计 (manual re-dispatch after human intervention)"
       }
     },
     {
@@ -612,6 +637,11 @@
         "aegis": null,
         "beacon": null,
         "harbor": null
+      },
+      "rescheduled": {
+        "at": "2026-09-04T06:53:11.000Z",
+        "by": "owner",
+        "note": "人工介入重新调度审计 (manual re-dispatch after human intervention)"
       }
     },
     {
@@ -641,6 +671,11 @@
         "aegis": null,
         "beacon": null,
         "harbor": null
+      },
+      "rescheduled": {
+        "at": "2026-09-04T06:53:11.000Z",
+        "by": "owner",
+        "note": "人工介入重新调度审计 (manual re-dispatch after human intervention)"
       }
     },
     {
@@ -670,6 +705,11 @@
         "aegis": null,
         "beacon": null,
         "harbor": null
+      },
+      "rescheduled": {
+        "at": "2026-09-04T06:53:11.000Z",
+        "by": "owner",
+        "note": "人工介入重新调度审计 (manual re-dispatch after human intervention)"
       }
     },
     {
@@ -699,6 +739,11 @@
         "aegis": null,
         "beacon": null,
         "harbor": null
+      },
+      "rescheduled": {
+        "at": "2026-09-04T06:53:11.000Z",
+        "by": "owner",
+        "note": "人工介入重新调度审计 (manual re-dispatch after human intervention)"
       }
     },
     {

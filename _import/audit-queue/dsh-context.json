@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 33,
-  "status": "needs-human",
+  "status": "pending",
   "submitted_at": "2026-08-22T11:14:27.655Z",
   "prescreen": {
     "ok": true,
@@ -158,9 +158,14 @@
       "at": "2026-08-29T11:04:15.650Z",
       "action": "needs-human",
       "reason": "llm-error:server-error (503: {\"code\":\"activity_cost_limit_reached\",\"message\":\"The model is temporarily unavailable because today's activity cost limit has been reached. (request id: 20260829110405165031295c955d568g2hAH5Hn)\",)"
+    },
+    {
+      "at": "2026-09-04T06:53:11.000Z",
+      "action": "requeued",
+      "reason": "owner manual re-dispatch after human intervention (prev=needs-human; llm-error:server-error 503 activity_cost_limit_reached)"
     }
   ],
-  "attempts": 1,
+  "attempts": 0,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-08-29T10:13:14.944Z",

@@ -83,9 +83,14 @@
       "at": "2026-09-03T19:12:00.851Z",
       "action": "requeued",
       "reason": "orphaned dispatch: no terminal write within 30 min of dispatch (run died or was cancelled)"
+    },
+    {
+      "at": "2026-09-04T06:53:11.000Z",
+      "action": "requeued",
+      "reason": "owner manual re-dispatch after human intervention (prev=pending; sonar submit failed validation 3 times)"
     }
   ],
-  "attempts": 2,
+  "attempts": 0,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-09-03T16:32:06.603Z",

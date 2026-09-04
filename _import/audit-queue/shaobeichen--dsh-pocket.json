@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #4 (catalog star ranking, 31 stars). Whitelist batch submission.",
   "source": "watch-update",
   "issue": 124,
-  "status": "needs-human",
+  "status": "pending",
   "submitted_at": "2026-08-24T03:07:52.149Z",
   "prescreen": {
     "ok": true,
@@ -88,9 +88,14 @@
       "at": "2026-08-29T11:08:00.365Z",
       "action": "needs-human",
       "reason": "llm-error:server-error (503: {\"code\":\"activity_cost_limit_reached\",\"message\":\"The model is temporarily unavailable because today's activity cost limit has been reached. (request id: 20260829110747780882753c955d568emaEaKPO)\",)"
+    },
+    {
+      "at": "2026-09-04T06:53:11.000Z",
+      "action": "requeued",
+      "reason": "owner manual re-dispatch after human intervention (prev=needs-human; llm-error:server-error 503 activity_cost_limit_reached)"
     }
   ],
-  "attempts": 1,
+  "attempts": 0,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-08-29T10:13:14.944Z",

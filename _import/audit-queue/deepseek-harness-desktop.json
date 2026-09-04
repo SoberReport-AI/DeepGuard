@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 69 stars).",
   "source": "watch-update",
   "issue": 80,
-  "status": "needs-human",
+  "status": "pending",
   "submitted_at": "2026-08-23T09:54:25.680Z",
   "prescreen": {
     "ok": true,
@@ -132,9 +132,14 @@
       "at": "2026-08-31T23:22:27.885Z",
       "action": "needs-human",
       "reason": "translation-integrity: report-zh.json (Sonar zh draft) missing — translate stage did not deliver; cannot admit a monolingual report under the v3 contract"
+    },
+    {
+      "at": "2026-09-04T06:53:11.000Z",
+      "action": "requeued",
+      "reason": "owner manual re-dispatch after human intervention (prev=needs-human; translation-integrity: report-zh.json missing)"
     }
   ],
-  "attempts": 1,
+  "attempts": 0,
   "gate": {
     "at": "2026-08-24T12:04:27.783Z",
     "submitter": "SoberReport-AI",
