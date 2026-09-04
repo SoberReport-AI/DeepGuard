@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T08:15:39.517Z",
+      "plugin_id": "dsh-context",
+      "name": "dsh-context",
+      "version": "0.38.1",
+      "commit": "5f2fc9a2654616bb58b94424a00f6cabd9f20469",
+      "repo": "bowenliang123/dsh-context",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/33",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/350",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33851933465",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核通过。身份核验一致；报告无 findings（clean 报告），全部 key claims 已验证：无 install hooks、无 eval/child_process 在发布代码中、唯一外联为 npm 版本检查、无模型可见工具与提示注入面、键盘监听仅 Escape 关闭、toolSources 中 schedule/goal 字样为静态映射。10条机械规则命中全部在 audit_scope.limits 中逐条裁决（含规则 ID 映射与排除理由）。能力声明中 fs: false 与实际代码轻微不符（readFileSync 用于读取 package.json 的工具归属标注，报告已",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T08:07:09.972Z",
       "plugin_id": "deepseek-harness-desktop",
       "name": "deepseek-harness-desktop",
@@ -6985,42 +7021,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核结论：安全通过。\n\n1. 身份核验 ✓：plugin.id/version/commit 与任务卡逐字一致。\n2. 证据核验 ✓：findings 为空，无可核验发现项。checked_items 中的全部声明性结论经逐一打开源码文件验证属实（凭据读取仅限 ~/.commandcode/auth.json、凭据写入走官方 credentials seam、无 eval/child_process、网络出口仅 api.commandcode.ai + registry.npmjs.org + studio 登录页、登录回环服务有状态令牌与来源白名单防护、AGENTS.md 为面向贡献者的",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T23:30:27.726Z",
-      "plugin_id": "dsh-chat-import",
-      "name": "dsh-chat-import",
-      "version": "0.7.0",
-      "commit": "a6c5410e45beb055e232edcf25db29f2721035c6",
-      "repo": "nwflower/dsh-chat-import",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/99",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/110",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32673366214",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核通过。身份四项逐字一致；报告 findings 为空，各维度 clean 声称的关键支撑点（secrets 保护性检测、discovery 声明业务读取、工具 description 功能性、AGENTS.md 开发指南、context-bridge 默认关、cordis.patch.yml 仅 insert、无安装钩子/无运行时子进程/无外部外联、CI 本地 mock、fzstd 唯一依赖、webServer 注入路由、sync-loop 默认关）均经实际打开文件逐行核实成立。12 条机械规则命中全部被 Sonar 逐条裁决且排除理由与行内容相符，无覆盖缺口。漏检快扫独立执行（ins",
           "install_ok": true
         },
         "beacon": null,
