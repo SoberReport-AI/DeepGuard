@@ -2,6 +2,35 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T08:57:09.948Z",
+      "plugin_id": "dsh-deep-whale",
+      "name": "dsh-deep-whale",
+      "version": "0.0.1",
+      "commit": "d3d7ff2b7d97260e940306b3e462870b6e033c96",
+      "repo": "small-tailqwq/dsh-deep-whale",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": null,
+      "findings": null,
+      "review_aegis": null,
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "sonar",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/92",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33855001911",
+      "extended_review": true,
+      "reason": "Sonar produced no report (agent crashed or submission over size limit; see run logs)",
+      "compactions": 0,
+      "stages": {
+        "sonar": null,
+        "aegis": null,
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T08:31:15.783Z",
       "plugin_id": "dsh-mnemon",
       "name": "dsh-mnemon",
@@ -4389,45 +4418,6 @@
     },
     {
       "ts": "2026-08-24T14:46:28.520Z",
-      "plugin_id": "lehhair--dsh-diff-viewer",
-      "name": "dsh-diff-viewer",
-      "version": "0.1.1",
-      "commit": "d576c00cc7db52695d69f86142d4454380fed236",
-      "repo": "lehhair/dsh-diff-viewer",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "needs_human",
-      "beacon": "escalate",
-      "postcheck": "flagged",
-      "stage_reached": "publish (manual owner release)",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/175",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32712412788",
-      "extended_review": false,
-      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "needs_human",
-          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
-          "install_ok": true
-        },
-        "beacon": {
-          "ruling": "escalate",
-          "notes": "escalate：三条 missed_concerns 中 FND-902（压缩 bundle 标识符不可识别属正常）指控较弱、FND-903（树内 patch 未被引用）不构成否决级；FND-901（704KB 打包产物约 15% 未逐行核验）与 Sonar limits 如实披露一致，属披露的覆盖边界。"
-        },
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T14:46:28.520Z",
       "plugin_id": "lzszq--dsh-scholar",
       "name": "dsh-scholar",
       "version": "0.1.0",
@@ -4461,6 +4451,45 @@
         "beacon": {
           "ruling": "escalate",
           "notes": "escalate：两条 missed_concerns（kernel.ts 517KB/server.ts 226KB 未逐行通读、无 L4 动态产物）在事实层面与报告 audit_scope.limits 自述一致，128 条机械命中已逐条裁决，属披露的覆盖边界。"
+        },
+        "harbor": null
+      }
+    },
+    {
+      "ts": "2026-08-24T14:46:28.520Z",
+      "plugin_id": "lehhair--dsh-diff-viewer",
+      "name": "dsh-diff-viewer",
+      "version": "0.1.1",
+      "commit": "d576c00cc7db52695d69f86142d4454380fed236",
+      "repo": "lehhair/dsh-diff-viewer",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "needs_human",
+      "beacon": "escalate",
+      "postcheck": "flagged",
+      "stage_reached": "publish (manual owner release)",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/175",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32712412788",
+      "extended_review": false,
+      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "needs_human",
+          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "escalate",
+          "notes": "escalate：三条 missed_concerns 中 FND-902（压缩 bundle 标识符不可识别属正常）指控较弱、FND-903（树内 patch 未被引用）不构成否决级；FND-901（704KB 打包产物约 15% 未逐行核验）与 Sonar limits 如实披露一致，属披露的覆盖边界。"
         },
         "harbor": null
       }
@@ -6971,42 +7000,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核通过：身份逐字一致；报告无 findings，引用的全部证据路径均实际打开验证存在且内容支撑描述（工具说明良性、网络端点正确、无安装钩子、publish.yml 标准发布流程）；51 条机械命中全部有明确裁决（DG-R3-59、DG-R3-54 均被引用排除理由）；manifest 21 文件全覆盖无缺口；漏检快扫（install 钩子/eval/child_process/外联/凭据/注入）未发现 Sonar 遗漏的高危点；安装命令形态与哈希完全合规。定级与结论（clean/clean）与证据相称，无浮夸、无误报。",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T00:06:34.030Z",
-      "plugin_id": "dsh-dream-skin",
-      "name": "dsh-dream-skin",
-      "version": "0.4.10",
-      "commit": "68c554c2fd4701b560315a7513b0ee73b668874f",
-      "repo": "revolutionla/dsh-dream-skin",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/104",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/114",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32675197240",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核通过。身份核验一致（id/version/commit/subpath 逐字匹配，commit 完整 40 位 hex）；报告无 findings，5 条机械命中（DSH-X10/X07×2/X05/X08）在报告中均有明确裁决且我逐一打开原始文件验证：SKILL.md 为要求用户确认的安装引导、ci.yml/stats-chart.yml 为仓库自身 CI（package.json files 不含 .github，不随插件分发）、client.js:2980 为分享链接剪贴板写入、client.js:2576 为壁纸 URL 控制字符拒绝正则，均判定良性成立；manifest.js",
           "install_ok": true
         },
         "beacon": null,
