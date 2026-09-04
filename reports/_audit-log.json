@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T09:42:17.155Z",
+      "plugin_id": "dsh-deep-whale",
+      "name": "dsh-deep-whale",
+      "version": "0.0.1",
+      "commit": "d7cfec228ce96fccf052a1ccee717b6b5e721e4d",
+      "repo": "small-tailqwq/dsh-deep-whale",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "publish",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/92",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33858014587",
+      "extended_review": true,
+      "reason": "publish did not pass (postcheck FAIL, or push/PR creation failed; see run logs)",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve（报告 findings[] 为空，per_finding 留空；证据核验落在各 dimension/limit 引用的具体行上）。(1) 身份：id/version/commit/subpath 与任务卡逐字一致。(2) 机械命中覆盖：任务卡 15 条预扫命中与 Sonar audit_scope.limits 的裁决清单一一对应（13 条 DSH-X08/DG-R3-60 图片密度信号 + 1 条 DSH-C05/DG-R4-53 命中 CSS 注释 curl + 1 条 DSH-X05/DG-R3-57 命中 Esc-only keydown），均已在报告内以引用",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T09:21:51.010Z",
       "plugin_id": "dsh-mnemon",
       "name": "dsh-mnemon",
@@ -4454,45 +4490,6 @@
     },
     {
       "ts": "2026-08-24T14:46:28.520Z",
-      "plugin_id": "lehhair--dsh-diff-viewer",
-      "name": "dsh-diff-viewer",
-      "version": "0.1.1",
-      "commit": "d576c00cc7db52695d69f86142d4454380fed236",
-      "repo": "lehhair/dsh-diff-viewer",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "needs_human",
-      "beacon": "escalate",
-      "postcheck": "flagged",
-      "stage_reached": "publish (manual owner release)",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/175",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32712412788",
-      "extended_review": false,
-      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "needs_human",
-          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
-          "install_ok": true
-        },
-        "beacon": {
-          "ruling": "escalate",
-          "notes": "escalate：三条 missed_concerns 中 FND-902（压缩 bundle 标识符不可识别属正常）指控较弱、FND-903（树内 patch 未被引用）不构成否决级；FND-901（704KB 打包产物约 15% 未逐行核验）与 Sonar limits 如实披露一致，属披露的覆盖边界。"
-        },
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T14:46:28.520Z",
       "plugin_id": "lzszq--dsh-scholar",
       "name": "dsh-scholar",
       "version": "0.1.0",
@@ -4526,6 +4523,45 @@
         "beacon": {
           "ruling": "escalate",
           "notes": "escalate：两条 missed_concerns（kernel.ts 517KB/server.ts 226KB 未逐行通读、无 L4 动态产物）在事实层面与报告 audit_scope.limits 自述一致，128 条机械命中已逐条裁决，属披露的覆盖边界。"
+        },
+        "harbor": null
+      }
+    },
+    {
+      "ts": "2026-08-24T14:46:28.520Z",
+      "plugin_id": "lehhair--dsh-diff-viewer",
+      "name": "dsh-diff-viewer",
+      "version": "0.1.1",
+      "commit": "d576c00cc7db52695d69f86142d4454380fed236",
+      "repo": "lehhair/dsh-diff-viewer",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "needs_human",
+      "beacon": "escalate",
+      "postcheck": "flagged",
+      "stage_reached": "publish (manual owner release)",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/175",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32712412788",
+      "extended_review": false,
+      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "needs_human",
+          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "escalate",
+          "notes": "escalate：三条 missed_concerns 中 FND-902（压缩 bundle 标识符不可识别属正常）指控较弱、FND-903（树内 patch 未被引用）不构成否决级；FND-901（704KB 打包产物约 15% 未逐行核验）与 Sonar limits 如实披露一致，属披露的覆盖边界。"
         },
         "harbor": null
       }
@@ -6967,42 +7003,6 @@
           "ruling": "uphold_sonar",
           "rationale": "双审分歧的唯一实质争议点是 Aegis 的 missed_concerns[0]：报告声称 DSH-X08/DG-R3-60『14 条命中全部排除』但只逐条列出 13 条路径，漏列 lib/command-CzzSPmag.js:194。该指控的事实基础成立（证据摘录确认该行真实存在：lib/command-CzzSPmag.js:194 为 cleanup() 中的 `output.write(\"\\x1B[0m\\x1B[?25h\\x1B[2J\\x1B[H\")`，是 TUI 连接表单清理阶段的 ANSI 终端复位/清屏序列），但该漏列不构成否决级问题：(1) 内容经证据摘录与 Aegis 本人"
         },
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T00:23:20.242Z",
-      "plugin_id": "dsh-openbiliclaw",
-      "name": "dsh-openbiliclaw",
-      "version": "0.3.206",
-      "commit": "b91ff7850df0722bc6133a6a312fa7b8984196c0",
-      "repo": "whiteguo233/dsh-openbiliclaw",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/106",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/116",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32676050010",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "身份、证据路径、维度一致性、31 条机械命中覆盖（30×DG-R3-60 于 DG-D3 排除、1×DG-R2-57 于 DG-D2 排除，均引用规则 ID 给良性理由）、覆盖面（manifest 130 文件全在树中，无点目录缺口）、安装命令四元组全部核验通过。独立漏检快扫未发现 install 钩子、child_process/eval、凭据读取或外联通道；全部 fetch/WebSocket 指向本机 127.0.0.1:8420，bilibili 链接仅 window.open 用户导航。唯一轻微不精确：DG-D4 称『唯一的非本机 URL 是项目主页链接』，实际另有 bilibili",
-          "install_ok": true
-        },
-        "beacon": null,
         "harbor": null
       }
     }
