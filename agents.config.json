@@ -2,8 +2,8 @@
   "_readme": "DeepGuard audit pipeline LLM configuration — the exact configuration every public audit run uses: the agent-audit workflow copies this file over the cloned core's agent/agents.config.json in every job, so the configuration the community sees here is the configuration that actually runs. All audit roles (sonar / aegis / beacon / harbor / translate) run on the b.ai gateway's glm-5.3-flash (OpenAI-compatible, deepseek-compat behavior kept for thinking params). The API key itself lives in GitHub Secrets (BAI_LLM_KEY) and is never part of this file.",
   "default_endpoint": "bai",
   "endpoints": {
-    "bai": { "provider": "deepseek", "base_url": "https://api.b.ai/v1", "api_key_env": "BAI_LLM_KEY", "context_window": 900000, "hard_window": true, "max_output_tokens": 393216,
-             "notes": "Input limit measured 943K-971K tokens (2026-08-21 probe on deepseek-v4-flash); 900K is the conservative working window. 400 'Input token exceed the limit' is a deterministic pre-dispatch rejection (fail-fast, no retry)." }
+    "bai": { "provider": "deepseek", "base_url": "https://api.b.ai/v1", "api_key_env": "BAI_LLM_KEY", "context_window": 900000, "hard_window": true, "max_output_tokens": 131072,
+             "notes": "Server limits measured on b.ai: context window 943K-971K (2026-08-21, deepseek-v4-flash; 900K working window) — max_tokens cap 131072 (glm-5.3-flash, 2026-09-04; 393216 was the ds-v4-flash ceiling). 400 'Input token exceed the limit' is a deterministic pre-dispatch rejection (fail-fast, no retry)." }
   },
   "roles": {
     "sonar":     { "endpoint": "bai", "model": "glm-5.3-flash", "effort": "high", "prompt_file": "agent/prompts/sonar.md" },
