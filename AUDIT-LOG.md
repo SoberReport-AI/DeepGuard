@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-09-04 16:07 | deepseek-harness-desktop | 3.2.0 | [3f5e3b6](https://github.com/ningbainb/deepseek-harness-desktop/commit/3f5e3b68cd515c4fdd0e17253ee3c25a9ce9b9d2) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
 | 2026-09-04 15:57 | ai-novel-writer | 0.1.0 | [a25b503](https://github.com/ethanyoq/ai-novel-writer/commit/a25b503dd290e9e9aa7d963561fe6deb95b5eed3) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-09-04 15:46 | shaobeichen--dsh-pocket | 2.1.4 | [663276b](https://github.com/shaobeichen/dsh-pocket/commit/663276bcf8fed483d7fbe6c4119bf2ed1e19e590) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#124](https://github.com/SoberReport-AI/DeepGuard/issues/124) |
 | 2026-09-04 15:37 | dsh-mnemon | 0.2.16 | [e5aae00](https://github.com/omdsh-dev/dsh-mnemon/commit/e5aae00797772bee34f414820b545d21391b84c7) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
@@ -203,4 +204,3 @@
 | 2026-08-24 07:49 | dsh-open-in-vscode | 0.1.6 | [8aed144](https://github.com/omdsh-dev/dsh-open-in-vscode/commit/8aed144abdc158a332aa73bce42fc217d962f751) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#101](https://github.com/SoberReport-AI/DeepGuard/issues/101) |
 | 2026-08-24 07:38 | dsh-commandcode-provider | 0.8.0 | [7eac763](https://github.com/mars-sea/dsh-commandcode-provider/commit/7eac763be33ddb5266b0966975916a11ae471664) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#102](https://github.com/SoberReport-AI/DeepGuard/issues/102) |
 | 2026-08-24 07:30 | dsh-chat-import | 0.7.0 | [a6c5410](https://github.com/nwflower/dsh-chat-import/commit/a6c5410e45beb055e232edcf25db29f2721035c6) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#99](https://github.com/SoberReport-AI/DeepGuard/issues/99) |
-| 2026-08-24 07:20 | dsh-automation | 0.1.7 | [5ae28f2](https://github.com/titanwings/dsh-automation/commit/5ae28f209c0253461131613fc1b2ea27920bec67) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#100](https://github.com/SoberReport-AI/DeepGuard/issues/100) |

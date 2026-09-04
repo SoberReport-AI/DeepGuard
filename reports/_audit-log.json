@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T08:07:09.972Z",
+      "plugin_id": "deepseek-harness-desktop",
+      "name": "deepseek-harness-desktop",
+      "version": "3.2.0",
+      "commit": "3f5e3b68cd515c4fdd0e17253ee3c25a9ce9b9d2",
+      "repo": "ningbainb/deepseek-harness-desktop",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/80",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/349",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33851114579",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核完毕。1) 身份核验通过：plugin.id/version/commit 与任务卡逐字一致。2) 逐条证据核验：已实际打开验证多个关键证据路径（.dsh/skills/*/SKILL.md、AGENTS.md、apps/dsh-desktop/src/legacy-credential-compat.mjs:95/120、apps/dsh-desktop/src/repair-model-availability.mjs:209、apps/dsh-desktop/src/conversation-import/discovery.mjs:57、packages/dsh-liangshen",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T07:57:00.971Z",
       "plugin_id": "ai-novel-writer",
       "name": "dsh-ai-novel-writer",
@@ -6985,42 +7021,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核通过。身份四项逐字一致；报告 findings 为空，各维度 clean 声称的关键支撑点（secrets 保护性检测、discovery 声明业务读取、工具 description 功能性、AGENTS.md 开发指南、context-bridge 默认关、cordis.patch.yml 仅 insert、无安装钩子/无运行时子进程/无外部外联、CI 本地 mock、fzstd 唯一依赖、webServer 注入路由、sync-loop 默认关）均经实际打开文件逐行核实成立。12 条机械规则命中全部被 Sonar 逐条裁决且排除理由与行内容相符，无覆盖缺口。漏检快扫独立执行（ins",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T23:20:54.604Z",
-      "plugin_id": "dsh-automation",
-      "name": "dsh-automation",
-      "version": "0.1.7",
-      "commit": "5ae28f209c0253461131613fc1b2ea27920bec67",
-      "repo": "titanwings/dsh-automation",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/100",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/109",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32673025044",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "身份核验通过：plugin.id/version/commit/subpath 均与任务卡逐字一致。\nSonar 报告无 findings，所有维度 clean。逐条证据核验：零条 finding 无需逐条核查；机械命中 6 条 DSH-X08 均已在线下逐行确认位置与内容（CSS 样式、Unicode 本地化字符串、sourcemap），均为良性，Sonar 已在 DG-D3 第 8 项中明确裁决排除。\n危险模式快扫：child_process/eval/Function/网络调用/凭据读取/base64 解码执行/install 钩子/隐藏指令文件均未发现。\n覆盖面对账：manifest ",
           "install_ok": true
         },
         "beacon": null,
