@@ -9,7 +9,7 @@
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #5). Monorepo subpath: `maid-atelier`.",
   "source": "watch-update",
   "issue": 92,
-  "status": "needs-human",
+  "status": "pending",
   "submitted_at": "2026-08-23T16:08:31.357Z",
   "prescreen": {
     "ok": true,
@@ -108,9 +108,14 @@
       "at": "2026-09-04T08:29:37.632Z",
       "action": "needs-human",
       "reason": "llm-error:invalid-max-tokens (400: {\"message\":\"The request is invalid: max_tokens参数非法：限制数值范围[1,131072]. Please check the request body, required fields, and request format.\",\"type\":\"invalid_request_error\",\"param\":\"\",\"code\":\"400001\")"
+    },
+    {
+      "at": "2026-09-04T08:45:08.000Z",
+      "action": "requeued",
+      "reason": "owner manual re-dispatch after max_output_tokens fix (prev=needs-human; glm-5.3-flash ceiling 131072, was 393216 ds-v4-flash)"
     }
   ],
-  "attempts": 2,
+  "attempts": 0,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-09-03T16:32:06.603Z",

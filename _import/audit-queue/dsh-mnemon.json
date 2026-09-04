@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 66 stars).",
   "source": "watch-update",
   "issue": 81,
-  "status": "needs-human",
+  "status": "pending",
   "submitted_at": "2026-08-23T09:54:24.556Z",
   "prescreen": {
     "ok": true,
@@ -188,9 +188,14 @@
       "at": "2026-09-04T08:31:15.954Z",
       "action": "needs-human",
       "reason": "llm-error:invalid-max-tokens (400: {\"message\":\"The request is invalid: max_tokens参数非法：限制数值范围[1,131072]. Please check the request body, required fields, and request format.\",\"type\":\"invalid_request_error\",\"param\":\"\",\"code\":\"400001\")"
+    },
+    {
+      "at": "2026-09-04T08:45:08.000Z",
+      "action": "requeued",
+      "reason": "owner manual re-dispatch after max_output_tokens fix (prev=needs-human; glm-5.3-flash ceiling 131072, was 393216 ds-v4-flash)"
     }
   ],
-  "attempts": 2,
+  "attempts": 0,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-08-31T20:52:24.516Z",
