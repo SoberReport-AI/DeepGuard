@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T07:31:32.226Z",
+      "plugin_id": "dsh-genui",
+      "name": "dsh-genui",
+      "version": "0.9.7",
+      "commit": "074b9333eb1d292430076cd98af911c3643d8c86",
+      "repo": "omdsh-dev/dsh-genui",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/48",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/346",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33848415304",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过。报告findings[]为空，所有evidence路径经实际打开验证均存在且内容吻合。23条机械命中全部在audit_scope.limits中逐条裁决覆盖。独立漏检快扫未发现高危遗漏。安装命令格式正确锁定owner/repo+完整commit。结论clean合规。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T07:21:48.437Z",
       "plugin_id": "dsh-deep-whale",
       "name": "dsh-deep-whale",
@@ -6980,35 +7016,6 @@
           "notes": "身份四元组逐字一致；findings 为空（clean 报告），无逐条证据需核验。机械规则面 51 条预扫命中全部落在 Sonar 已按规则 ID 明确裁决的规则族内（DSH-X10/X07/X03/X05/X08/C01/C05/T02/P01/X02），无两头皆空的覆盖缺口；关键良性裁决经独立抽查成立（SKILL.md/AGENTS.md 为仓库开发与发版指令、systemPrompt.section 为插件能力声明、prepare 全为构建工具、describe-image 实际 patch 无 !!js 标量、profile 克隆含撤销同意后不再复制凭据的测试）。定级校准：无 find",
           "install_ok": true
         },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T16:41:41.360Z",
-      "plugin_id": "oh-dsh",
-      "name": "oh-dsh",
-      "version": "0.1.8",
-      "commit": "64182e9acb81cc173a6c19136716d51a7d1b679d",
-      "repo": "hust-open-atom-club/oh-dsh",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": null,
-      "findings": null,
-      "review_aegis": null,
-      "beacon": null,
-      "postcheck": null,
-      "stage_reached": "gate",
-      "status": "failed",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/94",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32652444871",
-      "extended_review": true,
-      "reason": "intake gate script error (see run logs)",
-      "compactions": null,
-      "stages": {
-        "sonar": null,
-        "aegis": null,
         "beacon": null,
         "harbor": null
       }

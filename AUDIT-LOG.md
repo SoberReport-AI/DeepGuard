@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-09-04 15:31 | dsh-genui | 0.9.7 | [074b933](https://github.com/omdsh-dev/dsh-genui/commit/074b9333eb1d292430076cd98af911c3643d8c86) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#48](https://github.com/SoberReport-AI/DeepGuard/issues/48) |
 | 2026-09-04 15:21 | dsh-deep-whale | 0.0.1 | [d3d7ff2](https://github.com/small-tailqwq/dsh-deep-whale/commit/d3d7ff2b7d97260e940306b3e462870b6e033c96) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#92](https://github.com/SoberReport-AI/DeepGuard/issues/92) |
 | 2026-09-04 15:17 | dsh-cost-meter | 1.5.40 | [a6ab9d6](https://github.com/han-1413141/dsh-cost-meter/commit/a6ab9d61936e89521e800d16ce9b4dc6723972f9) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
 | 2026-09-04 15:15 | dsh-context | 0.24.1 | [c40a919](https://github.com/bowenliang123/dsh-context/commit/c40a919e60d86514a18f41e68d2ad3f0c3b13db4) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#33](https://github.com/SoberReport-AI/DeepGuard/issues/33) |
@@ -203,4 +204,3 @@
 | 2026-08-24 02:45 | openviking | — | [6e944cc](https://github.com/volcengine/openviking/commit/6e944cc3e14872ec7e7a80edec9265397f367894) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#75](https://github.com/SoberReport-AI/DeepGuard/issues/75) |
 | 2026-08-24 02:44 | oh-dsh | 0.1.8 | [64182e9](https://github.com/hust-open-atom-club/oh-dsh/commit/64182e9acb81cc173a6c19136716d51a7d1b679d) | SoberReport-AI | — | — | — | — | — | gate-rejected | [#94](https://github.com/SoberReport-AI/DeepGuard/issues/94) |
 | 2026-08-24 02:43 | deepseek-harness-desktop | 3.0.1 | [f718ac0](https://github.com/ningbainb/deepseek-harness-desktop/commit/f718ac012e80fccd0b3b123e58d780f0f8ed7abc) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#80](https://github.com/SoberReport-AI/DeepGuard/issues/80) |
-| 2026-08-24 00:41 | oh-dsh | 0.1.8 | [64182e9](https://github.com/hust-open-atom-club/oh-dsh/commit/64182e9acb81cc173a6c19136716d51a7d1b679d) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#94](https://github.com/SoberReport-AI/DeepGuard/issues/94) |
