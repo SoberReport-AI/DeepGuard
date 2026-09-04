@@ -9,7 +9,7 @@
   "note": "Re-submission: previous batch intake was withdrawn before the audit ran (issue #5). Monorepo subpath: `maid-atelier`.",
   "source": "watch-update",
   "issue": 92,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-23T16:08:31.357Z",
   "prescreen": {
     "ok": true,
@@ -113,9 +113,14 @@
       "at": "2026-09-04T08:45:08.000Z",
       "action": "requeued",
       "reason": "owner manual re-dispatch after max_output_tokens fix (prev=needs-human; glm-5.3-flash ceiling 131072, was 393216 ds-v4-flash)"
+    },
+    {
+      "at": "2026-09-04T08:45:45.630Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 0,
+  "attempts": 1,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-09-03T16:32:06.603Z",
