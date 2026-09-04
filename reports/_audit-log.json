@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T12:36:26.144Z",
+      "plugin_id": "dsh-context",
+      "name": "dsh-context",
+      "version": "0.41.3",
+      "commit": "dce08e0db3ad1dae40da0eb586e7da7f587b32b6",
+      "repo": "bowenliang123/dsh-context",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "publish",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/33",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33872531605",
+      "extended_review": true,
+      "reason": "publish did not pass (postcheck FAIL, or push/PR creation failed; see run logs)",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验：plugin.id/version/commit 与任务卡逐字一致，manifest.json commit 相同。证据核验：报告零 findings，逐条抽查了 checked_items 与 ds_scenarios 引用的全部关键证据路径——package.json:28-48/49-73（files 清单无测试文件、scripts 无安装钩子）、cordis.patch.yml:4-6（仅插入自身条目）、src/client/latestVersion.ts:12-15/22（唯一外联为 npm registry + npmmirror 版本检查，仅携带插件名）、src/cl",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T12:22:58.071Z",
       "plugin_id": "dsh-browser-lum1104",
       "name": "dsh-browser-lum1104",
@@ -4555,45 +4591,6 @@
     },
     {
       "ts": "2026-08-24T14:46:28.520Z",
-      "plugin_id": "lehhair--dsh-diff-viewer",
-      "name": "dsh-diff-viewer",
-      "version": "0.1.1",
-      "commit": "d576c00cc7db52695d69f86142d4454380fed236",
-      "repo": "lehhair/dsh-diff-viewer",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "needs_human",
-      "beacon": "escalate",
-      "postcheck": "flagged",
-      "stage_reached": "publish (manual owner release)",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/175",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32712412788",
-      "extended_review": false,
-      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "needs_human",
-          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
-          "install_ok": true
-        },
-        "beacon": {
-          "ruling": "escalate",
-          "notes": "escalate：三条 missed_concerns 中 FND-902（压缩 bundle 标识符不可识别属正常）指控较弱、FND-903（树内 patch 未被引用）不构成否决级；FND-901（704KB 打包产物约 15% 未逐行核验）与 Sonar limits 如实披露一致，属披露的覆盖边界。"
-        },
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T14:46:28.520Z",
       "plugin_id": "lzszq--dsh-scholar",
       "name": "dsh-scholar",
       "version": "0.1.0",
@@ -4627,6 +4624,45 @@
         "beacon": {
           "ruling": "escalate",
           "notes": "escalate：两条 missed_concerns（kernel.ts 517KB/server.ts 226KB 未逐行通读、无 L4 动态产物）在事实层面与报告 audit_scope.limits 自述一致，128 条机械命中已逐条裁决，属披露的覆盖边界。"
+        },
+        "harbor": null
+      }
+    },
+    {
+      "ts": "2026-08-24T14:46:28.520Z",
+      "plugin_id": "lehhair--dsh-diff-viewer",
+      "name": "dsh-diff-viewer",
+      "version": "0.1.1",
+      "commit": "d576c00cc7db52695d69f86142d4454380fed236",
+      "repo": "lehhair/dsh-diff-viewer",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "needs_human",
+      "beacon": "escalate",
+      "postcheck": "flagged",
+      "stage_reached": "publish (manual owner release)",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/175",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32712412788",
+      "extended_review": false,
+      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "needs_human",
+          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "escalate",
+          "notes": "escalate：三条 missed_concerns 中 FND-902（压缩 bundle 标识符不可识别属正常）指控较弱、FND-903（树内 patch 未被引用）不构成否决级；FND-901（704KB 打包产物约 15% 未逐行核验）与 Sonar limits 如实披露一致，属披露的覆盖边界。"
         },
         "harbor": null
       }
@@ -6954,42 +6990,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核结论：1) 身份/版本/commit/subpath 逐字一致；2) 报告 findings 为空，故无逐条证据待验，但对各维度 checked_items 的关键断言已在源码逐项核实（0600 凭据文件、仅平台 API 发送 token、execFile 参数数组、无 eval、cordis.patch.yml 纯 insert、AI 兜底在 ai-consent 授权后执行且提示词含安全约束、回环+Host+Origin 三层校验、宿主保护名单、无安装钩子、出站域名清单准确、当前代码无 --insecure）；3) 机械命中 57 条全部落在 DSH-X07/C05/X05/X08",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T02:17:47.088Z",
-      "plugin_id": "icetomoyo--dsh-workflow",
-      "name": "dsh-workflow",
-      "version": "0.1.2",
-      "commit": "44b83c182aa02d1be8a0803e8446cb495f93cd8f",
-      "repo": "icetomoyo/dsh_workflow",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/119",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/120",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32682050438",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核结果：身份信息一致，Sonar 报告无 findings，全部 6 个维度均为 clean。对 10 条机械命中（DSH-X03/DG-R3-55）逐一核验路径和行号，均存在且为良性用途（git 固定参数只读调用/策略静态清单/开发脚本与测试基建），Sonar 在 DG-D3 checked_item[0] 中明确引用规则 ID 并给出排除理由，覆盖完整。Manifest 74 个文件全部存在于树中，无隐藏目录或模型指令文件。代码扫描确认：无凭据读取、无网络外联、无任意代码执行面（execFile 仅以固定参数执行 git，路径经逃逸校验且不经 shell；QuickJS WASM 沙",
           "install_ok": true
         },
         "beacon": null,
