@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 48,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-22T12:46:49.718Z",
   "prescreen": {
     "ok": true,
@@ -108,9 +108,14 @@
       "at": "2026-09-04T06:53:11.000Z",
       "action": "requeued",
       "reason": "owner manual re-dispatch after human intervention (prev=needs-human; llm-error:unauthorized 401 auth verify timeout)"
+    },
+    {
+      "at": "2026-09-04T07:22:20.637Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 0,
+  "attempts": 1,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-09-02T04:44:53.045Z",
