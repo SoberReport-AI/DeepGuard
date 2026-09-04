@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T13:28:11.130Z",
+      "plugin_id": "shaobeichen--dsh-pocket",
+      "name": "dsh-pocket",
+      "version": "2.10.3",
+      "commit": "eb255032991949d95c896f762e681c19e622cbdc",
+      "repo": "shaobeichen/dsh-pocket",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/124",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/354",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33875803370",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论 approve（报告 findings 为空，六维全 clean，per_finding 无条目可列；证据核验记录如下）。1) 身份核验：id/version/commit 与任务卡逐字一致，完整 40 位 commit。2) 全部证据引用逐条开档核验属实：lib/index.js:54-67（0o600 写 PIN 文件）、lib/index.js:221（spawn dsh 自更新，参数固定）、lib/index.js:13、lib/restart.js:14/44/98（:44 为字符串字面量，:98 为 process.execPath 自重启 helper）、lib/ser",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T13:01:06.523Z",
       "plugin_id": "dsh-cost-meter",
       "name": "dsh-cost-meter",
@@ -6954,42 +6990,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "复核结论：approve。身份核验通过（plugin.id/version/commit/subpath 逐字一致）；10 条机械命中全部在报告中对应裁决（DSH-X03/X05/X07/X08 均有逐条引用）；独立快扫未发现漏检（无 eval、无安装钩子、无凭据读取、无外联未声明域名、无模型面指令文件）；manifest 所列 43 文件全部在树中可定位。Sonar 的 checked_items 中声称「进程调用共 5 处」实际为 6 处（spawn×4+execFile×1+execSync×1），属轻微描述不精确，不影响安全定级——所有调用均已判定为良性功能用法。声明功能（反代 0.0",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T03:26:54.061Z",
-      "plugin_id": "thewolfwalker--dsh-notifier",
-      "name": "dsh-notifier",
-      "version": "0.8.5",
-      "commit": "db4290830329799148475d1c17de6c21f2fde4e4",
-      "repo": "thewolfwalker/dsh-notifier",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/122",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/132",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32686036513",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核通过：身份四元组一致；报告无 findings，各维度 checked_items 的实质性声明均经我亲自打开源码验证（tool-register.mjs 限流、index.mjs admin token SHA-256+回环绑定、store.mjs 0600+写锁、approval/router.mjs 静默永不批准、http-callback.mjs 密径+64KB 上限、cordis.patch.yml 仅一行插件插入）；12 条机械命中全部在 L1 汇总与 audit_scope.limits 中以规则 ID 裁决，且每条命中点行号内容经我逐一核对属实；漏检快扫未见遗漏（生产代",
           "install_ok": true
         },
         "beacon": null,
