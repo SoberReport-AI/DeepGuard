@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-09-04 19:56 | ai-novel-writer | 0.1.0 | [6912bc6](https://github.com/ethanyoq/ai-novel-writer/commit/6912bc6f665411ef7869786770327012b2082381) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-09-04 17:42 | dsh-deep-whale | 0.0.1 | [d7cfec2](https://github.com/small-tailqwq/dsh-deep-whale/commit/d7cfec228ce96fccf052a1ccee717b6b5e721e4d) | SoberReport-AI | clean | 0 | approve | — | — | failed, flagged for extended review | [#92](https://github.com/SoberReport-AI/DeepGuard/issues/92) |
 | 2026-09-04 17:21 | dsh-mnemon | 0.4.4 | [a990d45](https://github.com/omdsh-dev/dsh-mnemon/commit/a990d45c42d85102ec9390b7df04746d4f6654c9) | SoberReport-AI | clean | 0 | approve | — | — | failed, flagged for extended review | [#81](https://github.com/SoberReport-AI/DeepGuard/issues/81) |
 | 2026-09-04 16:57 | dsh-deep-whale | 0.0.1 | [d3d7ff2](https://github.com/small-tailqwq/dsh-deep-whale/commit/d3d7ff2b7d97260e940306b3e462870b6e033c96) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#92](https://github.com/SoberReport-AI/DeepGuard/issues/92) |
@@ -203,4 +204,3 @@
 | 2026-08-24 11:18 | noob-stupid--dsh-plugin-hub | 0.3.19 | [3370884](https://github.com/noob-stupid/dsh-plugin-hub/commit/3370884f71b2e282a13a33d54325b20617296695) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#121](https://github.com/SoberReport-AI/DeepGuard/issues/121) |
 | 2026-08-24 10:17 | icetomoyo--dsh-workflow | 0.1.2 | [44b83c1](https://github.com/icetomoyo/dsh_workflow/commit/44b83c182aa02d1be8a0803e8446cb495f93cd8f) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#119](https://github.com/SoberReport-AI/DeepGuard/issues/119) |
 | 2026-08-24 08:43 | dsh-stock-watch | 1.0.8 | [0bd76f3](https://github.com/awu12277/dsh-stock-watch/commit/0bd76f3f72b647249b2168fc50ae4955c6c86575) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#107](https://github.com/SoberReport-AI/DeepGuard/issues/107) |
-| 2026-08-24 08:35 | dsh-data-agent | 0.1.1 | [b34f01f](https://github.com/omdsh-dev/dsh-data-agent/commit/b34f01f6ccaa1d3b8eb7aab403a833a45065ddb4) | SoberReport-AI | clean | 0 | extended review | uphold Sonar | pass | merged | [#108](https://github.com/SoberReport-AI/DeepGuard/issues/108) |

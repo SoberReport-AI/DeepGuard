@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T11:56:34.209Z",
+      "plugin_id": "ai-novel-writer",
+      "name": "dsh-ai-novel-writer",
+      "version": "0.1.0",
+      "commit": "6912bc6f665411ef7869786770327012b2082381",
+      "repo": "ethanyoq/ai-novel-writer",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/77",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/352",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33868974161",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "报告 findings 为空，per_finding 留空；对六个维度 checked_items 与 ds_scenarios 引用的全部关键证据点逐个打开核实：AGENTS.md:1（DSH-X10，开发规则文本，良性）、docs/official-dsh-plugin-installation.md:11/33/55/56（DSH-X01，官方安装流程调研且明示『进程内、重启后消失、不作为持久交付』，良性）、presets/ai-novel-writer/agent.cordis.yml:9（长行 persona，内容强化原生审批、审批被禁用时拒绝写入，良性）、src/agent.ts:",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T09:42:17.155Z",
       "plugin_id": "dsh-deep-whale",
       "name": "dsh-deep-whale",
@@ -6964,45 +7000,6 @@
           "install_ok": true
         },
         "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T00:35:08.056Z",
-      "plugin_id": "dsh-data-agent",
-      "name": "dsh-data-agent",
-      "version": "0.1.1",
-      "commit": "b34f01f6ccaa1d3b8eb7aab403a833a45065ddb4",
-      "repo": "omdsh-dev/dsh-data-agent",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "extended_review",
-      "beacon": "uphold_sonar",
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/108",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/117",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32676553600",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "extended_review",
-          "notes": "身份核验通过（plugin.id/version/commit/subpath 与任务卡逐字一致）。报告 findings 为空，故无逐条 finding 证据需核验；对其 checked_items 中的关键断言独立复核：7 个工具注册（sql-query/sql-write/sql-cmd/render-analysis/catalog-search/catalog-get/metric-get）描述均无注入语义，catalog 工具明确标注 untrusted；cordis.patch.yml 仅 insert 无 !!js；package.json 无 install 钩子；运行时无 ",
-          "install_ok": true
-        },
-        "beacon": {
-          "ruling": "uphold_sonar",
-          "rationale": "双审分歧的唯一实质争议点是 Aegis 的 missed_concerns[0]：报告声称 DSH-X08/DG-R3-60『14 条命中全部排除』但只逐条列出 13 条路径，漏列 lib/command-CzzSPmag.js:194。该指控的事实基础成立（证据摘录确认该行真实存在：lib/command-CzzSPmag.js:194 为 cleanup() 中的 `output.write(\"\\x1B[0m\\x1B[?25h\\x1B[2J\\x1B[H\")`，是 TUI 连接表单清理阶段的 ANSI 终端复位/清屏序列），但该漏列不构成否决级问题：(1) 内容经证据摘录与 Aegis 本人"
-        },
         "harbor": null
       }
     }
