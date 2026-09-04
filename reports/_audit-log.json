@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T13:01:06.523Z",
+      "plugin_id": "dsh-cost-meter",
+      "name": "dsh-cost-meter",
+      "version": "1.7.10",
+      "commit": "e9cafb5139f350053ac6f521c7ab002ed702e31c",
+      "repo": "han-1413141/dsh-cost-meter",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/68",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/353",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33873687240",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核通过。1) 身份核验：id/version/commit/subpath 与任务卡逐字一致，commit 为完整 40 位小写 hex。2) findings 为空，无逐条证据核验对象；对报告 checked_items/ds_scenarios 引用的证据行做了实证抽查——lib/index.js:859-869(官方域名端点守卫)、1925-1933/2252/2403-2468(凭据库托管写入+清明文)、635、2677-2700、139-166(双语报错文案)、lib/coding-plans.js:940-977(硬编码官方端点白名单,scnet/qwen 空端点表)、95/73",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T12:36:26.144Z",
       "plugin_id": "dsh-context",
       "name": "dsh-context",
@@ -6954,42 +6990,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核通过：身份四元组一致；报告无 findings，各维度 checked_items 的实质性声明均经我亲自打开源码验证（tool-register.mjs 限流、index.mjs admin token SHA-256+回环绑定、store.mjs 0600+写锁、approval/router.mjs 静默永不批准、http-callback.mjs 密径+64KB 上限、cordis.patch.yml 仅一行插件插入）；12 条机械命中全部在 L1 汇总与 audit_scope.limits 中以规则 ID 裁决，且每条命中点行号内容经我逐一核对属实；漏检快扫未见遗漏（生产代",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T03:18:27.416Z",
-      "plugin_id": "noob-stupid--dsh-plugin-hub",
-      "name": "dsh-plugin-hub",
-      "version": "0.3.19",
-      "commit": "3370884f71b2e282a13a33d54325b20617296695",
-      "repo": "noob-stupid/dsh-plugin-hub",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/121",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/131",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32685415206",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核结论：1) 身份/版本/commit/subpath 逐字一致；2) 报告 findings 为空，故无逐条证据待验，但对各维度 checked_items 的关键断言已在源码逐项核实（0600 凭据文件、仅平台 API 发送 token、execFile 参数数组、无 eval、cordis.patch.yml 纯 insert、AI 兜底在 ai-consent 授权后执行且提示词含安全约束、回环+Host+Origin 三层校验、宿主保护名单、无安装钩子、出站域名清单准确、当前代码无 --insecure）；3) 机械命中 57 条全部落在 DSH-X07/C05/X05/X08",
           "install_ok": true
         },
         "beacon": null,
