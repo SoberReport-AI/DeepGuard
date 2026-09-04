@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-04T08:28:00.762Z",
+      "plugin_id": "dsh-cost-meter",
+      "name": "dsh-cost-meter",
+      "version": "1.6.12",
+      "commit": "b21e27ad1756cf0a20cc68f4d6e3ee5beec51f89",
+      "repo": "han-1413141/dsh-cost-meter",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 1,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/68",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/351",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33852623057",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 1
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：逐条证据核验通过，14 条机械预扫命中全部有对应裁决/排除理由，独立快扫未发现漏检高危点。FND-001 为 LOW 历史追踪记录，定级与证据相称。报告整体 clean 结论合理，install_command 形态正确。",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T08:15:39.517Z",
       "plugin_id": "dsh-context",
       "name": "dsh-context",
@@ -6985,42 +7021,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "复核结论：approve。身份逐字一致；报告 findings 为空，各维度 clean 主张经独立实测全部成立（contributes.tools 为空、typert 描述良性、spawn 为核心功能、无 install 钩子、cordis.patch.yml 纯 insert、AGENTS.md 纯架构文档、src 与 lib 均无网络外联与凭据读取、lib/client.js 无剪贴板/键盘/localStorage 等危险面）；12 条机械预扫命中全部在 audit_scope.limits 中逐条 rule_id 裁决，无覆盖缺口；manifest 54 文件全部在树中，无越界点目录",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-23T23:38:42.904Z",
-      "plugin_id": "dsh-commandcode-provider",
-      "name": "dsh-commandcode-provider",
-      "version": "0.8.0",
-      "commit": "7eac763be33ddb5266b0966975916a11ae471664",
-      "repo": "mars-sea/dsh-commandcode-provider",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/102",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/111",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32673841600",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核结论：安全通过。\n\n1. 身份核验 ✓：plugin.id/version/commit 与任务卡逐字一致。\n2. 证据核验 ✓：findings 为空，无可核验发现项。checked_items 中的全部声明性结论经逐一打开源码文件验证属实（凭据读取仅限 ~/.commandcode/auth.json、凭据写入走官方 credentials seam、无 eval/child_process、网络出口仅 api.commandcode.ai + registry.npmjs.org + studio 登录页、登录回环服务有状态令牌与来源白名单防护、AGENTS.md 为面向贡献者的",
           "install_ok": true
         },
         "beacon": null,
