@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #2 (catalog star ranking, 372 stars).",
   "source": "watch-update",
   "issue": 77,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-23T09:54:21.002Z",
   "prescreen": {
     "ok": true,
@@ -102,9 +102,14 @@
       "at": "2026-09-04T06:53:11.000Z",
       "action": "requeued",
       "reason": "owner manual re-dispatch after human intervention (prev=needs-human; llm-error:server-error 503 activity_cost_limit_reached)"
+    },
+    {
+      "at": "2026-09-04T06:58:01.118Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 0,
+  "attempts": 1,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-08-29T10:13:14.944Z",
