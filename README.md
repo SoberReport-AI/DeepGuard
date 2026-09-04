@@ -21,9 +21,9 @@ dsh 生态装插件只要一条命令，装下的每段代码都拥有宿主进�
 
 [![Buy me more tokens](https://dsh.sober.report/assets/kofi-button.svg)](https://ko-fi.com/G2S825CBZS)
 
-**特别感谢 [B.AI](https://b.ai)**：当前审计消耗的 token 由 DeepSeek × B.AI V4 Flash 限时免费活动提供，DeepGuard 这个实验性项目因此得以持续运转，希望活动能办得长长久久。
+**特别感谢 [B.AI](https://b.ai)**：当前审计消耗的 token 由 GLM 5.3 Flash × B.AI 限时免费活动提供，DeepGuard 这个实验性项目因此得以持续运转，希望活动能办得长长久久。
 
-<a href="https://b.ai"><img src="https://dsh.sober.report/assets/brand/bai-sponsor-banner.svg?v=1" alt="DeepSeek × B.AI V4 Flash 限时免费" height="30"></a>
+<a href="https://b.ai"><img src="https://dsh.sober.report/assets/brand/bai-sponsor-banner.svg?v=2" alt="GLM 5.3 Flash × B.AI 限时免费" height="30"></a>
 
 > **捐赠透明**：社区捐了多少、token 花到了哪里，都应该公开可查。我目前没有找到满意的实现方案。如果你有想法，欢迎开 issue 聊聊。
 
@@ -36,6 +36,16 @@ dsh 生态装插件只要一条命令，装下的每段代码都拥有宿主进�
 DeepGuard 的能力有边界。静态分析覆盖不了全部运行时行为，AI 判断存在漏报与误报，每份报告开头都写明了审计边界。
 
 受限于 token 额度，审计火力目前聚焦 dsh 生态。这套编排和 skills 按整个 Agent 工具体系设计，agent、mcp、skills、plugins 生态都在能力覆盖范围内，视额度情况逐步扩展。
+
+## 时间线
+
+| 日期 | 事件 |
+|---|---|
+| 2026-08-17 | [B.AI](https://b.ai) 上线 DeepSeek V4 Flash 限时免费活动，审计 token 成本归零，实验项目得以全速运转 |
+| 2026-08-19 | 完成 B.AI 网关接入与实测，审计默认端点切换为 b.ai，基座模型 deepseek-v4-flash |
+| 2026-09-04 | B.AI 的 DeepSeek V4 Flash 免费活动结束；经同一网关实测后，基座模型切换为 GLM 5.3 Flash（具备限时免费活动），审计编排与规则集不变 |
+
+审计消耗的 token 由活动方提供，模型的存续随活动周期变化。切换基座模型只改配置、不改编排——规则集、场景库、定级纪律这些人工先验始终不变，模型在固定框架里干活。
 
 ## 检测框架
 
@@ -106,9 +116,9 @@ DeepGuard 的能力有边界。静态分析覆盖不了全部运行时行为，A
 
 伪装成开发者投毒是开源生态最常见的攻击入口之一。要求作者本人提交，配合账号年龄与身份核验，攻击门槛从「零成本小号」抬到了「真实身份背书」。攻击者不是绝对进不来，但一旦作恶就会留下身份痕迹并被拉黑，没法零成本重来。另一层考虑是责任归属：AI Agent 时代人人都是创作者，作品的安全由创作者自己负责，创作者要为自己的产品正名。
 
-### 为什么用 DeepSeek V4 Flash 作为基座？
+### 为什么用 GLM 5.3 Flash 作为基座？
 
-测过几个模型之后，就这个场景（长上下文读代码、结构化输出、高频调用）和成本结构来说，DeepSeek V4 Flash 是目前最合适的选择。模型能力是一方面，更关键的是把安全领域的专业知识固化进 skills：规则集、场景库、定级纪律都是人工先验，模型在这个框架里干活，效果足以胜任项目的任务。
+DeepGuard 的基座模型最早选择 DeepSeek V4 Flash——就长上下文读代码、结构化输出、高频调用这个场景和成本结构来说，它当时是最合适的选择。2026-09-04 B.AI 的 DeepSeek V4 Flash 免费活动结束后，我们在同一网关（B.AI）实测了 GLM 5.3 Flash（同样具备限时免费活动）：在目前的编排框架里（规则集、场景库、定级纪律都是人工先验），它的审计效果同样足以胜任项目任务，于是切换过去。切换只改配置、不改编排。模型能力是一方面，更关键的是把安全领域的专业知识固化进 skills：模型在固定框架里干活，效果好坏取决于框架本身，而不只是单点模型。
 
 ### 我可以完全信任 DeepGuard Agent 团队产出的报告吗？
 

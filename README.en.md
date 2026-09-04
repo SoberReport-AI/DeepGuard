@@ -21,9 +21,9 @@ If you want this agent team to keep working, buy it more tokens:
 
 [![Buy me more tokens](https://dsh.sober.report/assets/kofi-button.svg)](https://ko-fi.com/G2S825CBZS)
 
-**Special thanks to [B.AI](https://b.ai)**: audit tokens are currently provided by the DeepSeek × B.AI V4 Flash free-tier program, which keeps this experimental project alive. Long may it run.
+**Special thanks to [B.AI](https://b.ai)**: audit tokens are currently provided by the GLM 5.3 Flash × B.AI free-tier program, which keeps this experimental project alive. Long may it run.
 
-<a href="https://b.ai"><img src="https://dsh.sober.report/assets/brand/bai-sponsor-banner.svg?v=1" alt="DeepSeek × B.AI V4 Flash free tier" height="30"></a>
+<a href="https://b.ai"><img src="https://dsh.sober.report/assets/brand/bai-sponsor-banner.svg?v=2" alt="GLM 5.3 Flash × B.AI free tier" height="30"></a>
 
 > **Donation transparency**: how much the community gives and where the tokens go should be public. I have not found a good way to build that yet. If you have ideas, open an issue and tell me.
 
@@ -36,6 +36,16 @@ Every one of these attacks exploits the same assumption: installation means trus
 DeepGuard works within limits. Static analysis cannot cover every runtime behavior, and AI judgment comes with false negatives and false positives. Every report states its audit boundaries up front.
 
 Token budget limits the current audit firepower to the dsh ecosystem. The orchestration and skills are designed for the entire Agent toolchain. Coverage of the agent, mcp, skills, and plugins ecosystems will expand as budget allows.
+
+## Timeline
+
+| Date | Event |
+|---|---|
+| 2026-08-17 | [B.AI](https://b.ai) launches the DeepSeek V4 Flash free-tier program; audit token cost drops to zero and the experiment runs at full speed |
+| 2026-08-19 | B.AI gateway integrated and probed; the default audit endpoint switches to b.ai running deepseek-v4-flash |
+| 2026-09-04 | The DeepSeek V4 Flash free-tier program on B.AI ends; after testing on the same gateway, the base model switches to GLM 5.3 Flash (with its own free-tier program). Audit orchestration and rulesets are unchanged |
+
+Audit tokens are provided by the sponsor, so model continuity follows each program's lifecycle. Switching the base model changes configuration only, never orchestration — the human priors (rulesets, scenario libraries, severity discipline) stay fixed, and the model works inside that framework.
 
 ## Detection framework
 
@@ -106,9 +116,9 @@ One iron rule: AI only drafts reports; every entry and exit passes deterministic
 
 Impersonating a developer to ship poison is one of the most common attack entries in open source. Requiring the author to submit, plus account-age and identity checks, raises the cost of attack from a zero-cost throwaway account to a real identity on the line. Attackers are not absolutely kept out, but once they act they leave an identity trail and get blacklisted, with no zero-cost retry. The second consideration is accountability. In the AI Agent era everyone is a creator, and a creator answers for their own product.
 
-### Why DeepSeek V4 Flash as the base model?
+### Why GLM 5.3 Flash as the base model?
 
-After testing several models, DeepSeek V4 Flash fits this scenario (long-context code reading, structured output, high-frequency calls) and this cost structure best. Model capability is one side of it. The other side is encoding security domain knowledge into skills: rulesets, scenario libraries, and severity discipline are human priors, and the model works inside that framework. That combination carries the project's tasks.
+DeepGuard's base model was originally DeepSeek V4 Flash — the best fit for this scenario (long-context code reading, structured output, high-frequency calls) and this cost structure at the time. When B.AI's DeepSeek V4 Flash free-tier program ended on 2026-09-04, we tested GLM 5.3 Flash on the same gateway (B.AI, again with its own free-tier program): inside the current orchestration framework (rulesets, scenario libraries, severity discipline are all human priors) its audit results are equally up to the project's tasks, so we switched. The switch changes configuration only, never orchestration. Model capability is one side of it; the other side is encoding security domain knowledge into skills. The model works inside a fixed framework, and it is the framework that carries the project's tasks — not any single model.
 
 ### Can I fully trust the reports produced by the DeepGuard agent team?
 
