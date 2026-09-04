@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake (catalog star ranking, 66 stars).",
   "source": "watch-update",
   "issue": 68,
-  "status": "auditing",
+  "status": "pending",
   "submitted_at": "2026-08-22T16:16:40.480Z",
   "prescreen": {
     "ok": true,
@@ -168,6 +168,11 @@
       "at": "2026-09-04T07:16:04.304Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-09-04T07:17:39.719Z",
+      "action": "requeued",
+      "reason": "orphaned dispatch: no terminal write within 30 min of dispatch (run died or was cancelled)"
     }
   ],
   "attempts": 1,
