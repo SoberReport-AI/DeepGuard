@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 8,
-  "status": "auditing",
+  "status": "needs-human",
   "submitted_at": "2026-08-22T09:12:31.819Z",
   "prescreen": {
     "ok": true,
@@ -113,6 +113,11 @@
       "at": "2026-09-05T06:15:16.921Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-09-05T06:32:28.556Z",
+      "action": "needs-human",
+      "reason": "translation-integrity: report-zh.json (Sonar zh draft) missing — translate stage did not deliver; cannot admit a monolingual report under the v3 contract"
     }
   ],
   "attempts": 1,
