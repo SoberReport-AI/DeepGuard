@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-05T06:14:15.961Z",
+      "plugin_id": "dsh-genui",
+      "name": "dsh-genui",
+      "version": "0.9.8",
+      "commit": "680693eda677926942c11a499c476c55587d97c1",
+      "repo": "omdsh-dev/dsh-genui",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": null,
+      "stage_reached": "publish",
+      "status": "failed",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/48",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/33948541294",
+      "extended_review": true,
+      "reason": "publish did not pass (postcheck FAIL, or push/PR creation failed; see run logs)",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核全部通过。(1)身份：plugin.id/version/commit 与任务卡逐字一致，package.json@0.9.8 吻合，无仿冒信号。(2)证据：报告引用的每个证据路径均实际打开核验——src/plugin/index.ts:93-116(提示词段落含:114 Secrets ban)/:169(段注册)/:212(资产路由)，src/client/guard.ts:113(SAFE_COLOR_RE 拒url())/126-131(safeHref)/136-143(safeMediaSrc)/1035(ECHART_HTML_DANGER_RE)/1062-1103(r",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-04T13:53:21.352Z",
       "plugin_id": "dsh-browser-lum1104",
       "name": "dsh-browser-lum1104",
@@ -4699,45 +4735,6 @@
     },
     {
       "ts": "2026-08-24T14:46:28.520Z",
-      "plugin_id": "lzszq--dsh-scholar",
-      "name": "dsh-scholar",
-      "version": "0.1.0",
-      "commit": "76bfe960e9107a992dae506c3ebc298a99f57760",
-      "repo": "lzszq/dsh-scholar",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "needs_human",
-      "beacon": "escalate",
-      "postcheck": "flagged",
-      "stage_reached": "publish (manual owner release)",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/158",
-      "pr": null,
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32699318453",
-      "extended_review": false,
-      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "needs_human",
-          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
-          "install_ok": true
-        },
-        "beacon": {
-          "ruling": "escalate",
-          "notes": "escalate：两条 missed_concerns（kernel.ts 517KB/server.ts 226KB 未逐行通读、无 L4 动态产物）在事实层面与报告 audit_scope.limits 自述一致，128 条机械命中已逐条裁决，属披露的覆盖边界。"
-        },
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T14:46:28.520Z",
       "plugin_id": "lehhair--dsh-diff-viewer",
       "name": "dsh-diff-viewer",
       "version": "0.1.1",
@@ -4771,6 +4768,45 @@
         "beacon": {
           "ruling": "escalate",
           "notes": "escalate：三条 missed_concerns 中 FND-902（压缩 bundle 标识符不可识别属正常）指控较弱、FND-903（树内 patch 未被引用）不构成否决级；FND-901（704KB 打包产物约 15% 未逐行核验）与 Sonar limits 如实披露一致，属披露的覆盖边界。"
+        },
+        "harbor": null
+      }
+    },
+    {
+      "ts": "2026-08-24T14:46:28.520Z",
+      "plugin_id": "lzszq--dsh-scholar",
+      "name": "dsh-scholar",
+      "version": "0.1.0",
+      "commit": "76bfe960e9107a992dae506c3ebc298a99f57760",
+      "repo": "lzszq/dsh-scholar",
+      "source": "issue",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "needs_human",
+      "beacon": "escalate",
+      "postcheck": "flagged",
+      "stage_reached": "publish (manual owner release)",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/158",
+      "pr": null,
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32699318453",
+      "extended_review": false,
+      "reason": "owner override: scoped-clean standing ruling (2026-08-24) — fully disclosed coverage gaps in audit_scope.limits do not block a scoped clean verdict; report published via manual release path",
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "needs_human",
+          "notes": "Aegis 对覆盖缺口提 missed_concerns（详见 Beacon 裁决书）；install_check.command_ok=true、blacklist_check.consistent=true，无造假指控。",
+          "install_ok": true
+        },
+        "beacon": {
+          "ruling": "escalate",
+          "notes": "escalate：两条 missed_concerns（kernel.ts 517KB/server.ts 226KB 未逐行通读、无 L4 动态产物）在事实层面与报告 audit_scope.limits 自述一致，128 条机械命中已逐条裁决，属披露的覆盖边界。"
         },
         "harbor": null
       }
@@ -6954,42 +6990,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "身份核验通过（id/version/commit/subpath 与任务卡一致）。findings[] 为空，逐维度声明已打开源码亲自验证：凭据链仅发往用户配置 baseURL 且拒绝重定向；5 个工具说明与 AGENTS.md 无注入措辞；全树无 eval/Function/child_process，无安装钩子；唯一网络出口为用户配置的 MinerU 服务（默认 localhost:18000）；cordis.patch.yml 仅插入插件自身配置；运行时依赖仅 schemastery。7 条机械预扫命中（DSH-X10/DG-R2-57、DSH-X08/DG-R3-60×2、DSH-C0",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T03:41:29.127Z",
-      "plugin_id": "vlln--dsh-navbar",
-      "name": "dsh-navbar",
-      "version": "0.4.0",
-      "commit": "d89ba74f4e0403462a5e4c4feeec84a3e7a1cca2",
-      "repo": "vlln/dsh-navbar",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/123",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/134",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32687009901",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核通过。插件 vlln--dsh-navbar@0.4.0 为纯 UI 插件：Node half 空 apply，浏览器端 half 仅做 DOM 操作（导航条创建、悬停预览、点击跳转、滚轮切换），localStorage 仅存取精选 pin 状态（按会话 id 键存储 messageId/text/ts/turn），不涉及网络外联、eval/动态执行、凭据读取、剪贴板、键盘监听、模型工具注册或系统提示注入。package.json 存在模板占位符（+process.argv[1]+）仅影响元数据展示，无安全影响。README 推荐分支安装属文档习惯建议，Sonar 已如实标注。无漏检、",
           "install_ok": true
         },
         "beacon": null,
