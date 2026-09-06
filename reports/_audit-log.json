@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-06T21:41:54.314Z",
+      "plugin_id": "ai-novel-writer",
+      "name": "dsh-ai-novel-writer",
+      "version": "0.1.0",
+      "commit": "15e31bb88c462596f28d8e2a46088ecac2da0548",
+      "repo": "ethanyoq/ai-novel-writer",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/77",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/356",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/34060883511",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验：plugin.id/name/version/commit/subpath 与任务卡逐字一致。证据核验（报告无 findings，逐条核验 checked_items/ds_scenarios 引用）：src/agent.ts:167-188（system-prompt/assemble 仅在本 preset 附加协议段并收紧工具面）、:188-195 与 :607（tools/pre-execute 拒绝白名单外工具/写工具强制 ask，未截断宿主链条）、:453/:476（两工具 description 均为小说工作流文案，无注入）、src/index.ts:324（rpc.ha",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-05T13:30:02.022Z",
       "plugin_id": "aegis",
       "name": "aegis",
@@ -6943,42 +6979,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "身份核验通过（id/version/commit 逐字一致）。报告 0 findings、六维度全 clean：我逐项独立核验了 checked_items 的实质主张——DG-D1 token 仅存 localStorage 且 ghFetch 唯一调用点（src/client/index.js:130）只指向 api.github.com，无第三方转发路径；DG-D2 客户端仅注册 shell.overlay/settings.plugins.tab 两个 UI 槽位、宿主仅注册 webServer 路由，无模型面工具/系统提示注入接口，全树 grep 无注入措辞与模型面指令文件；DG-D",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T04:18:49.804Z",
-      "plugin_id": "omdsh-dev--dsh-lark",
-      "name": "dsh-lark",
-      "version": "0.0.7",
-      "commit": "632807d9abafbb866a5e208a0298eff21c7856d1",
-      "repo": "omdsh-dev/dsh-lark",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/127",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/138",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32688976179",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "复核结论：身份核验逐字一致（id/version/commit/subpath）；报告 findings 为空，无逐条证据路径需核验，但其维度结论经我独立取证全部成立——DG-D1 仅读取 LARK_APP_ID/LARK_APP_SECRET 与宿主凭据通道（credentials.ts、cordis.patch.yml），DG-D2 三个注册工具描述（ask_user_question/exit_plan_mode shadow/send_file）均为纯功能说明且 presence.ts 含防注入告诫，DG-D3 全树无 eval/new Function、install 钩子仅本地编译",
           "install_ok": true
         },
         "beacon": null,

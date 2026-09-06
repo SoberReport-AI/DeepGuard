@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-09-07 05:41 | ai-novel-writer | 0.1.0 | [15e31bb](https://github.com/ethanyoq/ai-novel-writer/commit/15e31bb88c462596f28d8e2a46088ecac2da0548) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-09-05 21:30 | aegis | 2.8.5 | [fea84dd](https://github.com/ganyuanran/aegis/commit/fea84dd545385ebdbe1c7ceab0d2afb8fe9d4600) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
 | 2026-09-05 21:24 | aegis | 2.9.8 | [1510bb0](https://github.com/ganyuanran/aegis/commit/1510bb0277a23074989df9c3f8f6114bc29e536b) | SoberReport-AI | clean | 0 | — | — | — | failed, flagged for extended review | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
 | 2026-09-05 14:32 | dsh-vision-router | 2.1.2 | [b1211b1](https://github.com/ysr666/dsh-vision-router/commit/b1211b1e99304f6fd778f36a2b31c5fd2f085520) | SoberReport-AI | clean | 0 | approve | — | — | failed, flagged for extended review | [#8](https://github.com/SoberReport-AI/DeepGuard/issues/8) |
@@ -203,4 +204,3 @@
 | 2026-08-24 12:45 | dsh-better-sidebar | 0.15.0 | [b7aab48](https://github.com/omdsh-dev/dsh-better-sidebar/commit/b7aab48deb17b7dd92094c84441783fccaf51561) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#3](https://github.com/SoberReport-AI/DeepGuard/issues/3) |
 | 2026-08-24 12:34 | moeblack--dsh-message-edit | 0.2.3 | [b78a167](https://github.com/moeblack/dsh-message-edit/commit/b78a167064ca612f1c400060d2bfc1dc9bc46436) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#130](https://github.com/SoberReport-AI/DeepGuard/issues/130) |
 | 2026-08-24 12:27 | yyyyukari--dsh-plugin-workshop | 1.6.2 | [f53a7e4](https://github.com/yyyyukari/dsh-plugin-workshop/commit/f53a7e466948a6c5636f2079b2382976a1eea4c8) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#129](https://github.com/SoberReport-AI/DeepGuard/issues/129) |
-| 2026-08-24 12:18 | omdsh-dev--dsh-lark | 0.0.7 | [632807d](https://github.com/omdsh-dev/dsh-lark/commit/632807d9abafbb866a5e208a0298eff21c7856d1) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#127](https://github.com/SoberReport-AI/DeepGuard/issues/127) |
