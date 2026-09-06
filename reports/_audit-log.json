@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-06T22:04:38.088Z",
+      "plugin_id": "dsh-cost-meter",
+      "name": "dsh-cost-meter",
+      "version": "1.7.13",
+      "commit": "0e09b701e073c2a7f6c2cdad28f33266ef6f544f",
+      "repo": "han-1413141/dsh-cost-meter",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/68",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/357",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/34061875930",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "逐项复核结论：(1) 身份核验通过——id/version/commit/subpath 与任务卡逐字一致。(2) findings=[]，无可伪造证据；对 checked_items/ds_scenarios 引用的全部关键证据点逐一实开核验：lib/index.js:860-870 端点守卫（硬编码 api.deepseek.com）、1919/2246/2426 credentials.set 单向写入+清空明文、2174-2214 迁移说明、636 官方额度端点、2652-2694 监听/投影/RPC；lib/aliyun-balance.js 全文（固定官方主机、凭据仅本地签名、re",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-06T21:41:54.314Z",
       "plugin_id": "ai-novel-writer",
       "name": "dsh-ai-novel-writer",
@@ -6943,42 +6979,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核通过：身份逐字一致；报告无 findings，各维度 clean 主张经我亲自扫描源码/打包产物/锁文件后成立（网络仅同源 /message-edit、无凭据读取、无 eval/child_process 于分发产物、无安装钩子、无模型面指令注入、依赖均来自官方 registry）；3 条机械命中（DSH-X08 client.js:796 内联 CSS、DSH-X08 client.js.map:1 源码映射、DSH-X03 scripts/build.mjs:3 开发编译脚本）均以规则 ID 在 audit_scope.limits 中给出排除理由且我逐一开档验证属实；manife",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T04:27:04.392Z",
-      "plugin_id": "yyyyukari--dsh-plugin-workshop",
-      "name": "dsh-plugin-workshop",
-      "version": "1.6.2",
-      "commit": "f53a7e466948a6c5636f2079b2382976a1eea4c8",
-      "repo": "yyyyukari/dsh-plugin-workshop",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/129",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/139",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32689569147",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "身份核验通过（id/version/commit 逐字一致）。报告 0 findings、六维度全 clean：我逐项独立核验了 checked_items 的实质主张——DG-D1 token 仅存 localStorage 且 ghFetch 唯一调用点（src/client/index.js:130）只指向 api.github.com，无第三方转发路径；DG-D2 客户端仅注册 shell.overlay/settings.plugins.tab 两个 UI 槽位、宿主仅注册 webServer 路由，无模型面工具/系统提示注入接口，全树 grep 无注入措辞与模型面指令文件；DG-D",
           "install_ok": true
         },
         "beacon": null,

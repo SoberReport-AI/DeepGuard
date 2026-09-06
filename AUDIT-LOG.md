@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-09-07 06:04 | dsh-cost-meter | 1.7.13 | [0e09b70](https://github.com/han-1413141/dsh-cost-meter/commit/0e09b701e073c2a7f6c2cdad28f33266ef6f544f) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#68](https://github.com/SoberReport-AI/DeepGuard/issues/68) |
 | 2026-09-07 05:41 | ai-novel-writer | 0.1.0 | [15e31bb](https://github.com/ethanyoq/ai-novel-writer/commit/15e31bb88c462596f28d8e2a46088ecac2da0548) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-09-05 21:30 | aegis | 2.8.5 | [fea84dd](https://github.com/ganyuanran/aegis/commit/fea84dd545385ebdbe1c7ceab0d2afb8fe9d4600) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
 | 2026-09-05 21:24 | aegis | 2.9.8 | [1510bb0](https://github.com/ganyuanran/aegis/commit/1510bb0277a23074989df9c3f8f6114bc29e536b) | SoberReport-AI | clean | 0 | — | — | — | failed, flagged for extended review | [#56](https://github.com/SoberReport-AI/DeepGuard/issues/56) |
@@ -203,4 +204,3 @@
 | 2026-08-24 13:01 | dhicoc--dsh-reverse-skill | 1.0.5 | [1bc4d63](https://github.com/dhicoc/dsh-reverse-skill/commit/1bc4d63ee9a5268419170f4c5fb4a4e59e0e815c) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#142](https://github.com/SoberReport-AI/DeepGuard/issues/142) |
 | 2026-08-24 12:45 | dsh-better-sidebar | 0.15.0 | [b7aab48](https://github.com/omdsh-dev/dsh-better-sidebar/commit/b7aab48deb17b7dd92094c84441783fccaf51561) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#3](https://github.com/SoberReport-AI/DeepGuard/issues/3) |
 | 2026-08-24 12:34 | moeblack--dsh-message-edit | 0.2.3 | [b78a167](https://github.com/moeblack/dsh-message-edit/commit/b78a167064ca612f1c400060d2bfc1dc9bc46436) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#130](https://github.com/SoberReport-AI/DeepGuard/issues/130) |
-| 2026-08-24 12:27 | yyyyukari--dsh-plugin-workshop | 1.6.2 | [f53a7e4](https://github.com/yyyyukari/dsh-plugin-workshop/commit/f53a7e466948a6c5636f2079b2382976a1eea4c8) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#129](https://github.com/SoberReport-AI/DeepGuard/issues/129) |
