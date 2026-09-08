@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-08T05:13:48.510Z",
+      "plugin_id": "ai-novel-writer",
+      "name": "dsh-ai-novel-writer",
+      "version": "0.1.0",
+      "commit": "879f83521414f66019488462830c3134c77dc4f8",
+      "repo": "ethanyoq/ai-novel-writer",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/77",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/358",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/34188826256",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核通过。(1) 身份：plugin.id/name/version/commit/subpath 与任务卡逐字一致。(2) findings 为空，无证据可核；机械预扫 30 条命中已逐条独立定位验证（AGENTS.md、docs 安装文档的 cordis_define 自然语言说明、presets/ai-novel-writer/agent.cordis.yml:9 与 README.md:74 与两个快照 JSON 的超长行、qualification-web-backend.mjs:157 与 snapshot-backend.mjs:478 的 registerAdapter、qua",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-06T22:04:38.088Z",
       "plugin_id": "dsh-cost-meter",
       "name": "dsh-cost-meter",
@@ -6943,42 +6979,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "身份核验通过（id/version/commit/subpath 与任务卡逐字一致，commit 为完整 40 位小写 hex）。findings[] 为空，无需逐条证据核验；对报告 checked_items 引用的全部关键证据位置（cordis.patch.yml:49 防双挂载 js 表达式、package.json:80 prepare=tsdown、git.ts spawn 固定参数无 shell、8 个终端工具描述、ime-guard/mermaid/UploadOverlay 键盘监听、e2e-aggregate-mount.sh curl 仅对本机 scratch 实例、bro",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T04:34:48.878Z",
-      "plugin_id": "moeblack--dsh-message-edit",
-      "name": "dsh-message-edit",
-      "version": "0.2.3",
-      "commit": "b78a167064ca612f1c400060d2bfc1dc9bc46436",
-      "repo": "moeblack/dsh-message-edit",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/130",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/140",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32690083402",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核通过：身份逐字一致；报告无 findings，各维度 clean 主张经我亲自扫描源码/打包产物/锁文件后成立（网络仅同源 /message-edit、无凭据读取、无 eval/child_process 于分发产物、无安装钩子、无模型面指令注入、依赖均来自官方 registry）；3 条机械命中（DSH-X08 client.js:796 内联 CSS、DSH-X08 client.js.map:1 源码映射、DSH-X03 scripts/build.mjs:3 开发编译脚本）均以规则 ID 在 audit_scope.limits 中给出排除理由且我逐一开档验证属实；manife",
           "install_ok": true
         },
         "beacon": null,
