@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 7,
-  "status": "pending",
+  "status": "auditing",
   "submitted_at": "2026-08-22T09:12:01.693Z",
   "prescreen": {
     "ok": true,
@@ -93,9 +93,14 @@
       "at": "2026-09-08T18:13:58.617Z",
       "action": "requeued",
       "reason": "orphaned dispatch: no terminal write within 30 min of dispatch (run died or was cancelled)"
+    },
+    {
+      "at": "2026-09-08T18:14:01.492Z",
+      "action": "dispatched",
+      "reason": "audit-dispatch → agent-audit"
     }
   ],
-  "attempts": 1,
+  "attempts": 2,
   "mode": "release-full",
   "watch": {
     "detected_at": "2026-09-08T16:43:26.471Z",
