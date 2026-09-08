@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-08T17:57:26.100Z",
+      "plugin_id": "dsh-better-sidebar",
+      "name": "dsh-better-sidebar",
+      "version": "0.18.1",
+      "commit": "146840bb4f1b67e9b9ab8c556355613b20bd20e3",
+      "repo": "omdsh-dev/dsh-better-sidebar",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/3",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/359",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/34257800938",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核结论：approve。① 身份核验通过：报告 plugin.id/version/commit 与任务卡逐字一致（dsh.plugin.json 内 id 为带命名空间的 dsh-external/dsh-better-sidebar，version/engines 一致，L0 无仿冒）。② 报告 findings 为空；对其 18 处证据锚点逐一开文件核验全部成立：src/tools.ts:96-104、src/agent-opens.ts:207-215（工具描述为功能性文本，无注入措辞）、src/client/plugins-tabs.ts:34（第三方插件安装命令为用户手动复制的界",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-08T14:36:23.567Z",
       "plugin_id": "dsh-cost-meter",
       "name": "dsh-cost-meter",
@@ -6929,45 +6965,6 @@
         "sonar": null,
         "aegis": null,
         "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T05:14:44.903Z",
-      "plugin_id": "xmanrui--dsh-im",
-      "name": "dsh-im",
-      "version": "2.0.1",
-      "commit": "dea9a8f2d1a3fdbb12a7b2a227ce93d0004257d9",
-      "repo": "xmanrui/dsh-im",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "extended_review",
-      "beacon": "uphold_sonar",
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/143",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/193",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32692104086",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "extended_review",
-          "notes": "身份核验通过（id/version/commit/subpath 逐字一致）。逐条核验：无 findings[]，checked_items/ds_scenarios 引用的大部分关键证据路径均已亲自打开验证为良性（spawnSync dsh 安装 CLI、execFileSync /usr/bin/security 钥匙串读取、spawn dsh web 本机 Harness 自启、唯一 systemPrompt.section 为文件投递说明、唯一工具 dsh_im_return_file 描述良性、cordis.patch.yml 单 insert、Escape 键盘监听、Slack M",
-          "install_ok": true
-        },
-        "beacon": {
-          "ruling": "uphold_sonar",
-          "rationale": "Aegis 的驳回/挂起理由在证据摘录面前不成立。其最具体的指控——lib/client.js:6882 不存在（文件仅 4951 行）——被机械装配的证据直接推翻：摘录显示 lib/client.js 至少延伸到 6897 行，6882 行恰为 `await navigator.clipboard.writeText(SLACK_APP_MANIFEST_YAML);`（SlackCredentialPanel.copyManifest 内），与 Sonar 所述良性剪贴板交互完全一致；文件头证实这是 esbuild bundle 且带 `// plugin-src/client/chann"
-        },
         "harbor": null
       }
     }
