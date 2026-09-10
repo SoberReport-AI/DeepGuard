@@ -9,7 +9,7 @@
   "note": "dsh-* E2E batch intake #4 (catalog star ranking, 31 stars). Whitelist batch submission.",
   "source": "watch-update",
   "issue": 124,
-  "status": "audited",
+  "status": "pending",
   "submitted_at": "2026-08-24T03:07:52.149Z",
   "prescreen": {
     "ok": true,
@@ -133,14 +133,19 @@
       "at": "2026-09-10T14:08:47.266Z",
       "action": "audited",
       "reason": null
+    },
+    {
+      "at": "2026-09-10T16:31:21.187Z",
+      "action": "watch-update",
+      "reason": "release v2.10.6 full audit (mode=periodic)"
     }
   ],
-  "attempts": 1,
+  "attempts": 0,
   "mode": "release-full",
   "watch": {
-    "detected_at": "2026-09-10T11:30:09.595Z",
-    "commit": "d664c3def9fdcd4903cc3718dbab1e8f8249b09a",
-    "release_tag": "v2.10.4",
+    "detected_at": "2026-09-10T16:31:21.187Z",
+    "commit": "c21a3457a820cb727d0480d8cbf7fa12372fe264",
+    "release_tag": "v2.10.6",
     "release_mode": "periodic"
   }
 }
