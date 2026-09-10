@@ -9,7 +9,7 @@
   "note": "Top-starred dsh plugin batch intake (catalog star ranking).",
   "source": "watch-update",
   "issue": 30,
-  "status": "auditing",
+  "status": "rejected",
   "submitted_at": "2026-08-22T11:14:29.047Z",
   "prescreen": {
     "ok": true,
@@ -93,6 +93,16 @@
       "at": "2026-09-10T17:14:04.396Z",
       "action": "dispatched",
       "reason": "audit-dispatch → agent-audit"
+    },
+    {
+      "at": "2026-09-10T17:14:15.590Z",
+      "action": "gate-pass",
+      "reason": null
+    },
+    {
+      "at": "2026-09-10T17:14:16.705Z",
+      "action": "gate-reject",
+      "reason": "repository contains a link entry (symlink/hardlink): \".agents/skills/dsh-benchmark-case\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit"
     }
   ],
   "attempts": 1,
@@ -102,5 +112,42 @@
     "commit": "2e59da17918558cfa3bf91d30d40f737509cca0c",
     "release_tag": "v0.1.17-rc.1",
     "release_mode": "periodic"
+  },
+  "gate": {
+    "at": "2026-09-10T17:14:15.590Z",
+    "submitter": "SoberReport-AI",
+    "whitelisted": true,
+    "association": null,
+    "checks": [
+      {
+        "check": "whitelist",
+        "ok": true,
+        "note": "whitelisted (Sim public-repo owner: runs triggered by dispatcher/cron fall back to repository_owner for identity verification at the gate, so the sim/formal public-repo owner must be whitelisted or all submissions are rejected), skipping identity and account-age checks"
+      },
+      {
+        "check": "identity",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "account-age",
+        "ok": true,
+        "note": "whitelist exempt"
+      },
+      {
+        "check": "blacklist",
+        "ok": true,
+        "note": "no hit"
+      },
+      {
+        "check": "duplicate",
+        "ok": true,
+        "note": "no existing report for dsh-agent-teams@0.1.12#2e59da17"
+      }
+    ],
+    "decision": "reject",
+    "reasons": [
+      "repository contains a link entry (symlink/hardlink): \".agents/skills/dsh-benchmark-case\" — the audit materializer rejects tarballs containing links (a link could pivot the audit root outside the snapshot, FINAL-V001); replace the link with a regular file copy, push, and re-submit"
+    ]
   }
 }
