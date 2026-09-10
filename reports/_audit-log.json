@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-09-10T14:09:09.266Z",
+      "plugin_id": "shaobeichen--dsh-pocket",
+      "name": "dsh-pocket",
+      "version": "2.10.4",
+      "commit": "d664c3def9fdcd4903cc3718dbab1e8f8249b09a",
+      "repo": "shaobeichen/dsh-pocket",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/124",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/360",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/34485821560",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核结论：approve。1) 身份：plugin.id/version/commit/subpath 与任务卡逐字一致。2) 报告 findings 为空（clean），无 per_finding 项；对各维度 checked_items 与 ds_scenarios 引用的全部关键证据路径:行号逐条实开验证，全部存在且内容支撑（含 lib/index.js:54-67/222/314、lib/proxy.mjs:30-36/52/98/132-170/241-256/297-307/390-395/1020-1047、lib/tunnel.mjs:80-87/302/346/452-4",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-10T13:55:54.591Z",
       "plugin_id": "dsh-better-sidebar",
       "name": "dsh-better-sidebar",
@@ -6922,42 +6958,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核通过：1) 身份与任务卡逐字一致；2) 报告 findings 为空，8 条机械命中（DSH-X07×2、DSH-X10、DSH-X05×2、DSH-X08×2、DSH-X03）全部在报告中以规则 ID 明确裁决为良性，且我逐一亲验内容属实（CI/发布工作流常规、AGENTS.md 无注入、两处剪贴板均为 write 只写不读、两处超长行为 SVG 路径数据、spawnSync 仅存于未分发的开发校验脚本）；3) 独立快扫确认插件自身无网络请求/无凭据读取/无动态执行/无安装钩子，唯一 fetch 位于内联 html-to-image 渲染库且 skipFonts:true、image",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T05:48:34.200Z",
-      "plugin_id": "hsiangnianian--dsh-auto-continue",
-      "name": "dsh-auto-continue",
-      "version": "0.8.1",
-      "commit": "e865b0b179331769cdce4a1e407a488056c1633d",
-      "repo": "hsiangnianian/dsh-auto-continue",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/149",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/197",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32694432934",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核通过：1) 身份（id/version/commit/subpath）逐字一致；2) 报告无 findings，但各维度 checked_items 声明逐项实际打开源码验证均属实（错误分类 regex 仅用于永久性失败判定、无工具注册、无 child_process/eval、网络仅本机 /api/ 两路径、依赖均为 @deepseek-ai 官方包、锁文件 0.8.0 差异属实、两本地 webServer 端点属实）；3) 6 条机械预扫命中（DSH-X07/DG-R3-59 ×2、DSH-X08/DG-R3-60 ×4）在 DG-D3 checked_items[2] 中全部被引",
           "install_ok": true
         },
         "beacon": null,
