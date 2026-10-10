@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-10-10T02:38:56.483Z",
+      "plugin_id": "ai-novel-writer",
+      "name": "dsh-ai-novel-writer",
+      "version": "0.1.0",
+      "commit": "0d85037320502b98c90be45b8d9724f0aa785af0",
+      "repo": "ethanyoq/ai-novel-writer",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/77",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/361",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/38015777544",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核要点：①身份逐字一致（id=ai-novel-writer/version=0.1.0/commit40/subpath，package.json name 与 version 亦相符）；②报告无 findings，全部 29 条机械预扫命中（DSH-X10→DG-R2-57、DSH-X01→DG-R3-53×4、DSH-X08→DG-R3-60×3、DSH-L02→DG-R4-55×2、DSH-P01→DG-R3-51×4、DSH-X03→DG-R3-55×14、DSH-X05→DG-R3-57）均在 DG-S01/S02/S03/S08/S09/S13 证据段引用规则 ID 给出良性排",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-09-10T17:49:32.358Z",
       "plugin_id": "shaobeichen--dsh-pocket",
       "name": "dsh-pocket",
@@ -6901,42 +6937,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "身份核验通过（id/name/version/commit/subpath 逐字一致）。报告为 clean 且无 findings，逐条核验了全部 checked_items 主张：21 条机械命中（DSH-C01/DSH-X03/X05/X08）全部在报告中有明确规则 ID 引用并逐一打开命中点核实排除理由属实（evaluateRetrieval/Retrieval( 子串误报、Esc 键监听、点击复制、JSONL 转义、测试子进程）。独立漏检快扫未发现 runtime eval/child_process、凭据读取、未声明外联或安装钩子载体；外联仅嵌入服务（用户配置）、localhost ",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T06:19:56.837Z",
-      "plugin_id": "omdsh-dev--dsh-toolkit",
-      "name": "dsh-toolkit",
-      "version": "0.0.1",
-      "commit": "2113d11a4e4510720251aa49a800bab917b14330",
-      "repo": "omdsh-dev/dsh-toolkit",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/153",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/201",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32696397143",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核通过，未发现 Sonar 报告被污染或偷懒迹象。逐项核验：(1) 身份三要素与任务卡逐字一致；(2) 报告无 findings，所有 clean 声明经独立抽样+全树 grep 验证成立——无网络外联（fetch/http/WebSocket/net.connect/curl 零匹配）、无 eval/new Function/child_process 代码调用（calculator 为白名单递归下降解析器，已读 evaluate.ts；regex 用 node:worker_threads 本地 worker 属合法 ReDoS 防护）、无凭据/敏感路径读取、无提示注入措辞、11 个",
           "install_ok": true
         },
         "beacon": null,
