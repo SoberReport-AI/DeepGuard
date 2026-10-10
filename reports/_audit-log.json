@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-10-10T14:55:01.722Z",
+      "plugin_id": "ai-novel-writer",
+      "name": "dsh-ai-novel-writer",
+      "version": "0.1.0",
+      "commit": "21d6721164e2ec0ebdf5b452ebf983785503c771",
+      "repo": "ethanyoq/ai-novel-writer",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/77",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/362",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/38060080985",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核方法：不依赖 Sonar 转述，独立逐点核验。①身份：id/name/version/commit/subpath 与任务卡逐字一致。②证据：报告 findings 为空；对 clean 判定引用的全部证据路径约 20 处逐点打开核验，全部属实——src/novel-project.ts:21-22/369-378/634-680（路径映射与逃逸/符号链接拒绝）、src/agent.ts:189-195/435-441/604-608/453/476/526/557（收窄面、审批闸、四处工具描述）、cordis.patch.yml 全 7 行仅一条登记项、两个 preset 人格与协议文本",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-10-10T02:38:56.483Z",
       "plugin_id": "ai-novel-writer",
       "name": "dsh-ai-novel-writer",
@@ -6901,42 +6937,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核确认：身份信息逐字一致；无 findings 无需证据路径核验；全部30条机械命中已逐条裁决（DSH-X10→DG-R2-57已排除、DSH-X08→DG-R3-60共21/22条为源码映射/编译输出/光标图片/样式行已排除、DSH-X03→DG-R3-55共7条为开发期脚本/测试已排除）；manifest 161个文件均在树中，无 .dsh/ 等点目录覆盖缺口；独立漏检快扫无发现（无安装钩子、无eval/child_process运行时代码、无网络外联、无凭据读取、原生助手哈希锁定+源码校验+拒绝系统光标位移原语）；定级无可校准项（全clean）。Sonar的21与22条微小差异系C",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T06:30:18.357Z",
-      "plugin_id": "modusensus--dsh-mneme",
-      "name": "dsh-mneme",
-      "version": "0.7.0",
-      "commit": "d8a568b66a563a3422667369026cf71fa82276d9",
-      "repo": "modusensus/dsh-mneme",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/154",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/202",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32696911266",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "身份核验通过（id/name/version/commit/subpath 逐字一致）。报告为 clean 且无 findings，逐条核验了全部 checked_items 主张：21 条机械命中（DSH-C01/DSH-X03/X05/X08）全部在报告中有明确规则 ID 引用并逐一打开命中点核实排除理由属实（evaluateRetrieval/Retrieval( 子串误报、Esc 键监听、点击复制、JSONL 转义、测试子进程）。独立漏检快扫未发现 runtime eval/child_process、凭据读取、未声明外联或安装钩子载体；外联仅嵌入服务（用户配置）、localhost ",
           "install_ok": true
         },
         "beacon": null,
