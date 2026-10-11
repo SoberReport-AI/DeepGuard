@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-10-11 21:58 | ai-novel-writer | 0.1.0 | [df04c99](https://github.com/ethanyoq/ai-novel-writer/commit/df04c996d7f9879290f9126cfb0f4a001d26b3a0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-10-10 22:55 | ai-novel-writer | 0.1.0 | [21d6721](https://github.com/ethanyoq/ai-novel-writer/commit/21d6721164e2ec0ebdf5b452ebf983785503c771) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-10-10 10:38 | ai-novel-writer | 0.1.0 | [0d85037](https://github.com/ethanyoq/ai-novel-writer/commit/0d85037320502b98c90be45b8d9724f0aa785af0) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-09-11 01:49 | shaobeichen--dsh-pocket | 1.13.4 | [472524a](https://github.com/shaobeichen/dsh-pocket/commit/472524a45ef7b1ff6fbd9c3bf50787680a5497c3) | SoberReport-AI | — | — | — | — | — | failed, flagged for extended review | [#124](https://github.com/SoberReport-AI/DeepGuard/issues/124) |
@@ -203,4 +204,3 @@
 | 2026-08-24 15:06 | lzszq--dsh-scholar | 0.1.0 | [76bfe96](https://github.com/lzszq/dsh-scholar/commit/76bfe960e9107a992dae506c3ebc298a99f57760) | SoberReport-AI | clean | 0 | extended review | escalated | — | failed, flagged for extended review | [#158](https://github.com/SoberReport-AI/DeepGuard/issues/158) |
 | 2026-08-24 14:55 | william-jin-cmu--dsh-stickers | 0.1.0 | [1703f09](https://github.com/william-jin-cmu/dsh-stickers/commit/1703f09915db1058b6031b31e52fd404560e0a78) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#157](https://github.com/SoberReport-AI/DeepGuard/issues/157) |
 | 2026-08-24 14:48 | anweat--dsh-web-search-pro | 0.1.9 | [2efaba3](https://github.com/anweat/dsh-web-search-pro/commit/2efaba33bfabb7574f9acfea31bc51addaf9a6dc) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#156](https://github.com/SoberReport-AI/DeepGuard/issues/156) |
-| 2026-08-24 14:39 | anionex--dsh-computer-use | 0.1.0 | [387eae9](https://github.com/anionex/dsh-computer-use/commit/387eae931b1852e3c3433e0e004fa460d3da2883) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#155](https://github.com/SoberReport-AI/DeepGuard/issues/155) |
