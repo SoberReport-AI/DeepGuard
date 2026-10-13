@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-10-13T23:07:51.377Z",
+      "plugin_id": "ai-novel-writer",
+      "name": "dsh-ai-novel-writer",
+      "version": "0.1.0",
+      "commit": "4494c24c8700fcc409583c12b84c58a6e4e9eb9c",
+      "repo": "ethanyoq/ai-novel-writer",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/77",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/364",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/38480073314",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "独立复核通过。(1) 身份：报告 id/name/version/commit/subpath 与任务卡逐字一致。(2) 证据：报告 findings 为空，checked_items 与 ds_scenarios 引用的约 25 处证据点全部亲自打开核验——路径全部在审计根内、行号准确、内容支撑结论，无形态违规、无幻觉路径、无把注入文本当功能的情况。(3) 机械命中 29 条逐条裁决覆盖完整（FND-001~007 对应全部 29 条），rule_id 映射与 static-scan-hits.json 吻合，无两头都无的缺口。(4) manifest 106 文件与树完全对账，无点目录缺扫",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-10-11T13:58:24.584Z",
       "plugin_id": "ai-novel-writer",
       "name": "dsh-ai-novel-writer",
@@ -6901,42 +6937,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核完成。身份核验通过（plugin.id/version/commit/subpath 均与任务卡一致）。报告无 findings（全部维度 clean），所有证据路径经实际读文件验证存在且内容准确。机械预扫命中 27 条全部在报告中明确排除（24 条 ANSI 艺术数据、2 条 systemPrompt.section、1 条 prepare 钩子）。漏检快扫：grep 检查 child_process/eval/fetch/凭据/注入模式均无命中。客户端 bundle 为纯被动 UI 组件，无键盘监听/剪贴板/凭据调用。构建脚本均为本地图片处理。安装命令哈希与形态完全正确。动态层无数",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T06:48:44.620Z",
-      "plugin_id": "anweat--dsh-web-search-pro",
-      "name": "dsh-web-search-pro",
-      "version": "0.1.9",
-      "commit": "2efaba33bfabb7574f9acfea31bc51addaf9a6dc",
-      "repo": "anweat/dsh-web-search-pro",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/156",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/204",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32698263965",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "身份核验通过（plugin.id/name/version/commit/subpath 与任务卡一致）。报告无 findings，各 clean 维度的 checked_items 均有实质内容且我逐条打开验证：resolveKey（router.ts:109-120）、credentials.set 用户触发（form.ts:380/save 流）、systemPrompt 无注入措辞（src/index.ts:116-119 与 lib/index.js:96 一致）、11 个工具描述全部功能化（src/tools.ts:51-618）、SSRF 防护（safe-http.ts）、文档命",
           "install_ok": true
         },
         "beacon": null,
