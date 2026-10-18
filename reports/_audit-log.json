@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-10-18T13:44:58.128Z",
+      "plugin_id": "ai-novel-writer",
+      "name": "dsh-ai-novel-writer",
+      "version": "0.1.0",
+      "commit": "3a5ba4521a1225ff7892954e4344efe4c9a84c02",
+      "repo": "ethanyoq/ai-novel-writer",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/77",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/365",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/39131616182",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "复核通过。①身份：id/version/commit/subpath 与任务卡逐字一致，审计根确为插件包根。②findings 为空，per_finding 空集成立；报告引用的关键证据行逐一实测核验全部成立：src/agent.ts:167-188（system-prompt/assemble 监听，注入 V2 工具协议并收紧工具面）、:189-195 与 :607（tools/pre-execute 白名单拒绝 + novel_apply_change 强制 'ask'，收紧方向非审批短路）、src/index.ts:324（/ai-novel RPC authority:'loopbac",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-10-13T23:07:51.377Z",
       "plugin_id": "ai-novel-writer",
       "name": "dsh-ai-novel-writer",
@@ -6904,42 +6940,6 @@
           "ruling": "escalate",
           "rationale": "本案分歧并非事实性争议：Aegis 的 per_finding 为空（无 evidence_ok:false 条目可逐条对账），blacklist_check.consistent=true 且无黑名单建议，install_check.command_ok=true（commit 40 位小写 hex 与任务卡逐字一致、subpath=null 与「仓库根」一致、install 命令形态与 owner/repo 完全正确），dynamic_check 与报告 L4=na 一致。分歧唯一来源是 Aegis 的两条 missed_concerns（下文以 FND-901/FND-902 编号指代，"
         },
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T06:55:05.439Z",
-      "plugin_id": "william-jin-cmu--dsh-stickers",
-      "name": "dsh-stickers",
-      "version": "0.1.0",
-      "commit": "1703f09915db1058b6031b31e52fd404560e0a78",
-      "repo": "william-jin-cmu/dsh-stickers",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "clean",
-      "findings": 0,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/157",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/205",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32698879092",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "clean",
-          "findings": 0
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核完成。身份核验通过（plugin.id/version/commit/subpath 均与任务卡一致）。报告无 findings（全部维度 clean），所有证据路径经实际读文件验证存在且内容准确。机械预扫命中 27 条全部在报告中明确排除（24 条 ANSI 艺术数据、2 条 systemPrompt.section、1 条 prepare 钩子）。漏检快扫：grep 检查 child_process/eval/fetch/凭据/注入模式均无命中。客户端 bundle 为纯被动 UI 组件，无键盘监听/剪贴板/凭据调用。构建脚本均为本地图片处理。安装命令哈希与形态完全正确。动态层无数",
-          "install_ok": true
-        },
-        "beacon": null,
         "harbor": null
       }
     }
