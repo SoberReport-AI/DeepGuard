@@ -4,6 +4,7 @@
 
 | Time (Beijing) | Plugin | Version | Commit | Submitter | Sonar Verdict | Findings | Aegis Review | Beacon Ruling | Postcheck | Status | Details |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-10-22 15:04 | ai-novel-writer | 0.1.0 | [305ee75](https://github.com/ethanyoq/ai-novel-writer/commit/305ee7559be7d8c9c1cbfcf1ed4b030513f32cfe) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-10-21 04:32 | ai-novel-writer | 0.1.0 | [7e6b827](https://github.com/ethanyoq/ai-novel-writer/commit/7e6b827fcced4f37184da834acc52ff9f222965a) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-10-18 21:44 | ai-novel-writer | 0.1.0 | [3a5ba45](https://github.com/ethanyoq/ai-novel-writer/commit/3a5ba4521a1225ff7892954e4344efe4c9a84c02) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
 | 2026-10-14 07:07 | ai-novel-writer | 0.1.0 | [4494c24](https://github.com/ethanyoq/ai-novel-writer/commit/4494c24c8700fcc409583c12b84c58a6e4e9eb9c) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#77](https://github.com/SoberReport-AI/DeepGuard/issues/77) |
@@ -203,4 +204,3 @@
 | 2026-08-24 15:44 | senmuuuuw--dsh-whale-report | 0.5.0 | [84cdb06](https://github.com/senmuuuuw/dsh-whale-report/commit/84cdb066d0921f2e5a17363c844c36f4b2823d42) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#162](https://github.com/SoberReport-AI/DeepGuard/issues/162) |
 | 2026-08-24 15:35 | franksong2702--dsh-codex-connect | 0.1.0-alpha.4.18 | [15f1c6f](https://github.com/franksong2702/dsh-codex-connect/commit/15f1c6f6b0715c63395e4852ec37c4dd5a9f598c) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#161](https://github.com/SoberReport-AI/DeepGuard/issues/161) |
 | 2026-08-24 15:22 | dingyi222666--dsh-focus-chat | 0.1.11 | [8127d69](https://github.com/dingyi222666/dsh-focus-chat/commit/8127d69c2b657dc4fd20f4628b8775d8933d633e) | SoberReport-AI | clean | 0 | approve | — | pass | merged | [#160](https://github.com/SoberReport-AI/DeepGuard/issues/160) |
-| 2026-08-24 15:14 | lsz-asd--dsh-plugin-session-delete | 0.3.1 | [352510e](https://github.com/lsz-asd/dsh-plugin-session-delete/commit/352510e552983dcfcb993cf9124181c55e2070f5) | SoberReport-AI | risk | 1 | approve | — | pass | merged | [#159](https://github.com/SoberReport-AI/DeepGuard/issues/159) |

@@ -2,6 +2,42 @@
   "version": 1,
   "entries": [
     {
+      "ts": "2026-10-22T07:04:21.830Z",
+      "plugin_id": "ai-novel-writer",
+      "name": "dsh-ai-novel-writer",
+      "version": "0.1.0",
+      "commit": "305ee7559be7d8c9c1cbfcf1ed4b030513f32cfe",
+      "repo": "ethanyoq/ai-novel-writer",
+      "source": "watch-update",
+      "submitter": "SoberReport-AI",
+      "verdict": "clean",
+      "findings": 0,
+      "review_aegis": "approve",
+      "beacon": null,
+      "postcheck": "pass",
+      "stage_reached": "publish",
+      "status": "merged",
+      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/77",
+      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/367",
+      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/39736439144",
+      "extended_review": false,
+      "reason": null,
+      "compactions": 0,
+      "stages": {
+        "sonar": {
+          "verdict": "clean",
+          "findings": 0
+        },
+        "aegis": {
+          "verdict": "approve",
+          "notes": "身份核验通过（id/version/commit/subpath 与任务卡逐字一致）。机械预扫 29 条命中逐条对账：DG-R2-57×1、DG-R3-53×4、DG-R3-60×3、DG-R4-55×2、DG-R3-51×5、DG-R3-55×13、DG-R3-57×1，全部 7 个规则编号在 audit_scope.limits 中有引用规则 ID 的明确排除理由，无两头都空的覆盖缺口；抽验证据行号全部落实（AGENTS.md 为开发门禁指针、qualification-web-backend.mjs:157 适配器注册、qualify-release.mjs:3/11/812、conte",
+          "install_ok": true
+        },
+        "beacon": null,
+        "harbor": null
+      }
+    },
+    {
       "ts": "2026-10-20T20:32:50.006Z",
       "plugin_id": "ai-novel-writer",
       "name": "dsh-ai-novel-writer",
@@ -6898,42 +6934,6 @@
         "aegis": {
           "verdict": "approve",
           "notes": "独立复核通过。身份四项逐字一致；findings 为空故无逐条证据可造假，报告引用的关键证据路径（apply.ts、cordis.patch.yml、package.json:47、ImageLightbox.tsx、MessageFeedbackActions.tsx）全部实际打开验证，内容支撑其 clean 论断；3 条机械预扫命中（DG-R3-54、DG-R3-57×2）均在 limits 中以规则 ID 明确裁决；manifest 78 文件与树一一对应，无点目录/越界路径，覆盖无缺口；独立漏检快扫（外联/执行/凭据/注入/混淆）无命中，反馈与文件打开仅经宿主标准接口；供应链无 git",
-          "install_ok": true
-        },
-        "beacon": null,
-        "harbor": null
-      }
-    },
-    {
-      "ts": "2026-08-24T07:14:02.137Z",
-      "plugin_id": "lsz-asd--dsh-plugin-session-delete",
-      "name": "dsh-plugin-session-delete",
-      "version": "0.3.1",
-      "commit": "352510e552983dcfcb993cf9124181c55e2070f5",
-      "repo": "lsz-asd/dsh-plugin-session-delete",
-      "source": "issue",
-      "submitter": "SoberReport-AI",
-      "verdict": "risk",
-      "findings": 1,
-      "review_aegis": "approve",
-      "beacon": null,
-      "postcheck": "pass",
-      "stage_reached": "publish",
-      "status": "merged",
-      "issue": "https://github.com/SoberReport-AI/DeepGuard/issues/159",
-      "pr": "https://github.com/SoberReport-AI/DeepGuard/pull/206",
-      "run_url": "https://github.com/SoberReport-AI/DeepGuard/actions/runs/32700118094",
-      "extended_review": false,
-      "reason": null,
-      "compactions": 0,
-      "stages": {
-        "sonar": {
-          "verdict": "risk",
-          "findings": 1
-        },
-        "aegis": {
-          "verdict": "approve",
-          "notes": "独立复核通过：身份一致；唯一 finding FND-001 的 4 条证据路径全部亲验存在且内容支撑描述与 MEDIUM 定级；static-scan-hits.json hit_count=0 无机械命中待裁决；manifest 5 文件全部在树且已读，无点目录/无覆盖缺口；独立 grep 快扫（child_process/eval/外联/凭据/注入）未发现 Sonar 漏检项；安装命令四元组（owner/repo/commit/subpath）与审计码一致。无关键证据不成立、无定级浮夸、无漏检，结论推导合规，予以 approve。",
           "install_ok": true
         },
         "beacon": null,
